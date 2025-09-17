@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generátor ze starýho HTML do Hranatých závorek a následné JSON</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; }
+    input, textarea, button {
+      width: 100%; padding: 8px; box-sizing: border-box;
+    }
+    textarea { height: 150px; }
+    .btn { background: #4CAF50; color: white; border: none; cursor: pointer; }
+    .btn:hover { background: #45a049; }
+    .btn-file { background: #2196F3; }
+    .btn-file:hover { background: #0b7dda; }
+    #fileInput { display: none; } /* Skryje nativní input pro soubor */
+  </style>
+</head>
+<body>
+  <h1>Generátor ze starýho HTML do Hranatých závorek a následné JSON</h1>
+  <p>Vyplňte formulář nebo nahrajte stávající HTML soubor.</p>
+
+  <div class="form-group">
+    <label for="textInput">Nahrát stávající píseň (extrahuje data z HTML):</label>
+    <input type="file" id="fileInput" accept=".html,.txt">
+    <button class="btn btn-file" onclick="document.getElementById('fileInput').click()">Procházet soubory...</button>
+  </div>
+
+  <hr>
+
+  <div class="form-group">
+    <label for="interpretInput">Interpret / Kapela:</label>
+    <input type="text" id="interpretInput" placeholder="Interpret/Kapela">
+  </div>
+
+  <div class="form-group">
+    <label for="nazevInput">Název písně:</label>
+    <input type="text" id="nazevInput" placeholder="Název písničky">
+  </div>
+
+  <div class="form-group">
+    <label for="textInput">Text s akordy (akordy piš do hranatých závorek, např. [Ami], je třeba je mít v textu pro správné zobrazení):</label>
+    <textarea id="textInput" placeholder="[C]Text písně s [G]akordy..."></textarea>
+  </div>
+
+  <button class="btn" onclick="generovatPisnicku()">Vygenerovat a stáhnout JSON</button>
+
+  <script>
+    document.getElementById('fileInput').addEventListener('change', processFile);
+
+    function processFile(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const content = e.target.result;
+        
+        // Regulární výrazy pro nalezení dat v HTML
+        const regexAutor = /<p class="autor">.*?<b><a[^>]*>([^<]+)<\/a><\/b>/;
+        const regexNazev = /<strong>(.*?)<\/strong>/; // Zjednodušený regex
+        const regexText = /<pre class="pisen">([\s\S]*?)<\/pre>/g;
+        
+        const autorMatch = content.match(regexAutor);
+        const nazevMatch = content.match(regexNazev);
+        let textContent = '';
+
+        // Spojení textu ze všech <pre> tagů s class "pisen"
+        const textMatches = [...content.matchAll(regexText)];
+        if (textMatches.length > 0) {
+          textMatches.forEach(match => {
+            textContent += match[1] + '\n\n';
+          });
+          textContent = textContent.trim();
+        } else {
+          // Pokud se nenašly <pre> tagy, zkusí najít <p> s ID "song-detail-chords"
+          const regexPText = /<p[^>]*id="song-detail-chords"[^>]*>([\s\S]*?)<\/p>/;
+          const pTextMatch = content.match(regexPText);
+          if (pTextMatch && pTextMatch[1]) {
+            textContent = pTextMatch[1];
+          } else {
+            // Pokud nic, vezme celý obsah
+            textContent = content;
+          }
+        }
+
+        if (autorMatch && autorMatch[1]) {
+          document.getElementById('interpretInput').value = autorMatch[1].trim();
+        }
+
+        if (nazevMatch && nazevMatch[1]) {
+          document.getElementById('nazevInput').value = nazevMatch[1].trim();
+        }
+
+        // Konverze akordů z <span> na hranaté závorky
+        let finalExtractedText = textContent.replace(/<span\s+class=['"]chord['"][^>]*>([^<]+)<\/span>/g, '[$1]');
+        
+        // A také konverze z <sup> na hranaté závorky
+        finalExtractedText = finalExtractedText.replace(/<sup[^>]*data-chord-name="([^"]+)"[^>]*>.*?<\/sup>/g, '[$1]');
+        
+        // Nahrazení <br> za nové řádky
+        finalExtractedText = finalExtractedText.replace(/<br\s*\/?>/g, '\n');
+
+        document.getElementById('textInput').value = finalExtractedText.trim();
+      };
+      reader.readAsText(file);
+    }
+
+    function odstranitDiakritiku(text) {
+      return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function generovatPisnicku() {
+      const interpret = document.getElementById('interpretInput').value.trim();
+      const nazev = document.getElementById('nazevInput').value.trim();
+      const text = document.getElementById('textInput').value.trim();
+
+      if (!interpret || !nazev || !text) {
+        alert('Prosím, vyplňte všechna pole.');
+        return;
+      }
+
+      // Regex pro akordy, abysme mohli kontrolovat první akord pro tóninu
+      const regexAkordy = /\[([A-H][#b]?((maj|min|mi|m|M|dim|aug|\+|sus|add)?\d*)?(\/[A-H][#b]?)?)\]/g;
+      const allChords = new Set();
+      let firstChord = null;
+
+      const formattedText = text
+        .replace(regexAkordy, (match, chord) => {
+          if (!firstChord) firstChord = chord;
+          allChords.add(chord);
+          return `<sup class="inline-chord ${chord}" data-chord-name="${chord}">${chord}</sup>`;
+        })
+        .replace(/\n/g, '<br>\n');
+
+      const songData = {
+        interpret: interpret,
+        nazev: nazev,
+        text: formattedText,
+        tonina: firstChord || "#",
+        used_chords: Array.from(allChords).join(',')
+      };
+
+      const nazevSouboru =
+        odstranitDiakritiku(interpret + "-" + nazev)
+          .toLowerCase()
+          .replace(/\s+/g, '-') + ".json";
+
+      const jsonContent = JSON.stringify(songData, null, 2);
+      const blob = new Blob([jsonContent], { type: "application/json" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = nazevSouboru;
+      link.click();
+    }
+  </script>
+</body>
+</html>

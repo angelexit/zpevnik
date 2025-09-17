@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generátor list.json</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; text-align: center; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        input[type="file"] { display: none; }
+        .btn { padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #2196F3; color: white; border: none; border-radius: 5px; margin-top: 10px; }
+        .btn:hover { background-color: #0b7dda; }
+        ul { list-style-type: none; padding: 0; text-align: left; }
+        li { background: #f4f4f4; margin-bottom: 5px; padding: 8px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generátor souboru list.json</h1>
+        <p>Pro vygenerování nového souboru list.json vyber všechny soubory písní (.json) ve složce songs.</p>
+        
+        <input type="file" id="fileInput" multiple accept=".json">
+        <button class="btn" onclick="document.getElementById('fileInput').click()">Vybrat soubory písní</button>
+        
+        <ul id="fileList"></ul>
+        
+        <button class="btn" onclick="generateListJson()" id="generateBtn" style="display:none;">Vygenerovat a stáhnout list.json</button>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        const generateBtn = document.getElementById('generateBtn');
+        let selectedFiles = [];
+
+        fileInput.addEventListener('change', (event) => {
+            fileList.innerHTML = '';
+            selectedFiles = Array.from(event.target.files);
+            
+            if (selectedFiles.length > 0) {
+                selectedFiles.forEach(file => {
+                    const li = document.createElement('li');
+                    li.textContent = file.name;
+                    fileList.appendChild(li);
+                });
+                generateBtn.style.display = 'block';
+            } else {
+                generateBtn.style.display = 'none';
+            }
+        });
+
+        function generateListJson() {
+            if (selectedFiles.length === 0) {
+                alert('Prosím, nejprve vyberte soubory.');
+                return;
+            }
+
+            const fileNames = selectedFiles.map(file => file.name);
+            const jsonContent = JSON.stringify(fileNames, null, 2);
+            
+            const blob = new Blob([jsonContent], { type: "application/json" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "list.json";
+            link.click();
+
+            alert('Soubor list.json byl úspěšně vygenerován. Uložte jej prosím do složky songs.');
+        }
+    </script>
+</body>
+</html>

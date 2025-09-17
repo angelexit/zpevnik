@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style_chords.css">
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <h1 id="artist-name"></h1>
+            <h2 id="song-title"></h2>
+        </div>
+        <div class="header-menu">
+            <button onclick="history.back()">↩ Zpět na interpreta</button>
+            <button onclick="window.location.href='index.html'">🏠 Hlavní strana</button>
+        </div>
+    </header>
+
+    <main class="song-detail">
+        <div class="song-text">
+            <div id="song-content" class="song-content"></div>
+        </div>
+    </main>
+
+    <script defer src="js/load_song.js"></script>
+</body>
+</html>
