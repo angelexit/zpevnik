@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Písně interpreta</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/artist-songs.js"></script>
+	<script defer src="js/index_interactive.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="artist-name"></h1>
+        <div>
+            <button onclick="window.location.href='index.html'">🏠 Hlavní strana</button>
+			<button id="toggle-theme">🌓 Režim</button>
+			<button id="chords-button" onclick="window.location.href='Chords/index.html'">🎸 Akordy</button>
+			<button id="reset-visited">🔄 Reset navštívených</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="songs-list-container">
+            <ul id="songs-list"></ul>
+        </div>
+    </main>
+</body>
+</html>

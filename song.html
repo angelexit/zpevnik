@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style_chords.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jspdf.umd.min.js"></script>
+  <script defer src="js/index_interactive.js"></script>
+<body>
+
+  <header> 
+    <div class="title-container">
+      <h1 id="song-artist"></h1>
+      <h2 id="song-title"></h2>
+    </div>
+    <div class="header-menu">
+      <button onclick="history.back()">↩ Zpět na interpreta</button>
+      <button onclick="window.location.href='index.html'">🏠 Hlavní strana</button>
+      <button id="toggle-theme">🌓 Režim</button>
+      <button id="export-pdf">📄 Tisk</button>
+      <button id="chords-button" onclick="window.location.href='Chords/index.html'">🎸 Akordy</button>
+    </div>
+  </header>
+ 
+  <article class="song-detail">
+    <div class="song-text">
+      <div class="song-text-left">    	  
+        <ul class="song-scale">
+          <li id="transpose-menu" class="key"><strong>Transpozice</strong></li> 
+          <li id="transpose" class="key"><a href="#" class="transpose-step">-2</a></li>
+          <li id="transpose" class="key"><a href="#" class="transpose-step">-1</a></li> 
+          <li id="transpose" class="key"><a href="#" class="transpose-step">0</a></li> 
+          <li id="transpose" class="key"><a href="#" class="transpose-step">+1</a></li> 
+          <li id="transpose" class="key"><a href="#" class="transpose-step">+2</a></li>
+          <li id="tone-menu" class="key"><strong>Tónina</strong></li>
+          <li id="tone" class="key" data-key-value="C"><a href="#">C</a></li>
+          <li id="tone" class="key" data-key-value="C#"><a href="#">C#</a></li>
+          <li id="tone" class="key" data-key-value="D"><a href="#">D</a></li>
+          <li id="tone" class="key" data-key-value="D#"><a href="#">D#</a></li>
+          <li id="tone" class="key" data-key-value="E"><a href="#">E</a></li>
+          <li id="tone" class="key" data-key-value="F"><a href="#">F</a></li>
+          <li id="tone" data-key-value="F#"><a href="#">F#</a></li>
+          <li id="tone" data-key-value="G"><a href="#">G</a></li>
+          <li id="tone" data-key-value="G#"><a href="#">G#</a></li>
+          <li id="tone" data-key-value="A"><a href="#">A</a></li>
+          <li id="tone" data-key-value="B"><a href="#">B</a></li>
+          <li id="tone" data-key-value="H"><a href="#">H</a></li>
+		    <!-- Nový prvek pro kapodastr -->
+          <li id="capo-menu" class="key"><strong>Kapodastr</strong></li>
+          <li id="capo-value" class="key"><span>-</span></li>
+        </ul>
+        
+        <div class="song-content print">
+          <p id="song-detail-chords"></p>
+        </div>
+      </div>
+    
+      <div class="song-text-right">
+        <form>
+          <select id="instrument-select">
+            <option value="guitar">Kytara</option>
+            <option value="ukulele">Ukulele</option>
+            <option value="baritone">Baryton</option>
+            <option value="mandolin">Mandolína</option>
+          </select>
+          <div class="song-text-right-image" id="chords"></div>
+         </form>
+		 </article>
+        </div>
+       </div>
+      </div>
+     <script src="js/hudba.min.js"></script> <!-- vhlavní skript, který možná volá chord_bind_hover() nebo render_chords() -->
+   <script src="js/svguitar.min.js"></script> <!-- vykreslovací engine -->
+   <script src="js/chords_guitar.js"></script> <!-- data akordů -->
+   <script src="js/guitar.js"></script> <!-- logika pro vykreslování a interakci -->
+   <script src="js/inline.js"></script> <!-- přepis akordů -->
+   <script defer src="js/load_song.js"></script>
+  
+</body>
+</html>

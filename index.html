@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zpěvník - Hlavní strana</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/index_interactive.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Zpěvník</h1>
+	    <h2>Interpreti</h2>
+    <div>
+      <button onclick="window.location.href='index.html'">🏠 Hlavní strana</button>
+      <button id="toggle-theme">🌓 Režim</button>
+      <a href="Chords/index.html" id="chords-link"><button>🎸 Akordy</button></a>
+      <button id="reset-visited">🔄 Reset navštívených</button>
+    </div>
+  </header>
+
+  <main id="artists-container">
+<div class="artist-list">
+  <ul id="artists-list"></ul>
+</div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
