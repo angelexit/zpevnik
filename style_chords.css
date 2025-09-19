@@ -1,0 +1,121 @@
+/* ===============================
+   Základní proměnné pro světlý/tmavý režim
+   (přepínání barev pro SVG akordy)
+================================ */
+:root {
+  --chord-color: #ff9800;      /* Barva akordu (světlý režim) */
+  --hover-chord-color: #ffb74d;/* Barva akordu při hoveru */
+  --chord-bg: transparent;     /* Pozadí akordu */
+  --text-color: #333;          /* Barva textu */
+}
+
+/* Tmavý režim */
+body.dark-mode {
+  --chord-color: #ffa726;
+  --hover-chord-color: #ffcc80;
+  --chord-bg: transparent;
+  --text-color: #e0e0e0;
+}
+
+/* ==========================================
+   Vykreslení SVG akordů a dvouvrstvého zápisu
+========================================== */
+/* Kontejner pro řádek písně s akordovou vrstvou */
+.song-row {
+  display: block;
+  margin-bottom: 0.8em;
+}
+
+/* Vrstva akordů nad textem – vhodné pro SVG */
+.chord-layer {
+  min-height: 1.2em;
+  margin-bottom: -0.5em;
+  text-align: left;
+  font-size: 1em;
+}
+
+/* SVG akord – třída je např. Fxmi (SVG kompatibilita) */
+.chord {
+  color: var(--chord-color);
+  font-weight: bold;
+  background: var(--chord-bg);
+  padding: 0 2px;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+/* Zvýraznění akordu při hoveru nebo výběru */
+.chord:hover,
+.chord.selected {
+  background: #e3f2fd;
+  color: var(--hover-chord-color);
+}
+
+/* Vrstva textu písně */
+.text-layer {
+  font-size: 1.1em;
+  color: var(--text-color);
+  position: relative;
+  z-index: 1;
+  padding: 2px 0;
+}
+
+/* Dvouvrstvé zobrazení akordu nad slovem (např. pro SVG) */
+.chorded-word {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 1px;
+  vertical-align: top;
+}
+.chorded-word .chord {
+  font-size: 0.85em;
+  font-weight: bold;
+  color: var(--chord-color);
+  line-height: 1;
+  white-space: nowrap;
+}
+.chorded-word .lyric {
+  font-size: 1em;
+  line-height: 1.2;
+  height: 1em;
+}
+
+/* Tooltip pro SVG akordy (volitelné) */
+.chord-tooltip {
+  visibility: hidden;
+  background-color: #FEFEFE;
+  color: #000;
+  text-align: left;
+  border-radius: 3px;
+  padding: 5px;
+  position: absolute;
+  z-index: 3;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
+}
+.chord:hover .chord-tooltip,
+.chord.selected .chord-tooltip {
+  visibility: visible;
+}
+
+/* ===============================
+   Tisk – úprava SVG akordů pro tisk
+=============================== */
+@media print {
+  .chord {
+    color: #000 !important;
+    background: none !important;
+  }
+  .chord-layer {
+    min-height: 1em;
+    margin-bottom: 0;
+  }
+}
+
+/* ===============================
+   Pro další rozšíření, např. mobil/tablet
+=============================== */
+/* Zde můžeš doplňovat další styly */
