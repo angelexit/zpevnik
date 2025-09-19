@@ -1,43 +1,32 @@
-/* Styles.css - Základní styly stránky */
-
+/* ==============================
+   Proměnné pro světlý/tmavý režim
+============================== */
 :root {
-  --bg-color: #f0f0f0; /* Světlé pozadí pro denní režim */
-  --text-color: #333333; /* Tmavý text pro denní režim */
-  --header-bg-color: #ffffff; /* Barva pozadí hlavičky */
-  --border-color: #cccccc; /* Barva okrajů */
-  --link-color: #007bff; /* Barva odkazů */
-  --link-hover-color: #0056b3; /* Barva odkazů při najetí myší */
-  --button-bg-color: #007bff; /* Modrá pozadí tlačítek */
-  --button-text-color: #ffffff; /* Bílý text tlačítek */
-  --button-border-color: var(--button-bg-color); /* Barva rámečku tlačítka ve světlém režimu */
-  --input-bg-color: #ffffff; /* Barva pozadí vstupních polí */
-  --input-text-color: #333333; /* Barva textu vstupních polí */
-  --chord-color: #ff9800;       /* oranžová pro světlý režim */
-  --hover-chord-color: #ffb74d; /* světlejší oranžová při hoveru */
-  --input-border: #cccccc; /* Barva okraje pro inputy a rámečky tónin */
-  --active-key-bg: #007bff; /* Barva pozadí aktivní tóniny/transpozice */
-  --active-key-text: #ffffff; /* Barva textu aktivní tóniny/transpozice */
+  --bg-color: #f0f0f0; /* pozadí stránky - světlý režim */
+  --text-color: #333333; /* barva textu - světlý režim */
+  --header-bg-color: #ffffff; /* pozadí hlavičky */
+  --border-color: #cccccc; /* okraje */
+  --link-color: #007bff; /* odkazy */
+  --link-hover-color: #0056b3; /* odkazy při hoveru */
+  --button-bg-color: #007bff; /* pozadí tlačítek */
+  --button-text-color: #ffffff; /* barva textu tlačítek */
+  --button-border-color: var(--button-bg-color); /* rámeček tlačítka */
+  --input-bg-color: #ffffff; /* pozadí vstupních polí */
+  --input-text-color: #333333; /* text vstupních polí */
+  --chord-color: #ff9800; /* akordy - světlý režim (oranžová) */
+  --hover-chord-color: #ffb74d; /* akordy při hoveru */
+  --input-border: #cccccc; /* okraje vstupů */
+  --active-key-bg: #007bff; /* aktivní tónina/transpozice */
+  --active-key-text: #ffffff; /* text aktivní tóniny */
   --select-bg: #ffffff;
   --select-text: #000000;
   --select-border: #999999;
-  --hover-highlight-bg: #e5e5e5; /* Nová proměnná pro hover stav menu položek */
+  --hover-highlight-bg: #e5e5e5; /* pozadí při hoveru menu */
+  --link-visited: #ff9800;
+  --highlight-bg: #e0e0e0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.3s, color 0.3s;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-/* Tmavý režim (Dark mode) */
+/* === Tmavý režim === */
 body.dark-mode {
   --bg-color: #1a1a1a;
   --text-color: #e0e0e0;
@@ -50,8 +39,8 @@ body.dark-mode {
   --button-border-color: #e0e0e0;
   --input-bg-color: #333333;
   --input-text-color: #e0e0e0;
-  --chord-color: #ffa726;       /* světlejší oranžová pro tmavý režim */
-  --hover-chord-color: #ffcc80; /* ještě světlejší oranžová pro hover v dark */
+  --chord-color: #ffa726;
+  --hover-chord-color: #ffcc80;
   --input-border: #555555;
   --active-key-bg: #55aaff;
   --active-key-text: #ffffff;
@@ -61,7 +50,7 @@ body.dark-mode {
   --hover-highlight-bg: #3a3a3a;
 }
 
-/* Světlý režim (Light mode) */
+/* === Světlý režim === */
 body.light {
   --bg-color: #f9f9f9;
   --text-color: #1a1a1a;
@@ -80,53 +69,61 @@ body.light {
   --hover-highlight-bg: #e5e5e5;
 }
 
+/* =====================
+   Základní reset a prvky
+===================== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 a {
   text-decoration: none;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
   color: var(--link-color);
 }
-
 img {
   border: 0;
   display: block;
 }
+h1, h2 { margin: 0; }
+p, ul { margin: 0; padding: 0; }
+ul { list-style-type: none; }
 
-h1,
-h2 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-input,
-textarea,
-select,
-button,
-a {
+/* =====================
+   Formuláře a vstupy
+===================== */
+input, textarea, select, button, a {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-appearance: none;
   border-radius: 0;
 }
-
-input,
-textarea,
-select,
-button {
+input, textarea, select, button {
   margin: 0;
   border: 0;
 }
+#search-box {
+  padding: 0.5em;
+  margin: 1em;
+  width: calc(100% - 2em);
+  border: 1px solid var(--input-border);
+  background: var(--input-bg-color);
+  color: var(--input-text-color);
+  transition: background 0.3s, color 0.3s;
+}
 
+/* =====================
+   Hlavička a navigace
+===================== */
 header {
   background-color: var(--header-bg-color);
   padding: 1em;
@@ -136,37 +133,20 @@ header {
   flex-wrap: wrap;
   transition: background-color 0.3s;
 }
-
 header .title-container {
   display: flex;
   align-items: baseline;
   flex: 1 1 auto;
 }
-
 header h1 {
-  margin: 0;
   font-size: 2.5em;
   color: var(--text-color);
 }
-
 header h2 {
-  margin: 0;
   margin-left: 0.5em;
   font-size: 1.5em;
   color: var(--text-color);
   opacity: 0.8;
-}
-
-#instrument-select,
-#toggle-theme,
-#reset-visited,
-#export-pdf,
-#chords-button {
-  background: var(--button-bg-color);
-  color: var(--button-text-color);
-  border: 1px solid var(--button-border-color);
-  margin-left: 0.5em;
-  cursor: pointer;
 }
 
 label[for="instrument-select"] {
@@ -179,75 +159,199 @@ label[for="instrument-select"] {
   font-weight: bold;
   line-height: 1.2;
   margin-right: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-#search-box {
-  padding: 0.5em;
-  margin: 1em;
-  width: calc(100% - 2em);
-  border: 1px solid var(--input-border);
-  background: var(--input-bg-color);
-  color: var(--input-text-color);
-  transition: background 0.3s, color 0.3s;
+/* =====================
+   Tlačítka
+===================== */
+button,
+#instrument-select,
+#toggle-theme,
+#reset-visited,
+#export-pdf,
+#chords-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: 1px solid var(--button-border-color);
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.2;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  box-sizing: border-box;
+}
+button:hover,
+#instrument-select:hover,
+#toggle-theme:hover,
+#reset-visited:hover,
+#export-pdf:hover,
+#chords-button:hover {
+  background-color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+  color: var(--button-text-color);
+}
+button:active {
+  transform: translateY(1px);
+  box-shadow: none;
 }
 
-main {
-  padding: 1em;
-}
-
-/* Seznam Interpretů */
-.artist-list ul {
+/* =====================
+   Rozvržení stránky a seznamy
+===================== */
+main { padding: 1em; }
+.artist-list ul, #songs-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   padding: 0;
   margin: 0;
 }
-
-.artist-list li {
-  margin: 0;
-  width: 100%;
-}
-
-.artist-list a {
-  color: var(--link-color);
-  text-decoration: none;
+.artist-list li, #songs-list li { width: 100%; list-style: none; }
+.artist-list a, #songs-list li a {
   display: block;
   width: 100%;
-  padding: 0.25em;
-  border-radius: 1px;
+  padding: 8px;
+  border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
+  color: var(--link-color);
+  text-decoration: none;
 }
-
 .artist-list a.visited {
   background-color: var(--highlight-bg);
   color: var(--link-visited);
 }
-
-.artist-list a:hover {
+.artist-list a:hover, #songs-list li a:hover {
   text-decoration: underline;
 }
-
-/* Interpreti */
-.col-kat {
-  display: block;
-  float: left;
-  width: 24%;
-  margin: 0px;
-  padding: 0px;
-  border-left: 2px solid rgba(0, 0, 0, 0);
-}
-
-.col-in {
-  display: inline;
-  float: none;
-  width: 49%;
+#songs-list li a {
+  border: 1px solid var(--border-color);
+  text-align: left;
   white-space: normal;
-  margin: 0px;
-  padding: 4px 8px 4px 0px;
+  word-break: break-word;
 }
 
-/* STYLY PRO TRANZPOZICI / TÓNINU (song-scale) */
+/* =====================
+   Rozvržení písně
+===================== */
+.song-detail .song-text {
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.song-detail .song-text .song-text-left {
+  flex-grow: 1;
+  width: auto;
+  margin: 0 5px;
+}
+.song-detail .song-text .song-text-right {
+  width: 110px;
+  flex-shrink: 0;
+  padding-top: 0px;
+}
+.song-detail .song-text .song-text-left .song-content {
+  line-height: 1.5;
+  font-size: 18px;
+}
+.song-detail .song-text .song-text-left .transposition {
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+.transposition a { color: var(--link-color); }
+
+/* =====================
+   Akordy (dvouvrstvé, SVG, tooltip)
+===================== */
+/* Dvouvrstvé zobrazení akordu nad textem */
+.chorded-word {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 1px;
+  vertical-align: top;
+}
+.chorded-word .chord {
+  font-size: 0.85em;
+  font-weight: bold;
+  color: var(--chord-color);
+  line-height: 1;
+  white-space: nowrap;
+}
+.chorded-word .lyric {
+  font-size: 1em;
+  line-height: 1.2;
+  height: 1em;
+}
+/* Akordy v textu */
+.song-detail sup.inline-chord,
+.song-detail .song-text .song-text-left .song-content p sup.inline-chord {
+  position: relative;
+  top: -1.2em;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--chord-color);
+  margin-right: -0.3em;
+  vertical-align: baseline;
+  transition: color 0.2s;
+}
+.song-detail .song-text .song-text-left .song-content p sup.inline-chord {
+  font-size: 14px;
+}
+.song-detail .song-text .song-text-left .song-content p sup.inline-chord:hover {
+  color: var(--hover-chord-color);
+  cursor: pointer;
+}
+
+/* Tooltip pro akordy */
+.inline-chord {
+    position: relative;
+    display: inline-block;
+}
+.inline-chord .chord-tooltip {
+    visibility: hidden;
+    background-color: #FEFEFE;
+    color: #000;
+    text-align: left;
+    border-radius: 0px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    bottom: -420%;
+    left: 100%;
+    margin-left: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+.inline-chord:hover .chord-tooltip {
+    visibility: visible;
+}
+
+/* SVG obrázky akordů (pravá strana) */
+.song-text-right-image {
+    display: block !important;
+}
+@media print {
+    .song-text-right-image svg {
+        height: 140px;
+        display: inline;
+        float: left;
+        margin-bottom: 15px;
+    }
+}
+
+/* =====================
+   Tónina / Transpozice / Capo
+===================== */
 .song-detail .song-text .song-text-left .song-scale {
   display: flex;
   justify-content: space-between;
@@ -257,12 +361,10 @@ main {
   width: 100%;
   box-sizing: border-box;
 }
-
 .song-detail .song-text .song-text-left .song-scale li {
   flex: 1 1 auto;
   box-sizing: border-box;
 }
-
 .song-detail .song-text .song-text-left .song-scale li a {
   display: block;
   height: 40px;
@@ -274,29 +376,20 @@ main {
   color: var(--text-color);
   box-sizing: border-box;
 }
-
 .song-detail .song-text .song-text-left .song-scale li a:hover {
   background-color: var(--hover-highlight-bg);
   cursor: pointer;
 }
-
 .song-detail .song-text .song-text-left .song-scale li:last-child a {
   border-right: 1px solid var(--input-border);
 }
-
-.song-detail .song-text .song-text-left .song-scale li.active a {
-  background-color: var(--active-key-bg);
-  border-color: var(--active-key-bg);
-  color: var(--active-key-text);
-}
-
+.song-detail .song-text .song-text-left .song-scale li.active a,
 .song-scale .key.active a,
 .song-scale .transpose-step.active {
   background-color: var(--active-key-bg);
   border-color: var(--active-key-bg);
   color: var(--active-key-text);
 }
-
 .song-detail .song-text .song-text-left .song-scale li#transpose-menu,
 .song-detail .song-text .song-text-left .song-scale li#tone-menu,
 .song-detail .song-text .song-text-left .song-scale li#capo-menu {
@@ -313,57 +406,12 @@ main {
   border-bottom: 1px solid var(--input-border);
   border-left: 1px solid var(--input-border);
   box-sizing: border-box;
-}
-
-.song-detail .song-text .song-text-left .song-scale li#transpose-menu {
   border-right: 1px solid var(--input-border);
 }
 
-.song-detail .song-text .song-text-left .song-scale li#tone-menu {
-  border-right: 1px solid var(--input-border);
-}
-.song-detail .song-text .song-text-left .song-scale li#capo-menu {
-  border-right: 1px solid var(--input-border);
-}
-
-/* Text Písničky */
-.song-detail .song-text {
-  font-size: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.song-detail .song-text .song-text-left .song-content {
-  line-height: 1.5; /* menší výška řádku */
-  font-size: 18px;
-}
-
-/* Styl pro akordy */
-.song-detail .song-text .song-text-left .song-content p sup.inline-chord {
-  font-size: 14px;
-  font-weight: bold;
-  color: var(--chord-color);
-  transition: color 0.2s ease-in-out;
-}
-
-/* Hover efekt */
-.song-detail .song-text .song-text-left .song-content p sup.inline-chord:hover {
-  color: var(--hover-chord-color);
-  cursor: pointer;
-}
-
-/* Dělení textu písně do dvou sloupců na desktopu */
-@media (min-width: 900px) {
-  .song-detail .song-text .song-text-left .song-content {
-    columns: 2;
-    column-gap: 40px;
-    column-rule: 1px solid var(--border-color);
-  }
-}
-
-/* Akordy a Seznam v Pravá strana */
+/* =====================
+   Select boxy (pravá strana, akordy)
+===================== */
 .song-detail .song-text .song-text-right select {
   width: 100%;
   font-size: 16px;
@@ -373,90 +421,16 @@ main {
   height: 38px !important;
   line-height: 1.2 !important;
   padding: 0 15px;
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3e%3cpath fill='%23999999' d='M0 2.5L5 7.5 10 2.5z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 15px center;
   box-sizing: border-box;
 }
 
-.song-detail .song-text .song-text-left {
-  flex-grow: 1;
-  width: auto;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-.song-detail .song-text .song-text-right {
-  width: 110px;
-  flex-shrink: 0;
-  padding-top: 0px;
-}
-
-.song-detail .song-text .song-text-left .transposition {
-  margin-bottom: 5px;
-  color: var(--text-color);
-}
-
-.transposition a {
-  color: var(--link-color);
-}
-
-/* Robustní styly pro VŠECHNY <button> ELEMENTY */
-button {
-  background-color: var(--button-bg-color);
-  color: var(--button-text-color);
-  border: 1px solid var(--button-border-color);
-  padding: 8px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1em;
-  line-height: 1.2;
-  text-align: center;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  box-sizing: border-box;
-}
-
-button:hover {
-  background-color: var(--link-hover-color);
-  border-color: var(--link-hover-color);
-  color: var(--button-text-color);
-}
-
-button:active {
-  transform: translateY(1px);
-  box-shadow: none;
-}
-#songs-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* teď 2 sloupce */
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-}
-
-#songs-list li {
-  list-style: none;
-}
-
-#songs-list li a {
-  display: block;
-  padding: 8px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  text-align: left;   /* ← místo center */
-  white-space: normal; /* ← zajistí zalomení dlouhých názvů */
-  word-break: break-word; /* ← pokud by byl extra dlouhý text */
-}
-/* Styl pro informaci o kapodastru */
+/* =====================
+   Informace o kapodastru
+===================== */
 .song-capo {
   font-size: 0.9em;
   margin-top: 4px;
@@ -465,13 +439,127 @@ button:active {
   opacity: 0.8;
   transition: color 0.3s, opacity 0.3s;
 }
+body.light .song-capo { color: #555; }
+body.dark-mode .song-capo { color: #bbb; }
 
-/* Světlý režim */
-body.light .song-capo {
-  color: #555; /* tmavší šedá */
+/* =====================
+   Responsivita (desktop - sloupce, galerie, obrázky)
+===================== */
+@media (min-width: 900px) {
+  .song-detail .song-text .song-text-left .song-content {
+    columns: 2;
+    column-gap: 40px;
+    column-rule: 1px solid var(--border-color);
+  }
+  .prev-image, .next-image {
+      top: 200px !important;
+  }
+}
+@media (max-width: 767px) {
+    .prev-image, .next-image {
+        top: 10vh !important;
+    }
 }
 
-/* Tmavý režim */
-body.dark-mode .song-capo {
-  color: #bbb; /* světlejší šedá */
+/* =====================
+   Kategorie interpretů
+===================== */
+.col-kat {
+  display: block;
+  float: left;
+  width: 24%;
+  border-left: 2px solid rgba(0, 0, 0, 0);
+}
+.col-in {
+  display: inline;
+  float: none;
+  width: 49%;
+  white-space: normal;
+  padding: 4px 8px 4px 0;
+}
+
+/* =====================
+   FLASH NEWS sekce (novinky, články)
+===================== */
+.flash-news .article-item-info {
+    padding-bottom: 10px;
+}
+.flash-news img {
+    width: 100%;
+    max-width: 100%;
+}
+.flash-news .article-item {
+    margin-bottom: 15px !important;
+}
+.flash-news .article-item .article-source-info {
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+}
+.flash-news .article-item .article-source-info .article-source {
+    color: #939393;
+}
+.flash-news .article-item .article-image-link {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+.flash-news .article-item > div {
+    font-size: 18px;
+    line-height: 30px;
+}
+.flash-news .article-item p {
+  margin-bottom: 29px;
+}
+.article-detail h2, .article-detail h3 {
+    padding: 0px;
+}
+
+/* Deaktivace lupa obrázků v galerii a článcích */
+.article-gallery .article-gallery-image .current-image::after,
+.article-detail .article-image-link:after {
+    content: '';
+    border: 0px;
+}
+
+.article-text .ext-link {
+    background-color: #f4f4f4;
+    padding: 20px 15px 20px 15px;
+}
+
+.article-item-list-1 {
+    width: 90%;
+    margin: 0px 16px;
+}
+.article-item-list-1 li .article-item-list-left {
+    width: calc(100% - 110px) !important;
+}
+.article-gallery .article-gallery-image, .article-gallery .article-gallery-image img {
+    max-height: 750px;
+}
+
+/* Tooltip v galerii */
+.article-gallery .current-image .nav-tooltip-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #009cdc;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+/* =====================
+   Pro budoucí rozšíření (např. tisk)
+===================== */
+@page { size: portrait; }
+@media print {
+    .song-text-right-image svg {
+        height: 140px;
+        display: inline;
+        float: left;
+        margin-bottom: 15px;
+    }
 }
