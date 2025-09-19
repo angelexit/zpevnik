@@ -54,7 +54,7 @@ body.dark-mode {
 
 /* Vrstva textu písně */
 .text-layer {
-  font-size: 1.1em;
+  font-size: 1.0em;
   color: var(--text-color);
   position: relative;
   z-index: 1;
