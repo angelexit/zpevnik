@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+   <title>Song Manager Export</title>
+   <link rel="stylesheet" href="../css/export.css">
+</head>
+<body class="tool-page tool-export">
+<div class="container">
+  <div class="tabs export-actions">
+    <button class="tab-btn reset" onclick="resetAll()">🧹 RESET EXPORTU</button>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">1. Zdroj a výstup</div>
+    <div class="setup">
+      <div class="box"><label>1. Vybrat složku songs/</label><button class="btn" onclick="pickSongsFolder()">📁 VYBRAT SONGS</button><div id="songsStatus" class="hint muted">Čekám na složku songs...</div></div>
+      <div class="box"><label>2. Výstupní složka</label><button class="btn secondary" onclick="pickOutputFolder()">💾 VYBRAT VÝSTUP</button><div id="outputStatus" class="hint muted">Volitelné. Bez výběru se soubory stáhnou.</div></div>
+      <div class="box"><label>3. Původní database.json</label><input type="file" id="oldDbFile" accept=".json" onchange="loadOldDatabase(event)"><div id="oldDbStatus" class="hint muted">Volitelné pro porovnání nových/chybějících songů.</div></div>
+      <div class="box"><label>4. Kontrola JSON</label><button class="btn green" onclick="scanSongs()">🔍 NAČÍST A ZKONTROLOVAT</button><div id="scanStatus" class="hint muted">Nejdřív vyber složku songs.</div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">2. Souhrn</div>
+    <div class="grid">
+      <div class="stat"><b id="statFound">0</b><span>nalezeno JSON</span></div>
+      <div class="stat"><b id="statOk">0</b><span>načteno OK</span></div>
+      <div class="stat"><b id="statArtists">0</b><span>interpretů</span></div>
+      <div class="stat"><b id="statErrors">0</b><span>chyb</span></div>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="generateDatabase()">📄 GENEROVAT database.json</button>
+      <button class="btn secondary" onclick="generateArtists()">👥 GENEROVAT artists.json</button>
+      <button class="btn warn" onclick="generateReport()">⚠️ GENEROVAT REPORT</button>
+      <button class="btn green" onclick="generateAll()">🚀 VŠECHNO NAJEDNOU</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">3. Náhledy a diagnostika</div>
+    <div class="tabs2">
+      <button class="smalltab active" onclick="showPreview('songs',this)">Načtené songy</button>
+      <button class="smalltab" onclick="showPreview('database',this)">database.json</button>
+      <button class="smalltab" onclick="showPreview('artists',this)">artists.json</button>
+      <button class="smalltab" onclick="showPreview('report',this)">report.txt</button>
+      <button class="smalltab" onclick="showPreview('log',this)">Log</button>
+    </div>
+    <div id="songsPreview" class="list"></div>
+    <pre id="databasePreview" class="preview" style="display:none"></pre>
+    <pre id="artistsPreview" class="preview" style="display:none"></pre>
+    <pre id="reportPreview" class="preview" style="display:none"></pre>
+    <pre id="logPreview" class="log" style="display:none"></pre>
+  </div>
+</div>
+
+<script type="module" src="../js/tools/export/main.js"></script>
+</body>
+</html>

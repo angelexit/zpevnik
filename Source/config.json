@@ -1,0 +1,40 @@
+{
+  "appTitle": "Zpěvník",
+  "appVersion": "v3.00",
+  "loginEnabled": true,
+  "adminName": "admin",
+  "adminPassword": "admin",
+  "searchPlaceholder": "🔎 Hledat (interpret, název, album...)",
+  "instrumentLabel": "Nástroje:",
+  "homeTitle": "Domů",
+  "transDownTitle": "Snížit tóninu",
+  "transUpTitle": "Zvýšit tóninu",
+  "toolsTitle": "Nástroje",
+  "themeTitle": "Přepnout režim",
+  "loadingText": "Načítání dat...",
+  "paths": {
+    "database": "database.json",
+    "artists": "artists.json",
+    "songs": "songs/",
+    "covers": "img/covers/",
+    "interprets": "img/interprets/"
+  },
+  "sectionLabels": {
+    "intro": "Předehra",
+    "verse": "Sloka",
+    "chorus": "Refrén",
+    "bridge": "Mezihra",
+    "outro": "Dohra"
+  },
+  "editor": {
+    "rememberFolders": true,
+    "restoreSession": true,
+    "restoreDraft": true,
+    "confirmRestore": true
+  },
+  "defaultTheme": "dark",
+  "defaultInstrument": "guitar",
+  "offlineMode": true,
+  "adminMode": false,
+  "versionCheck": true
+}
