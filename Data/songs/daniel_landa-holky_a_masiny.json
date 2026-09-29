@@ -1,0 +1,65 @@
+{
+  "title": "Holky a mašiny",
+  "artist": "Daniel Landa",
+  "artistKey": "daniel_landa",
+  "album": "Chcíply dobrý víly",
+  "year": "1995",
+  "key": "Ami",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "B",
+    "C",
+    "Dmi",
+    "E",
+    "F",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=2haUh7CdHj8&list=RD2haUh7CdHj8&start_radio=1",
+  "last_modified": "2026-04-28T13:35:50.514Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:35:43.978Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Ami]Rychlost je opojná, [F]riziko [G]láká,\n[Ami]mašina ňáká, [F]teď kolem [G]proletěla,\n[Ami]dej si panáka [F]abys mně [G]potom chtěla,\n[Ami]vůle vyhrávat proni[F]ká do tě[G]la."
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Krajem se rozlejhá [G]motorů řev,\n[Dmi]kupředu letí [C]česká krev,\n[B]kupředu letí [Ami]česká krev,\nmu[E]zika burá[Ami]cí.\n\n[F]Holky a [G]mašiny,\n[Dmi]záplaty [C]na džíny,\n[B]lahodnej [Ami]žlutej mok\nje [E]kupředu [Ami]krok."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]S partou magorů, [F]jo to je [G]vono!\n[Ami]No! Tak si vem [F]ten svůj [G]díl.\nBuď [Ami]s náma tady, [F]neotáčej se [G]zády,\n[Ami]aby ses i ty [F]probu[G]dil."
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Krajem se rozlejhá [G]motorů řev,\n[Dmi]kupředu letí [C]česká krev,\n[B]kupředu letí [Ami]česká krev,\nmu[E]zika burá[Ami]cí.\n\n[F]Holky a [G]mašiny,\n[Dmi]záplaty [C]na džíny,\n[B]lahodnej [Ami]žlutej mok\nje [E]kupředu [Ami]krok."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]A když se hlava [F]bleskově [G]k zemi blíží,\n[Ami]to jsi pak rád, [F]žes přežil [G]bez obtíží.\n[Ami]Je spoustu takovejch, [F]co kliku [G]neměli,\n[Ami]na jejich počest [F]my budem [G]veselí."
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Krajem se rozlejhá [G]motorů řev,\n[Dmi]kupředu letí [C]česká krev,\n[B]kupředu letí [Ami]česká krev,\nmu[E]zika burá[Ami]cí.\n\n[F]Holky a [G]mašiny,\n[Dmi]záplaty [C]na džíny,\n[B]lahodnej [Ami]žlutej mok\nje [E]kupředu [Ami]krok."
+    }
+  ]
+}

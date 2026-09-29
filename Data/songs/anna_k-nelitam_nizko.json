@@ -1,0 +1,68 @@
+{
+  "title": "Nelítám nízko",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Nebe",
+  "year": "1999",
+  "key": "H",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "C#mi",
+    "E",
+    "F#",
+    "G#mi",
+    "H"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=HfcnemLiZyM&list=RDHfcnemLiZyM&start_radio=1",
+  "last_modified": "2026-04-28T13:13:07.339Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:12:56.612Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[H]taptaptara ....[C#mi] [E]"
+    },
+    {
+      "type": "verse",
+      "text": "[H]hvězdy na nebi [C#mi]bdí a ty [E]dlouho [H]spíš / [C#mi]taptaptara ....[E]\n[H]přídeš o svůj hlas [C#mi]dřív než ho [E]usly[H]šíš / [C#mi]taptaptara ....[E]\n[F#]Možná ví co tvý [E]křídla\na [A]noc ti nedá, [F#]něco oku[E]síš ..[A]\n[F#]v dálce pomalu [E]svítá\nuž se [A]vítr zvedá [F#]a ty poletíš[H] [G#mi]"
+    },
+    {
+      "type": "chorus",
+      "text": "Všechno [E]nečeká blízko\ntak [F#]nelítej nízko[H] [G#mi]\nVšechno [E]nečeká blízko\ntak [F#]nelítej nízko\n[E]Snad se probu[H]díš[C#mi] [E]"
+    },
+    {
+      "type": "bridge",
+      "text": "[H]taptaptara ....[C#mi] [E]"
+    },
+    {
+      "type": "verse",
+      "text": "[H]Hloupě se [C#mi]ptáš asi [E]netu[H]šíš / [C#mi]taptaptara ....[E]\n[H]Já už svý křídla [C#mi]mám sám to [E]hned uvi[H]díš / [C#mi]taptaptara ....[E]\n[F#]Jak nelítám [E]nízko"
+    },
+    {
+      "type": "verse",
+      "text": "a [A]noc mi nedá, [F#]něco oku[E]síš..[A]\n[F#]v dálce pomalu [E]svítá\nuž se [A]vítr zvedá [F#]a já poletím [H] [G#mi] [E] [F#] [H] [G#mi]"
+    },
+    {
+      "type": "chorus",
+      "text": "Všechno [E]nečeká blízko\ntak [F#]nelítej nízko[H] [G#mi]\nVšechno [E]nečeká blízko\ntak [F#]nelítej nízko\n[E]Snad se probu[H]díš[C#mi] [E]"
+    }
+  ]
+}

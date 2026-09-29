@@ -1,0 +1,73 @@
+{
+  "title": "Proužek",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Zahrádky",
+  "year": "1994",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "E",
+    "H7"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:30:26.438Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "Ten [E]mír, když [H7]za kopcem [A]sví[E]tá,\nkdyž [A]vystřídá se s [H7]nocí [E]den,\na proužek dýmu z [H7]dřeva slunce [A]ví[E]tá,\nz [A]kytky motýl [H7]vylít' [E]ven."
+    },
+    {
+      "type": "chorus",
+      "text": "[E]Někdo škrtne sirkou, někdo [A]zpí[E]vá,\n[A]někdo ještě zkouší s[E]pát,\nu potoka do v[H7]ody se dív[A]á[E]\n[A]jedna holka, [H7]co mám [E]rád."
+    },
+    {
+      "type": "verse",
+      "text": "Vlasy sváže do uzlu a kouká,\npak vodu dlaní rozčeří,\nstud jí sluší, tak jako všem holkám,\nco na svou krásu nevěří."
+    },
+    {
+      "type": "chorus",
+      "text": "[E]Někdo škrtne sirkou, někdo [A]zpí[E]vá,\n[A]někdo ještě zkouší s[E]pát,\nu potoka do v[H7]ody se dív[A]á[E]\n[A]jedna holka, [H7]co mám [E]rád."
+    },
+    {
+      "type": "bridge",
+      "text": "[E] [H7] [A] [E] [A] [H7] [E] [H7] [A] [E] [A] [H7] [E]"
+    },
+    {
+      "type": "chorus",
+      "text": "[E]Někdo škrtne sirkou, někdo [A]zpí[E]vá,\n[A]někdo ještě zkouší s[E]pát,\nu potoka do v[H7]ody se dív[A]á[E]\n[A]jedna holka, [H7]co mám [E]rád."
+    },
+    {
+      "type": "verse",
+      "text": "Z [E]odpadlýho [H7]kousku starý [A]ků[E]ry\n[A]srdce jsem jí [H7]uděla[E]l\na večer, když už [H7]začly lítat [A]mů[E]ry,\n[A]tajně jí ho do [H7]spacáku [E]dal."
+    },
+    {
+      "type": "chorus",
+      "text": "[E]Někdo škrtne sirkou, někdo [A]zpí[E]vá,\n[A]někdo ještě zkouší s[E]pát,\nu potoka do v[H7]ody se dív[A]á[E]\n[A]jedna holka, [H7]co mám [E]rád."
+    },
+    {
+      "type": "outro",
+      "text": "[:[A]jedna holka, [H7]co mám [E]rád:]"
+    }
+  ]
+}

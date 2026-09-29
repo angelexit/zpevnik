@@ -1,0 +1,59 @@
+{
+  "title": "Barák na odstřel",
+  "artist": "Brichta Aleš",
+  "artistKey": "brichta_ales",
+  "album": "Růže Pro Algernon",
+  "year": "1994",
+  "key": "Emi",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D",
+    "Emi",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=LkxbzXfqALE&list=RDLkxbzXfqALE&start_radio=1",
+  "last_modified": "2026-04-28T13:22:04.497Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:21:59.352Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[Emi] [D] [Emi] [D] [Emi] [D] [C] [D] [Emi]"
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]V tom šeru [D]dvorů trpěly [Ami]místy zbytky [C]trávy,\n[Emi]z pavlačí [D]dolů visely [Ami]stonky zvadlejch [C]květin.\n[Emi]Jen okna [D]zaprášený s čarami [Ami]teď už prošlý [C]zprávy,\n[Emi]dvě srdce [D]nakreslený, písmena, [Ami]co měl dávno [C]smazat [Emi]déšť."
+    },
+    {
+      "type": "chorus",
+      "text": "Tenhle [C]barák na odst[G]řel je dopis [D]promlčený [Ami]lásky.\nTenhle [C]barák na odst[G]řel, kam večer [D]chodilo se na zeď [Ami]psát.\nTenhle [C]barák na odst[G]řel, co odpo[D]vídat měl nám na [Ami]otázky.\nTenhle [C]barák na odst[G]řel už nebu[D]deš se jeho [C]stínů [Emi]ptát."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Dav čumilů [D]civí, těší se [Ami]až ta barabizna [C]zmizí,\n[Emi]kdekdo se [D]diví, že tu [Ami]mohla takhle dlouho [C]stát.\n[Emi]Vzpomínky [D]mávaj'  a Ty [Ami]procházíš svou malou [C]krizí.\n[Emi]Času se ne[D]dostává - na pohled [Ami]zbejvá už jen [C]vteřin [Emi]pár."
+    },
+    {
+      "type": "chorus",
+      "text": "Tenhle [C]barák na odst[G]řel a na Tvý [D]tváři pár let starý [C]vrásky\nTenhle [C]barák na odst[G]řel, kde ze zdí [D]čiší vyklizenej [C]chlad.\nTenhle [C]barák na odst[G]řel, co půvab [D]má už jenom pro [C]obrázky\nTenhle [C]barák na odst[G]řel, proč naje[D]dnou už se Ti vůbec [C]nechce [Emi]smát?"
+    }
+  ]
+}

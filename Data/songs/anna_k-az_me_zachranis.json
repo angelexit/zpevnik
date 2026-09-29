@@ -1,0 +1,66 @@
+{
+  "title": "Až mě zachráníš",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Světlo",
+  "year": "2017",
+  "key": "C",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "Ami7",
+    "C",
+    "Fadd9",
+    "Fmaj7",
+    "G",
+    "Gadd9",
+    "H"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=mncy3er5o8U&list=RDmncy3er5o8U&start_radio=1",
+  "last_modified": "2026-04-28T13:07:49.843Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:07:43.806Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "orig.H ; odC uku ; kytara od G kapo4\n[C] [C] [Ami] [Fmaj7]"
+    },
+    {
+      "type": "verse",
+      "text": "[C]Poslouchej, jak spolu zní,\n[Ami]ty slyšíš moje srdce, [Fmaj7]já poslouchám tvý\n[C]Až zapálíš, co se dá,\n[Ami]zůstanem spolu, už nás [Fmaj7]nikdo nehledá.\nJenom [Gadd9]láska ti [Fadd9]otvírá můj [C]svět"
+    },
+    {
+      "type": "chorus",
+      "text": "[Fadd9]Oooo, když mě [C]zachráníš,\n[G]ooo, až tě [Ami7]poznám blíž,\n[Fadd9]oooo když tě [C]objímám,\nnejsi [G]sám[Gadd9], nejsi [C]sám [Ami7] [Fmaj7]"
+    },
+    {
+      "type": "verse",
+      "text": "[C]Schovávej si u mě svý\n[Ami]vzpomínky na bolest i [Fmaj7]chvile ke štěstí\n[C]Až zapálíš, co se dá,\n[Ami]zůstanem spolu, už nás [Fmaj7]nikdo nehledá\nJenom [Gadd9]láska ti [Fadd9]otvírá můj [C]svět,\njenom [G]láska ti [Fadd9]otvírá můj [C]svět"
+    },
+    {
+      "type": "chorus",
+      "text": "[Fadd9]Oooo, když mě [C]zachráníš,\n[G]ooo, až tě [Ami7]poznám blíž,\n[Fadd9]oooo když tě [C]objímám,\nnejsi [G]sám[Gadd9], nejsi [C]sám [Ami7] [Fmaj7]"
+    },
+    {
+      "type": "chorus",
+      "text": "[Fadd9]Oooo, když mě [C]zachráníš,\n[G]ooo, až tě [Ami7]poznám blíž,\n[Fadd9]oooo když tě [C]objímám,\nnejsi [G]sám[Gadd9], nejsi [C]sám [Ami7] [Fmaj7]"
+    }
+  ]
+}

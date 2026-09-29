@@ -1,0 +1,72 @@
+{
+  "title": "Andante Aledeto",
+  "artist": "AG Flek",
+  "artistKey": "ag_flek",
+  "album": "Dohrála hudba",
+  "year": "1989",
+  "key": "Emi",
+  "capo": 0,
+  "used_chords": [
+    "C",
+    "Cmaj7",
+    "D",
+    "Emi",
+    "G",
+    "Hmi"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=KUZbvdKLYbo&list=RDKUZbvdKLYbo&start_radio=1",
+  "last_modified": "2026-06-13T08:37:46.452Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T12:31:22.057Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[Emi]      [C]    [G]    [D]    [Emi]      [G]    [Hmi] .\n[F#]     [G]    [F#]     [G]    [G]    [A]    [G] ."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Nitka [C]slůvek [G]bloudí [D]po výšivkách,\n[Emi]a světlo [C]svíček, [G]hýbe se [D]na tvých křivkách."
+    },
+    {
+      "type": "bridge",
+      "text": "[Hmi]      [F#]     [D]    [H]    [G]    [F#]     [D]    [H]    [G]    [A] ."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Svět kolem [C]vláční, [G]přítulně, [D]po skleničkách,\n[Emi]a život [C]lásek, [G]zakletý [D]je v těch svíčkách,[Hmi]\na flám se [Emi]líně[C]\n[Hmi]spřáhnul [Emi]s půl[Cmaj7]nocí."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Pár něžných [C]rýmů, [G]připíšu [D]do partesů,\n[Emi]ohraných [C]songů, [G]pak šeptem [D]do tvých vlasů,\n[Emi]a smutek [C]dílem [G]přinesou [D]tóny v basu,\n[Emi]ten smutek [C]v bílém [G]po prošlém [D]místě v času."
+    },
+    {
+      "type": "bridge",
+      "text": "[Hmi]      [Emi]      [C]    [Hmi]      [Emi]      [Cmaj7] ."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Víno mou [C]vůli, [G]jenom tak [D]mírně leptá,\n[Emi]výmluvnost [C]tváří, [G]tam, kde [D]se víckrát neptá."
+    },
+    {
+      "type": "outro",
+      "text": "[Hmi]      [F#]     [D]    [H]    [G]    [F#]     [D]    [H]    [G]    [A] ."
+    }
+  ]
+}

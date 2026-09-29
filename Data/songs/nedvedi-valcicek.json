@@ -1,0 +1,58 @@
+{
+  "title": "Valčíček",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Na kameni kámen",
+  "year": "1985",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "A7",
+    "D",
+    "E7"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:36:37.658Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "chorus",
+      "text": "Tuhle p[A]ísničku chtěl bych ti, l[E7]ásko, dát,\nať ti každej den připomí[A]ná\n[: toho, kdo je tvůj, [A7]čí ty jsi [D]a kdo má [A]rád,\nať ti každej den [E7]připomí[A]ná :]"
+    },
+    {
+      "type": "verse",
+      "text": "Kluka jako ty hledám už spoustu let,\ntakový trošku trhlý mý já.\nDej mi ruku, pojď, půjdeme šlapat náš svět,\ni když obrovskou práci to dá."
+    },
+    {
+      "type": "chorus",
+      "text": "Tuhle p[A]ísničku chtěl bych ti, l[E7]ásko, dát,\nať ti každej den připomí[A]ná\n[: toho, kdo je tvůj, [A7]čí ty jsi [D]a kdo má [A]rád,\nať ti každej den [E7]připomí[A]ná :]"
+    },
+    {
+      "type": "verse",
+      "text": "Fakt mi nevadí, že nos jak bambulku máš,\nani já nejsem žádný ideál,\nhlavně co uvnitř nosíš a co ukrýváš,\nto je pouto, co vede nás dál."
+    },
+    {
+      "type": "chorus",
+      "text": "Tuhle p[A]ísničku chtěl bych ti, l[E7]ásko, dát,\nať ti každej den připomí[A]ná\n[: toho, kdo je tvůj, [A7]čí ty jsi [D]a kdo má [A]rád,\nať ti každej den [E7]připomí[A]ná :]"
+    }
+  ]
+}

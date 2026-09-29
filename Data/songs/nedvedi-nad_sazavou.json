@@ -1,0 +1,68 @@
+{
+  "title": "Nad Sázavou",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "František",
+  "year": "1993",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "C/H",
+    "D",
+    "D7",
+    "E7",
+    "Em",
+    "Emi",
+    "G",
+    "H7"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:29:14.838Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Emi]Do noci před tunelem zahoukal\nposlední vlak, co veze opožděný nádražáky [Ami]domů spát,\n[H7]zhasni tu písničku a napít mi dej,\npřed spaním [Emi]chci si ještě [D]přečíst pár [C]hvě[C/H]zd,\n[Ami]ta řeka je jak pohádka,\n[H7]co vyprávěli naši v chatě, [Emi]kde byl les."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Mravenčí skála plná našich jmen\na pražce plný hřebů, z kterých jsi si letopočet [Ami]přečíst moh\n[H7]viadukt, kam ses chodil učit bát,\njak strašně [Emi]duní, když [D]pro[C]jíždí[C/H] vlak,\n[Ami]a táta s mámou, co foukali nám [H7]rány,\nkdyž chodili jsme [Emi]domů spát."
+    },
+    {
+      "type": "chorus",
+      "text": "Nad [E7]Sázav[Ami]ou, nad [D7]Sáza[G]vou, občas [C]vzpomene si člověk asi\n[Ami]na ty časy krásný, kdy [H7]zpívali jsme Brontosaury, [Em]Spirituál."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Do noci před tunelem zahouká\nposlední vlak, co veze opožděný nádražáky [Ami]domů spát,\n[H7]u trati ostružiny vykvetly zas,\nv Sázavě [Emi]zase prej je [D]hromada [C]ryb,\n[Ami]a dokonce prý indiánský [H7]teepee se tu objevilo, [Emi]bude líp."
+    },
+    {
+      "type": "chorus",
+      "text": "Nad [E7]Sázav[Ami]ou, nad [D7]Sáza[G]vou, občas [C]vzpomene si člověk asi\n[Ami]na ty časy krásný, kdy [H7]zpívali jsme Brontosaury, [Em]Spirituál."
+    },
+    {
+      "type": "chorus",
+      "text": "Nad [E7]Sázav[Ami]ou, nad [D7]Sáza[G]vou, občas [C]vzpomene si člověk asi\n[Ami]na ty časy krásný, kdy [H7]zpívali jsme Brontosaury, [Em]Spirituál."
+    }
+  ]
+}

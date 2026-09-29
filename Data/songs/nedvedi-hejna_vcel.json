@@ -1,0 +1,66 @@
+{
+  "title": "Hejna v\u010Del",
+  "artist": "Nedv\u011Bdi",
+  "artistKey": "nedvedi",
+  "album": "Pt\u00E1\u010Data",
+  "year": "1987",
+  "key": "Ami",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "Ami7",
+    "Esus4",
+    "Fmaj7"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-09-29T12:34:26.306Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehk\u00E1 \u00FAprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Ami]N\u011Bjak um\u00EDr\u00E1 n\u00E1m [Ami7]l\u00E1ska,\nmy jako [Fmaj7]hejna divejch [Esus4]v\u010Del\njdeme [Ami]d\u00E1l.[Ami7][Fmaj7][Esus4]"
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Ka\u017Edej vztah je vlastn\u011B [Ami7]s\u00E1zka\na ka\u017Ed\u00FD [Fmaj7]r\u00E1no  m\u016F\u017Ee [Esus4]zmizet,\nmy jdeme [Ami]d\u00E1l.[Ami7][Fmaj7][Esus4]"
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]\u0158ekn\u011Bte, kdopak za to [Ami7]m\u016F\u017Ee,\nkdo z n\u00E1s m\u00E1 [Fmaj7]pr\u00E1vo n\u011Bco [Esus4]br\u00E1t,\n[Ami]kdo u\u010Dil lidi zlobu [Ami7]d\u00FDchat,\nkdo na vo[Fmaj7]j\u00E1ky chce si [Esus4]hr\u00E1t."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]U\u017E zase bohatejch je [Ami7]spousta,\na \u010D\u00EDm v\u00EDc [Fmaj7]pen\u011Bz, l\u00E1sky [Esus4]m\u00ED\u0148,\nmy jdeme [Ami]d\u00E1l.[Ami7][Fmaj7][Esus4]"
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]A tak n\u00E1m zb\u00FDv\u00E1 jenom [Ami7]doufat,\n\u017Ee u\u017E [Fmaj7]z\u00EDtra, z\u00EDtra [Esus4]snad\nbudeme [Ami]d\u00E1l.[Ami7][Fmaj7][Esus4]"
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]\u0158ekn\u011Bte, kdopak za to [Ami7]m\u016F\u017Ee,\nkdo z n\u00E1s m\u00E1 [Fmaj7]pr\u00E1vo n\u011Bco [Esus4]br\u00E1t,\n[Ami]kdo u\u010Dil lidi zlobu [Ami7]d\u00FDchat,\nkdo na vo[Fmaj7]j\u00E1ky chce si [Esus4]hr\u00E1t."
+    },
+    {
+      "type": "outro",
+      "text": "[Ami]      [Ami7] .\n[Fmaj7]        [Esus4] .\n[Ami] ."
+    }
+  ]
+}

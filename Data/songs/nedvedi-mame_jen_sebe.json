@@ -1,0 +1,71 @@
+{
+  "title": "Máme jen sebe",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Zahrádky",
+  "year": "1994",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "C#m",
+    "E",
+    "F#m",
+    "H"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:27:45.927Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[C#mi]Ještě chvíli unavíme čas, máme jen [A]sebe\n[H]a na nočním nebi budem hledat plamínky [C#mi]hvězd. \nTak dlouho jsme se hledali, tak dlouho, Ty mě, já [A]Tebe,\n[H]ještě jednou po pěšinkách těl, budem se [C#mi]vést."
+    },
+    {
+      "type": "chorus",
+      "text": "[A]Tisíckrát mi řekneš, že mě ráda máš,\njá Tobě [E]tisíckrát až do nebe,\n[F#mi]zas mi hlavu na rameno něžně dáš,\nvždyť [A#]víme - že máme jen [C#mi]sebe."
+    },
+    {
+      "type": "verse",
+      "text": "[C#mi]Nekřičíme, že nás doba bolí, vzdáleni [A]smutku,\n[H]unešeni neskutečnou láskou neznáme [C#mi]svět.\nPo ovoci pozná se strom, a Ty podle [A]skutků,\ni [H]smutek má svý hranice a ví, že je jen [C#mi]teď."
+    },
+    {
+      "type": "chorus",
+      "text": "[A]Tisíckrát mi řekneš, že mě ráda máš,\njá Tobě [E]tisíckrát až do nebe,\n[F#mi]zas mi hlavu na rameno něžně dáš,\nvždyť [A#]víme - že máme jen [C#mi]sebe."
+    },
+    {
+      "type": "verse",
+      "text": "[C#mi]Ještě chvíli unavíme čas, máme jen [A]sebe\n[H]a na nočním nebi budem hledat plamínky [C#mi]hvězd. \nTak dlouho jsme se hledali, tak dlouho, Ty mě, já [A]Tebe,\n[H]ještě jednou po pěšinkách těl, budem se [C#mi]vést."
+    },
+    {
+      "type": "chorus",
+      "text": "[A]Tisíckrát mi řekneš, že mě ráda máš,\njá Tobě [E]tisíckrát až do nebe,\n[F#mi]zas mi hlavu na rameno něžně dáš,\nvždyť [A#]víme - že máme jen [C#mi]sebe."
+    },
+    {
+      "type": "bridge",
+      "text": "[C#mi], [A], [H], [C#mi]\n [C#mi], [A], [H], [C#mi]"
+    },
+    {
+      "type": "verse",
+      "text": "[A]Tisíckrát mi řekneš, že mě ráda máš,\njá Tobě [E]tisíckrát až do nebe,\n[F#mi]zas mi hlavu na rameno něžně dáš,\nvždyť [A#]víme - že máme jen [C#mi]sebe."
+    }
+  ]
+}

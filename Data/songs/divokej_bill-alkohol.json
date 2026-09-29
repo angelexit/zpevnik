@@ -1,0 +1,66 @@
+{
+  "title": "Alkohol",
+  "artist": "Divokej Bill",
+  "artistKey": "divokej_bill",
+  "album": "Divokej Bill",
+  "year": "2007",
+  "key": "G",
+  "capo": 0,
+  "used_chords": [
+    "C",
+    "D",
+    "Emi",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=p8JVuQi11N4&list=RDp8JVuQi11N4&start_radio=1",
+  "last_modified": "2026-04-28T13:43:47.035Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:43:42.091Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[G][Emi][C][D][G]"
+    },
+    {
+      "type": "verse",
+      "text": "[G]Je to tady, už mě má, přítel [Emi]Alkohol\nv hrsti [C]rukama zuba[D]ma, [G]kroutí mi nohama\n[G]Polyká mě a já, v jámě [Emi]hady počítám\nkvůli [C]dámě, co na mě [D]usmívá se [G]chlupama vobalená"
+    },
+    {
+      "type": "chorus",
+      "text": "[G]Alkohol, přítel [Emi]alkohol\n[C]hladí mý tělo [D]mladý, takže [G]zdyde z něj jenom vrak\n[G]Alkohol, přítel [Emi]alkohol\n[C]hladí mý tělo [D]mladý, takže [G]zdyde z něj jenom vrak"
+    },
+    {
+      "type": "verse",
+      "text": "[G]Je to tlak, no a tak, přítel [Emi]Alkohol\npo [C]srsti hladí mý tělo [D]mladý,\n[G]takže zbyde z něj jenom vrak"
+    },
+    {
+      "type": "verse",
+      "text": "[G]Polyká mě a zas, výraz v očích [Emi]pod obraz\nkvůli [C]dámě co na vás [D]usmívá se\n[G]ale mně láme vaz"
+    },
+    {
+      "type": "chorus",
+      "text": "[G]Alkohol, přítel [Emi]alkohol\n[C]hladí mý tělo [D]mladý, takže [G]zdyde z něj jenom vrak\n[G]Alkohol, přítel [Emi]alkohol\n[C]hladí mý tělo [D]mladý, takže [G]zdyde z něj jenom vrak"
+    },
+    {
+      "type": "chorus",
+      "text": "[G]Alkohol, přítel [Emi]alkohol\n[C]hladí mý tělo [D]mladý, takže [G]zdyde z něj jenom vrak\n[G]Alkohol, přítel [Emi]alkohol\n[C]hladí mý tělo [D]mladý, takže [G]zdyde z něj jenom vrak"
+    }
+  ]
+}

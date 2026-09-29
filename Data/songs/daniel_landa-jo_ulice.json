@@ -1,0 +1,73 @@
+{
+  "title": "Jó ulice",
+  "artist": "Daniel Landa",
+  "artistKey": "daniel_landa",
+  "album": "Valčík",
+  "year": "1993",
+  "key": "",
+  "capo": 0,
+  "used_chords": [],
+  "youtube_link": "",
+  "last_modified": "2026-06-11T05:09:35.087Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:42:00.266Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[F]    [C]    [E]    [F] .\n[F]    [C]    [E]    [Am]     [A]    [Asus4] ."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Jeho otec se sebou měl problémů [C]dost\n[Dmi]a v bohatý rodině, [C]taky nevyrost.\n[Ami]Vlastní matka nevěděla, jestli ho má ráda,\n[E]stalo se co muselo, [Ami]když ukázal jim záda."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Problémovej parchant, furt by si jen [C]hrál,\n[Dmi]učit se mu nechtělo, už [C]ve školce se rval\n[Ami]a když pořád slyšel co tu chce ten šmejd,\n[E]jediný ho napadlo, [Ami]mezi svejma bejt."
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Jó, uli[C]ce je [E]jako [F]sen,\nduše v plame[C]nech, děsně [E]dlouhej [Ami]den.\n[F]Jó, uli[C]ce, teď [E]patřej [F]sem,\nnoc je králov[C]na, [E]no pro[A]blem."
+    },
+    {
+      "type": "verse",
+      "text": "Tak poprvé [Ami]v životě, našel kamaráda,\n[Dmi]s ním si nechal na rameno [C]vytetovat hada.\n[Ami]Spolu to snad jednou, někam dotáhnou,\n[E]když na těžkejch křižovatkách [A]blbě neza[Ami]hnou."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Hodně lidí spojil, jak ocel tvrdej rock,\n[Dmi]jsou démoni ulic a [C]pro vostatní šok.\nA [Ami]chtěli by i milovat, o nic hůř než vy,\n[F]na ulici [E]léčej si svý [Ami]duše bolavý."
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Jó, uli[C]ce je [E]jako [F]sen,\nduše v plame[C]nech, děsně [E]dlouhej [Ami]den.\n[F]Jó, uli[C]ce, teď [E]patřej [F]sem,\nnoc je králov[C]na, [E]no pro[A]blem."
+    },
+    {
+      "type": "verse",
+      "text": "Někdy je i nejhůř,[E]   [A]krev často všechno zkazí,[Ami][F]vopruz je když jeden[E],   [C]do druhýho nůž vrazí.\n[A]Jinde zase večer, slzy provázej,\n[E]to mladí lidi s báglama, [A]z domu odcházééé[C]ééééj."
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Jó, uli[C]ce je [E]jako [F]sen,\nduše v plame[C]nech, děsně [E]dlouhej [Ami]den.\n[F]Jó, uli[C]ce, teď [E]patřej [F]sem,\nnoc je králov[C]na, [E]no pro[A]blem."
+    },
+    {
+      "type": "verse",
+      "text": "[F]Jó, uli[C]ce je [H]jako [F]sen,\nduše v plame[C]nech, děsně [H]dlouhej [Ami]den.\n[F]Jó, uli[C]ce, teď [H]patřej [F]sem,\nnoc je králov[C]na, [H]no pro[Ami]blem.[C]"
+    }
+  ]
+}

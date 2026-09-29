@@ -1,0 +1,60 @@
+{
+  "title": "Carpe diem",
+  "artist": "AG Flek",
+  "artistKey": "ag_flek",
+  "album": "Dohrála hudba",
+  "year": "1989",
+  "key": "G",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "Dmi7",
+    "E",
+    "Emi",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=AUvL2uMX0IM&list=RDAUvL2uMX0IM&start_radio=1",
+  "last_modified": "2026-04-28T12:47:46.184Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T12:34:19.046Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Ami]Nadešel asi [Dmi7]poslední den, podí[G]vej, celá planeta [Emi]blázní,\na já [Ami]neuroním ani [Dmi7]slzu pro ni, jenom [G]zamknu dům.\nPůjdu [Ami]po kolejích až [Dmi7]na konečnou,\nhle, jak [G]mám krok vojensky [Emi]rázný \na [Ami]nezastavím ani [Dmi7]na červenou, natruc [G]předpisům."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Tak tady mě [G]máš, [Ami]dnes můžeš [G]říkat klidně, co [C]chceš,\nzbylo tak málo vět, tak [Ami]málo slov, co [G]nelžou."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Už si nebudeme [Dmi7]hrát na román, setři [G]růž, nikdo nás nena[Emi]táčí,\nje [Ami]poslední den a [Dmi7]zbyla nám jen miska [G]cukroví.\nAť [Ami]všechny hospody dnes [Dmi7]doženou plán,\nať [G]svět z posledního pije a [Emi]tančí,\njá [Ami]nebudu pít, nechám [Dmi7]naplno znít v hlavě [G]všechno, co mám."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Žádný slib z těch, [Dmi7]co jsem ti dal,\nnejde [G]vyplnit a nejde vzít [Emi]zpátky.\nTak ať [Ami]točí se svět mladší o[Dmi7] deset let na desce [G]Jethro Tull[E].\nAť platí [Ami]aspoň dnes, co [Dmi7]dřív jsem jen lhal,\ncarpe [G]diem, život je [Emi]krátký,\nv tvých [Ami]očích je klid a [Dmi7]nemám chuť snít, co [G]by bylo dál."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Tak tady mě [G]máš, [Ami]dnes můžeš [G]říkat klidně, co [C]chceš,\nzbylo tak málo vět, tak [Ami]málo slov, co [G]nelžou.\nTak málo slov..."
+    }
+  ]
+}

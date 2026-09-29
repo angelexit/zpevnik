@@ -1,0 +1,82 @@
+{
+  "title": "Dívka s perlami ve vlasech",
+  "artist": "Brichta Aleš",
+  "artistKey": "brichta_ales",
+  "album": "Růže Pro Algernon",
+  "year": "1994",
+  "key": "Emi",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "D",
+    "Emi",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=f7OhR4aylxA&list=RDf7OhR4aylxA&start_radio=1",
+  "last_modified": "2026-04-28T13:27:00.302Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:26:44.814Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[Emi] [D] [Ami] [Emi]\n[G] [D] [Ami] [Emi]\n[G] [D] [Ami] [Emi]"
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Zas mě tu [D]máš, [Ami]nějak se [Emi]mračíš\n[Emi]vybledlej [D]smích [Ami]už ve dve[Emi]řích.\n[Emi]S čelenkou z [D]perel [Ami]svatozář [Emi]strácíš\n[Emi]kolik se [D]platí [Ami]za vláčnej [Emi]hřích."
+    },
+    {
+      "type": "chorus",
+      "text": "No tak [G]lásko, co chceš mi [D]říct\n[Ami]máš už perly možná i [Emi]víc\n[G]lásko [D]na co se ptáš, [Ami]svíčku zhasí[Emi]náš.\nNemám [G]lásko co bych ti [D]dal,\n[Ami]chtělas' všechno, [Emi]nebyl jsem král\n[G]lásko [D]na co se ptáš, [Ami]perly ve vlasech [Emi]máš."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Tvý horký [D]rty, [Ami]víc radši [Emi]ne,\n[Emi]nejsou už [D]mý, [Ami]nejsi má [Emi]Cher.\n[Emi]Něco snad [D]chápu, to [Ami]ne, to [Emi]ne,\n[Emi]bolí to [D]hořím, [Ami]jak černej [Emi]thér."
+    },
+    {
+      "type": "chorus",
+      "text": "No tak [G]lásko, [D]kdo mi tě vzal,\n[Ami]komu dalas [Emi]tělo i duši,\n[G]lásko [D]na co je pláč,\n[Ami]když to skončit [Emi]má."
+    },
+    {
+      "type": "chorus",
+      "text": "No tak [G]lásko, co chceš mi [D]říct\n[Ami]máš už perly možná i [Emi]víc\n[G]lásko [D]na co se ptáš, [Ami]svíčku zhasí[Emi]náš.\nNemám [G]lásko co bych ti [D]dal,\n[Ami]chtělas' všechno, [Emi]nebyl jsem král\n[G]lásko [D]na co se ptáš, [Ami]perly ve vlasech [Emi]máš."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Chtěla jsi [D]víc [Ami]pro svoje [Emi]touhy,\n[Emi]já chudej [D]princ, [Ami]mám jen co [Emi]mám\n[Emi]Co vlastně [D]zbývá [Ami]jen slzy [Emi]pouhý\n[Emi]ze svatebních [D]zvonů, [Ami]z nebeskejch [Emi]bran."
+    },
+    {
+      "type": "chorus",
+      "text": "No tak [G]lásko, [D]kdo mi tě vzal,\n[Ami]komu dalas [Emi]tělo i duši,\n[G]lásko [D]na co je pláč,\n[Ami]když to skončit [Emi]má."
+    },
+    {
+      "type": "chorus",
+      "text": "No tak [G]lásko, co chceš mi [D]říct\n[Ami]máš už perly možná i [Emi]víc\n[G]lásko [D]na co se ptáš, [Ami]svíčku zhasí[Emi]náš.\nNemám [G]lásko co bych ti [D]dal,\n[Ami]chtělas' všechno, [Emi]nebyl jsem král\n[G]lásko [D]na co se ptáš, [Ami]perly ve vlasech [Emi]máš."
+    },
+    {
+      "type": "chorus",
+      "text": "No tak [G]lásko, [D]kdo mi tě vzal,\n[Ami]komu dalas [Emi]tělo i duši,\n[G]lásko [D]na co je pláč,\n[Ami]když to skončit [Emi]má."
+    },
+    {
+      "type": "chorus",
+      "text": "No tak [G]lásko, co chceš mi [D]říct\n[Ami]máš už perly možná i [Emi]víc\n[G]lásko [D]na co se ptáš, [Ami]svíčku zhasí[Emi]náš.\nNemám [G]lásko co bych ti [D]dal,\n[Ami]chtělas' všechno, [Emi]nebyl jsem král\n[G]lásko [D]na co se ptáš, [Ami]perly ve vlasech [Emi]máš."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Podvod",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "František",
+  "year": "1993",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "Ami/C",
+    "D",
+    "Emi",
+    "G",
+    "H7"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:29:41.323Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Emi]Na dlani jednu z tvých řas, do tmy [Ami]se koukám,\n[D]hraju si písničky tvý, co jsem ti [G]psal,\nje skoro [Ami]půlnoc a z kostela [Ami/C]zvon mi noc připo[Emi]míná,\npůjdu se [Ami]mejt a pozhasínám, co bude [H7]dál?"
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Pod polštář dopisů pár, co poslalas, [Ami]dávám,\n[D]píšeš, že ráda mě máš a trápí tě [G]stesk,\nje skoro [Ami]půlnoc a z kostela [Ami/C]zvon mi noc připo[Emi]míná,\npůjdu se [Ami]mejt a pozhasínám, co bude [H7]dál?"
+    },
+    {
+      "type": "chorus",
+      "text": "Chtěl jsem to [Ami]ráno, kdy naposled snídal jsem s tebou,\nti [Emi]říct, že už ti nezavolám,\npro jednu pitomou [Ami]holku, pro pár nocí [D]touhy\npodved jsem [G]všechno, o čem doma si [H7]sníš,\nteď je mi to [Emi]líto[Emi].[Ami]"
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Kolikrát člověk může mít rád tak opravdu [Ami]z lásky,\n[D]dvakrát či třikrát - to ne, i jednou je [G]dost,\nje skoro [Ami]půlnoc a z kostela [Ami/C]zvon mi noc připo[Emi]míná,\npůjdu se [Ami]mejt a pozhasínám, co bude [H7]dál?"
+    },
+    {
+      "type": "chorus",
+      "text": "Chtěl jsem to [Ami]ráno, kdy naposled snídal jsem s tebou,\nti [Emi]říct, že už ti nezavolám,\npro jednu pitomou [Ami]holku, pro pár nocí [D]touhy\npodved jsem [G]všechno, o čem doma si [H7]sníš,\nteď je mi to [Emi]líto[Emi].[Ami]"
+    },
+    {
+      "type": "chorus",
+      "text": "Chtěl jsem to [Ami]ráno, kdy naposled snídal jsem s tebou,\nti [Emi]říct, že už ti nezavolám,\npro jednu pitomou [Ami]holku, pro pár nocí [D]touhy\npodved jsem [G]všechno, o čem doma si [H7]sníš,\nteď je mi to [Emi]líto[Emi].[Ami]"
+    }
+  ]
+}

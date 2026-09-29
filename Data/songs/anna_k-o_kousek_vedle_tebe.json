@@ -1,0 +1,67 @@
+{
+  "title": "O kousek vedle tebe",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Noc na zemi",
+  "year": "2005",
+  "key": "D",
+  "capo": 0,
+  "used_chords": [
+    "C",
+    "D",
+    "Dsus4",
+    "G",
+    "Hmi"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=Fn2e6s1Ufd4&list=RDFn2e6s1Ufd4&start_radio=1",
+  "last_modified": "2026-04-28T13:14:13.524Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:14:10.549Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[D]Až mi na růžích ustelou[Dsus4]\n[G]o kousek vedle tebe[Hmi]\n[D]a omámí vůní bezcennou[Dsus4]\n[G]studenou až to zebe[Hmi]"
+    },
+    {
+      "type": "verse",
+      "text": "[D]Pod mojí hlavou rozkvetou a [C]zalitý slzou zakletou[G]\nse obtočí kolem nás[D]\nspojený tichou záhadou s [C]podivnou zimní zahradou[G]\nvrátíme o den čas[D]"
+    },
+    {
+      "type": "verse",
+      "text": "[D]Hlasy jsou jenom ozvěnou[Dsus4]\n[G]slyšíme slova předem[Hmi]\n[D]ležíme spolu za stěnou[Dsus4]\n[G]ležíme vedle sebe[Hmi]"
+    },
+    {
+      "type": "verse",
+      "text": "[D]Pod mojí slzou rozkvetou a [C]podruhý smyčku zakletou[G]\nutáhnou kolem nás[D]\nspojený tichou záhadou s [C]podivnou zimní zahradou[G]\nvracíme o den čas[D]"
+    },
+    {
+      "type": "chorus",
+      "text": "[D]Stoupám [C]vzhůru, [G]mám to blíž[D]\n[D]Stoupám [C]vzhůru, [G]mám to blíž[D]\n[D]Stoupám [C]vzhůru, [G]mám to blíž[D]"
+    },
+    {
+      "type": "verse",
+      "text": "[D]Pod mojí slzou rozkvetou  a [C]naposled smyčku zakletou[G]\nutáhnou kolem nás[D]\nspojený tichou záhadou s [C]podivnou zimní zahradou[G]\nvracíme o den čas[D]"
+    },
+    {
+      "type": "chorus",
+      "text": "[D]Stoupám [C]vzhůru, [G]mám to blíž[D]\n[D]Stoupám [C]vzhůru, [G]mám to blíž[D]\n[D]Stoupám [C]vzhůru, [G]mám to blíž[D]"
+    }
+  ]
+}

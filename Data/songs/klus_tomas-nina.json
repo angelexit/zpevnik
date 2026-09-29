@@ -1,0 +1,70 @@
+{
+  "title": "Nina",
+  "artist": "Klus Tomáš",
+  "artistKey": "klus_tomas",
+  "album": "Racek",
+  "year": "2011",
+  "key": "D",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "D",
+    "G",
+    "Hmi"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T10:09:24.298Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[D]Dnes v noci jsem ze spaní křičela tvoje jméno, \njá v[Hmi]ím, že nejsi rád, ale nejde zapomenout, \njak při[G] každém slově přivíráš víčka. \nProsím, [A]vyslyš moji zpověď, už jsme starý na psaníčka."
+    },
+    {
+      "type": "verse",
+      "text": "Jsem [D]bytost z vodních par, živa jenom z tvého dechu, \njá [Hmi]vím, že nejsi rád a že je ti to k vzteku, \nchci ti [G]všechno říct a pak se někam schovat, \ntřeba [A]pochopíš, jak je těžké nemilovat."
+    },
+    {
+      "type": "verse",
+      "text": "Zase [D]zrychlil se mi dech, jak maratonským běžcům, \nco je to [Hmi]za příběh bez lásky, bez milenců, \nnemáš [G]slov, patrně všechna patří jiným, \nprosím, [A]proměň je s nimi ve snech v gesta i v činy."
+    },
+    {
+      "type": "verse",
+      "text": "A já tu [D]zůstanu, ztracené malířské plátno, \ntřeba se [Hmi]vrátíš a já zas nechám se napnout, \nprosím, [G]maluj mě, tvoř k obrazu svému, \nnech mě [A]shořet, už nikdy o nás nemluv."
+    },
+    {
+      "type": "chorus",
+      "text": "Jsi mé úzko, [D]jsi krev z řezných ran,                   \njsi ten, k[Hmi]do vchází nepozván, \njsi z[G]vuk, když padnou mi na rety slzy m[A]úz. \nJsi mé [D]úzko, jsi krev z řezných ran, \načkoli n[Hmi]echci, jsi ve mně uschován, \njsi z[G]vuk, když padnou mi na rety slzy m[A]úz."
+    },
+    {
+      "type": "verse",
+      "text": "Až [D]splynu se vzduchem, nechám rozplakat nebe, \nbudu [Hmi]vším tím, co lidi k propasti svede, \nbudu [G]krysařovou flétnou a ozvěna v tvé duši, \npak [A]ptáci tiše vzlétnou, by nedali tušit."
+    },
+    {
+      "type": "verse",
+      "text": "Že se [D]nebe nakloní a zatřese světem, \ntvé [Hmi]černé svědomí poprvé promluví k obětem \n[G]nerovných bojů tvé sebestředné války, \nsr[A]dečních nepokojů, cos pozoroval z dálky."
+    },
+    {
+      "type": "chorus",
+      "text": "Jsi mé úzko, [D]jsi krev z řezných ran,                   \njsi ten, k[Hmi]do vchází nepozván, \njsi z[G]vuk, když padnou mi na rety slzy m[A]úz. \nJsi mé [D]úzko, jsi krev z řezných ran, \načkoli n[Hmi]echci, jsi ve mně uschován, \njsi z[G]vuk, když padnou mi na rety slzy m[A]úz."
+    }
+  ]
+}

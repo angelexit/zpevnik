@@ -1,0 +1,89 @@
+{
+  "title": "V blbým věku",
+  "artist": "Xindl-X",
+  "artistKey": "xindlx",
+  "album": "Čecháček Made",
+  "year": "2014",
+  "key": "Ami",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D7",
+    "Dmi7",
+    "E",
+    "F",
+    "G"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T10:50:15.632Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[G]Ujel [C]mi vlak i posled[G]ní metro,\nještě jsem [Ami]nebyl in a už jsem [D7]retro.\nNež jsem se [F]z pulce vyloup [G]v samce,\nco má [C]všechno pod pal[Ami]cem,\n[F]v den svý šance na poslední [Dmi7]jamce zaspal [G]jsem."
+    },
+    {
+      "type": "verse",
+      "text": "[G]Ujel mi [C]vlak, tak už to [G]chodí,\nhlavu [Ami]nevěším, pojedu [D7]lodí.\nNež si to [F]hodit, spíš se [G]hodím do po[C]hody u vo[Ami]dy\na [F]počkám si až retro zase [Dmi7]přijde do mó[G]dy."
+    },
+    {
+      "type": "chorus",
+      "text": "Jó, [F]stále [G]mě to bav[Ami]í, sázet se s osudem,[G]\n[F]byť čas utíká víc, než je [G]milo.\n[F]Stále [G]věřím, že ze [Ami]mě ještě něco bude,[G]\nno [F]jo, ale co když už [E]bylo?"
+    },
+    {
+      "type": "chorus",
+      "text": "Včera mi [Ami]bylo málo, [F]dneska je mi [C]moc,\njak se to [G]stalo, nevím,\n[Ami]každopádně [F]jsem zas v blbým [G]věku\na jedu mimo [Ami]trať a [F]říkám si tak [C]ať,\nvždyť všechny [G]mosty vedou [F]beztak\npo stý [G]přes tu stejnou [Ami]řeku.\n\nVčera mi [Ami]bylo málo, [F]dneska je mi [C]moc,\njak se to [G]stalo, nevím,\n[Ami]každopádně [F]jsem zas v blbým [G]věku\na pluju proti [Ami]proudu vstříc [F]poslednímu [C]soudu\na jsem [G]radši vám všem p[F]ro smích,\nnež [G]abych byl sobě k [Ami]breku."
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Na - [G]na  - [Ami]na… - vč[G]era mi [F]bylo málo, [G]dneska je mi [Ami]moc,\n[F]na - [G]na - n[Ami]a… - vče[G]ra mi [F]bylo málo, [G]dneska je mi [Ami]moc.[G]"
+    },
+    {
+      "type": "verse",
+      "text": "[G]Ujel mi [C]vlak před rokem v [G]dubnu,\nještě jsem [Ami]nezmoudřel a už zas [D7]blbnu.\nJak dopus[F]til jsem to, že [G]život protek [C]mi mezi prs[Ami]ty,\n[F]nevím, věřím, že až se prospím, [Dmi7]pochopím, co s [G]tím."
+    },
+    {
+      "type": "chorus",
+      "text": "Jó, [F]stále [G]mě to bav[Ami]í, sázet se s osudem,[G]\n[F]teď mám v kapse jen poslední [G]kilo.\n[F]Stále [G]věřím, že ze [Ami]mě ještě něco bude,[G]\nno [F]jo, ale co když už [E]bylo?"
+    },
+    {
+      "type": "chorus",
+      "text": "Včera mi [Ami]bylo málo, [F]dneska je mi [C]moc,\njak se to [G]stalo, nevím,\n[Ami]každopádně [F]jsem zas v blbým [G]věku\na jedu mimo [Ami]trať a [F]říkám si tak [C]ať,\nvždyť všechny [G]mosty vedou [F]beztak\npo stý [G]přes tu stejnou [Ami]řeku.\n\nVčera mi [Ami]bylo málo, [F]dneska je mi [C]moc,\njak se to [G]stalo, nevím,\n[Ami]každopádně [F]jsem zas v blbým [G]věku\na pluju proti [Ami]proudu vstříc [F]poslednímu [C]soudu\na jsem [G]radši vám všem p[F]ro smích,\nnež [G]abych byl sobě k [Ami]breku."
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Na - [G]na  - [Ami]na… - vč[G]era mi [F]bylo málo, [G]dneska je mi [Ami]moc,\n[F]na - [G]na - n[Ami]a… - vče[G]ra mi [F]bylo málo, [G]dneska je mi [Ami]moc.[G]"
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Na - [G]na  - [Ami]na… - vč[G]era mi [F]bylo málo, [G]dneska je mi [Ami]moc,\n[F]na - [G]na - n[Ami]a… - vče[G]ra mi [F]bylo málo, [G]dneska je mi [Ami]moc.[G]"
+    },
+    {
+      "type": "chorus",
+      "text": "Včera mi [Ami]bylo málo, [F]dneska je mi [C]moc,\njak se to [G]stalo, nevím,\n[Ami]každopádně [F]jsem zas v blbým [G]věku\na jedu mimo [Ami]trať a [F]říkám si tak [C]ať,\nvždyť všechny [G]mosty vedou [F]beztak\npo stý [G]přes tu stejnou [Ami]řeku.\n\nVčera mi [Ami]bylo málo, [F]dneska je mi [C]moc,\njak se to [G]stalo, nevím,\n[Ami]každopádně [F]jsem zas v blbým [G]věku\na pluju proti [Ami]proudu vstříc [F]poslednímu [C]soudu\na jsem [G]radši vám všem p[F]ro smích,\nnež [G]abych byl sobě k [Ami]breku."
+    },
+    {
+      "type": "chorus",
+      "text": "[F]Na - [G]na  - [Ami]na… - vč[G]era mi [F]bylo málo, [G]dneska je mi [Ami]moc,\n[F]na - [G]na - n[Ami]a… - vče[G]ra mi [F]bylo málo, [G]dneska je mi [Ami]moc.[G]"
+    }
+  ]
+}

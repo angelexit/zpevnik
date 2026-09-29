@@ -1,0 +1,65 @@
+{
+  "title": "Slunovrat",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Na kameni kámen",
+  "year": "1985",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "Ami/C",
+    "C",
+    "Dmi",
+    "Emi",
+    "G",
+    "H7"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:34:49.175Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Ami]Stíny nad obzo[Ami/C]rem pomalu jd[H7]ou, [Emi]noc se s[Ami]náší,\n[Ami]paseky osvítí [Ami/C]zář z borovejch [Ami]klád zapále[Emi]nejch."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Sešli se zapome[C]nout [G]a zvednout hlavu, to [Dmi]stačí,\n[Ami]jen trochu popadnout de[Emi]ch, než půjdou zas [Ami]dál."
+    },
+    {
+      "type": "verse",
+      "text": "Ohnutý lžíce a nůž, dům z igelitu, lístek zpátky,\nboudy na zastávkách, kde potkáváš lidi, co potkat jsi chtěl."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Sešli se zapome[C]nout [G]a zvednout hlavu, to [Dmi]stačí,\n[Ami]jen trochu popadnout de[Emi]ch, než půjdou zas [Ami]dál."
+    },
+    {
+      "type": "verse",
+      "text": "Stíny nad obzorem pomalu jdou, právě svítá,\nšlápoty, ohniště, klid, smutnej je kemp opuštěnej."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Sešli se zapome[C]nout [G]a zvednout hlavu, to [Dmi]stačí,\n[Ami]jen trochu popadnout de[Emi]ch, než půjdou zas [Ami]dál."
+    }
+  ]
+}

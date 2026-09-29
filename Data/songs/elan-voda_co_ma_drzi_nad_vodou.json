@@ -1,0 +1,64 @@
+{
+  "title": "Voda čo ma drží nad vodou",
+  "artist": "Elán",
+  "artistKey": "elan",
+  "album": "",
+  "year": "",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "E",
+    "Emi",
+    "F",
+    "G"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-07-12T18:46:22.995Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[C]Keby bolo [F]niečo, [G]čo sa ti dá [C]zniesť \n[C]Okrem neba [F]nado mnou [C]a mi[G]liónov [F]hviezd[G]\n[C]Tak by som to [F]zniesol [G]vždy znova a [Emi]rád[F]\nK tvojím nohám [C]dobré veci [G]ako vodo[F]pád"
+    },
+    {
+      "type": "verse",
+      "text": "[C]Keby som mal [F]kráčať [G]sám a zrane[C]ný\n[C]Šiel by som až [F]tam, [C]kde [G]tvoja duša [F]prame[G]ní\n[C]Keby som ten [F]prameň [G]našiel ná[Emi]hodou[F]\nBola by to [C]voda, čo ma [G]drží nad vod[F]ou"
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Možeš zabud[Ami]núť, [F]stačí kým tu [C]si\n[Emi]Iba ďalej [Ami]buď, nič [F]viac nemusíš[G]"
+    },
+    {
+      "type": "chorus",
+      "text": "[E]Chcem sa z teba [Ami]napiť, [C]šaty odhoď [G]preč [E]\n[E]Čo ma byť sa [Ami]stane, tak [G]cez moje dla[F]ne\nAko [E]čistý prameň teč \n[E]Ak ťa eště [Ami]trápi [C]smútok z rozcho[G]dov [E]\n[E]Ono sa to [Ami]poddá, [G]ty si predsa [F]voda\nČo ma [E]drží nad vodou"
+    },
+    {
+      "type": "verse",
+      "text": "[C]Keby bolo [F]niečo, [G]čo sa ti dá znie[C]sť \n[C]Okrem neba [F]nado mnou  [C]a [G]miliónov [F]hviezd[G]\n[C]Tak by som to [F]zniesol [G]vždy znova a [Emi]ráád[F]\nK tvojím nohám [C]dobré veci [G]ako vodo[F]pád"
+    },
+    {
+      "type": "verse",
+      "text": "[E]Chcem sa z teba [Ami]napiť, [C]šaty odhoď [G]preč[E]\n[E]Čo ma byť sa [Ami]stane, tak [G]cez moje dla[F]ne\nAko [E]čistý prameň teč \n[E]Ak ťa eště [Ami]trápi [C]smútok z rozcho[G]dov[E]\n[E]Ono sa to [Ami]poddá, [G]ty si predsa [F]voda\nČo ma [E]drží nad vodou"
+    }
+  ]
+}

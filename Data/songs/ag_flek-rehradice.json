@@ -1,0 +1,57 @@
+{
+  "title": "Rehradice",
+  "artist": "AG Flek",
+  "artistKey": "ag_flek",
+  "album": "Tramtárie",
+  "year": "1991",
+  "key": "Dmi",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "Dmi",
+    "F",
+    "G",
+    "G7",
+    "Gmi"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=-0Zp10i_enQ&list=RD-0Zp10i_enQ&start_radio=1",
+  "last_modified": "2026-06-13T08:52:06.429Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T12:51:20.299Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Dmi]A te Rehradice [C]na pěkný ro[F]vině,\n[G]teče tam vo[Ami]děnka [Dmi]dole po [G7]dě[C]dině,\n[Gmi]je pěk[Ami]ná, je [Dmi]čistá."
+    },
+    {
+      "type": "verse",
+      "text": "[Dmi]A po tej voděnce [C]drobný rybe [F]skáčou,\n[G]pověz mi, má [Ami]milá, [Dmi]proč tvý [G7]oči [C]pláčou\n[Gmi]tak smut[Ami]ně, ža[Dmi]lostně."
+    },
+    {
+      "type": "verse",
+      "text": "[Dmi]Pláčou oni, pláčou [C]šohajó pro [F]tebe,\n[G]že sme sa do[Ami]stali [Dmi]daleko [G7]od [C]sebe,\n[Gmi]dale[Ami]ko od [Dmi]sebe."
+    },
+    {
+      "type": "verse",
+      "text": "[Dmi]A te Rehradice [C]na pěkný ro[F]vině,\n[G]teče tam vo[Ami]děnka [Dmi]dole po [G7]dě[C]dině,\n[Gmi]je pěk[Ami]ná, je [Dmi]čistá."
+    }
+  ]
+}

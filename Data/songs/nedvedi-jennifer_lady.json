@@ -1,0 +1,53 @@
+{
+  "title": "Jennifer Lady",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Balady",
+  "year": "1995",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "C",
+    "D",
+    "G"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-09T06:08:14.341Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "Drobně [G]mží a do noci zvon z majáku [C]lodím zavolal [G]vstříc,\nútesy skal ostrých jak nůž už proplou[D]vá.\nJeniffer [G]Lady, tak malá jak stín, má na boku [C]ránu a v plachtoví k[G]lín,\nto z pitomý války muži se [D]vrací domů  k [G]nám."
+    },
+    {
+      "type": "verse",
+      "text": "Kolik jich [G]šlo a vrací se půl, to bude [C]pláče a po dlaních [G]sůl,\nco bez tátů synů a bez věna dcer, Bože, co bude [D]dál?\nPřestane [G]svítat, až do hrobu dáš všechen ten [C]smutek, má Irská [G]zem?\nCo platný jsou květy a všechna ta [D]sláva? Bože co bude [G]dál?"
+    },
+    {
+      "type": "verse",
+      "text": "V srdci [G]úzkost, na duši vzdor, myšlenky [C]letí jak potoky z [G]hor.\nDokud nám budou poroučet blázni, kde bude [D]svět?\nSvobodo [G]drahá, kolik to stojíš? Kolik nás [C]zemře ve válkách [G]jen?\nAž jednou ráno snad vyjdeš jak [D]slunce v jedinej [G]den."
+    },
+    {
+      "type": "verse",
+      "text": "Drobně [G]mží a do noci zvon z majáku [C]lodím zavolal [G]vstříc,\nútesy skal ostrých jak nůž už proplou[D]vá.\nJeniffer [G]Lady, tak malá jak stín, má na boku [C]ránu a v plachtoví [G]klín,\nto z pitomý války muži se [D]vrací domů  k [G]nám."
+    }
+  ]
+}

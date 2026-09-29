@@ -1,0 +1,53 @@
+{
+  "title": "Hráz",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Na kameni kámen",
+  "year": "1985",
+  "key": "Ami",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D7",
+    "E",
+    "Emi",
+    "G",
+    "Hmi"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:21:02.343Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "S[G]tál tam na stráni [Hmi]dům, v něm židle a s[Emi]tůl,\npár kůží a k[G]rb, co dřevo z něj v[Ami]oní,\ns j[D7]arem, když máj rozdá barvy svý,\ntu sosna krásná nad chajdou se skl[G]oní[D7],\na ř[G]íčka, když stříbrným h[Hmi]ávem se přikryje s r[Emi]ánem,\nsvý ahoj jí d[G]áš a pak je tu d[E]en,\nz[C]azní údolím kytara tvá, ta p[Emi]íseň ráno uvítá,\nsvět s n[D7]ím, svět s n[G]ím[D7]."
+    },
+    {
+      "type": "verse",
+      "text": "Touláš se po lese, touláš a jenom tak bloumáš\na koruny stromů tě uvítaj' rosou,\nvíš, že času je dost, to znáš,\na možná potkáš někde dívku bosou,\npo slůvkách, který se říkaj', po dnech něžných stisků\nvás uvítá chajda a zas je tu den,\nzazní údolím kytara tvá, ta píseň ráno uvítá,\nsvět s ním, svět s ním."
+    },
+    {
+      "type": "verse",
+      "text": "Však náhle volání táhlé ti přeruší snění\na oznámí všem: je poslední den,\nvoda zaplaví údolí,\nsosnu, chajdu, pohled zabolí,\nta hráz je potřebná všem, však zabíjí den,\nco nosil tě v náručí romantickém,\nzazní údolím bolest tvá, ta bolest ráno uvítá,\nsvět s ním, svět s ním ..."
+    }
+  ]
+}

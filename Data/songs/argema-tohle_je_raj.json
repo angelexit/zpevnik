@@ -1,0 +1,63 @@
+{
+  "title": "Tohle je ráj",
+  "artist": "Argema",
+  "artistKey": "argema",
+  "album": "Tohle je ráj",
+  "year": "1995",
+  "key": "C",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "Emi",
+    "F",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=L-kyYkNEpD8&list=RDL-kyYkNEpD8&start_radio=1",
+  "last_modified": "2026-04-28T13:19:22.332Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:19:14.474Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[C]Před kým dveře zavíráš, [Ami]proč se stále schováváš,\n[Emi]bojíš se prý nočních můr, [F]kam to utíkáš,\n[G]počkej na mě baby."
+    },
+    {
+      "type": "verse",
+      "text": "[C]Pořád mě jen odmítáš, [Ami]proč už něco neříkáš,\n[Emi]blízko už je věčný ráj, [F]tam tě nečekám,\n[G]moje smutná Lady."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Pojď ke mně a dej mi ruku, ať [Emi]ji políbím,\n[Ami]tvé oči jsou tak blízko, já [Emi]ti nabízím,\nnabí[F]zím toulá[G]ní, poslou[F]chej volá[G]ní:\nTohle je [C]ráj, tohle je [Ami]ráj, tohle je [F]ráj, tohle je [G]ráj."
+    },
+    {
+      "type": "verse",
+      "text": "[C]Neboj se jít kousek blíž, [Ami]konečně snad uvidíš,\n[Emi]je to jako v pohádkách, [F]jsi tak bláznivá,\n[G]budu Tě jen líbat."
+    },
+    {
+      "type": "verse",
+      "text": "[C]Zavři oči, neváhej, [Ami]jenom kousek srdce dej,\n[Emi]polož hlavu na mou dlaň, [F]teď už můžu sám,\n[G]na Tebe se dívat."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Pojď ke mně a dej mi ruku, ať [Emi]ji políbím,\n[Ami]tvé oči jsou tak blízko, já [Emi]ti nabízím,\nnabí[F]zím toulá[G]ní, poslou[F]chej volá[G]ní:\nTohle je [C]ráj, tohle je [Ami]ráj, tohle je [F]ráj, tohle je [G]ráj."
+    }
+  ]
+}

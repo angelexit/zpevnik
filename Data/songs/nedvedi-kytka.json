@@ -1,0 +1,77 @@
+{
+  "title": "Kytka",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Sedmikráska",
+  "year": "1992",
+  "key": "G",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "D",
+    "G"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-07-12T19:30:13.333Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "Otvírám [G]lásku na stránce [D]\"rád\",\npřišel jsem, [A]milá má, něco Ti [D]dát,\nzeptat se, co [G]děláš a jakej byl [D]den,\npohladit [A]tvář, tu kytku si [D]vem."
+    },
+    {
+      "type": "chorus",
+      "text": "Ty jsi tak [G]jiná, tak jiná, kdo [D]ví,\njestli má [A]touha tě nepora[D]ní.\nTy jsi tak [G]jiná, pojď, ruku mi [D]dej,\ns Tebou je [A]celej svět jak vyměně[D]nej."
+    },
+    {
+      "type": "verse",
+      "text": "Sedíme tu [G]spolu a slova si [D]jdou,\npropletený [A]prsty ležej na kole[D]nou, \noči jako [G]čert a malinkej [D]nos,\nze všech je [A]nejhezčí, tiše, už [D]dost."
+    },
+    {
+      "type": "chorus",
+      "text": "Ty jsi tak [G]jiná, tak jiná, kdo [D]ví,\njestli má [A]touha tě nepora[D]ní.\nTy jsi tak [G]jiná, pojď, ruku mi [D]dej,\ns Tebou je [A]celej svět jak vyměně[D]nej."
+    },
+    {
+      "type": "bridge",
+      "text": "[G]    [D]    [A]    [G] ."
+    },
+    {
+      "type": "chorus",
+      "text": "Ty jsi tak [G]jiná, tak jiná, kdo [D]ví,\njestli má [A]touha tě nepora[D]ní.\nTy jsi tak [G]jiná, pojď, ruku mi [D]dej,\ns Tebou je [A]celej svět jak vyměně[D]nej."
+    },
+    {
+      "type": "verse",
+      "text": "Otvírám [G]lásku na stránce \"[D]rád\",\nTy jsi tak jiná, tak jiná, kdo ví,\npřišel jsem, [A]milá má, něco Ti [D]dát,\njestli má touha tě neporaní\nzeptat se, co [G]děláš a jakej byl [D]den,\nTy jsi tak jiná, pojď, ruku mi dej,\npohladit [A]tvář, tu kytku si [D]vem.\ns Tebou je celej svět jak vyměněnej."
+    },
+    {
+      "type": "chorus",
+      "text": "Ty jsi tak [G]jiná, tak jiná, kdo [D]ví,\njestli má [A]touha tě nepora[D]ní.\nTy jsi tak [G]jiná, pojď, ruku mi [D]dej,\ns Tebou je [A]celej svět jak vyměně[D]nej."
+    },
+    {
+      "type": "chorus",
+      "text": "Ty jsi tak [G]jiná, tak jiná, kdo [D]ví,\njestli má [A]touha tě nepora[D]ní.\nTy jsi tak [G]jiná, pojď, ruku mi [D]dej,\ns Tebou je [A]celej svět jak vyměně[D]nej."
+    },
+    {
+      "type": "chorus",
+      "text": "jestli má [A]touha tě nepora[D]ní\nTy jsi tak [G]jiná, pojď, ruku mi [D]dej,\ns Tebou je [A]celej svět jak vyměně[D]nej"
+    }
+  ]
+}

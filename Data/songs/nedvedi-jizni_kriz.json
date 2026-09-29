@@ -1,0 +1,67 @@
+{
+  "title": "Jižní kříž",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Jakub",
+  "year": "1991",
+  "key": "D",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "A7",
+    "D",
+    "Emi",
+    "Hmi"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:25:11.736Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[D] [Hmi] [A] [Emi] [D] [Hmi] [A]"
+    },
+    {
+      "type": "verse",
+      "text": "[D]Spí Jižní kříž,\njak [Hmi]říkali jsme hvězdám kdysi v ml[A]ádí,\nto [Emi]na studený zemi\nještě [D]uměli jsme [Hmi]milovat a sp[A]át."
+    },
+    {
+      "type": "verse",
+      "text": "Dál, však to víš,\nsvětem protloukal ses, jak ten život pádí,\ndneska písničky třeba vod Červánku\ndojmou tě, jak vrátil bys' to rád."
+    },
+    {
+      "type": "chorus",
+      "text": "Zase [Emi]toulal by ses Foglarovým [D]rájem\na sta[Hmi]věl Bobří hr[A]áz,\nse smečkou [Emi]vlků čekal na jaro,\njak [D]stejská se, až [Hmi]po zádech jde mr[A]áz.[A7]"
+    },
+    {
+      "type": "verse",
+      "text": "Spí Jižní kříž,\nvidí všechna místa, kde jsi někdy byl,\nto když, naplněnej smutkem,\njsi plakal, plakal nebo snil."
+    },
+    {
+      "type": "chorus",
+      "text": "Zase [Emi]toulal by ses Foglarovým [D]rájem\na sta[Hmi]věl Bobří hr[A]áz,\nse smečkou [Emi]vlků čekal na jaro,\njak [D]stejská se, až [Hmi]po zádech jde mr[A]áz.[A7]"
+    },
+    {
+      "type": "outro",
+      "text": "[D] [Hmi] [D]"
+    }
+  ]
+}

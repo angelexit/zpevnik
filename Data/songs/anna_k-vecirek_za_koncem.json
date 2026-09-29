@@ -1,0 +1,74 @@
+{
+  "title": "Večírek za koncem",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Stačí, když se díváš",
+  "year": "2001",
+  "key": "G",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=_3Z2UbB5zDA&list=RD_3Z2UbB5zDA&start_radio=1",
+  "last_modified": "2026-04-28T13:15:24.182Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:15:20.944Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[G] [Ami]"
+    },
+    {
+      "type": "verse",
+      "text": "Ještě [G]svět se ukrejvá ta chvíle přebejvá\nA [Ami]víc jí nezbejvá ještě tiše pokejvá\nPotom se [G]zlou radostí tě praští do kostí\nA [Ami]bolest zůstává jenom jizva krvavá"
+    },
+    {
+      "type": "bridge",
+      "text": "[C]Přece se nekončí ránem večerem [D]nezačíná\nSvět se [C]nemění náhle a [D]neusíná"
+    },
+    {
+      "type": "chorus",
+      "text": "Víno se [G]dopíjí oči se [Ami]nemýlí\nStopy se [C]nezkrejou tak [D]kam ty lidi jdou\nVečírek za [G]koncem světla se slun[Ami]cem\nZačal o [C]dost dřív [D]něco o tom vím, něco o tom vím"
+    },
+    {
+      "type": "bridge",
+      "text": "[G] [Ami]"
+    },
+    {
+      "type": "verse",
+      "text": "Za [G]tichým obzorem kde je prapodivná zem\nKde [Ami]se nikdy nekončí a nikdo neloučí\n[G]Doufám že stojí za ten pláč a prázdnej květináč\n[Ami]a stíny ve slunci a vůně matoucí"
+    },
+    {
+      "type": "bridge",
+      "text": "[C]Přece se nekončí ránem večerem [D]nezačíná\nSvět se [C]nemění náhle a [D]neusíná"
+    },
+    {
+      "type": "chorus",
+      "text": "Víno se [G]dopíjí oči se [Ami]nemýlí\nStopy se [C]nezkrejou tak [D]kam ty lidi jdou\nVečírek za [G]koncem světla se slun[Ami]cem\nZačal o [C]dost dřív [D]něco o tom vím, něco o tom vím"
+    },
+    {
+      "type": "verse",
+      "text": "Víno se [G]dopíjí oči se [Ami]nemýlí\nStopy se [C]nezkrejou tak [D]kam ty lidi jdou\nVečírek za [G]koncem světla se slun[Ami]cem\nZačal o [C]dost dřív [D]něco o tom vím, něco o tom vím"
+    }
+  ]
+}

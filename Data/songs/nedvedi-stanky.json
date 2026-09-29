@@ -1,0 +1,62 @@
+{
+  "title": "Stánky",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Na kameni kámen",
+  "year": "1985",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "D",
+    "Dm",
+    "E"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:35:18.399Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[A]U stánků [D]na levnou krásu[A], postávaj [Dmi]a smějou se času,\n[A]s cigaretou a s [E]holkou, co nemá kam [A]jít."
+    },
+    {
+      "type": "verse",
+      "text": "Skleniček pár a pár tahů z trávy, uteče den jak večerní \nzprávy,\nneuměj žít a bouřej se a neposlouchaj."
+    },
+    {
+      "type": "chorus",
+      "text": "Jen [D]zahlídli svět - [E]maj na duši vrásky,\ntak [A]málo je, tak [Dmi]málo je lásky,\n[A]ztracená víra [E]hrozny z vinic neposbí[A]rá. [E]"
+    },
+    {
+      "type": "verse",
+      "text": "U stánků na levnou krásu, postávaj a ze slov a hlasů \npoznávám,\njak málo jsme jim stačili dát."
+    },
+    {
+      "type": "chorus",
+      "text": "Jen [D]zahlídli svět - [E]maj na duši vrásky,\ntak [A]málo je, tak [Dmi]málo je lásky,\n[A]ztracená víra [E]hrozny z vinic neposbí[A]rá. [E]"
+    },
+    {
+      "type": "chorus",
+      "text": "Jen [D]zahlídli svět - [E]maj na duši vrásky,\ntak [A]málo je, tak [Dmi]málo je lásky,\n[A]ztracená víra [E]hrozny z vinic neposbí[A]rá. [E]"
+    }
+  ]
+}

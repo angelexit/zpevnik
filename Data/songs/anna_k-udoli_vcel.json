@@ -1,0 +1,66 @@
+{
+  "title": "Údolí včel",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Údolí včel",
+  "year": "2023",
+  "key": "D",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "C",
+    "D",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=TYmB5xf0xf0&list=RDTYmB5xf0xf0&start_radio=1",
+  "last_modified": "2026-04-28T13:14:45.831Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:14:39.670Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[D] [G] [A] [D] [G] [A]"
+    },
+    {
+      "type": "verse",
+      "text": "Když se [D]nad novým ránem vyčistil vzduch\nA ty [G]otevíráš oči jako [A]ohrožený druh\nTo může, [D]zítřek nám vyřeší láska\nV srdci [G]věřím[A]\nA jak se s [D]dalším nádechem rozloučila tma\nZnovu [G]zavíráme oči, to se [A]občas dělat má\nSpolu [D]zapomenem na lidi i čas\nNa hradě z [G]peří([D])"
+    },
+    {
+      "type": "chorus",
+      "text": "Jsi můj [G]ztracený [A]grál\nJá tvoje [D]údolí včelC\nJsi [G]medový král\nCo [A]pro mý srdce dolů [D]šel[C]\nJsi můj [G]ztracený grál[A]\nJá tvoje [D]údolí včel[C]\nJsi [G]poslední král\nCo [A]pro mý srdce zemřít [D]chtěl[G] [A]"
+    },
+    {
+      "type": "verse",
+      "text": "Když se [D]prosekáš trním, až na dno, kde je chlad\n[G]Jestli mi rozumíš, kde [A]není o co stát\nKde už [D]neuvidíš oheň\nAni z těch nejvyšších [G]věží[A]\nJestli mě [D]slyšíš, kde je světlo bývá taky tma\n[G]Nemáš jenom oči něco v [A]tobě cestu zná\nZnovu [D]zapomenem na lidi i čas\nNa hradě z [G]peří[A]"
+    },
+    {
+      "type": "chorus",
+      "text": "Jsi můj [G]ztracený [A]grál\nJá tvoje [D]údolí [C]včel\nJsi [G]medový král\nCo [A]pro mý srdce dolů [D]šel[C]\nJsi můj [G]ztracený [A]grál\nJá tvoje [D]údolí [C]včel\nJsi [G]poslední král\nCo [A]pro mý srdce dolů [D]šel[C]"
+    },
+    {
+      "type": "chorus",
+      "text": "Jsi můj [G]ztracený [A]grál\nJá tvoje [D]údolí [C]včel\nJsi [G]medový král\nCo [A]pro mý srdce zemřít [D]chtěl[C]\nJsi můj [G]ztracený [A]grál\nJá tvoje [D]údolí [C]včel\nJsi [G]poslední král\nCo [A]pro mý srdce dolů [D]šel"
+    },
+    {
+      "type": "outro",
+      "text": "Jsi [G]poslední král\nCo [A]pro mý srdce domů [D]šel\nJsi [G]poslední král\nCo [A]pro mý srdce domů [D]šel\nJsi [G]poslední král\nCo [A]pro mý srdce domů [D]šel\nJsi [G]poslední král\nCo [A]pro mý srdce domů [D]šel\n[G] [A] [D]"
+    }
+  ]
+}

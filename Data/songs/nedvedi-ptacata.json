@@ -1,0 +1,62 @@
+{
+  "title": "Ptáčata",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Ptáčata",
+  "year": "1987",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Ami/C",
+    "C",
+    "D7",
+    "G"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:31:10.040Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[G]Na kolejích stála a za uchem květ, \nvlasy trávou zavázaný,\ns [C]kytarou na zádech, [G]strun už jen pět, \n[D7]hezký oči uplaka[G]ný."
+    },
+    {
+      "type": "verse",
+      "text": "[G]Opuštěnejch ptáčat plnej je svět, \nhnízda hledaj, neví, co dál,\n[C]vyšlápli jsme ránem a v [G]neděli zpět,                        \n[D7]za tejden jsem u trati  [G/G7]stál."
+    },
+    {
+      "type": "chorus",
+      "text": "[C]Víš, holky těžší to [G]maj',\n[Ami/C]víš, holky těžší to [G]maj',"
+    },
+    {
+      "type": "verse",
+      "text": "[G]Říkal jsem jí štístko zatoulaný, \nvždycky smála se a začala hrát\n[C]o potocích v trávě a [G]o znamení,\n[D7]co lidi uměj' ze zloby [G]dát."
+    },
+    {
+      "type": "chorus",
+      "text": "[C]Víš, holky těžší to [G]maj',\n[Ami/C]víš, holky těžší to [G]maj',"
+    },
+    {
+      "type": "outro",
+      "text": "[G]Na kolejích stála a za uchem květ, vlasy trávou zavázaný,\ns [C]kytarou na zádech, [G]strun už jen pět, \n[D7]hezký oči uplaka[G]ný."
+    }
+  ]
+}

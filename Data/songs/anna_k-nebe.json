@@ -1,0 +1,74 @@
+{
+  "title": "Nebe",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Nebe",
+  "year": "1999",
+  "key": "A",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "C#mi",
+    "E",
+    "H"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=vWsB15dIbxI\u0026list=RDvWsB15dIbxI\u0026start_radio=1",
+  "last_modified": "2026-09-29T11:14:09.716Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:12:37.309Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[A]Odl\u00EDtaj za [C#mi]jin\u00FDm sv\u011Btem\n[A]Odl\u00EDtaj za [C#mi]lep\u0161\u00EDm st\u00EDnem\n[A]Nez\u016Fstane [C#mi]ani jedi[H]n\u00FD"
+    },
+    {
+      "type": "verse",
+      "text": "[E]Kr\u00E1sn\u00FD [C#mi]\n[E]Kr\u00E1sn\u00FD nejsou stejn\u00FD [C#mi]\n[E]Kr\u00E1sn\u00E1 tv\u00E1\u0159 [C#mi]\nVyp\u00E1[H]len\u00E1 svatoz\u00E1\u0159"
+    },
+    {
+      "type": "bridge",
+      "text": "[C#mi]       [A] .\n[C#mi]       [A]    [H] ."
+    },
+    {
+      "type": "chorus",
+      "text": "A tak [E]n\u00E1m[H] vzali [C#mi]nebe[E] ...........Vzali [A]nebe[H]\n[E]N\u00E1m[H] vzali [C#mi]nebe[E].........Vzali [A]nebe[H] [E]"
+    },
+    {
+      "type": "verse",
+      "text": "[A]Z\u016Fstali jsme [C#mi]sami pr\u00E1zdn\u00FD\n[A]Nevl\u00EDdn\u00FD a [C#mi]p\u0159\u00EDli\u0161 v\u00E1\u017En\u00FD\n[A]Spoutan\u00FD a [C#mi]v p\u016Flce zlome[H]n\u00FD"
+    },
+    {
+      "type": "verse",
+      "text": "[E]Kr\u00E1sn\u00FD[C#mi]\n[E]Kr\u00E1sn\u00FD [C#mi]nejsou stejn\u00FD\n[E]Kr\u00E1sn\u00E1 [C#mi]tv\u00E1\u0159\nVyp\u00E1[H]len\u00E1 svatoz\u00E1\u0159"
+    },
+    {
+      "type": "bridge",
+      "text": "[A]    [C#mi] .\n[A]    [C#mi] .\n[A]    [C#mi]       [H] ."
+    },
+    {
+      "type": "chorus",
+      "text": "A tak [E]n\u00E1m[H] vzali [C#mi]nebe[E] ...........Vzali [A]nebe[H]\n[E]N\u00E1m[H] vzali [C#mi]nebe[E].........Vzali [A]nebe[H] [E]"
+    },
+    {
+      "type": "chorus",
+      "text": "A tak [E]n\u00E1m[H] vzali [C#mi]nebe[E] ...........Vzali [A]nebe[H]\n[E]N\u00E1m[H] vzali [C#mi]nebe[E].........Vzali [A]nebe[H] [E]"
+    }
+  ]
+}

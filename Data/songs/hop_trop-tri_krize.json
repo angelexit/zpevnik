@@ -1,0 +1,75 @@
+{
+  "title": "Tři kříže",
+  "artist": "Hop Trop",
+  "artistKey": "hop_trop",
+  "album": "Hop Trop na Venkowě",
+  "year": "1993",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D",
+    "Dmi",
+    "F"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-07-12T16:39:41.207Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Dmi]Dávám sbohem [C]břehům prokla[Ami]tejm,\nkterý v [Dmi]spárech má [C]ďábel [Dmi]sám.\n[Dmi]Bílou přídí [C]šalupa “My [Ami]grave” míří\n[Dmi]k útesům [C]který [Dmi]znám."
+    },
+    {
+      "type": "chorus",
+      "text": "Jen tři [F]kříže z [C]bílýho kame[Ami]ní někdo [Dmi]do písku [C]posklá[Dmi]dal.\nSlzy [F]v očích měl a [C]v ruce znave[Ami]ný,\nlodní [Dmi]deník co [C]sám do něj [Dmi]psal."
+    },
+    {
+      "type": "verse",
+      "text": "První kříž má pod sebou jen hřích,\nsamý pití a rvačky jen.\nChřestot nožů, při kterých přejde smích,\nsrdce kámen a jméno “Sten.”"
+    },
+    {
+      "type": "chorus",
+      "text": "Jen tři [F]kříže z [C]bílýho kame[Ami]ní někdo [Dmi]do písku [C]posklá[Dmi]dal.\nSlzy [F]v očích měl a [C]v ruce znave[Ami]ný,\nlodní [Dmi]deník co [C]sám do něj [Dmi]psal."
+    },
+    {
+      "type": "verse",
+      "text": "Já, Bob Green, mám tváře zjizvený,\nštěkot psa zněl, když jsem se smál.\nDruhej kříž mám a spím pod zemí,\nže jsem falešný karty hrál."
+    },
+    {
+      "type": "chorus",
+      "text": "Jen tři [F]kříže z [C]bílýho kame[Ami]ní někdo [Dmi]do písku [C]posklá[Dmi]dal.\nSlzy [F]v očích měl a [C]v ruce znave[Ami]ný,\nlodní [Dmi]deník co [C]sám do něj [Dmi]psal."
+    },
+    {
+      "type": "verse",
+      "text": "Třetí kříž snad vyvolá jen vztek,\nKaty Rodgers těm dvoum život vzal.\nSvědomí měl, vedle nich si klek…"
+    },
+    {
+      "type": "chorus",
+      "text": "Recitace:\n[F]Snad se chtěl modlit: [C]vím, trestat je [Dmi]lidský,\n[C]ale odpouštět je božský, ať [Dmi]mi tedy Bůh odpustí.[Ami][Dmi]"
+    },
+    {
+      "type": "chorus",
+      "text": "Jen tři [F]kříže z [C]bílýho kame[Ami]ní jsem jim [Dmi]do písku [C]posklá[Dmi]dal.\nSlzy [F]v očích měl a [C]v ruce znave[Ami]ný,\nlodní [Dmi]deník..... [C]a v něm co jsem [Dmi]psal.[D]"
+    }
+  ]
+}

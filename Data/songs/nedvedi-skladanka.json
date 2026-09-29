@@ -1,0 +1,59 @@
+{
+  "title": "Skládanka",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Zahrádky",
+  "year": "1994",
+  "key": "",
+  "capo": 2,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D",
+    "Emi",
+    "G"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:33:57.649Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "Tak od dneška v[G]ím, jak zavíráš[Ami] oči, když pusu ti [G]dávám,\njak otáčíš hlavu, všechno už v[Ami]íš, to, co bych cht[G]ěl,\nsnad se mi zd[D]áš, nebo nechápu nic,\nsnad jsem jen bl[Emi]ázen, co chtěl bych [C]víc,\nty můj v[G]ánku, skládanko h[Ami]ezká z kouzelnejch chv[D]il."
+    },
+    {
+      "type": "verse",
+      "text": "Do závěs[G]ů nutí se [Ami]den a my máme [G]půlnoc,\ncítím tvůj dech a trochu se[Ami] bráním hladit tě[G] víc,\npoprvé blíz[D]ko, blízko tě mám\na tvoje tvář j[Emi]e plná stop [C]mých,\nzačnu[G] se bát, jestli t[Ami]o moje rád ti neublíží[D]."
+    },
+    {
+      "type": "verse",
+      "text": "A už se[G] mi stýská, pito[Ami]mej čas, už musíš j[G]ít, \nuklidím okurky, polštáře,[Ami] naposledy pusu t[G]i dám,\nruce si[D] chvíli nebudu mýt,\npel z tvojí [Emi]kůže nechci si[C] vzít,\nta[G]k zase zítra, ty [Ami]můj vánku milo[D]vaný."
+    },
+    {
+      "type": "verse",
+      "text": "Tak od dneška v[G]ím, jak zavíráš[Ami] oči, když pusu ti [G]dávám,\njak otáčíš hlavu, všechno už v[Ami]íš, to, co bych cht[G]ěl,\nsnad se mi zd[D]áš, nebo nechápu nic,\nsnad jsem jen bl[Emi]ázen, co chtěl bych [C]víc,\nty můj v[G]ánku, skládanko h[Ami]ezká z kouzelnejch chv[D]il."
+    },
+    {
+      "type": "outro",
+      "text": "milovan[G]á ..."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Stačí, když se díváš",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Stačí, když se díváš",
+  "year": "2001",
+  "key": "Emi",
+  "capo": 0,
+  "used_chords": [
+    "C",
+    "D",
+    "Emi",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=8SRAEops3ic&list=RD8SRAEops3ic&start_radio=1",
+  "last_modified": "2026-04-28T13:14:31.770Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:14:21.942Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Emi]Zpomalí se slova, půjdou jenom krajinou\n[G]a překvapený oči si jich ani nevšimnou.\n[D]Potichu se ztrácí, [C]už tu nebu[Emi]dou."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Zapomenem na hlas, ten to stejně nepoví,\n[G]a řeknem co se nikdy nikdo jinej nedoví,\n[D]a nad náma se dívá, [C]nebe medo[Emi]vý."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Jsme tichý jako leden, ještě trochu zvěda[Emi]ví,\n[G]slunce už se s náma ale stejně nebaví.\n[D]Pomalu se stmívá, [C]až den se una[Emi]ví."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Zatočí mi hlavou slzy nevychovaný,\n[G]vyplavou jak věci, co jsou na dně schovaný.\n[D]Nad náma se loučí, [C]nebe zamilova[Emi]ný."
+    },
+    {
+      "type": "bridge",
+      "text": "[Emi] [G] [D] [C] [Emi]"
+    },
+    {
+      "type": "chorus",
+      "text": "[Emi]Zpomalí se slova, od nás dvou\n[G]Zapomenou znova, už Tě nenajdou\n[D]Stačí, když se díváš, oči [C]prominou[Emi]"
+    },
+    {
+      "type": "chorus",
+      "text": "[Emi]Zpomalí se slova, od nás dvou\n[G]Zapomenou znova, už Tě nenajdou\n[D]Stačí, když se díváš, oči [C]prominou[Emi]"
+    },
+    {
+      "type": "chorus",
+      "text": "[Emi]Zpomalí se slova, od nás dvou\n[G]Zapomenou znova, už Tě nenajdou\n[D]Stačí, když se díváš, oči [C]prominou[Emi]"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Někdy se bojím",
+  "artist": "Štěpán Kozub & Jiří Krhut",
+  "artistKey": "stepan_kozub__jiri_krhut",
+  "album": "Prásknu bičem",
+  "year": "2020",
+  "key": "F",
+  "capo": 0,
+  "used_chords": [
+    "C",
+    "Dmi",
+    "Dmi7",
+    "Emi",
+    "F",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=BiIw2ZekbXM&list=RDBiIw2ZekbXM&start_radio=1",
+  "last_modified": "2026-06-13T20:13:23.556Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:47:41.239Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "Někdy se [F]bojím, že nebudu [C]bulet\nAž bože [Dmi]zjistím, [Dmi7]že svět ztratil [G]kule\nNěkdy se [F]bojím o tvoje [C]dary\nŽe než je [Dmi]poznám, [C]budu už [G]starý"
+    },
+    {
+      "type": "verse",
+      "text": "A někdy se [F]bojím průvanu [C]z dveří\nŽe až se [Dmi]zavřou, [Dmi7]nebudu [G]věřit\nNěkdy se [F]bojím o svoje [C]tělo\nŽe jednou [Dmi]zjistí, [C]že není, co [G]chtělo"
+    },
+    {
+      "type": "chorus",
+      "text": "A nech mi jen [F]vodu, slova a [G]písně\nChci po tobě [Ami]málo, tak netvař se [Emi]přísně\nNeber mi [F]víru, neber mi [C]nebe\nNeber mi, [Dmi]prosím,[G]\nneber mi [F]sebe [C][Ami][F][C]"
+    },
+    {
+      "type": "verse",
+      "text": "Někdy se [F]bojím o kama[C]rády\nŽe se jich [Dmi]zřekneš, [Dmi7]budeš stát [G]zády\nA někdy se [F]bojím, že přijdou [C]fámy\nNěkdy se [Dmi]bojím, [C]že zůstanem [G]sami"
+    },
+    {
+      "type": "chorus",
+      "text": "Nech mi jen [F]vodu, slova a [G]písně\nChci po tobě [Ami]málo, tak netvař se [Emi]přísně\nNeber mi [F]víru, neber mi [C]nebe\nNeber mi, [Dmi]prosím,[G]\nneber mi [F]sebe [C][Ami][F][C]"
+    },
+    {
+      "type": "bridge",
+      "text": "[F]    [C]    [Ami]      [F]    [C] ."
+    },
+    {
+      "type": "verse",
+      "text": "Někdy se [F]bojím o všechny [C]básně\nTak nějak to [Dmi]cítím a [Dmi7]nevím proč [G]vlastně\nNěkdy se [F]bojím a nesnáším [C]pózu\nNěkdy se [Dmi]bojím o [C]selský [G]rozum"
+    },
+    {
+      "type": "verse",
+      "text": "A někdy se [F]bojím srdcí, co [C]zebou\nNěkdy se [Dmi]bojím, že [Dmi7]nepohnu s [G]tebou\nA nejvíc se [F]bojím, nejvíc mě [C]děsí\nŽe jsem tě [Dmi]ztratil [C]anebo že [G]nejsi"
+    },
+    {
+      "type": "chorus",
+      "text": "A nech mi jen [F]vodu, slova a [G]písně\nChci po tobě [Ami]málo, tak netvař se [Emi]přísně\nNeber mi [F]víru, neber mi [C]nebe\nNeber mi, [Dmi]prosím,[G]"
+    },
+    {
+      "type": "chorus",
+      "text": "Tak nech mi jen [F]vodu, slova a [G]písně\nChci po tobě [Ami]málo, tak netvař se [Emi]přísně\nNeber mi [F]víru, neber mi [C]nebe\nNeber mi, [Dmi]prosím,[G]\nneber mi [F]sebe [C][Ami][F][C]"
+    }
+  ]
+}

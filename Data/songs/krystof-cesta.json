@@ -1,0 +1,79 @@
+{
+  "title": "Cesta",
+  "artist": "Kryštof",
+  "artistKey": "krystof",
+  "album": "Inzerát",
+  "year": "2012",
+  "key": "C",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "Dmi",
+    "F",
+    "G"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-04-28T13:45:32.551Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:44:54.218Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[C] [G] [Ami] [F] [G]"
+    },
+    {
+      "type": "verse",
+      "text": "Tou [C]cestou, tím směrem prý bych se [G]dávno měl dát,\nkdyž [Dmi]sněží, jde to stěží, ale sněhy pak tají,  \nkus [F]něhy ti za nehty slíbí a [G]dají."
+    },
+    {
+      "type": "verse",
+      "text": "Víc [C]síly, se prát, na dně víc [G]dávat než brát,   \na i[Dmi] když se vleče a je schůdná jen v kleče \ndonutí [F]přestat se zbytečně [G]ptát."
+    },
+    {
+      "type": "chorus",
+      "text": "Jestli se [C]blížím k cíli, kolik [G]zbývá víry,\nkam [Ami]zvou, svodidla, co po tmě mi [F]lžou?[G]\nZda [C]couvám zpátky, a [G]plýtvám řádky, co [Ami]řvou,\nže už mi doma neotev[F]řou.[G]"
+    },
+    {
+      "type": "verse",
+      "text": "Nebo jít s[C] proudem, na lusknutí prstu se [G]začít hned smát, \nmít [Dmi]svůj chodník slávy a před sebou davy \na přes [F]zkroucená záda být [G]součástí stáda."
+    },
+    {
+      "type": "verse",
+      "text": "Ale [C]zpívat, a hrát, kotníky [G]líbat, a stát, \nna [Dmi]křídlech všech slavíků, a vlastně už ze zvyku\n[F]přestat se zbytečně [G]ptát."
+    },
+    {
+      "type": "chorus",
+      "text": "Jestli se [C]blížím k cíli, kolik [G]zbývá víry,\nkam [Ami]zvou, svodidla, co po tmě mi [F]lžou?[G]\nZda [C]couvám zpátky, a [G]plýtvám řádky, co [Ami]řvou,\nže už mi doma neotev[F]řou.[G]"
+    },
+    {
+      "type": "bridge",
+      "text": "4x [Ami] [G] [D/F#] [F] + [G]"
+    },
+    {
+      "type": "chorus",
+      "text": "Jestli se [C]blížím k cíli, kolik [G]zbývá víry,\nkam [Ami]zvou, svodidla, co po tmě mi [F]lžou?[G]\nZda [C]couvám zpátky, a [G]plýtvám řádky, co [Ami]řvou,\nže už mi doma neotev[F]řou.[G]"
+    },
+    {
+      "type": "outro",
+      "text": "[C] [G] [Ami] [F] [G]"
+    }
+  ]
+}

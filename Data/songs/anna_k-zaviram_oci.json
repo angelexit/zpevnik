@@ -1,0 +1,72 @@
+{
+  "title": "Zavírám oči",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Stačí, když se díváš",
+  "year": "2001",
+  "key": "A",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "C#mi",
+    "D",
+    "E",
+    "F#mi",
+    "Hmi"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=01vYRktcUiQ&list=RD01vYRktcUiQ&start_radio=1",
+  "last_modified": "2026-04-28T13:16:09.165Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:16:02.621Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[A] [C#mi] [F#mi] 2x"
+    },
+    {
+      "type": "verse",
+      "text": "[A]Jednou se nám [C#mi]může zdát, [F#mi]co jsme byli dřív.\n[A]Ráno stopy [C#mi]nejsou znát, když [F#mi]večer padal sníh."
+    },
+    {
+      "type": "chorus",
+      "text": "[Bmi]Jsou věci jiný, něco [D]víc…\n[A]Zavírám oči, nenech mě [E]říct…\n\nMálo tě [A]znám,\nmálo tě [B#mi]znám,\nMálo tě [D]znám,\nMálo tě [A]znám…."
+    },
+    {
+      "type": "verse",
+      "text": "[A]Možná se už [C#mi]nedozvíš, [F#mi]jak to bylo dál.\n[A]Po čem takhle [C#mi]dlouho spíš a [F#mi]že jsi se i smál"
+    },
+    {
+      "type": "chorus",
+      "text": "[Bmi]Jsou věci jiný, něco [D]víc…\n[A]Zavírám oči, nenech mě [E]říct…\n[Bmi]Jsou věci jiný, něco [D]víc…\n[A]Zavírám oči, nenech mě [E]říct…\n\nMálo tě [A]znám,\nmálo tě [B#mi]znám,\nMálo tě [D]znám,\nMálo tě [A]znám…."
+    },
+    {
+      "type": "bridge",
+      "text": "[A] [C#mi] [F#mi]"
+    },
+    {
+      "type": "chorus",
+      "text": "[Bmi]Jsou věci jiný, něco [D]víc…\n[A]Zavírám oči, nenech mě [E]říct…\n\nMálo tě [A]znám,\nmálo tě [B#mi]znám,\nMálo tě [D]znám,\nMálo tě [A]znám….\nMálo tě [B#mi]znám, (jsou věci jiný)\nMálo tě [D]znám, (jsou věci jiný)\nMálo tě [A]znám, (jsou věci jiný)\nMálo tě [B#mi]znám, (jsou věci jiný)\nMálo tě [D]znám, (jsou věci jiný)\nMálo tě [D]znám, (jsou věci jiný)"
+    },
+    {
+      "type": "outro",
+      "text": "(do ztracena….)"
+    }
+  ]
+}

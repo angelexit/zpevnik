@@ -1,0 +1,63 @@
+{
+  "title": "Kříž",
+  "artist": "Stypka David",
+  "artistKey": "stypka_david",
+  "album": "Neboj",
+  "year": "2019",
+  "key": "Emi",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D",
+    "Emi",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=ZZAKP9D27pU&list=RDZZAKP9D27pU&start_radio=1",
+  "last_modified": "2026-04-28T13:46:35.815Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:46:31.904Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[Emi]  [D]  [G]  [C]  [Emi]  [D]  [Ami]\n[Emi]  [D]  [G]  [C]  [Emi]  [D]  [Ami]"
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Možná [D]možná že ten [G]kříž co ty [C]víš\n[Emi]táhneš že tě [D]chce mít mnohem [Ami]blíž [Ami7]\n[Emi]Možná [D]že se odvá[G]žíš opus[C]tíš\n[Emi]tuhle skrýš budeš [D]čím[Ami]koli"
+    },
+    {
+      "type": "chorus",
+      "text": "A to tě [D]vystřelí do úplné [C]dálky\n[D]Lidi budou kolem cesty stát ptát se proč [G]nezasta[C]víš\nz budoucí [G]války přijde ti [D]úplně nový\nneobnošený [C]kříž zas [Ami]zpátky\n[Emi]což vlastně znamená že [D]se ho nikdy nezba[Ami]víš"
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Dost [D]možná že je ten tvůj [G]kříž co ty [C]víš\npřesně tak [Emi]velký jak [D]velký si vymys[Ami]líš\nA mož[Emi]ná, [D]dá se ti už [G]říct tu[C]šíš\nteď [Emi]ho pustíš necháš [D]ležet kdeko[Ami]li"
+    },
+    {
+      "type": "chorus",
+      "text": "A to tě [D]vystřelí do úplné [C]dálky\n[D]lidi budou kolem cesty stát, ptát se proč [G]nezasta[C]víš\nz budoucí [G]války přijde ti [D]úplně nový\nneobnošený [C]kříž      [Ami]zas [D]zpátky"
+    },
+    {
+      "type": "outro",
+      "text": "[C]Tap tádap tádap tádau[Ami] [D]\ntap tádap tádap tádau[Emi]"
+    }
+  ]
+}

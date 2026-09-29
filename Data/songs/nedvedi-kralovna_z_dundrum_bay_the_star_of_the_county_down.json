@@ -1,0 +1,52 @@
+{
+  "title": "Královna z Dundrum Bay (The Star Of The County Down)",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Balady",
+  "year": "1995",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D",
+    "Emi",
+    "G",
+    "Hmi"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-09T06:42:48.443Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "Kdo ji [Emi]prvně [C]zřel, ten k ní [G]zaho[D]řel,\nmožná [G]obdivem, [Emi]možná [D]víc.[Hmi]\nJejí [Emi]ladný [C]krok, její [G]oblý b[D]ok\nnejhez[G]čí ze všech [C]kra[D]sa[Emi]vic.\n[:Já šel [G]na sta[Emi]tek, hned si [Ami]o ní [D]řek.\nTu chci [G]mít, pane [Emi]tu mi [D]dej![Hmi]\nDivný [Emi]jméno [C]má, každej z [G]nás ji z[D]ná,\njako [G]královnu z [C]Dun[D]drum [Emi]Bay.:]"
+    },
+    {
+      "type": "verse",
+      "text": "Bože [Emi]rozmi[C]lý mi si [G]uži[D]li,\nbrzo [G]nás v kraji [Emi]každej [D]znal.[Hmi]\nJenže [Emi]po pár [C]dnech se ji [G]zrychlil [D]dech\na já [G]doktora [C]za[D]vo[Emi]lal.\n[:Dlouho [G]stonala, než mi [C]sko[D]na[Emi]la,\nlehkou [G]hlínu ji P[Emi]ánbůh [D]dej, [Hmi]\nvždyť [Emi]to neb[C]yla jenom [G]koby[D]la,\nale k[G]rálovna z D[C]und[D]rum B[Emi]ay.:]"
+    },
+    {
+      "type": "verse",
+      "text": "Letos [Emi]na ja[C]ře potkám [G]koňa[D]ře,\nvede k[G]lisničku [Emi]jako s[D]en,[Hmi]\nzas ten l[Emi]adný [C]krok, zas ten [G]oblý [D]bok\na já [G]stál jako [C]při[D]mra[Emi]zen.\n[:Až mi v [G]sobotu dají [C]vej[D]pla[Emi]tu,\nzeptám s[G]e zda je n[Emi]a prod[D]ej[Hmi]\na pak [Emi]budu [C]pít na to, [G]že smím [D]mít,\nzase [G]královnu z [C]Dun[D]drum [Emi]Bay.:]"
+    }
+  ]
+}

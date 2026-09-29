@@ -1,0 +1,69 @@
+{
+  "title": "Holubí dům",
+  "artist": "Jiří Schelinger",
+  "artistKey": "jiri_schelinger",
+  "album": "Holubí Dům / René, Já A Rudolf",
+  "year": "1973",
+  "key": "Emi",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D",
+    "Emi",
+    "G",
+    "H",
+    "Hmi"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-04-28T14:58:15.620Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T14:50:26.138Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Emi]Zpí[D]vám [C]ptákům a [H]zvlášť holu[Emi]bům,\n[Emi]stá[D]val [C]v údolí [H]mém starý [Emi]dům.\n[G]Ptá[D]ků [G]houf zalé[D]tal ke kro[G]vům,\n[Emi]měl [D]jsem [C]rád, holu[Hmi]bích křídel [Emi]šum."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Vlí[D]dná [C]dívka jim [Hmi]házela [Emi]hrách,\n[Emi]má[D]vá[C]ní peru[Hmi]tí víří [Emi]prach.\n[G]Ptá[D]ci [G]krouží a [D]neznají [G]strach,\n[Emi]měl [D]jsem [C]rád starý [Hmi]dům, jeho [Emi]práh."
+    },
+    {
+      "type": "chorus",
+      "text": "[G]Hledám [Ami]dům holu[D]bí, kdopak [G]z vás cestu [Emi]ví,\nmíval [Ami]stáj vroube[D]nou, bílý [G]štít.\n[G]Kde je [Ami]dům holu[D]bí a ta [G]dívka kde [Emi]spí,\nvždyť to [Ami]ví, že jsem [D]chtěl pro ni [Emi]žít."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Sdí[D]lný [C]déšť vyprá[H]ví oka[Emi]pům,\n[Emi]blá[D]ho[C]vý, kdo hle[H]dá tenhle [Emi]dům.\n[G]Od[D]růs[G]táš chlape[D]ckým střeví[G]cům,\n[Emi]ne[D]sly[C]šíš holu[Hmi]bích křídel [Emi]šum."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Na[D]bí[C]zej úpla[Hmi]tou coko[Emi]li,\n[Emi]ne[D]po-jíš cukro[Hmi]vých homo[Emi]lí.\n[G]Mů[D]žeš [G]mít třeba [D]zrak soko[G]lí,\n[Emi]ne[D]spa[C]tříš ztrace[Hmi]né údo[Emi]lí."
+    },
+    {
+      "type": "chorus",
+      "text": "[G]Hledám [Ami]dům holu[D]bí, kdopak [G]z vás cestu [Emi]ví,\nmíval [Ami]stáj vroube[D]nou, bílý [G]štít.\n[G]Kde je [Ami]dům holu[D]bí a ta [G]dívka kde [Emi]spí,\nvždyť to [Ami]ví, že jsem [D]chtěl pro ni [Emi]žít."
+    },
+    {
+      "type": "outro",
+      "text": "[Emi]Zpí[D]vám [C]ptákům a [H]zvlášť holu[Emi]bům,\n[Emi]stá[D]val [C]v údolí [H]mém starý [Emi]dům...."
+    }
+  ]
+}

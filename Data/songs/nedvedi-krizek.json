@@ -1,0 +1,78 @@
+{
+  "title": "Křížek",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "František",
+  "year": "1993",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "A7",
+    "D",
+    "D/A",
+    "D/C#",
+    "D/F#",
+    "D/G",
+    "D/H",
+    "D7",
+    "Dmaj7",
+    "Emi",
+    "G",
+    "H7"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-10T12:46:16.126Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[D]    [Dmaj7]        [D7]     [G]    [Emi]      [H7]     [Emi]      [A7] ."
+    },
+    {
+      "type": "verse",
+      "text": "[D]Neptej se mě na nic, když tě [Dmaj7]blízko mám,\n[D7]nestačí než být, jen [G]být,\n[Emi]kdyby kolem nás byl jenom [H7]dým a [Emi]klam,\ntak [A7]ty jsi to, v co uvěřím."
+    },
+    {
+      "type": "verse",
+      "text": "[D]Víš, jak někdy člověk bejvá [Dmaj7]strašně sám,\n[D7]smutnej ze svých vlastních [G]vin,\n[Emi]s tebou vždycky pocit, že i žiju, mám,\nže nejím, jenom sním a bdím."
+    },
+    {
+      "type": "chorus",
+      "text": "Jsi můj [D]proud, co někam [D/C#]odnese mě, jedno je [D/H]kam,\njsi můj [D/A]rým, já verše [D/G]další vždycky u sebe [D/F#]mám,\nco zapad[Emi]nou, když napad[A7]nou."
+    },
+    {
+      "type": "verse",
+      "text": "Udělám ti křížek palcem na čelo,\njak dělávala bába nám,\naby žádný pokušení nesmělo\npřes práh dveří nikdy k nám."
+    },
+    {
+      "type": "verse",
+      "text": "Aby bída, co se o svět pokouší,\ns kosou chodí duše brát,\nutekla, a nikdy ať to nezkouší,\nmiluješ mě, mám tě rád."
+    },
+    {
+      "type": "chorus",
+      "text": "Jsi můj [D]proud, co někam [D/C#]odnese mě, jedno je [D/H]kam,\njsi můj [D/A]rým, já verše [D/G]další vždycky u sebe [D/F#]mám,\nco zapad[Emi]nou, když napad[A7]nou."
+    },
+    {
+      "type": "chorus",
+      "text": "Jsi můj [D]proud, co někam [D/C#]odnese mě, jedno je [D/H]kam,\njsi můj [D/A]rým, já verše [D/G]další vždycky u sebe [D/F#]mám,\nco zapad[Emi]nou, když napad[A7]nou."
+    }
+  ]
+}

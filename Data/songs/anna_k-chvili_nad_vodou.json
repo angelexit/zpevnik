@@ -1,0 +1,76 @@
+{
+  "title": "Chvíli nad vodou",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Nebe",
+  "year": "1999",
+  "key": "D",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "C",
+    "Cadd9",
+    "D",
+    "Emi",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=Ttd9NwEHPnY&list=RDTtd9NwEHPnY&start_radio=1",
+  "last_modified": "2026-04-28T13:10:08.706Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:07:58.950Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[D]Svítá noc končí srdce mi buší\na oči se loučí s tebou[Cadd9]\n[D]stmívá se z loučí po kape smůla jak vosk\na do očí dny jdou[Cadd9] [G]"
+    },
+    {
+      "type": "bridge",
+      "text": "[C]hée.. [G]hóó.. [A]chvíli nad vodou"
+    },
+    {
+      "type": "verse",
+      "text": "[D]svítá noc končí ráno tě budí\na po tmě se loučíš dny jdou[Cadd9]\n[D]dívám se z loučí po kape smůla a noc\nse otočí s tebou[Cadd9] [G]"
+    },
+    {
+      "type": "bridge",
+      "text": "[C]hée.. [G]hóó.. [A]chvíli nad vodou"
+    },
+    {
+      "type": "chorus",
+      "text": "je to [D]krásný [Emi] [G] [A] / .. krásný\npomalu [D]krásný [Emi] [G] [A] / pomalu krásný\nje to [D]krásný [Emi] [G] [A] / .. krásný\npomalu [D]krásný [Emi] [G] [A] / pomalu krásný"
+    },
+    {
+      "type": "bridge",
+      "text": "[C]hée.. [G]hóó.. [A]chvíli nad vodou"
+    },
+    {
+      "type": "chorus",
+      "text": "je to [D]krásný [Emi] [G] [A] / .. krásný\npomalu [D]krásný [Emi] [G] [A] / pomalu krásný\nje to [D]krásný [Emi] [G] [A] / .. krásný\npomalu [D]krásný [Emi] [G] [A] / pomalu krásný"
+    },
+    {
+      "type": "chorus",
+      "text": "je to [D]krásný [Emi] [G] [A] / .. krásný\npomalu [D]krásný [Emi] [G] [A] / pomalu krásný\nje to [D]krásný [Emi] [G] [A] / .. krásný\npomalu [D]krásný [Emi] [G] [A] / pomalu krásný"
+    },
+    {
+      "type": "chorus",
+      "text": "je to [D]krásný [Emi] [G] [A] / .. krásný\npomalu [D]krásný [Emi] [G] [A] / pomalu krásný\nje to [D]krásný [Emi] [G] [A] / .. krásný\npomalu [D]krásný [Emi] [G] [A] / pomalu krásný"
+    }
+  ]
+}

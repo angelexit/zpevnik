@@ -1,0 +1,75 @@
+{
+  "title": "Večernice",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Večernice",
+  "year": "2006",
+  "key": "Hmi",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D",
+    "G",
+    "Hmi"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=IC4nx8SPef0&list=RDIC4nx8SPef0&start_radio=1",
+  "last_modified": "2026-04-28T13:15:00.566Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:14:54.860Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Hmi]Jiný [C]slova jinej [D]kraj\n[Hmi]jiný [C]nebe tady [D]maj\n[Hmi]až Ti [C]ráno Tvý sny [D]promění\n[C]poznáš svou moc i kouzel [D]noc"
+    },
+    {
+      "type": "verse",
+      "text": "[Hmi]Zavři [C]oči budeš [D]rád\n[Hmi]až se [C]zítra Tvý sny [D]vyplní\n[Hmi]až ráno [C]srdce [D]rozbuší\n[C]poznáš svou moc i kouzel [D]noc  ...víš"
+    },
+    {
+      "type": "bridge",
+      "text": "[G] [D] [Ami] [C]"
+    },
+    {
+      "type": "chorus",
+      "text": "[G]Jinej [C]anděl jinej [D]kraj[Ami]\n[G]divný [C]nebe tady [D]maj[Ami]\n[G]jinej [C]anděl jinej [D]kraj[Ami]\n[C]možná že ráj jen z knížky [D]znaj"
+    },
+    {
+      "type": "bridge",
+      "text": "[Hmi] [C] [D]"
+    },
+    {
+      "type": "verse",
+      "text": "[Hmi]Koukáš [C]oči nevin[D]ný\n[Hmi]koukej [C]dál[D]\n[Hmi]Doufáš [C]srdce jediný[D]\n[C]poznáš svou moc i kouzel noc[D]"
+    },
+    {
+      "type": "chorus",
+      "text": "[G]Jinej [C]anděl jinej [D]kraj[Ami]\n[G]divný [C]nebe tady [D]maj[Ami]\nVěř mi [C]všechno nebo [D]nic[Ami]\n[C]možná jsi blíž o kousek blíž\n[Hmi]možná jsi blíž o kousek výš\n[Ami]možná jsi blíž znám Tě\n[D]znám .............. Svět Tvůj[G] [D] [Ami] [C]"
+    },
+    {
+      "type": "bridge",
+      "text": "[G]Nademnou za mnohem [D]víc\nHoří zbytky Večer[Ami]nic\nSmysl časem uni[C]káá\nJak utí[G]ká             (3x)"
+    },
+    {
+      "type": "outro",
+      "text": "[G]lá lá [D]la la [Ami]la la [C]lá la la la.......\njak [G]utíká"
+    }
+  ]
+}

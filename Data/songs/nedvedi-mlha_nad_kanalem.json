@@ -1,0 +1,56 @@
+{
+  "title": "Mlha nad kanálem",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Balady",
+  "year": "1995",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "D",
+    "Emi",
+    "G",
+    "Hmi"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-09T06:47:00.137Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "Od [G]Do[Hmi]veru [Emi]dál tři [C]jezdci spěcha[D]jí\na [G]ví[Hmi]tr v[Emi]zdouvá jejich p[C]lášt[D]ě,\ntmou [G]pů[Hmi]lnoč[Emi]ní se d[C]ýky blýskaj[D]í \na [G]sv[Hmi]íti [Emi]bělma plná z[C]ášt[D]ě. \nTi [Ami]míří [D]přímo [G]pod londýnskou [Emi]zeď,\nach [Ami]Bože m[D]ůj co bude s [G]král[D]em, \nKdo z [Ami]vás si [D]troufne [G]hádat odpo[Emi]věď?\nTu z[G]ná[Hmi] jen [Emi]mlha nad Ka[C]nál[D]em.."
+    },
+    {
+      "type": "verse",
+      "text": "Ó králi, králi, Řím ti vědět dal, že málo věnuješ se vládě,\nže místo abys zemi panoval, jsi s církví kruté půtky sváděl.\nCož království tě nazajímá dost a žít chceš v strachu neustálém?\nO sílu svou se bojí vznešenost když houstne mlha nad Kanálem."
+    },
+    {
+      "type": "verse",
+      "text": "Když ráno v Toweru kat potřetí ťal, tři trůny ztratili své pány,\nnevzdá se cíle cizí kardinál, dál spřádat bude svoje plány.\nDnes díky strážím nezachvěl se trůn, dnes věrní ubránili krále,\nvšak v příštích dnech se znovu zjeví člun, v té bíle mlze nad Kanálem."
+    },
+    {
+      "type": "verse",
+      "text": "Od [G]Do[Hmi]veru [Emi]dál tři [C]jezdci spěcha[D]jí\na [G]ví[Hmi]tr v[Emi]zdouvá jejich p[C]lášt[D]ě,\ntmou [G]pů[Hmi]lnoč[Emi]ní se d[C]ýky blýskaj[D]í \na [G]sv[Hmi]íti [Emi]bělma plná z[C]ášt[D]ě. \nTi [Ami]míří [D]přímo [G]pod londýnskou [Emi]zeď,\nach [Ami]Bože m[D]ůj co bude s [G]král[D]em, \nKdo z [Ami]vás si [D]troufne [G]hádat odpo[Emi]věď?\nTu z[G]ná[Hmi] jen [Emi]mlha nad Ka[C]nál[D]em.."
+    }
+  ]
+}

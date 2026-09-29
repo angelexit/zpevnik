@@ -1,0 +1,66 @@
+{
+  "title": "Růže z papíru",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Na kameni kámen",
+  "year": "1985",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "A7",
+    "Ami",
+    "C7",
+    "D7",
+    "Dmi",
+    "E7",
+    "F",
+    "Gmi"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:31:53.405Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "Ami, Dmi"
+    },
+    {
+      "type": "verse",
+      "text": "[Dmi]Do tvých očí jsem se zbláznil a teď [E7]nemám, nemám [Gmi]klid,\n[Ami]hlava třeští, asi tě mám [Dmi]rád.\n[Dmi]Stále někdo říká: vzbuď se, [E7]věčně trhá [Gmi]nit,\n[Ami]studenou sprchu měl bych si [Dmi]dát."
+    },
+    {
+      "type": "chorus",
+      "text": "[D7]Na pouti jsem vystřelil, [Gmi]růži z papíru,\n[C7]dala sis ji do vlasů, kde [F]hladívám Tě [A7]já.\n[Dmi]V tomhle smutným světě jsi má [Gmi]naděj na víru,\nže [Ami]nebe modrý ještě smysl [Dmi]má."
+    },
+    {
+      "type": "verse",
+      "text": "[Dmi]Přines' jsem ti kytku, no co [E7]koukáš, to se [Gmi]má,\n[Ami]tak jsem asi jinej, teď to [Dmi]víš.\n[Dmi]Možná trochu zvláštní v dnešní [E7]době, no tak [Gmi]ať,\n[Ami]třeba z ní mou lásku vytu[Dmi]šíš."
+    },
+    {
+      "type": "chorus",
+      "text": "[D7]Na pouti jsem vystřelil, [Gmi]růži z papíru,\n[C7]dala sis ji do vlasů, kde [F]hladívám Tě [A7]já.\n[Dmi]V tomhle smutným světě jsi má [Gmi]naděj na víru,\nže [Ami]nebe modrý ještě smysl [Dmi]má."
+    },
+    {
+      "type": "outro",
+      "text": "Dmi, E7, Gmi, Ami, Dmi, E7, Gmi, Ami, Dmi"
+    }
+  ]
+}

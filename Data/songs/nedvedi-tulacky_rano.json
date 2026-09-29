@@ -1,0 +1,64 @@
+{
+  "title": "Tulácký ráno",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Na kameni kámen",
+  "year": "1985",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Am",
+    "Ami",
+    "B",
+    "C",
+    "Dmi",
+    "F"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-13T08:22:27.869Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Dmi]Posvátný je mi každý ráno, \n[Ami]když ze sna budí šumící [Dmi]les\n[Dmi]a když se zvedám s písničkou známou\n[Ami]a přezky chřestí o skalnatou [Dmi]mez."
+    },
+    {
+      "type": "chorus",
+      "text": "[Dmi]Tulácký ráno na kemp se snáší, \n[B]za chvíli půjdem [C]toulat se [F]dál,\n[Dmi]a vodou z říčky oheň se zháší, \n[B]tak zase půjdem [Ami]toulat se [Dmi]dál."
+    },
+    {
+      "type": "verse",
+      "text": "[Dmi]Posvátný je můj každý večer, \n[Ami]když oči k ohni vždy vrací se [Dmi]zpět\n[Dmi]tam mnohý z pánů měl by se kouknout\n[Ami]a hned by věděl, jakej chcem [Dmi]svět."
+    },
+    {
+      "type": "chorus",
+      "text": "[Dmi]Tulácký ráno na kemp se snáší, \n[B]za chvíli půjdem [C]toulat se [F]dál,\n[Dmi]a vodou z říčky oheň se zháší, \n[B]tak zase půjdem [Ami]toulat se [Dmi]dál."
+    },
+    {
+      "type": "verse",
+      "text": "[Dmi]Posvátný je mi každý slovo,\n[Ami]když lesní moudrost a přírodu [Dmi]zná,\n[Dmi]bobříků sílu a odvahu touhy,\n[Ami]kolik v tom pravdy, však kdo nám ji [Dmi]dá?"
+    },
+    {
+      "type": "chorus",
+      "text": "[Dmi]Tulácký ráno na kemp se snáší, \n[B]za chvíli půjdem [C]toulat se [F]dál,\n[Dmi]a vodou z říčky oheň se zháší, \n[B]tak zase půjdem [Ami]toulat se [Dmi]dál."
+    }
+  ]
+}

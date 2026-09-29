@@ -1,0 +1,64 @@
+{
+  "title": "Sedmikráska",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Sedmikráska",
+  "year": "1992",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "D",
+    "E7",
+    "Emi",
+    "G",
+    "H7"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:33:16.618Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Emi]V řece plavou bílý lístky, sedmikrásky někdo blízký\n[Ami]druhému se ptal, zda na něj [Emi]myslí, vzpomí[H7]ná, má-nemá [Emi]rád."
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Smutně plavou květy vodou, rozum pláče nad náhodou,\n[Ami]nemá, nemá, řeko němá, [Emi]pospíchej, ať [H7]nebolí to [Emi]tak."
+    },
+    {
+      "type": "chorus",
+      "text": "[E7]Chvíli si myslíš, že svět stratil tvar,\n[Ami]prostor se zúžil na má dáti - dal,\njak [D]mokrá sirka připadáš si zbytečná,\njak [G]zapálený trsy [H7]trav.[Emi]"
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]Uschla kytka na kamenech, vezmi ji a v knížce nech ji,\n[Ami]pro vzpomínku u básniček, [Emi]ze kterých ti [H7]po večerech [Emi]čet'."
+    },
+    {
+      "type": "chorus",
+      "text": "[E7]Chvíli si myslíš, že svět stratil tvar,\n[Ami]prostor se zúžil na má dáti - dal,\njak [D]mokrá sirka připadáš si zbytečná,\njak [G]zapálený trsy [H7]trav.[Emi]"
+    },
+    {
+      "type": "verse",
+      "text": "[Emi]V řece plavou bílý lístky, sedmikrásky někdo blízký\n[Ami]druhému se ptal, zda na něj [Emi]myslí, vzpomí[H7]ná, má-nemá [Emi]rád."
+    }
+  ]
+}

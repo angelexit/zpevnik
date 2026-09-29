@@ -1,0 +1,83 @@
+{
+  "title": "Noc na zemi",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Noc na zemi",
+  "year": "2005",
+  "key": "E",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "A6",
+    "Amaj7/D",
+    "Bmi",
+    "D5",
+    "Dmaj7",
+    "E",
+    "Esus4",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=OlKDksUn9f4&list=RDOlKDksUn9f4&start_radio=1",
+  "last_modified": "2026-04-28T13:13:48.683Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:13:17.883Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[E] [Esus4] [Bmi] [A]"
+    },
+    {
+      "type": "verse",
+      "text": "[E]Zamyká za jinou v roztopených [Esus4]zdech\nzamyká za jinou má ledovej [E]dech\nnedozví se už víc, jen konec [Esus4]zná"
+    },
+    {
+      "type": "verse",
+      "text": "[E]Poprvé za jinou překročí ten [Bmi]práh\npoprvé nad [A]milou mu zavoní [E]strach\nnedozví se už víc, jen konec [Bmi]zná [Dmaj7]"
+    },
+    {
+      "type": "bridge",
+      "text": "[D5] [Amaj7/D] [D5] [Gmaj7sus#4]"
+    },
+    {
+      "type": "chorus",
+      "text": "[A6]Po nocích kolem ní okolo malých [G]měst\nnajednou [D5]padají [Amaj7/D]kameny hvězd\n[A6]zahoří vyplní co se jí zdá[G]  [D5] [Amaj7sus4]\n[A6]Po nocích kolem ní okolo malých [G]měst\nnajednou [D5]padají [Amaj7/D]kameny hvězd\n[A6]zahoří vyplní co se jí zdá[G]  [D5] [Amaj7sus4]"
+    },
+    {
+      "type": "verse",
+      "text": "[E] [Esus4] [Bmi] [A]"
+    },
+    {
+      "type": "verse",
+      "text": "[E]Zamyká za jinou v olověných [Esus4]zdech\nZamyká za jinou má kovový [E]dech\nNedozví se už víc, jen konec [Esus4]zná"
+    },
+    {
+      "type": "verse",
+      "text": "[E]S poslední hodinou brzo půjde [Bmi]spát\nOdsouzen za [A]milou a milá je [E]kat\nNebojí se už víc a konec [Bmi]zná [Dmaj7]"
+    },
+    {
+      "type": "bridge",
+      "text": "[D5] [Amaj7/D] [D5] [Gmaj7sus#4]"
+    },
+    {
+      "type": "chorus",
+      "text": "[A6]Po nocích kolem ní okolo malých [G]měst\nnajednou [D5]padají [Amaj7/D]kameny hvězd\n[A6]zahoří vyplní co se jí zdá[G]  [D5] [Amaj7sus4]\n[A6]Po nocích kolem ní okolo malých [G]měst\nnajednou [D5]padají [Amaj7/D]kameny hvězd\n[A6]zahoří vyplní co se jí zdá[G]  [D5] [Amaj7sus4]"
+    }
+  ]
+}

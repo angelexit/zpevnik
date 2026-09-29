@@ -1,0 +1,79 @@
+{
+  "title": "Na shledanou",
+  "artist": "Anna K.",
+  "artistKey": "anna_k",
+  "album": "Nebe",
+  "year": "1999",
+  "key": "A",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "D",
+    "E",
+    "F#mi",
+    "Hmi"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=QNPnmIIYuCY&list=RDQNPnmIIYuCY&start_radio=1",
+  "last_modified": "2026-04-28T13:12:25.170Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:12:15.898Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[A] [Hmi] [D] [A]"
+    },
+    {
+      "type": "verse",
+      "text": "[A]Mraky už [Hmi]vyhráli nad [D]mořskou [A]pěnou\nRybáři [Hmi]vytáhli [D]sítě s [E]rybou\n[D]I ty si [F#mi]našel ko[D]nečně tu [E]svou\n[A]Máš už teď [Hmi]tu holku [D]vypále[A]nou"
+    },
+    {
+      "type": "bridge",
+      "text": "[A] [Hmi] [D] [A] (2x)"
+    },
+    {
+      "type": "verse",
+      "text": "[A]Bába už [Hmi]zbaštila [D]kaši s hou[A]bou\n[Hmi]Dědek má [D]svou švestku [E]zabalenou\n[D]I ty si [F#mi]našel [D]konečně tu [E]svou\n[A]Máš už teď [Hmi]tu holku [D]pozlace[A]nou"
+    },
+    {
+      "type": "chorus",
+      "text": "[F#mi]Každej by chtěl jenom [D]vědět co bude [A]dál\n[F#mi]Každýmu zůstalo jen [D]s čím si tu [E]hrál"
+    },
+    {
+      "type": "verse",
+      "text": "[A]Řeka se [Hmi]se sluncem [D]zdraví [A]duhou\n[Hmi]Mařenka [D]svázala [E]Pepu stuhou\n[D]I ty si [F#mi]našel [D]konečně tu [E]svou\n[A]Máš už teď [Hmi]tu holku [D]pozlace[A]nou"
+    },
+    {
+      "type": "chorus",
+      "text": "[F#mi]Každej by chtěl jenom [D]vědět co bude [A]dál\n[F#mi]Každýmu zůstalo jen [D]s čím si tu [E]hrál"
+    },
+    {
+      "type": "chorus",
+      "text": "[F#mi]Každej by chtěl jenom [D]vědět co bude [A]dál\n[F#mi]Každýmu zůstalo jen [D]s čím si tu [E]hrál"
+    },
+    {
+      "type": "verse",
+      "text": "[A]Zejtra mě [Hmi]tvý oči [D]nerozhou[A]pou\n[Hmi]Oni se [D]do zejtra [E]zapomenou\n[D]Vždyť ty si [F#mi]našel ko[D]nečně tu [E]svou\n[A]Jistěže [Hmi]dík, [D]ale nashleda[A]nou .."
+    },
+    {
+      "type": "outro",
+      "text": "Jistěže [Hmi]dík, [D]ale nashleda[A]nou .."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Igelit",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Kamínky",
+  "year": "1990",
+  "key": "C",
+  "capo": 0,
+  "used_chords": [
+    "C",
+    "D",
+    "Em",
+    "G"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:23:52.926Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[G] Ukrytý v stínu lesa,[D] igelit, to kdyby přišel[C] k ránu[G] déšť,\npod hlavou boty, nůž, tá[D]tovu bundu šitou z maská[G]čů.\nK ránu se mlhy zvednou [D]a ptáci volaj': hele, lidi, [C]sví[G]tá,\npak větvičky si nalámou na [D]oheň, aby uvařili [G]čaj."
+    },
+    {
+      "type": "chorus",
+      "text": "A všichni se [Em]znaj', [D]znaj', [G]znaj' a blázněj' a [C]zpí[G]vaj'\na po cestách [Em]dál, [D]dál, [G]dál hledaj' [C]normální [G]svět."
+    },
+    {
+      "type": "verse",
+      "text": "[G]Ukrytý v stínu lesa, [D]k večeru znavený nohy [C]sklá[G]daj',\nkytara zpívá o tom, [D]hmmmm jak dřív bylo [G]líp.\nTen, kdo neví, nepochopí, [D]nepromíjí čas nic, všechno [C]vrá[G]tí,\nta chvilka, co máš na život, [D]Ti uplyne jak od ohýnku [G]dým."
+    },
+    {
+      "type": "chorus",
+      "text": "A všichni se [Em]znaj', [D]znaj', [G]znaj' a blázněj' a [C]zpí[G]vaj'\na po cestách [Em]dál, [D]dál, [G]dál hledaj' [C]normální [G]svět."
+    },
+    {
+      "type": "outro",
+      "text": "Ukrytý v stínu lesa, [D]igelit, to kdyby přišel [C]k ránu [G]déšť...."
+    }
+  ]
+}

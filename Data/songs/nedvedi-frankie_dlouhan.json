@@ -1,0 +1,63 @@
+{
+  "title": "Frankie Dlouhán",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Na kameni kámen",
+  "year": "1985",
+  "key": "Ami",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "F",
+    "G",
+    "G7"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:18:01.658Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "Kolik je [C]smutného, když [F]mraky černé [C]jdou,\nlidem nad hla[G]vou, [F]smutnou dála[C]vou.\n[C]Já slyšel příběh, který [F]velkou pravdu [C]měl,\nza čas odle[G]těl, [F]každý zapo[C]mněl."
+    },
+    {
+      "type": "chorus",
+      "text": "Měl kapsu [G]prázdnou Frankie Dlouhán,\npo Státech [F]toulal se jen [C]sám,\na že byl [F]veselej, tak [C]každej měl ho [G]rád.[G7]\nTam ruce [F]k dílu mlčky přiloží a [C]zase jede [Ami]dál,\na [F]každej, kdo s ním [G]chvilku byl,\ntak [F]dlouho [G]se pak [C]smál."
+    },
+    {
+      "type": "verse",
+      "text": "Tam, kde byl [C]pláč, tam Frankie [F]hezkou píseň [C]měl,\nslzy neměl [G]rád, [F]chtěl se jenom sm[C]át.\n[C]A když pak večer ranče [F]tiše usín[C]aj,\nFrankův zpěv jde [G]dál, [F]nocí s písní d[C]ál."
+    },
+    {
+      "type": "chorus",
+      "text": "Měl kapsu [G]prázdnou Frankie Dlouhán,\npo Státech [F]toulal se jen [C]sám,\na že byl [F]veselej, tak [C]každej měl ho [G]rád.[G7]\nTam ruce [F]k dílu mlčky přiloží a [C]zase jede [Ami]dál,\na [F]každej, kdo s ním [G]chvilku byl,\ntak [F]dlouho [G]se pak [C]smál."
+    },
+    {
+      "type": "verse",
+      "text": "Tak Franki[C]eho vám jednou [F]našli, přestal [C]žít,\njeho srdce [G]spí, [F]tiše, smutně [C]spí.\nBůhví jak, [C]za co, tenhle[F] smíšek konec [C]měl,\narář píseň [G]pěl, [F]umíráček zn[C]ěl."
+    },
+    {
+      "type": "chorus",
+      "text": "Měl kapsu [G]prázdnou Frankie Dlouhán,\npo Státech [F]toulal se jen [C]sám,\na že byl [F]veselej, tak [C]každej měl ho [G]rád.[G7]\nTam ruce [F]k dílu mlčky přiloží a [C]zase jede [Ami]dál,\na [F]každej, kdo s ním [G]chvilku byl,\ntak [F]dlouho [G]se pak [C]smál."
+    }
+  ]
+}

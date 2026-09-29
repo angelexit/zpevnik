@@ -1,0 +1,96 @@
+{
+  "title": "Slečna Závist",
+  "artist": "Brichta Aleš",
+  "artistKey": "brichta_ales",
+  "album": "Legendy",
+  "year": "1995",
+  "key": "Ami",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=1V0mPufCFPA&list=RD1V0mPufCFPA&start_radio=1",
+  "last_modified": "2026-04-28T13:34:42.212Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:31:54.454Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[Ami] [G]"
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Ta dívka u oltáře,\nco pohled tvůj teď váže,\n[G]skrýt závist zkouší\nza vlast[Ami]ním bohatstvím."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Má krásu moc i slávu,\npřesto vidíš, že se trápí,\nkdyž [G]tvář zakrývá jí závoj\n[Ami]tkanej z černejch pavučin."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Á...  [G]Á... [Ami]"
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Proč přišla takhle zrána\na co si žádá u pána,\nže [G]svíčku drží v dlaních,\ntiše [Ami]obchod nabízí."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Bože vyslyš moje přání,\njak neřekneš svý \"ano\" mi,\ntak [G]ďáblu ruku podám,\nkdyž mi [Ami]pomoc přislíbí."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Á...  [G]Á... [Ami]"
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]No jen řekni, dám ti to, co chceš,\njá věřím, ty to dokážeš,\nslib [G]krví potvrdím,\njen dej, ať [Ami]nikdo nemá víc."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Mě pálí, když je kdokoliv\ns víc štěstím, se vším cokoliv,\nco [G]zrovna nemám já,\nradši, ať [Ami]sama nemám nic."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Teď otáčí se s nevolí,\n   jak ďáblu podpis zabolí,\n   už [G]do rysů jí kreslí\n   vrásky [Ami]z duše šedivý"
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Á...  [G]Á... [Ami]"
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Pak konečně k nám promluví,\nskřek havraní tu zakrouží\na [G]mezi námi hledá,\nsvoji [Ami]oběť vybírá."
+    },
+    {
+      "type": "verse",
+      "text": "[Ami]Když ne mě, radši nikomu\na slova nejsou k ničemu,\nto [G]slečna závist vstoupila\nzas [Ami]do někoho z nás."
+    },
+    {
+      "type": "chorus",
+      "text": "[Ami]Á...  [G]Á... [Ami]"
+    },
+    {
+      "type": "outro",
+      "text": "[Ami]Á...  [G]Á... [Ami]"
+    }
+  ]
+}

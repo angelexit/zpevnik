@@ -1,0 +1,85 @@
+{
+  "title": "Sally Grey",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "Balady",
+  "year": "1995",
+  "key": "",
+  "capo": 0,
+  "used_chords": [
+    "C",
+    "D",
+    "Emi"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-09T08:16:56.417Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[Emi]Pojďte, lidi poslou[D]chejte, [Emi]pojďte lidi ke mně [D]blíž\n[Emi]já vám povím historii [C]o tom, že je [D]s láskou [Emi]kříž."
+    },
+    {
+      "type": "verse",
+      "text": "Žil jest v Yorku jeden párek, jeden párek blaženej,\nmladej pán byl Wiliam Taylor a slečinka Sally Gray."
+    },
+    {
+      "type": "verse",
+      "text": "On byl jinoch tuze švarnej, ona zas ja z růže květ,\nno a tak se měli rádi, celičkej jim patřil svět."
+    },
+    {
+      "type": "verse",
+      "text": "Jenže po tý pěkný Sally začal koukat jeden pán,\nWiliam byl mu trnem v oku, tak byl k vojsku povolán."
+    },
+    {
+      "type": "verse",
+      "text": "V krátkým čase rozkřiklo se, kdo v tom skutku prsty měl,\nale to už milej Taylor s granátníckým plukem šel."
+    },
+    {
+      "type": "verse",
+      "text": "Jeho milá nezoufala, že má život zmařenej,\nkdo si myslí že to vzdala, ten zná málo Sally Gray."
+    },
+    {
+      "type": "verse",
+      "text": "Sally vlasy zkrátíla si, prstýnek si schovala,\nv kalhotách a režný blůze zverbovat se nechala."
+    },
+    {
+      "type": "verse",
+      "text": "Cvičili ji levá - pravá, šturmem běhat blíž a dál,\nprstýnek ji přitom vypad, zrovna u ní seržant stál."
+    },
+    {
+      "type": "verse",
+      "text": "Ty přec nejsi žádný vojín, ty si holka z růže květ,\njěště bys tu došla škody, zejtra půjdeš k mámě zpět."
+    },
+    {
+      "type": "verse",
+      "text": "Já tu hledám bratra svého, nikde ho tu nevidím,\nWiliam Taylor jméno jeho, to je vše, co o něm vím."
+    },
+    {
+      "type": "verse",
+      "text": "Jestli ty jsi sestra jeho, mám pro tebe smutnou zvěst,\nsám si nožem život zkrátil, sedum dnů už mrtev jest."
+    },
+    {
+      "type": "verse",
+      "text": "Dívka v mžiku bodák tasí, bodák dvakrát broušenej,\nvlastní srdce probodla si, tak skončila Sally Gray."
+    }
+  ]
+}

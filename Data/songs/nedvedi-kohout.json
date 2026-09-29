@@ -1,0 +1,70 @@
+{
+  "title": "Kohout",
+  "artist": "Nedvědi",
+  "artistKey": "nedvedi",
+  "album": "František",
+  "year": "1993",
+  "key": "A",
+  "capo": 0,
+  "used_chords": [
+    "A",
+    "D",
+    "E",
+    "Hm"
+  ],
+  "youtube_link": "",
+  "last_modified": "2026-06-08T13:26:07.324Z",
+  "status": {
+    "state": "needs_review",
+    "level": "orange",
+    "label": "Lehká úprava",
+    "issues": [],
+    "note": "",
+    "checked": false,
+    "checked_at": null,
+    "play_review_required": true,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "S [A]podvečerem tady u nás začnou ptáci zpívat\na [E]nad krajinou nebe vzlítne kamsi, kde je řád.\nA [Hmi]do řeky se světla z oken budou chvilku dívat\na pak si [D]unavený lásky půjdou lehnout, budou [E]spát."
+    },
+    {
+      "type": "verse",
+      "text": "[A]V tu dobu zavírám už oči abych Tě měl něžná lásko,\nv [E]soukromí tak tiše jako voda tečky hvězd.\n[Hmi]Nádhernou a bílou jak svý ruce ke mě vzpínáš,\njak často [D]nechávám se Tebou do ztracena něhy [E]vést."
+    },
+    {
+      "type": "chorus",
+      "text": "Zvony zvoní jen [A]chvíli, ruce budou se třást\na pak zmlknou má [E]lásko,\nto [Hmi]kohout je umlčí [D]k ránu, když mě opou[A]štíš.[E]\nZvony zvoní jen [A]chvíli, jen než přijde den,\nproto krásně a [E]blízko\na pak [Hmi]ztichnou, abych slyšel, jak mi tajný přání [D]mý odpou[A]štíš.[E]"
+    },
+    {
+      "type": "verse",
+      "text": "S [A]podvečerem tady u nás začnou ptáci zpívat\na [E]nad krajinou nebe vzlétne kamsi, kde je řád.\nTo [Hmi]já se chodím do Tvých očí v noci lásko dívat\na kdyby [D]do očí, jo to bys koukala, kam už jsem [E]spad."
+    },
+    {
+      "type": "verse",
+      "text": "[A]Na záda Ti nehty napíšu miláčku jméno\na [E]podepíšu na čas rozloučení věrný slib.\nŽe [Hmi]kameny se k nebi spíš než moje láska zvednou,\nže jsi [D]moje štěstí, s Tebou je mi vždycky trochu [E]líp."
+    },
+    {
+      "type": "chorus",
+      "text": "Zvony zvoní jen [A]chvíli, ruce budou se třást\na pak zmlknou má [E]lásko,\nto [Hmi]kohout je umlčí [D]k ránu, když mě opou[A]štíš.[E]\nZvony zvoní jen [A]chvíli, jen než přijde den,\nproto krásně a [E]blízko\na pak [Hmi]ztichnou, abych slyšel, jak mi tajný přání [D]mý odpou[A]štíš.[E]"
+    },
+    {
+      "type": "chorus",
+      "text": "Zvony zvoní jen [A]chvíli, ruce budou se třást\na pak zmlknou má [E]lásko,\nto [Hmi]kohout je umlčí [D]k ránu, když mě opou[A]štíš.[E]\nZvony zvoní jen [A]chvíli, jen než přijde den,\nproto krásně a [E]blízko\na pak [Hmi]ztichnou, abych slyšel, jak mi tajný přání [D]mý odpou[A]štíš.[E]"
+    },
+    {
+      "type": "outro",
+      "text": "a pak zmlknou má [E]lásko,\n     to [Hmi]kohout je umlčí [D]k ránu, když mě opou[A]štíš.[E]\n     Zvony zvoní jen [A]chvíli, jen než přijde den,\n     proto krásně a [E]blízko\n     a pak [Hmi]ztichnou, abych slyšel, jak mi tajný přání [D]mý odpou[A]štíš.[E]"
+    }
+  ]
+}

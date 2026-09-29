@@ -1,0 +1,62 @@
+{
+  "title": "Jarošovský pivovar",
+  "artist": "Argema",
+  "artistKey": "argema",
+  "album": "Poprvé",
+  "year": "1993",
+  "key": "G",
+  "capo": 0,
+  "used_chords": [
+    "C",
+    "D",
+    "Emi",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=ZkUlFxPWblA&list=RDZkUlFxPWblA&start_radio=1",
+  "last_modified": "2026-04-28T13:18:30.760Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:18:24.853Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "verse",
+      "text": "[G]Léta tam [D]stál, [C]stojí tam [G]dál,\n[G]pivovar [D]u cesty, [C]každý ho [D]znal,\n[G]léta tam [D]stál, [C]stát bude [G]dál,\n[G]ten, kdo zná [D]Jarošov, [C]zná pivo[G]var."
+    },
+    {
+      "type": "chorus",
+      "text": "[C]Bílá [D]pěna, lá[G]hev oro[Emi]sená,\n[C]chmelový [D]nektar já [G]znám,\n[C]jen jsem to [D]zkusil a [G]jednou se [Emi]napil,\n[C]od těch dob [D]žízeň [G]mám."
+    },
+    {
+      "type": "verse",
+      "text": "[G]Bída a [D]hlad, [C]kolem šel [G]strach,\n[G]když bylo [D]piva dost, [C]mohl ses [D]smát,\n[G]třista let [D]stál, [C]stát bude [G]dál,\n[G]ten, kdo zná [D]Jarošov, [C]zná pivo[G]var."
+    },
+    {
+      "type": "chorus",
+      "text": "[C]Bílá [D]pěna, lá[G]hev oro[Emi]sená,\n[C]chmelový [D]nektar já [G]znám,\n[C]jen jsem to [D]zkusil a [G]jednou se [Emi]napil,\n[C]od těch dob [D]žízeň [G]mám."
+    },
+    {
+      "type": "chorus",
+      "text": "[C]Bílá [D]pěna, lá[G]hev oro[Emi]sená,\n[C]chmelový [D]nektar já [G]znám,\n[C]jen jsem to [D]zkusil a [G]jednou se [Emi]napil,\n[C]od těch dob [D]žízeň [G]mám."
+    },
+    {
+      "type": "chorus",
+      "text": "[C]Bílá [D]pěna, lá[G]hev oro[Emi]sená,\n[C]chmelový [D]nektar já [G]znám,\n[C]jen jsem to [D]zkusil a [G]jednou se [Emi]napil,\n[C]od těch dob [D]žízeň [G]mám."
+    }
+  ]
+}

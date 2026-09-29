@@ -1,0 +1,76 @@
+{
+  "title": "Dám ti napít",
+  "artist": "Štěpán Kozub & Jiří Krhut",
+  "artistKey": "stepan_kozub__jiri_krhut",
+  "album": "Prásknu bičem",
+  "year": "2020",
+  "key": "C",
+  "capo": 0,
+  "used_chords": [
+    "Ami",
+    "C",
+    "Dmi",
+    "Emi",
+    "F",
+    "G"
+  ],
+  "youtube_link": "https://www.youtube.com/watch?v=kJzvehEs1BU&list=RDkJzvehEs1BU&start_radio=1",
+  "last_modified": "2026-06-13T20:11:33.062Z",
+  "status": {
+    "state": "ok",
+    "level": "green",
+    "label": "OK",
+    "issues": [],
+    "note": "",
+    "checked": true,
+    "checked_at": "2026-04-28T13:47:19.688Z",
+    "play_review_required": false,
+    "play_reviewed_at": null
+  },
+  "playback": {
+    "played": false,
+    "played_at": null
+  },
+  "source": {
+    "created_by": "Song Manager",
+    "generator_version": "3.3"
+  },
+  "parts": [
+    {
+      "type": "intro",
+      "text": "[C]    [Dmi]      [Ami]      [F] ."
+    },
+    {
+      "type": "verse",
+      "text": "V [C]těchto divných časech,\nuž to [Dmi]trvá dlouho, zdá se,\nale [Ami]jsi mi tak nějak blíž.[F]\nSice [C]nahoru a dolů,\ndneska [Dmi]sami včera spolu.\nMilá [Ami]už nic nemusíš.[F]"
+    },
+    {
+      "type": "verse",
+      "text": "[Dmi]Teď konečně vidím,\n[F]kdo mi všechno [G]chybí\na [C]ty jsi jedna z nich, ty jsi [F]první z nich.\n[Dmi]Pořád je nám krásně,\ni když [F]svět na chvíli [G]zhasne.\nNeboj, [Ami]on jen [G]na chvíli [F]ztich."
+    },
+    {
+      "type": "chorus",
+      "text": "Zůstaň [Ami]prosím tě [Emi]dýl, dám ti [F]zelenou.[G]\nJá jsem v [Ami]likérech [Emi]bájný [F]mág.[G] \nÓ-[Ami]ooo-h, dám ti [Emi]napít a [F]vzpomenout, [G]\njak jsem [Dmi]poprvé [F]na tebe [G]sáh....na tebe [C]sáh."
+    },
+    {
+      "type": "verse",
+      "text": "Že jsem blázen to víš i ty,\nČasto bývám roztržitý,\na je to na mě znát.\nNěco plácnu dřív než brzy,\nTy víš, jak mě to tak mrzí,\nNo a ten tvůj vodopád."
+    },
+    {
+      "type": "verse",
+      "text": "Prostě v téhle době\nvím jen díky tobě,\nkde je sever a kde jih .... kde je sever a kde jih.\nDívej, pořád je nám krásně,\ni když svět na chvíli zhasne.\nTak ho nech, on jen na chvíli ztich."
+    },
+    {
+      "type": "chorus",
+      "text": "Zůstaň [Ami]prosím tě [Emi]dýl, [F]dám ti zelenou.[G]\nJá jsem v [Ami]likérech [Emi]bájný [F]mág.[G] \nÓ-[Ami]ooo-h, dám ti [Emi]napít a [F]vzpomenout, [G]\njak jsem [Dmi]poprvé [F]na tebe [G]sáh.....na tebe [C]sáh."
+    },
+    {
+      "type": "chorus",
+      "text": "Zůstaň [Ami]prosím tě [Emi]dýl, [F]dám ti zelenou.[G]\nJá jsem v [Ami]likérech [Emi]bájný [F]mág.[G] \nÓ-[Ami]ooo-h, dám ti [Emi]napít a [F]vzpomenout, [G]\njak jsem [Dmi]poprvé [F]na [G]tebe sáh.....na tebe [C]sáh."
+    },
+    {
+      "type": "outro",
+      "text": "na tebe sáh"
+    }
+  ]
+}
