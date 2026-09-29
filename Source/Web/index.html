@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zpěvník</title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/svg.css">
+</head>
+
+<body data-theme="light">
+
+    <!-- LOGIN OVERLAY -->
+    <div id="loginOverlay" class="login-overlay hidden">
+        <div class="login-box">
+
+            <h1>🎵 Zpěvník</h1>
+            <p class="login-subtitle">
+                Vyber režim použití
+            </p>
+
+            <!-- USER -->
+            <div class="login-section">
+                <h2>👤 User</h2>
+
+                <input
+                    type="email"
+                    id="userEmailInput"
+                    placeholder="Email adresa"
+                >
+
+                <button id="userLoginBtn" class="login-btn">
+                    Pokračovat
+                </button>
+            </div>
+
+            <!-- ADMIN -->
+            <div class="login-section admin-section">
+                <h2>🧰 Admin</h2>
+
+                <input
+                    type="text"
+                    id="adminNameInput"
+                    placeholder="Admin jméno"
+                >
+
+                <input
+                    type="password"
+                    id="adminPassInput"
+                    placeholder="Admin heslo"
+                >
+
+                <button id="adminLoginBtn" class="login-btn admin-btn">
+                    Přihlásit admin
+                </button>
+            </div>
+
+            <div id="loginError" class="login-error"></div>
+
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <div class="topbar-left">
+            <a href="index.html" id="mainTitle">Zpěvník</a>
+			<div id="contextBar" class="context-bar"></div>
+        </div>
+
+        <div class="topbar-right">
+
+            <input
+                id="globalSearch"
+                type="text"
+                placeholder="Hledat písně či interprety..."
+            >
+
+            <button id="themeBtn" class="icon-btn">
+                🌙
+            </button>
+
+            <button id="toolsBtn" class="icon-btn">
+                🧰
+            </button>
+
+        </div>
+
+    </header>
+
+<!-- ADMIN TOOLBOX -->
+<div id="adminToolbox" class="admin-panel">
+
+    <div class="admin-grid">
+
+        <a href="tools/index.html#editor" class="admin-link">
+            ✍️ Editor
+        </a>
+
+        <a href="tools/index.html#indexer" class="admin-link">
+            ⚡ Indexer
+        </a>
+
+        <a href="tools/index.html#export" class="admin-link">
+            📦 Export
+        </a>
+
+        <a href="tools/index.html#chords" class="admin-link">
+            🎸 Akordy
+        </a>
+
+        <button id="logoutBtn" type="button" class="admin-link logout-btn">
+            🚪 Odhlásit
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- FILTER -->
+    <div id="album-filter-bar" class="filter-bar" style="display:none;">
+        <div id="album-list" class="filter-chips"></div>
+    </div>
+
+    <!-- MAIN -->
+    <main class="container">
+        <div id="app-content"></div>
+    </main>
+
+    <!-- APP -->
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

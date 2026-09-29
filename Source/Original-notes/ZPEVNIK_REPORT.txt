@@ -1,0 +1,105 @@
+ZPĚVNÍK EXPORT REPORT
+Vytvořeno: 8. 6. 2026 15:40:18
+==================================================
+Songů OK: 53
+Chybné JSON: 0
+
+NOVÉ SONGY OPROTI DATABASE
+- žádné
+
+CHYBÍ OPROTI DATABASE
+- žádné
+
+🟠 LEHKÁ ÚPRAVA
+---------------
+- Klus Tomáš – Nina [klus_tomas-nina.json] |  | 
+- Klus Tomáš – Pocity [klus_tomas-pocity.json] |  | 
+- Nedvědi – Frankie Dlouhán [nedvedi-frankie_dlouhan.json] |  | 
+- Nedvědi – Hejna včel [nedvedi-hejna_vcel.json] |  | 
+- Nedvědi – Hráz [nedvedi-hraz.json] |  | 
+- Nedvědi – Igelit [nedvedi-igelit.json] |  | 
+- Nedvědi – Jižní kříž [nedvedi-jizni_kriz.json] |  | 
+- Nedvědi – Kohout [nedvedi-kohout.json] |  | 
+- Nedvědi – Kytka [nedvedi-kytka.json] |  | 
+- Nedvědi – Máme jen sebe [nedvedi-mame_jen_sebe.json] |  | 
+- Nedvědi – Na kameni kámen [nedvedi-na_kameni_kamen.json] |  | 
+- Nedvědi – Nad Sázavou [nedvedi-nad_sazavou.json] |  | 
+- Nedvědi – Podvod [nedvedi-podvod.json] |  | 
+- Nedvědi – Proužek [nedvedi-prouzek.json] |  | 
+- Nedvědi – Ptáčata [nedvedi-ptacata.json] |  | 
+- Nedvědi – Růže z papíru [nedvedi-ruze_z_papiru.json] |  | 
+- Nedvědi – Sedmikráska [nedvedi-sedmikraska.json] |  | 
+- Nedvědi – Skládanka [nedvedi-skladanka.json] |  | 
+- Nedvědi – Slunovrat [nedvedi-slunovrat.json] |  | 
+- Nedvědi – Stánky [nedvedi-stanky.json] |  | 
+- Nedvědi – Tulácký ráno [nedvedi-tulacky_rano.json] |  | 
+- Nedvědi – Valčíček [nedvedi-valcicek.json] |  | 
+- Xindl-X – V blbým věku [xindlx-v_blbym_veku.json] |  | 
+
+🔴 PŘEDĚLAT
+-----------
+- nic
+
+🎸 NEPŘEHRÁNO
+-------------
+- 4 Non Blondes – What´s up [4_non_blondes-whats_up.json]
+- AG Flek – Andante Aledeto [ag_flek-andante_aledeto.json]
+- AG Flek – Carpe diem [ag_flek-carpe_diem.json]
+- AG Flek – Rehradice [ag_flek-rehradice.json]
+- Anna K. – Až mě zachráníš [anna_k-az_me_zachranis.json]
+- Anna K. – Chvíli nad vodou [anna_k-chvili_nad_vodou.json]
+- Anna K. – Na shledanou [anna_k-na_shledanou.json]
+- Anna K. – Nebe [anna_k-nebe.json]
+- Anna K. – Nelítám nízko [anna_k-nelitam_nizko.json]
+- Anna K. – Noc na zemi [anna_k-noc_na_zemi.json]
+- Anna K. – O kousek vedle tebe [anna_k-o_kousek_vedle_tebe.json]
+- Anna K. – Stačí, když se díváš [anna_k-staci_kdyz_se_divas.json]
+- Anna K. – Údolí včel [anna_k-udoli_vcel.json]
+- Anna K. – Večernice [anna_k-vecernice.json]
+- Anna K. – Večírek za koncem [anna_k-vecirek_za_koncem.json]
+- Anna K. – Vždycky se budeme znát [anna_k-vzdycky_se_budeme_znat.json]
+- Anna K. – Zavírám oči [anna_k-zaviram_oci.json]
+- Argema – Jarošovský pivovar [argema-jarosovsky_pivovar.json]
+- Argema – Tohle je ráj [argema-tohle_je_raj.json]
+- Brichta Aleš – Barák na odstřel [brichta_ales-barak_na_odstrel.json]
+- Brichta Aleš – Dívka s perlami ve vlasech [brichta_ales-divka_s_perlami_ve_vlasech.json]
+- Brichta Aleš – Slečna Závist [brichta_ales-slecna_zavist.json]
+- Daniel Landa – Holky a mašiny [daniel_landa-holky_a_masiny.json]
+- Daniel Landa – Jó ulice [daniel_landa-jo_ulice.json]
+- Divokej Bill – Alkohol [divokej_bill-alkohol.json]
+- Jiří Schelinger – Holubí dům [jiri_schelinger-holubi_dum.json]
+- Klus Tomáš – Nina [klus_tomas-nina.json]
+- Klus Tomáš – Pocity [klus_tomas-pocity.json]
+- Kryštof – Cesta [krystof-cesta.json]
+- Nedvědi – Frankie Dlouhán [nedvedi-frankie_dlouhan.json]
+- Nedvědi – Hejna včel [nedvedi-hejna_vcel.json]
+- Nedvědi – Hráz [nedvedi-hraz.json]
+- Nedvědi – Igelit [nedvedi-igelit.json]
+- Nedvědi – Jižní kříž [nedvedi-jizni_kriz.json]
+- Nedvědi – Kohout [nedvedi-kohout.json]
+- Nedvědi – Kytka [nedvedi-kytka.json]
+- Nedvědi – Máme jen sebe [nedvedi-mame_jen_sebe.json]
+- Nedvědi – Na kameni kámen [nedvedi-na_kameni_kamen.json]
+- Nedvědi – Nad Sázavou [nedvedi-nad_sazavou.json]
+- Nedvědi – Podvod [nedvedi-podvod.json]
+- Nedvědi – Proužek [nedvedi-prouzek.json]
+- Nedvědi – Ptáčata [nedvedi-ptacata.json]
+- Nedvědi – Růže z papíru [nedvedi-ruze_z_papiru.json]
+- Nedvědi – Sedmikráska [nedvedi-sedmikraska.json]
+- Nedvědi – Skládanka [nedvedi-skladanka.json]
+- Nedvědi – Slunovrat [nedvedi-slunovrat.json]
+- Nedvědi – Stánky [nedvedi-stanky.json]
+- Nedvědi – Tulácký ráno [nedvedi-tulacky_rano.json]
+- Nedvědi – Valčíček [nedvedi-valcicek.json]
+- Stypka David – Kříž [stypka_david-kriz.json]
+- Štěpán Kozub & Jiří Krhut – Dám ti napít [stepan_kozub__jiri_krhut-dam_ti_napit.json]
+- Štěpán Kozub & Jiří Krhut – Někdy se bojím [stepan_kozub__jiri_krhut-nekdy_se_bojim.json]
+- Xindl-X – V blbým věku [xindlx-v_blbym_veku.json]
+
+🖼️ POZNÁMKA K OBALU
+--------------------
+- nic
+
+❌ CHYBNÉ JSON SOUBORY
+---------------------
+- nic

@@ -1,0 +1,813 @@
+[
+  {
+    "file": "js/app/login.js",
+    "exports": [
+      "setupLogin",
+      "showLoginOverlay",
+      "showLoginError",
+      "applyMode",
+      "logout"
+    ],
+    "imports": [
+      "js/core/state.js"
+    ]
+  },
+  {
+    "file": "js/app/router.js",
+    "exports": [
+      "router"
+    ],
+    "imports": [
+      "js/catalog/artists.js",
+      "js/catalog/songs.js",
+      "js/song/view.js"
+    ]
+  },
+  {
+    "file": "js/app/theme.js",
+    "exports": [
+      "setupTheme",
+      "updateThemeIcon"
+    ],
+    "imports": [
+      "js/core/state.js"
+    ]
+  },
+  {
+    "file": "js/app/toolbox.js",
+    "exports": [
+      "setupToolbox"
+    ],
+    "imports": [
+      "js/app/login.js"
+    ]
+  },
+  {
+    "file": "js/app.js",
+    "exports": [
+      "init",
+      "setupTitle"
+    ],
+    "imports": [
+      "js/core/loader.js",
+      "js/core/state.js",
+      "js/app/login.js",
+      "js/app/theme.js",
+      "js/app/toolbox.js",
+      "js/app/router.js",
+      "js/shell/interactions.js"
+    ]
+  },
+  {
+    "file": "js/catalog/artists.js",
+    "exports": [
+      "renderArtists"
+    ],
+    "imports": [
+      "js/core/data-source.js",
+      "js/core/state.js",
+      "js/shell/header.js"
+    ]
+  },
+  {
+    "file": "js/catalog/songs.js",
+    "exports": [
+      "renderSongGrid",
+      "renderAlphabetFilter",
+      "filterByLetter",
+      "renderSongs",
+      "setupAlbumFiltering"
+    ],
+    "imports": [
+      "js/core/data-source.js",
+      "js/core/state.js",
+      "js/shell/header.js"
+    ]
+  },
+  {
+    "file": "js/chords/catalog.js",
+    "exports": [
+      "CHORD_DATABASES",
+      "getChordDatabase",
+      "findChordData"
+    ],
+    "imports": [
+      "js/chords/theory.js"
+    ]
+  },
+  {
+    "file": "js/chords/databases/chords_banjo5_Db.js",
+    "exports": [
+      "banjo5Chords"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/databases/chords_banjo6_Db.js",
+    "exports": [
+      "banjo6Chords"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/databases/chords_guitar_classic_Db.js",
+    "exports": [
+      "guitarChords"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/databases/chords_mandolin_Db.js",
+    "exports": [
+      "mandolinChords"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/databases/chords_open_c_Db.js",
+    "exports": [
+      "openCChords"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/databases/chords_open_d_Db.js",
+    "exports": [
+      "openDChords"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/databases/chords_open_g_Db.js",
+    "exports": [
+      "openGChords"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/databases/chords_ukulele_Db.js",
+    "exports": [
+      "ukuleleChords"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/diagrams.js",
+    "exports": [
+      "getChordDiagram"
+    ],
+    "imports": [
+      "js/chords/catalog.js",
+      "js/chords/theory.js",
+      "js/chords/svg.js"
+    ]
+  },
+  {
+    "file": "js/chords/svg.js",
+    "exports": [
+      "generateStringInstrumentSVG",
+      "getStringCount",
+      "stringToX",
+      "escapeHtml"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/theory.js",
+    "exports": [
+      "NOTES_SHARP",
+      "NOTE_ALIASES",
+      "normalizeChordName",
+      "transposeChord"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/chords/tooltips.js",
+    "exports": [
+      "initChordTooltips",
+      "moveChordTooltip"
+    ],
+    "imports": [
+      "js/chords/diagrams.js"
+    ]
+  },
+  {
+    "file": "js/core/data-source.js",
+    "exports": [
+      "libraryRoot",
+      "libraryUrl",
+      "readLibraryJson"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/core/desktop-api.js",
+    "exports": [
+      "api",
+      "announceChange",
+      "notice",
+      "libraryDirectory"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/core/loader.js",
+    "exports": [
+      "fetchData",
+      "loadSong"
+    ],
+    "imports": [
+      "js/core/data-source.js"
+    ]
+  },
+  {
+    "file": "js/core/parser.js",
+    "exports": [
+      "renderSongWithChordLayer"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/core/state.js",
+    "exports": [
+      "state"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/render/chords.js",
+    "exports": [
+      "getChordDiagram"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/render/piano.js",
+    "exports": [],
+    "imports": []
+  },
+  {
+    "file": "js/render/ui.js",
+    "exports": [
+      "renderArtists",
+      "renderSongs",
+      "renderSongDetail"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/shell/header.js",
+    "exports": [
+      "getAppTitle",
+      "getAppVersion",
+      "setHeaderTitle",
+      "setContextBar",
+      "clearContextBar",
+      "hideOldAlbumBar"
+    ],
+    "imports": [
+      "js/core/state.js"
+    ]
+  },
+  {
+    "file": "js/shell/interactions.js",
+    "exports": [],
+    "imports": []
+  },
+  {
+    "file": "js/song/instruments.js",
+    "exports": [
+      "TUNINGS_BY_INSTRUMENT",
+      "normalizeStoredInstrument",
+      "normalizeStoredTuning",
+      "updateTuningOptions"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/song/pagination.js",
+    "exports": [
+      "repaginateSong",
+      "currentSongPage",
+      "resetPagesToFlatList",
+      "paginateSongSections",
+      "measureSongCard",
+      "createSongPage",
+      "createSongColumn",
+      "updateSongPages",
+      "showSongPage",
+      "autoFitActivePage"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/song/settings.js",
+    "exports": [
+      "getSongSettings",
+      "applySongVisualSettings"
+    ],
+    "imports": [
+      "js/song/instruments.js"
+    ]
+  },
+  {
+    "file": "js/song/toolbar-layout.js",
+    "exports": [
+      "renderSongContextToolbar"
+    ],
+    "imports": [
+      "js/shell/header.js"
+    ]
+  },
+  {
+    "file": "js/song/toolbar.js",
+    "exports": [
+      "initSongToolbarSettings",
+      "initCollapsibleToolbar",
+      "collapseSongToolbars"
+    ],
+    "imports": [
+      "js/song/instruments.js",
+      "js/song/settings.js",
+      "js/song/pagination.js"
+    ]
+  },
+  {
+    "file": "js/song/view.js",
+    "exports": [
+      "renderSongDetail",
+      "renderSongObject"
+    ],
+    "imports": [
+      "js/core/loader.js",
+      "js/core/parser.js",
+      "js/shell/header.js",
+      "js/song/settings.js",
+      "js/song/toolbar.js",
+      "js/song/toolbar-layout.js",
+      "js/song/pagination.js",
+      "js/chords/tooltips.js"
+    ]
+  },
+  {
+    "file": "js/tools/chord-editor/chooser.js",
+    "exports": [
+      "matchingName",
+      "refreshAvailability",
+      "renderAvailability",
+      "buildLookupChord",
+      "filterInstrumentTypes",
+      "loadChosenChord",
+      "initChooser"
+    ],
+    "imports": [
+      "js/core/desktop-api.js",
+      "js/tools/chord-editor/library.js",
+      "js/tools/chord-editor/output.js"
+    ]
+  },
+  {
+    "file": "js/tools/chord-editor/fretboard.js",
+    "exports": [
+      "initFretboard",
+      "toggleNote",
+      "renderDots"
+    ],
+    "imports": [
+      "js/tools/chord-editor/instruments.js",
+      "js/tools/chord-editor/state.js",
+      "js/tools/chord-editor/output.js"
+    ]
+  },
+  {
+    "file": "js/tools/chord-editor/import.js",
+    "exports": [
+      "parseChordImport",
+      "importChord"
+    ],
+    "imports": [
+      "js/core/desktop-api.js",
+      "js/tools/chord-editor/instruments.js"
+    ]
+  },
+  {
+    "file": "js/tools/chord-editor/instruments.js",
+    "exports": [
+      "instruments",
+      "dotFrets",
+      "heights"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/chord-editor/library.js",
+    "exports": [
+      "mapping",
+      "changeChordLibrary",
+      "selectDatabaseChord",
+      "selectChordPosition",
+      "newDatabaseChord",
+      "addChordPosition",
+      "shiftFretboard",
+      "saveDatabaseChord",
+      "connectChordLibrary",
+      "importIntoLibrary"
+    ],
+    "imports": [
+      "js/core/desktop-api.js",
+      "js/tools/chord-editor/state.js",
+      "js/tools/chord-editor/fretboard.js",
+      "js/tools/chord-editor/output.js"
+    ]
+  },
+  {
+    "file": "js/tools/chord-editor/main.js",
+    "exports": [],
+    "imports": [
+      "js/tools/chord-editor/fretboard.js",
+      "js/tools/shared/theme.js",
+      "js/tools/chord-editor/output.js",
+      "js/tools/chord-editor/import.js",
+      "js/tools/chord-editor/svg.js",
+      "js/tools/chord-editor/library.js",
+      "js/tools/chord-editor/chooser.js"
+    ]
+  },
+  {
+    "file": "js/tools/chord-editor/output.js",
+    "exports": [
+      "updateAll",
+      "copyToClipboard"
+    ],
+    "imports": [
+      "js/tools/chord-editor/instruments.js",
+      "js/tools/chord-editor/state.js",
+      "js/tools/chord-editor/svg.js"
+    ]
+  },
+  {
+    "file": "js/tools/chord-editor/state.js",
+    "exports": [
+      "chordState"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/chord-editor/svg.js",
+    "exports": [
+      "renderNativeSVG"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/editor/chord-text.js",
+    "exports": [
+      "resetChordHistory",
+      "cancelChordMove",
+      "insertVisualChord",
+      "mountChordText"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/editor/chords.js",
+    "exports": [
+      "processToCache",
+      "renderChords",
+      "getDetectedChordList",
+      "buildChordName",
+      "buildChordQuickPicker",
+      "refreshChordPickers",
+      "setChordBuilderAccidental",
+      "setChordBuilderQuality",
+      "insertBuiltChordIntoSection",
+      "insertChordIntoSection"
+    ],
+    "imports": [
+      "js/tools/editor/chord-text.js",
+      "js/tools/editor/state.js",
+      "js/tools/editor/dom.js"
+    ]
+  },
+  {
+    "file": "js/tools/editor/covers.js",
+    "exports": [
+      "pickCoversFolder",
+      "getCoverBaseName",
+      "updatePaths",
+      "setCoverEmpty",
+      "findCoverHandle",
+      "refreshCoverPreview",
+      "imageFileToJpegBlob",
+      "pickCoverImage"
+    ],
+    "imports": [
+      "js/tools/editor/state.js",
+      "js/tools/editor/dom.js",
+      "js/tools/shared/paths.js"
+    ]
+  },
+  {
+    "file": "js/tools/editor/dom.js",
+    "exports": [
+      "$",
+      "setStatus",
+      "openTab",
+      "openChordEditor",
+      "escapeHtml"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/editor/downloads.js",
+    "exports": [
+      "writeTextFileToDir",
+      "downloadFileSafe"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/editor/files.js",
+    "exports": [
+      "rememberEditor",
+      "connectLibrary",
+      "pickSongsFolder",
+      "indexDirectory",
+      "findSongHandle",
+      "handleDbImport",
+      "autoLoadSelectedSong",
+      "loadSongContent",
+      "saveSongDirect",
+      "previewSong",
+      "downloadSong"
+    ],
+    "imports": [
+      "js/tools/editor/state.js",
+      "js/tools/editor/dom.js",
+      "js/tools/editor/metadata.js",
+      "js/tools/editor/song.js",
+      "js/core/desktop-api.js"
+    ]
+  },
+  {
+    "file": "js/tools/editor/indexer.js",
+    "exports": [
+      "collectSongsFromDirectory",
+      "pickIndexerFolder",
+      "pickIndexerOutputFolder",
+      "useEditorSongsFolderForIndexer",
+      "generateIndexesFromSelectedFolder",
+      "saveIndexOutputs",
+      "generateIndexes"
+    ],
+    "imports": [
+      "js/tools/editor/state.js",
+      "js/tools/editor/dom.js",
+      "js/tools/editor/downloads.js",
+      "js/tools/shared/paths.js"
+    ]
+  },
+  {
+    "file": "js/tools/editor/main.js",
+    "exports": [],
+    "imports": [
+      "js/tools/editor/dom.js",
+      "js/tools/editor/indexer.js",
+      "js/tools/editor/status.js",
+      "js/tools/editor/sections.js",
+      "js/tools/shared/theme.js",
+      "js/tools/shared/paths.js",
+      "js/tools/editor/metadata.js",
+      "js/tools/editor/files.js",
+      "js/tools/editor/covers.js",
+      "js/tools/editor/song.js",
+      "js/tools/editor/chords.js",
+      "js/tools/editor/downloads.js",
+      "js/tools/editor/files.js",
+      "js/tools/editor/chord-text.js"
+    ]
+  },
+  {
+    "file": "js/tools/editor/metadata.js",
+    "exports": [
+      "populateArtistSelect",
+      "handleArtistSelectChange",
+      "setArtistValue",
+      "handleCustomArtistInput",
+      "getAlbumListForArtist",
+      "populateAlbumSelect",
+      "handleAlbumSelectChange",
+      "handleCustomAlbumInput",
+      "setAlbumValue"
+    ],
+    "imports": [
+      "js/tools/editor/state.js",
+      "js/tools/editor/dom.js",
+      "js/tools/editor/covers.js"
+    ]
+  },
+  {
+    "file": "js/tools/editor/sections.js",
+    "exports": [
+      "isInstrumentalType",
+      "lineLooksInstrumental",
+      "autoSpaceInstrumentalLine",
+      "normalizeInstrumentalForEdit",
+      "addSection"
+    ],
+    "imports": [
+      "js/tools/editor/chord-text.js",
+      "js/tools/editor/dom.js",
+      "js/tools/editor/chords.js"
+    ]
+  },
+  {
+    "file": "js/tools/editor/song.js",
+    "exports": [
+      "normalizeSongParts",
+      "loadSongObject",
+      "resetEditorInputs",
+      "clearWorkAreasForNewSong",
+      "startSameArtistSong",
+      "startDifferentSong",
+      "buildSongObject"
+    ],
+    "imports": [
+      "js/tools/editor/chord-text.js",
+      "js/tools/editor/state.js",
+      "js/tools/editor/dom.js",
+      "js/tools/editor/metadata.js",
+      "js/tools/editor/status.js",
+      "js/tools/editor/covers.js",
+      "js/tools/editor/chords.js",
+      "js/tools/editor/sections.js",
+      "js/tools/shared/paths.js"
+    ]
+  },
+  {
+    "file": "js/tools/editor/state.js",
+    "exports": [
+      "editorState"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/editor/status.js",
+    "exports": [
+      "normalizeStatus",
+      "normalizePlayback",
+      "setPlaybackStatus",
+      "renderPlaybackStatus",
+      "setSongStatus",
+      "getSelectedStatusIssues",
+      "updateCurrentStatusDetails",
+      "renderSongStatus"
+    ],
+    "imports": [
+      "js/tools/editor/state.js",
+      "js/tools/editor/dom.js"
+    ]
+  },
+  {
+    "file": "js/tools/export/actions.js",
+    "exports": [
+      "ensureData",
+      "generateDatabase",
+      "generateArtists",
+      "generateReport",
+      "generateAll",
+      "resetAll"
+    ],
+    "imports": [
+      "js/tools/export/state.js",
+      "js/tools/export/files.js",
+      "js/tools/export/view.js"
+    ]
+  },
+  {
+    "file": "js/tools/export/files.js",
+    "exports": [
+      "pickSongsFolder",
+      "pickOutputFolder",
+      "loadOldDatabase",
+      "walk",
+      "scanSongs",
+      "writeFile"
+    ],
+    "imports": [
+      "js/tools/export/state.js",
+      "js/tools/export/view.js"
+    ]
+  },
+  {
+    "file": "js/tools/export/indexes.js",
+    "exports": [
+      "makeDatabase",
+      "makeArtists"
+    ],
+    "imports": [
+      "js/tools/export/state.js",
+      "js/tools/shared/paths.js"
+    ]
+  },
+  {
+    "file": "js/tools/export/main.js",
+    "exports": [],
+    "imports": [
+      "js/tools/shared/theme.js",
+      "js/tools/shared/paths.js",
+      "js/tools/export/view.js",
+      "js/tools/export/files.js",
+      "js/tools/export/indexes.js",
+      "js/tools/export/report.js",
+      "js/tools/export/actions.js"
+    ]
+  },
+  {
+    "file": "js/tools/export/report.js",
+    "exports": [
+      "makeReport"
+    ],
+    "imports": [
+      "js/tools/export/state.js"
+    ]
+  },
+  {
+    "file": "js/tools/export/state.js",
+    "exports": [
+      "exportState"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/export/view.js",
+    "exports": [
+      "log",
+      "setText",
+      "updateStats",
+      "renderSongsList",
+      "buildAllPreviews",
+      "showPreview"
+    ],
+    "imports": [
+      "js/tools/export/state.js",
+      "js/tools/shared/paths.js",
+      "js/tools/export/indexes.js",
+      "js/tools/export/report.js"
+    ]
+  },
+  {
+    "file": "js/tools/shared/paths.js",
+    "exports": [
+      "slug",
+      "normalizePath",
+      "basename"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/shared/theme.js",
+    "exports": [
+      "applyEmbeddedTheme"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/shell/main.js",
+    "exports": [
+      "initToolsPage"
+    ],
+    "imports": [
+      "js/tools/shell/navigation.js",
+      "js/tools/shell/theme.js"
+    ]
+  },
+  {
+    "file": "js/tools/shell/navigation.js",
+    "exports": [
+      "TOOLS",
+      "openTool",
+      "reloadActiveTool",
+      "goSongbook"
+    ],
+    "imports": [
+      "js/tools/shell/state.js"
+    ]
+  },
+  {
+    "file": "js/tools/shell/state.js",
+    "exports": [
+      "toolsState"
+    ],
+    "imports": []
+  },
+  {
+    "file": "js/tools/shell/theme.js",
+    "exports": [
+      "applyToolsTheme",
+      "toggleToolsTheme"
+    ],
+    "imports": []
+  }
+]

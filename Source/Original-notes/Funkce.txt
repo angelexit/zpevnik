@@ -1,0 +1,170 @@
+1. Základní navigace a hlavička
+
+Cíl: vždy vědět, kde jsem.
+
+hlavní stránka: Zpěvník
+stránka interpreta: Anna K.
+detail písně: v hlavičce zůstane Anna K.
+klik na Anna K. vrací zpět na interpreta
+klik z interpreta na Zpěvník vrací domů
+tlačítko/šipka zpět podle kontextu
+
+Záloha: backup_01_header_navigation
+
+2. Opravit routing a návraty
+
+Cíl: žádné ztracené URL ani bílé stránky.
+
+/index.html
+?artist=anna_k
+?song=songs/anna_k/pisen.json
+detail písně si musí pamatovat interpreta
+návrat z písně na správného interpreta
+ošetření neexistujícího interpreta/songu
+
+Záloha: backup_02_router
+
+3. User/Admin mód
+
+Cíl: běžný user nic nerozbije.
+
+User mód: (OK)
+prohlížení
+hledání
+navrhnout píseň
+nahlásit chybu
+Admin mód: (OK)
+editor
+indexer
+export JSON
+kontrola chyb
+správa obrázků
+admin menu schovat pod 🧰
+admin mód zapínat třeba přes heslo/PIN/localStorage
+
+Záloha: backup_03_user_admin_mode
+
+4. Žádanky o písně
+
+Cíl: user může poslat požadavek, ale nesahá do databáze.
+
+formulář:
+interpret
+název písně
+album
+rok
+poznámka
+odkaz na zdroj
+výstup jako JSON
+později GitHub Issue
+statusy:
+pending
+accepted
+rejected
+added
+
+Záloha: backup_04_song_requests
+
+5. Offline/Online aktualizace
+
+Cíl: zpěvník funguje offline, ale umí si stáhnout novinky.
+
+lokální data jako hlavní zdroj
+online kontrola nové verze
+ruční tlačítko Aktualizovat zpěvník
+informace o verzi databáze
+fallback: když není internet, jede poslední lokální verze
+později GitHub raw/release sync
+
+Záloha: backup_05_offline_online_sync
+
+6. Kontrola integrity dat
+
+Cíl: najít chyby dřív než rozbijí appku.
+
+chybějící artistKey
+duplicitní songy
+chybějící album
+chybějící cover
+neexistující soubor písně
+špatná cesta k obrázku
+prázdný title/artist
+nesedící artists.json vs database.json
+
+Záloha: backup_06_data_validator
+
+7. Obrázky interpretů a alb
+
+Cíl: jednotný vzhled.
+
+fallback obrázek
+kontrola chybějících obrázků
+jednotný formát třeba 16:9
+doporučená složka:
+img/interpret/
+img/album/
+img/default/
+později nástroj na crop/resize
+
+Záloha: backup_07_covers
+
+8. Fulltext hledání
+
+Cíl: rychle najít interpreta nebo píseň.
+
+hledání podle interpreta
+hledání podle názvu písně
+později podle textu
+zvýraznění výsledků
+kliknutí na výsledek
+ošetřit diakritiku: krystof najde Kryštof
+
+Záloha: backup_08_search
+
+9. Konfigurační soubor
+
+Cíl: neměnit věci natvrdo v JS.
+
+Do config.json dát:
+
+{
+  "appTitle": "Zpěvník",
+  "version": "2.6",
+  "adminEnabled": true,
+  "onlineSync": false,
+  "defaultTheme": "light"
+}
+
+Záloha: backup_09_config
+
+10. Čistá struktura projektu
+
+Cíl: už nikdy nemít chaos mezi 20 zálohama 😄
+
+jedna pracovní složka:
+zpevnik_DEV
+zálohy bokem:
+zpevnik_BACKUP_2026-05-18_01_header
+žádná editace přímo v backupu
+do hlavičky dát DEV označení
+
+Záloha: backup_10_structure_clean
+
+Pak teprve bych šel na největší část:
+
+11. Zobrazení samotné písně
+stránkování (OK)
+sloupce (OK)
+capo
+transpozice
+velikost písma (OK)
+mezerník/dálkové ovládání (OK)
+fullscreen (OK)
+tisk/PDF
+koncertní režim
+
+Tohle bych nechal jako samostatnou velkou etapu.
+
+Přidání akordů do závorek v případě hraní ve dvou na jednom pc (popřípadně i vybrání druhého nástroje, pak akordy podle lazení)
+Upravit zobrazení na sloupce, při dlouhým textu stránkování
+Přidat funkci hratelnosti (Neověřeno, ok, drobná oprava, špatně, katastrofa - vytvážet report soubor, který bude v admin módu viditelný) 

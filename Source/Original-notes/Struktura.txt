@@ -1,0 +1,41 @@
+ZPEVNIK/
+│
+├─ css/
+│  ├─ index.css                      # kaskádový styl pro stránku
+│  ├─ svg.css                        # kaskádový styl pro akordy a text
+│  └─ tools.css                      # kaskádový styl pro nástroje
+│
+├─ img/
+│  ├─ covers/                        # obaly alb 300×300 px, .jpg
+│  ├─ interprets/                    # bannery interpretů 500×250 px, .jpg
+│  ├─ Interpret.psd                  # šablona banneru interpreta
+│  └─ Template.psd                   # šablona skladby / alba
+│
+├─ js/
+│  ├─ core/
+│  │  ├─ loader.js                   # načítání JSON/databází
+│  │  └─ parser.js                   # převod textu, akordů, formátování
+│  │
+│  ├─ render/
+│  │  ├─ chords.js                   # vykreslení akordů strunné nástroje
+│  │  ├─ chord_guitar_classic_Db.js  # databáze akordů pro kytaru klasické lazení
+│  │  ├─ piano.js                    # vykreslení akordů klávesové nástroje
+│  │  ├─ piano_Db.js                 # databáze akordů pro klávesové nástroje
+│  │  └─ ui.js                       # vykreslení rozhraní
+│  │
+│  ├─ tools/                         # pomocné JS nástroje
+│  │  ├─ tools-app.js                # router nástrojů, přepínání Editor / Export / Akordy
+│  │  ├─ export.js                   # logika pro export
+│  │  └─ chords.js                   # logika pro editaci akordů
+│  └─ app.js                         # hlavní logika zpěvníku
+│
+├─ tools/
+│  └─ index.html                    # hlavní stránka nástrojů
+│
+├─ songs/                            # všechny písně ve formátu .json
+│
+├─ artists.json                      # databáze interpretů
+├─ config.json                       # nastavení aplikace
+├─ database.json                     # hlavní databáze písní
+├─ index.html                        # hlavní stránka zpěvníku
+└─ ZPEVNIK_REPORT.txt                # kontrolní report / chyby / chybějící data 
