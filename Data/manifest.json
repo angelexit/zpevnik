@@ -1,0 +1,588 @@
+{
+  "schemaVersion": 1,
+  "libraryVersion": "3.1-initial",
+  "database": "database.json",
+  "artists": "artists.json",
+  "songsDirectory": "songs/",
+  "assetDirectories": [
+    "img/covers/",
+    "img/interprets/"
+  ],
+  "files": [
+    {
+      "path": "artists.json",
+      "sha256": "64018517c10abb84eb55205b5ec097782c1f01e5f9e900e3886474bb8b7dd5a4",
+      "bytes": 2087
+    },
+    {
+      "path": "database.json",
+      "sha256": "bc02cf9cdc853b610ddeab55b151fac5ed7960bd146b85ffaab2b9683091b8c0",
+      "bytes": 17621
+    },
+    {
+      "path": "img/covers/4_non_blondes-bigger_better_faster_more.jpg",
+      "sha256": "984c5173a6f3e0422b9b631b784e5218f157f8e490a9c745a86e5da1e1e29779",
+      "bytes": 33486
+    },
+    {
+      "path": "img/covers/ag_flek-dohrala_hudba.jpg",
+      "sha256": "1e280e7872011a33bbf9b242a1adbc725e7fcdb697c29d3fc814fe5483be0115",
+      "bytes": 23370
+    },
+    {
+      "path": "img/covers/ag_flek-tramtarie.jpg",
+      "sha256": "94ebd541672862fbea62365b82eb1f1c8a7602411cb11ca4f0734771fbfa3d94",
+      "bytes": 18414
+    },
+    {
+      "path": "img/covers/anna_k-amulet.jpg",
+      "sha256": "70333d3d3c385ec1a17220c0adbb80120965d11d82785a257da0f66df0f1115f",
+      "bytes": 18944
+    },
+    {
+      "path": "img/covers/anna_k-nebe.jpg",
+      "sha256": "f51962af9c62064051416cccb84be13de29ab97a162d810938ef0d8e3581737c",
+      "bytes": 28440
+    },
+    {
+      "path": "img/covers/anna_k-noc_na_zemi.jpg",
+      "sha256": "9fda306d0f260e856d1f86902ca3311f9019f2b9066893d906eabb45fcb27909",
+      "bytes": 89559
+    },
+    {
+      "path": "img/covers/anna_k-relativni_cas.jpg",
+      "sha256": "a3041072c5bec4269847b31dcf4e7edcb6e07675310c17741aa3faea6b76f618",
+      "bytes": 16266
+    },
+    {
+      "path": "img/covers/anna_k-staci_kdyz_se_divas.jpg",
+      "sha256": "5002e274567e70f298a00b6db3d03877396559c8e0ba0da4d1e86f2acf151f88",
+      "bytes": 32914
+    },
+    {
+      "path": "img/covers/anna_k-svetlo.jpg",
+      "sha256": "b2b8f1b786de48ba72421f7da39d6a5d7c28904a0ec2181a4018242eb3f22e7b",
+      "bytes": 32097
+    },
+    {
+      "path": "img/covers/anna_k-udoli_vcel.jpg",
+      "sha256": "4602ebb6f863ebf590c3c1ccc0122fc9116b25c7102fdf3ad92fb0e9bcda938a",
+      "bytes": 27807
+    },
+    {
+      "path": "img/covers/anna_k-vecernice.jpg",
+      "sha256": "bf64ab83dd088c76f498f6df6ea100e4ac9c62b5f7b1aa3152e9fdca4b9c2ea9",
+      "bytes": 23980
+    },
+    {
+      "path": "img/covers/argema-poprve.jpg",
+      "sha256": "015f041479d52d0997c844b9d91dc85abaca91c174c96c7a51ec56f379f227e8",
+      "bytes": 30235
+    },
+    {
+      "path": "img/covers/argema-tohle_je_raj.jpg",
+      "sha256": "241909cf6a5202bdfff9384207d1d8b85c9be57f5455a75aeba0198919ba10dd",
+      "bytes": 30803
+    },
+    {
+      "path": "img/covers/brichta_ales-legendy.jpg",
+      "sha256": "f481dd2a955d9ceee6ec820379a07608a224880853ae26d47a167d42f99d2ce1",
+      "bytes": 34836
+    },
+    {
+      "path": "img/covers/brichta_ales-ruze_pro_algernon.jpg",
+      "sha256": "6ae70ac38f13c772831971815ca96bd88b6e7945673ce5eb3c5895edbb47abb6",
+      "bytes": 27779
+    },
+    {
+      "path": "img/covers/daniel_landa-chciply_dobry_vily.jpg",
+      "sha256": "882ab5f209d02b733fc576781bb190c23d8d3a5d4d3703ee3eaf2962b46b79a8",
+      "bytes": 31538
+    },
+    {
+      "path": "img/covers/daniel_landa-valcik.jpg",
+      "sha256": "141989a6d7ee3fe7ccc05e4942b4ff02d0d981635434e7c6eeec13d3da6b94fd",
+      "bytes": 27215
+    },
+    {
+      "path": "img/covers/divokej_bill-divokej_bill.jpg",
+      "sha256": "6041ac026367cea8edddc097da5e4a8b1d55f192ff68c48a34f93301c06e30a5",
+      "bytes": 27584
+    },
+    {
+      "path": "img/covers/hop_trop-hop_trop_na_venkowe.jpg",
+      "sha256": "ffb64e31bd2f50caecc0afeaf59fbc5aff73df0a7a908a89d2f33304cb9f0a40",
+      "bytes": 65092
+    },
+    {
+      "path": "img/covers/jiri_schelinger-holubi_dum__rene_ja_a_rudolf.jpg",
+      "sha256": "cc90a149fbbe1ba294c6bfe029242a7f8109fd0bcd5a9a849a728eb47dca79cc",
+      "bytes": 26497
+    },
+    {
+      "path": "img/covers/klus_tomas-cesta_do_zahudby.jpg",
+      "sha256": "1ae145a6e040b09ed92ed81a2aee2a5764bf5bd95641ff3d24255e84f272fac0",
+      "bytes": 22390
+    },
+    {
+      "path": "img/covers/klus_tomas-hlavni_uzaver_splinu.jpg",
+      "sha256": "091e00147e6466d4ce194d284413011534730efd43b86191be80d6c905d95cb9",
+      "bytes": 38669
+    },
+    {
+      "path": "img/covers/klus_tomas-racek.jpg",
+      "sha256": "6fb14e487bad454baa9c743cab74dbca5f831966e799817053278f44188e42c3",
+      "bytes": 20992
+    },
+    {
+      "path": "img/covers/krystof-inzerat.jpg",
+      "sha256": "db91b180863eb7cff7cfac20e78488ae6aad715972e759c85df335664665c2d2",
+      "bytes": 30225
+    },
+    {
+      "path": "img/covers/nedvedi-balady.jpg",
+      "sha256": "29f9826a46b735ef9d1ede5690adee8c668023ff3a6cc4d321b16b8bafe6cb39",
+      "bytes": 30253
+    },
+    {
+      "path": "img/covers/nedvedi-frantisek.jpg",
+      "sha256": "1e15efbab956d04f3f9fdf250f3a70622ba4e092a4e3bff4f923c16e5a49d2d0",
+      "bytes": 22803
+    },
+    {
+      "path": "img/covers/nedvedi-jakub.jpg",
+      "sha256": "a4dcb7205dd42f42977846f4d1c46b0d1ecd335262d455d92bd546272825ff9c",
+      "bytes": 21585
+    },
+    {
+      "path": "img/covers/nedvedi-kaminky.jpg",
+      "sha256": "1571a3c801b49eebe0aa3ea161ebd9c5e3de57cbb2d0e56972d26ed7b1443d32",
+      "bytes": 22500
+    },
+    {
+      "path": "img/covers/nedvedi-na_kameni_kamen.jpg",
+      "sha256": "eb2550e548bff3bfe093e805ca3ed39f432198150440cc30ad2a01dc957065bd",
+      "bytes": 30736
+    },
+    {
+      "path": "img/covers/nedvedi-ptacata.jpg",
+      "sha256": "cc5705295ed2c87ff7a5d4b74c653dab53526ea0448befc198cb0336ecfa71eb",
+      "bytes": 39152
+    },
+    {
+      "path": "img/covers/nedvedi-sedmikraska.jpg",
+      "sha256": "35e7332c3815c711dcdcf62cb25934d5aaf0b8087fdeb16f630d42f0bc2d534e",
+      "bytes": 19954
+    },
+    {
+      "path": "img/covers/nedvedi-vstupenka_na_strahov.jpg",
+      "sha256": "dbc24450efae93b1fe742060c914a9bd0e77d9cc77d31ffa7d721eed9182f9f9",
+      "bytes": 142879
+    },
+    {
+      "path": "img/covers/nedvedi-zahradky.jpg",
+      "sha256": "57e5c5178f7a33fbddf3d8bc919cdb191e87ec5b1837ef6c1ce8fa312b52ddd9",
+      "bytes": 24226
+    },
+    {
+      "path": "img/covers/stepan_kozub__jiri_krhut-prasknu_bicem.jpg",
+      "sha256": "1b9d1ab6a69ed8d42f674a608d43afd31d8d77c81a0d2362718991e7cbfc79a1",
+      "bytes": 20599
+    },
+    {
+      "path": "img/covers/stepan_kozub__jiri_krhut-prejezdely_vztah.jpg",
+      "sha256": "8283a7d0342070a3adba7e0c59994b15d2a693dca2693c1f75de019a922c3ec7",
+      "bytes": 29095
+    },
+    {
+      "path": "img/covers/stypka_david-neboj.jpg",
+      "sha256": "037f44ed7b18e224b1dfe126472f49b55ceda2e3ef1d1efd83836c5b0ce0e557",
+      "bytes": 22345
+    },
+    {
+      "path": "img/covers/xindlx-cechacek_made.jpg",
+      "sha256": "94ae0ba70ecb594dec9d7400caf8acd5ca3950242c86ffe07d2faf025ddaca23",
+      "bytes": 22004
+    },
+    {
+      "path": "img/interprets/4_non_blondes.jpg",
+      "sha256": "b1490108036f175691c013f996db58d153f6352c6778b27faaa2d88d61ef96c7",
+      "bytes": 130842
+    },
+    {
+      "path": "img/interprets/ag_flek.jpg",
+      "sha256": "c8c41e6ca582900a23fe7341fe757271255f5cf4683c94356601c2744519c2b4",
+      "bytes": 103897
+    },
+    {
+      "path": "img/interprets/anna_k.jpg",
+      "sha256": "0c08e8211ccc7dcc84bc4003e9d5bd12698e730bfe2f959c51b7a85f7c5f2791",
+      "bytes": 50395
+    },
+    {
+      "path": "img/interprets/argema.jpg",
+      "sha256": "1d0dc6377d989d40a3c0d5f26be8c49e4be410ec121b0f327759b5084a0c5932",
+      "bytes": 31003
+    },
+    {
+      "path": "img/interprets/brichta_ales.jpg",
+      "sha256": "317693b73748fb46baefb3fef6fea7f90814d7e30acee593593f6348dd24bd6f",
+      "bytes": 22006
+    },
+    {
+      "path": "img/interprets/daniel_landa.jpg",
+      "sha256": "0cff2eab8191fcc23f01f6aff76b4c77af161c2b837b1214b19deb25951106c7",
+      "bytes": 21806
+    },
+    {
+      "path": "img/interprets/divokej_bill.jpg",
+      "sha256": "eed35424a8850cf6fe5c459e3d198ee70cc01e9767dd080be85b08a03f6acd4e",
+      "bytes": 50435
+    },
+    {
+      "path": "img/interprets/elan.jpg",
+      "sha256": "b6ba070adbea14993ddee3fb939ff5305cfc501eaa159198b5cc519dc2274620",
+      "bytes": 31124
+    },
+    {
+      "path": "img/interprets/jiri_schelinger.jpg",
+      "sha256": "ded9668ddf6913ce819324e206d6601a945a487856fe7808df9fecb81337e536",
+      "bytes": 29953
+    },
+    {
+      "path": "img/interprets/klus_tomas.jpg",
+      "sha256": "0c71e92cc9aada4da944c25c4c658464637d2b4c27d2e606f9f438bd3a4ae443",
+      "bytes": 19247
+    },
+    {
+      "path": "img/interprets/krystof.jpg",
+      "sha256": "2449860b6ef1ef3439fe0341c6f837113160c358988447ca5b1a5c9014a44184",
+      "bytes": 105138
+    },
+    {
+      "path": "img/interprets/nedvedi.jpg",
+      "sha256": "f3bc3dd3fb0d9da7921fbbdff52e1018221de377087546d786cecb952e343c2b",
+      "bytes": 22855
+    },
+    {
+      "path": "img/interprets/stepan_kozub__jiri_krhut.jpg",
+      "sha256": "48eb546edd16b8feaf15b430a619e9285a2f329d9a70a09c1cfe0e1a0e101c6b",
+      "bytes": 30900
+    },
+    {
+      "path": "img/interprets/stypka_david.jpg",
+      "sha256": "913ccbacec80148b401eef3c85c826f7b7c013ea43be9d5c11fa86475816ee9d",
+      "bytes": 21032
+    },
+    {
+      "path": "img/interprets/xindlx.jpg",
+      "sha256": "06484b482bc12bbc6b4339ed082f263ce300ad1f2ed90aae6b7e96f7f6a7d2ee",
+      "bytes": 34181
+    },
+    {
+      "path": "songs/4_non_blondes-whats_up.json",
+      "sha256": "06374af6d1b3fdfcaacd85256a1bc17f9ac6133c3a41ff807df5b2218a357973",
+      "bytes": 3323
+    },
+    {
+      "path": "songs/ag_flek-andante_aledeto.json",
+      "sha256": "e2e7b8f90b725bf4589cc69113e784920b818a3ab921dc6ea68470dc045f7164",
+      "bytes": 2236
+    },
+    {
+      "path": "songs/ag_flek-carpe_diem.json",
+      "sha256": "c3cf7440fa3ca99f5053bafd46a434b85148d2abe165aa5a0463aa75306bdfa5",
+      "bytes": 2361
+    },
+    {
+      "path": "songs/ag_flek-rehradice.json",
+      "sha256": "5276287af9073231697ad3fc841486ba1b6ee6153c7a6ef9a3b6359f914544c8",
+      "bytes": 1592
+    },
+    {
+      "path": "songs/anna_k-az_me_zachranis.json",
+      "sha256": "de8866218f8d92e01a66c18da946013e1055684568148dcafc7b585a66e2f898",
+      "bytes": 2201
+    },
+    {
+      "path": "songs/anna_k-chvili_nad_vodou.json",
+      "sha256": "9e6f2611bbee9e9677a610c0de3c80757adca131c19d90bf21dfbfc0880436b5",
+      "bytes": 2483
+    },
+    {
+      "path": "songs/anna_k-na_shledanou.json",
+      "sha256": "9e82c201ad345f39271d233b57e29907db1f19c1dd0b8a107e5670d5f4ab8df4",
+      "bytes": 2490
+    },
+    {
+      "path": "songs/anna_k-nebe.json",
+      "sha256": "2bd0b4b357dccc5e8948573ae975007a37bed737e8666e04659253ae2f575d81",
+      "bytes": 2281
+    },
+    {
+      "path": "songs/anna_k-nelitam_nizko.json",
+      "sha256": "59582a50f6d22ab80ec68bad2a9423e49fe4ac07dc88cded141d5cac968f2f54",
+      "bytes": 2210
+    },
+    {
+      "path": "songs/anna_k-noc_na_zemi.json",
+      "sha256": "8dfb39d8456aa6d72192f1af18614cb16b9bae00f18d1b372ea792f2d82a7f68",
+      "bytes": 2598
+    },
+    {
+      "path": "songs/anna_k-o_kousek_vedle_tebe.json",
+      "sha256": "77443358ae2ec9b145b7acf6e62d37d0805f0d76bc76f4853ad73598698d3d45",
+      "bytes": 2206
+    },
+    {
+      "path": "songs/anna_k-staci_kdyz_se_divas.json",
+      "sha256": "70ce01d42bacbad662317be7937905ee7d871a40f4021528ccb76247a2b0d45e",
+      "bytes": 2217
+    },
+    {
+      "path": "songs/anna_k-udoli_vcel.json",
+      "sha256": "ea206d3b9b9458f318c9fc8ffcb6ce5b2261b83e8e9fc29ac57e237bd84d18a2",
+      "bytes": 2831
+    },
+    {
+      "path": "songs/anna_k-vecernice.json",
+      "sha256": "54d579cad60c44a1a891debf4ac0e6b97fd2160ec26108f105c66523ae5c88d6",
+      "bytes": 2348
+    },
+    {
+      "path": "songs/anna_k-vecirek_za_koncem.json",
+      "sha256": "49ac5cef78c649b88b6a953cec3a1c858db82ee0b06410a3b97d21a8f419395c",
+      "bytes": 2470
+    },
+    {
+      "path": "songs/anna_k-vzdycky_se_budeme_znat.json",
+      "sha256": "e884a8d89171a93338304d52afed657610922a5b0174fa3606e1c3f6efafcbd8",
+      "bytes": 2534
+    },
+    {
+      "path": "songs/anna_k-zaviram_oci.json",
+      "sha256": "9aaae4d6441407bfd62825b898728c08a131c6c0c6258b631aa2a054f1d385ed",
+      "bytes": 2399
+    },
+    {
+      "path": "songs/argema-jarosovsky_pivovar.json",
+      "sha256": "788c6c15dc15ee636d805652a43ce87c4bcd3eae8d2a53eb0e096ec2c11f4e46",
+      "bytes": 2165
+    },
+    {
+      "path": "songs/argema-tohle_je_raj.json",
+      "sha256": "99e2e3f8d57d2bc3a5ed4a2b9022447f6e1e93f5c09c1c799bdde9ff6d3603ec",
+      "bytes": 2154
+    },
+    {
+      "path": "songs/brichta_ales-barak_na_odstrel.json",
+      "sha256": "e7d02a1afbb1717da5d3cf98ea4e572cdb9ebcce27095c24da2eff4d64e37c9f",
+      "bytes": 2335
+    },
+    {
+      "path": "songs/brichta_ales-divka_s_perlami_ve_vlasech.json",
+      "sha256": "8ea95db6c9d8c23ddd3b0f4941281a3ab3764676e76e68739ca04ac8ea6c79ae",
+      "bytes": 3709
+    },
+    {
+      "path": "songs/brichta_ales-slecna_zavist.json",
+      "sha256": "be26e43e417cdff5c4b60a550ac8ad9cfa61349eda32c3e23108fd8562dc7a2c",
+      "bytes": 2845
+    },
+    {
+      "path": "songs/daniel_landa-holky_a_masiny.json",
+      "sha256": "08f3f02b9a2d0ed2289ffc07348ab26679061f882dee594502fc68131117cd00",
+      "bytes": 2483
+    },
+    {
+      "path": "songs/daniel_landa-jo_ulice.json",
+      "sha256": "b9aeb25b4a54ed23579212e935313a0675cf8e8e407db0d8b4769a918b59170c",
+      "bytes": 2986
+    },
+    {
+      "path": "songs/divokej_bill-alkohol.json",
+      "sha256": "db1533bc806bcecc196a9bc03bef9126dc82757b66f895004d818c86abeee577",
+      "bytes": 2222
+    },
+    {
+      "path": "songs/elan-voda_co_ma_drzi_nad_vodou.json",
+      "sha256": "6c32b566a9258496c1528d8c694075d26965899c67a7b5c965b7c202cdddc0ab",
+      "bytes": 2369
+    },
+    {
+      "path": "songs/hop_trop-tri_krize.json",
+      "sha256": "dd0ea3f277bb01c4acb331325a9dd56807e9ab7993575bf51d54b76f4671ad39",
+      "bytes": 2730
+    },
+    {
+      "path": "songs/jiri_schelinger-holubi_dum.json",
+      "sha256": "7d156e0f3a68a6df8707867969f282966709f71a5435144e4cc6054bed45e1ae",
+      "bytes": 2602
+    },
+    {
+      "path": "songs/klus_tomas-nina.json",
+      "sha256": "ac7b101ad8343d28b3743cc43cab2897018fe0f32714d3865f85e0753eb959c7",
+      "bytes": 2993
+    },
+    {
+      "path": "songs/klus_tomas-pocity.json",
+      "sha256": "168c9c94bdc17efbbbdb672978022b1aab73957d15fc99482d3b8e082ae88269",
+      "bytes": 2504
+    },
+    {
+      "path": "songs/krystof-cesta.json",
+      "sha256": "5676f627c966173e36c6aaea57ada2311aca9fc4249af350f9ca72a830327ab3",
+      "bytes": 2580
+    },
+    {
+      "path": "songs/nedvedi-cechacek.json",
+      "sha256": "a13a19deea813f4757476fd0d89bd623998c28f1653ad8e05040ab82b367b5a7",
+      "bytes": 2348
+    },
+    {
+      "path": "songs/nedvedi-frankie_dlouhan.json",
+      "sha256": "715e0051ffcf2abbb89a887b3c9ba9a3f8b639e64bc550d92b6f0ba0bf857c80",
+      "bytes": 2517
+    },
+    {
+      "path": "songs/nedvedi-hejna_vcel.json",
+      "sha256": "1f5fa5b8514881d6fbad0f2942d7fb3f687c811be2a18c7be502b719add123eb",
+      "bytes": 2049
+    },
+    {
+      "path": "songs/nedvedi-hraz.json",
+      "sha256": "fa4074243e5629841b41e96f7a22330a7f7695fdf2e2611e17b375e29fd35db3",
+      "bytes": 1990
+    },
+    {
+      "path": "songs/nedvedi-igelit.json",
+      "sha256": "fe5f023c805f9c53e6b33efda97dd1c8a8c05b34f6743fc104bb7d43125f9049",
+      "bytes": 1871
+    },
+    {
+      "path": "songs/nedvedi-jennifer_lady.json",
+      "sha256": "592493273658b8c4391aee01bc8ce94581ee5e55c810a0cf2bd211f263b6e420",
+      "bytes": 1993
+    },
+    {
+      "path": "songs/nedvedi-jizni_kriz.json",
+      "sha256": "3325e091573592cccd261b2994641298447281340468c79d6bb3e47351d76369",
+      "bytes": 1903
+    },
+    {
+      "path": "songs/nedvedi-kohout.json",
+      "sha256": "484c59747baab741f79e7ae8e81b762c9a837f440baffe52bd53ea1adef1172f",
+      "bytes": 3254
+    },
+    {
+      "path": "songs/nedvedi-kralovna_z_dundrum_bay_the_star_of_the_county_down.json",
+      "sha256": "576aec22166f4d9934630d5330f2dd56c99d375a4e6773a4b7a420cc1959e581",
+      "bytes": 2074
+    },
+    {
+      "path": "songs/nedvedi-krizek.json",
+      "sha256": "d227c61932be369d982a1aa0bd2ba2631f25dfa846a882cc0f3d7654c60f4ced",
+      "bytes": 2443
+    },
+    {
+      "path": "songs/nedvedi-kytka.json",
+      "sha256": "d143667b4265af16bc7bf65d2ae9406b545daccf38aa7f74ce3df49203c06675",
+      "bytes": 2916
+    },
+    {
+      "path": "songs/nedvedi-mame_jen_sebe.json",
+      "sha256": "383f42f60fc129a72ad0188fc473e19bd3fbebe637473fc8582ab08897a240d1",
+      "bytes": 2606
+    },
+    {
+      "path": "songs/nedvedi-mlha_nad_kanalem.json",
+      "sha256": "346b29c63282a634dc1d420a0983003965e47f404bb21faccee8582d7e2ca65d",
+      "bytes": 2387
+    },
+    {
+      "path": "songs/nedvedi-na_kameni_kamen.json",
+      "sha256": "671adbde86b415e780996ef2760c35bc0a9bc8431317b114eeb64f99391bbd73",
+      "bytes": 2154
+    },
+    {
+      "path": "songs/nedvedi-nad_sazavou.json",
+      "sha256": "590923b2c5a5d6806503c7340df7e048750ce9b23dd5bf1e5332fcde584674b2",
+      "bytes": 2419
+    },
+    {
+      "path": "songs/nedvedi-podvod.json",
+      "sha256": "d6b56050ba37c342cf44dca118fc5205e4b4fe3a9e7f9d1fdda1b398b55684b0",
+      "bytes": 2500
+    },
+    {
+      "path": "songs/nedvedi-prouzek.json",
+      "sha256": "04096776bc066cfcfbaedaabe745e5aabf4a0aa4f43c58a21a65f00704c484b3",
+      "bytes": 2382
+    },
+    {
+      "path": "songs/nedvedi-ptacata.json",
+      "sha256": "5aa72cbb2aa47b43d33e46421124282392fb58a8c9f0860e92313446007a501a",
+      "bytes": 1812
+    },
+    {
+      "path": "songs/nedvedi-ruze_z_papiru.json",
+      "sha256": "82da40c40864790268ec84588f7e2baa9815a023a30b385f58ddf9c037147ecb",
+      "bytes": 2015
+    },
+    {
+      "path": "songs/nedvedi-sally_grey.json",
+      "sha256": "036a117d2be983b7968d5a61e0dc242085d78e73a449dbfa47faea9433824243",
+      "bytes": 2680
+    },
+    {
+      "path": "songs/nedvedi-sedmikraska.json",
+      "sha256": "de85e8d4070b4909ebe427260d31695ffad68890b77f79ae7da6cd046806a2c5",
+      "bytes": 1978
+    },
+    {
+      "path": "songs/nedvedi-skladanka.json",
+      "sha256": "ad67e7b8a4ea12c34a264ab87b4f204c1c36d6797aac80c919e16660953c5bfc",
+      "bytes": 2124
+    },
+    {
+      "path": "songs/nedvedi-slunovrat.json",
+      "sha256": "4ba9c1bd692f383e83a8fa1cb3ec46b4b2e59944bde805352259608b00f185fe",
+      "bytes": 1826
+    },
+    {
+      "path": "songs/nedvedi-stanky.json",
+      "sha256": "733f7837eba423b247226c6a7d712bd96061ba11ee3d4c2207ebbaa4e789d26c",
+      "bytes": 1811
+    },
+    {
+      "path": "songs/nedvedi-tulacky_rano.json",
+      "sha256": "040538aee8c37540d42c6035ffae36e3b180cadc817976d704aa5f5eb77a6061",
+      "bytes": 2118
+    },
+    {
+      "path": "songs/nedvedi-valcicek.json",
+      "sha256": "def48bcbe52466d0fe310d98856aa9b4525b4f93bd69e7e6273aa82f3ccd326b",
+      "bytes": 1854
+    },
+    {
+      "path": "songs/stepan_kozub__jiri_krhut-dam_ti_napit.json",
+      "sha256": "826d9a463ffeaf3d7c09a364bfa8709cc60c89ce12d39b28945265949b821ea6",
+      "bytes": 2855
+    },
+    {
+      "path": "songs/stepan_kozub__jiri_krhut-nekdy_se_bojim.json",
+      "sha256": "19210f9cca4a21c50305b616256ee1ca3e085a2870c1f4608d0e1d24a57ae28b",
+      "bytes": 3094
+    },
+    {
+      "path": "songs/stypka_david-kriz.json",
+      "sha256": "35ac2239d69b147c00bfd2c24605a08615f9cf927e8b923520084181d61a062e",
+      "bytes": 2169
+    },
+    {
+      "path": "songs/xindlx-v_blbym_veku.json",
+      "sha256": "63833d8fcf194bd3c95bac86cac70d7e2bed024b28f68b7782d069aef6bb1d9f",
+      "bytes": 4769
+    }
+  ]
+}
