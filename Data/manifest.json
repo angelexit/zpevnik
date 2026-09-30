@@ -1,23 +1,94 @@
 {
   "schemaVersion": 1,
-  "libraryVersion": "3.1-initial",
+  "libraryVersion": "20260930-135401-60a2c671",
   "database": "database.json",
   "artists": "artists.json",
   "songsDirectory": "songs/",
   "assetDirectories": [
     "img/covers/",
-    "img/interprets/"
+    "img/interprets/",
+    "chords/"
   ],
   "files": [
     {
       "path": "artists.json",
-      "sha256": "64018517c10abb84eb55205b5ec097782c1f01e5f9e900e3886474bb8b7dd5a4",
-      "bytes": 2087
+      "sha256": "4b5c3b9eee96726455034b29d2b902729c4a32260e19b964de26b3efce8a3934",
+      "bytes": 2189
+    },
+    {
+      "path": "chords/banjo-banjo5.json",
+      "sha256": "7645b7e8cf6b4cb63d50199b4831e12bf2b1906271c35bd661bd208282f09da2",
+      "bytes": 3296
+    },
+    {
+      "path": "chords/banjo-banjo6.json",
+      "sha256": "23730eba2fc5acb6a3d39e31de1b72aa2868ef8f880e7edb01133f46fcd368e1",
+      "bytes": 3813
+    },
+    {
+      "path": "chords/banjo-tenor.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    {
+      "path": "chords/guitar-dropc.json",
+      "sha256": "e48c51e5e3dcbb688b70befae5c203ae169ede214b4b27eecba119b264dcd716",
+      "bytes": 822142
+    },
+    {
+      "path": "chords/guitar-dropd.json",
+      "sha256": "e48c51e5e3dcbb688b70befae5c203ae169ede214b4b27eecba119b264dcd716",
+      "bytes": 822142
+    },
+    {
+      "path": "chords/guitar-guitar7.json",
+      "sha256": "e48c51e5e3dcbb688b70befae5c203ae169ede214b4b27eecba119b264dcd716",
+      "bytes": 822142
+    },
+    {
+      "path": "chords/guitar-openc.json",
+      "sha256": "68f9e44254719f4f6b9875352b574e1955f18e83c56c9a0b3ee97ef783c26222",
+      "bytes": 2826
+    },
+    {
+      "path": "chords/guitar-opend.json",
+      "sha256": "754d9c1db0bf29c0e0e9aa99c0d730055f91c967f2578129b9380b439e6f512a",
+      "bytes": 3358
+    },
+    {
+      "path": "chords/guitar-openg.json",
+      "sha256": "0f495a4b6ef5a421a794e180f51e68b489b0bd97d1b74e9b875a2c75125cc6a7",
+      "bytes": 2809
+    },
+    {
+      "path": "chords/guitar-standard.json",
+      "sha256": "e48c51e5e3dcbb688b70befae5c203ae169ede214b4b27eecba119b264dcd716",
+      "bytes": 822142
+    },
+    {
+      "path": "chords/mandolin-standard.json",
+      "sha256": "81a1166594ec73e10000771034f572f9a8c1fa385eb06138c48696bf686ba03a",
+      "bytes": 2898
+    },
+    {
+      "path": "chords/ukulele-baritone.json",
+      "sha256": "91fd3057a61c3b621b5d2c412d700f6f59f8d31f8631b5b9c8ac07b4791b4733",
+      "bytes": 2881
+    },
+    {
+      "path": "chords/ukulele-standard.json",
+      "sha256": "91fd3057a61c3b621b5d2c412d700f6f59f8d31f8631b5b9c8ac07b4791b4733",
+      "bytes": 2881
+    },
+    {
+      "path": "config.json",
+      "sha256": "b4e1e22cc5bfd122f6ca9da9ed3a21a4915cecb3bf6d2c655ac91dafe91f04b1",
+      "bytes": 229
     },
     {
       "path": "database.json",
-      "sha256": "bc02cf9cdc853b610ddeab55b151fac5ed7960bd146b85ffaab2b9683091b8c0",
-      "bytes": 17621
+      "sha256": "2b7a4f30c2eb7c42d5fd91f8f33cd293f19fd77206efc4c32f8b20d8b0bc6af2",
+      "bytes": 18033
     },
     {
       "path": "img/covers/4_non_blondes-bigger_better_faster_more.jpg",
@@ -291,8 +362,8 @@
     },
     {
       "path": "songs/ag_flek-carpe_diem.json",
-      "sha256": "c3cf7440fa3ca99f5053bafd46a434b85148d2abe165aa5a0463aa75306bdfa5",
-      "bytes": 2361
+      "sha256": "eea62914d324400e8064856fd90d834491f03409362b7618cffe389369525cc3",
+      "bytes": 2430
     },
     {
       "path": "songs/ag_flek-rehradice.json",
@@ -301,8 +372,8 @@
     },
     {
       "path": "songs/anna_k-az_me_zachranis.json",
-      "sha256": "de8866218f8d92e01a66c18da946013e1055684568148dcafc7b585a66e2f898",
-      "bytes": 2201
+      "sha256": "c347990e3faa7d99c797d08c1ef018fb9480ab2aa020e5c5e0cd005a2130116d",
+      "bytes": 2297
     },
     {
       "path": "songs/anna_k-chvili_nad_vodou.json",
@@ -316,8 +387,8 @@
     },
     {
       "path": "songs/anna_k-nebe.json",
-      "sha256": "2bd0b4b357dccc5e8948573ae975007a37bed737e8666e04659253ae2f575d81",
-      "bytes": 2281
+      "sha256": "11d65254f506e456061194ef32887413eea59e739413df40af03f2834137b471",
+      "bytes": 2454
     },
     {
       "path": "songs/anna_k-nelitam_nizko.json",
@@ -356,8 +427,8 @@
     },
     {
       "path": "songs/anna_k-vzdycky_se_budeme_znat.json",
-      "sha256": "e884a8d89171a93338304d52afed657610922a5b0174fa3606e1c3f6efafcbd8",
-      "bytes": 2534
+      "sha256": "a810b9198569326cf1bccf49d2cc7958e9d7360b4f9f72a01af59538287073db",
+      "bytes": 2687
     },
     {
       "path": "songs/anna_k-zaviram_oci.json",
@@ -446,8 +517,8 @@
     },
     {
       "path": "songs/nedvedi-hejna_vcel.json",
-      "sha256": "1f5fa5b8514881d6fbad0f2942d7fb3f687c811be2a18c7be502b719add123eb",
-      "bytes": 2049
+      "sha256": "ecc6512df7f82e28ecc14d56cd6850176fe83fb7aef299b68f55ec5b5f9a54e0",
+      "bytes": 2317
     },
     {
       "path": "songs/nedvedi-hraz.json",
@@ -584,5 +655,7 @@
       "sha256": "63833d8fcf194bd3c95bac86cac70d7e2bed024b28f68b7782d069aef6bb1d9f",
       "bytes": 4769
     }
-  ]
+  ],
+  "config": "config.json",
+  "publishedAt": "2026-09-30T13:54:01.1811829Z"
 }

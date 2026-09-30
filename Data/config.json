@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "paths": {
+    "database": "database.json",
+    "artists": "artists.json",
+    "songs": "songs/",
+    "covers": "img/covers/",
+    "interprets": "img/interprets/",
+    "chords": "chords/"
+  }
+}

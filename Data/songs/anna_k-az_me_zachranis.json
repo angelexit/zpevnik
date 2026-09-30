@@ -13,11 +13,10 @@
     "Fadd9",
     "Fmaj7",
     "G",
-    "Gadd9",
-    "H"
+    "Gadd9"
   ],
-  "youtube_link": "https://www.youtube.com/watch?v=mncy3er5o8U&list=RDmncy3er5o8U&start_radio=1",
-  "last_modified": "2026-04-28T13:07:49.843Z",
+  "youtube_link": "https://www.youtube.com/watch?v=mncy3er5o8U\u0026list=RDmncy3er5o8U\u0026start_radio=1",
+  "last_modified": "2026-09-30T13:40:56.890Z",
   "status": {
     "state": "ok",
     "level": "green",
@@ -40,7 +39,7 @@
   "parts": [
     {
       "type": "intro",
-      "text": "orig.H ; odC uku ; kytara od G kapo4\n[C] [C] [Ami] [Fmaj7]"
+      "text": "orig.H ; odC uku ; kytara od G kapo4\n[C]    [C]    [Ami]      [Fmaj7] ."
     },
     {
       "type": "verse",
@@ -48,7 +47,7 @@
     },
     {
       "type": "chorus",
-      "text": "[Fadd9]Oooo, když mě [C]zachráníš,\n[G]ooo, až tě [Ami7]poznám blíž,\n[Fadd9]oooo když tě [C]objímám,\nnejsi [G]sám[Gadd9], nejsi [C]sám [Ami7] [Fmaj7]"
+      "text": "[Fadd9]Oooo, když mě [C]zachráníš,\n[G]ooo, až tě [Ami7]poznám blíž,\n[Fadd9]oooo když tě [C]objímám,\nnejsi [G]sám[Gadd9], nejsi [C]sám [Ami7]       [Fmaj7]"
     },
     {
       "type": "verse",
@@ -56,11 +55,11 @@
     },
     {
       "type": "chorus",
-      "text": "[Fadd9]Oooo, když mě [C]zachráníš,\n[G]ooo, až tě [Ami7]poznám blíž,\n[Fadd9]oooo když tě [C]objímám,\nnejsi [G]sám[Gadd9], nejsi [C]sám [Ami7] [Fmaj7]"
+      "text": "[Fadd9]Oooo, když mě [C]zachráníš,\n[G]ooo, až tě [Ami7]poznám blíž,\n[Fadd9]oooo když tě [C]objímám,\nnejsi [G]sám[Gadd9], nejsi [C]sám [Ami7]       [Fmaj7]"
     },
     {
       "type": "chorus",
-      "text": "[Fadd9]Oooo, když mě [C]zachráníš,\n[G]ooo, až tě [Ami7]poznám blíž,\n[Fadd9]oooo když tě [C]objímám,\nnejsi [G]sám[Gadd9], nejsi [C]sám [Ami7] [Fmaj7]"
+      "text": "[Fadd9]Oooo, když mě [C]zachráníš,\n[G]ooo, až tě [Ami7]poznám blíž,\n[Fadd9]oooo když tě [C]objímám,\nnejsi [G]sám[Gadd9], nejsi [C]sám [Ami7]       [Fmaj7]"
     }
   ]
 }

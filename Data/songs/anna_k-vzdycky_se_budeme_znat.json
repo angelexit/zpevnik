@@ -14,8 +14,8 @@
     "Emi",
     "G"
   ],
-  "youtube_link": "https://www.youtube.com/watch?v=ymMTBli7hBQ&list=RDymMTBli7hBQ&start_radio=1",
-  "last_modified": "2026-04-28T13:15:38.592Z",
+  "youtube_link": "https://www.youtube.com/watch?v=ymMTBli7hBQ\u0026list=RDymMTBli7hBQ\u0026start_radio=1",
+  "last_modified": "2026-09-30T13:41:42.530Z",
   "status": {
     "state": "ok",
     "level": "green",
@@ -38,7 +38,7 @@
   "parts": [
     {
       "type": "intro",
-      "text": "[D] [G] [Emi] [A]\n[D] [G] [Emi] [A]"
+      "text": "[D]    [G]    [Emi]      [A] .\n[D]    [G]    [Emi]      [A] ."
     },
     {
       "type": "verse",
@@ -50,7 +50,7 @@
     },
     {
       "type": "bridge",
-      "text": "[D] [G] [Emi] [A]\n[D] [G] [Emi] [A]"
+      "text": "[D]    [G]    [Emi]      [A] .\n[D]    [G]    [Emi]      [A] ."
     },
     {
       "type": "verse",
@@ -66,7 +66,7 @@
     },
     {
       "type": "bridge",
-      "text": "[D] [G] [Em] [A]"
+      "text": "[D]    [G]    [Em]     [A] ."
     },
     {
       "type": "chorus",

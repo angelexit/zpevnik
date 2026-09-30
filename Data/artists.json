@@ -1,98 +1,98 @@
 [
   {
+    "cover": "img/interprets/4_non_blondes.jpg",
     "artistKey": "4_non_blondes",
     "artist": "4 Non Blondes",
-    "count": 1,
-    "cover": "img/interprets/4_non_blondes.jpg"
+    "count": 1
   },
   {
+    "cover": "img/interprets/ag_flek.jpg",
     "artistKey": "ag_flek",
     "artist": "AG Flek",
-    "count": 3,
-    "cover": "img/interprets/ag_flek.jpg"
+    "count": 3
   },
   {
+    "cover": "img/interprets/anna_k.jpg",
     "artistKey": "anna_k",
     "artist": "Anna K.",
-    "count": 13,
-    "cover": "img/interprets/anna_k.jpg"
+    "count": 13
   },
   {
+    "cover": "img/interprets/argema.jpg",
     "artistKey": "argema",
     "artist": "Argema",
-    "count": 2,
-    "cover": "img/interprets/argema.jpg"
+    "count": 2
   },
   {
+    "cover": "img/interprets/brichta_ales.jpg",
     "artistKey": "brichta_ales",
-    "artist": "Brichta Ale\u0161",
-    "count": 3,
-    "cover": "img/interprets/brichta_ales.jpg"
+    "artist": "Brichta Aleš",
+    "count": 3
   },
   {
+    "cover": "img/interprets/daniel_landa.jpg",
     "artistKey": "daniel_landa",
     "artist": "Daniel Landa",
-    "count": 2,
-    "cover": "img/interprets/daniel_landa.jpg"
+    "count": 2
   },
   {
+    "cover": "img/interprets/divokej_bill.jpg",
     "artistKey": "divokej_bill",
     "artist": "Divokej Bill",
-    "count": 1,
-    "cover": "img/interprets/divokej_bill.jpg"
+    "count": 1
   },
   {
+    "cover": "img/interprets/elan.jpg",
     "artistKey": "elan",
-    "artist": "El\u00E1n",
-    "count": 1,
-    "cover": "img/interprets/elan.jpg"
+    "artist": "Elán",
+    "count": 1
   },
   {
+    "cover": "img/interprets/hop_trop.jpg",
     "artistKey": "hop_trop",
     "artist": "Hop Trop",
-    "count": 1,
-    "cover": "img/interprets/hop_trop.jpg"
+    "count": 1
   },
   {
+    "cover": "img/interprets/jiri_schelinger.jpg",
     "artistKey": "jiri_schelinger",
-    "artist": "Ji\u0159\u00ED Schelinger",
-    "count": 1,
-    "cover": "img/interprets/jiri_schelinger.jpg"
+    "artist": "Jiří Schelinger",
+    "count": 1
   },
   {
+    "cover": "img/interprets/klus_tomas.jpg",
     "artistKey": "klus_tomas",
-    "artist": "Klus Tom\u00E1\u0161",
-    "count": 2,
-    "cover": "img/interprets/klus_tomas.jpg"
+    "artist": "Klus Tomáš",
+    "count": 2
   },
   {
+    "cover": "img/interprets/krystof.jpg",
     "artistKey": "krystof",
-    "artist": "Kry\u0161tof",
-    "count": 1,
-    "cover": "img/interprets/krystof.jpg"
+    "artist": "Kryštof",
+    "count": 1
   },
   {
+    "cover": "img/interprets/nedvedi.jpg",
     "artistKey": "nedvedi",
-    "artist": "Nedv\u011Bdi",
-    "count": 26,
-    "cover": "img/interprets/nedvedi.jpg"
+    "artist": "Nedvědi",
+    "count": 26
   },
   {
+    "cover": "img/interprets/stepan_kozub__jiri_krhut.jpg",
+    "artistKey": "stepan_kozub__jiri_krhut",
+    "artist": "Štěpán Kozub \u0026 Jiří Krhut",
+    "count": 2
+  },
+  {
+    "cover": "img/interprets/stypka_david.jpg",
     "artistKey": "stypka_david",
     "artist": "Stypka David",
-    "count": 1,
-    "cover": "img/interprets/stypka_david.jpg"
+    "count": 1
   },
   {
-    "artistKey": "stepan_kozub__jiri_krhut",
-    "artist": "\u0160t\u011Bp\u00E1n Kozub \u0026 Ji\u0159\u00ED Krhut",
-    "count": 2,
-    "cover": "img/interprets/stepan_kozub__jiri_krhut.jpg"
-  },
-  {
+    "cover": "img/interprets/xindlx.jpg",
     "artistKey": "xindlx",
     "artist": "Xindl-X",
-    "count": 1,
-    "cover": "img/interprets/xindlx.jpg"
+    "count": 1
   }
 ]
