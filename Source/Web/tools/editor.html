@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<script>if(localStorage.getItem('zpevnikMode')!=='admin')location.replace('/index.html');</script>
+    <meta charset="UTF-8">
+    <title>Song Manager v4.0 CHORD BUILDER FIXED</title>
+    <link rel="stylesheet" href="../css/editor.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="tabs">
+        <button class="tab-btn add-btn" onclick="startSameArtistSong()">➕ PŘIDAT SONG STEJNÉHO INTERPRETA</button>
+        <button class="tab-btn add-btn alt" onclick="startDifferentSong()">➕ PŘIDAT JINÝ SONG</button>
+        <button class="tab-btn reset-btn header-reset" onclick="resetEditorInputs()">🧹 RESETOVAT EDITOR</button>
+    </div>
+
+    <div id="editor" class="tab-content active">
+        <div class="panel-db">
+            <div class="panel-title">1. Databáze</div>
+            <div class="setup-box">
+            <div class="input-group">
+                <label>1. Připojená databáze</label>
+                <span>Datová složka aplikace</span>
+                <div id="dbStatus" class="status">Čekám na database.json…</div>
+            </div>
+            <div class="input-group">
+                <label>2. Písně</label>
+                
+                <div id="folderStatus" class="status">Po výběru písničky se JSON načte automaticky.</div>
+            </div>
+            <div class="input-group">
+                <label>3. Obaly alb</label>
+                
+                <div id="coverFolderStatus" class="status">Volitelné, ale potom uvidíš obaly a můžeš je ukládat.</div>
+            </div>
+            <div class="input-group">
+                <label>4. Vybrat existující píseň k úpravě</label>
+                <div style="display:flex; gap:10px;">
+                    <select id="songSelect" style="flex-grow:1" disabled onchange="autoLoadSelectedSong()">
+                        <option value="">-- Nejdříve načti database.json --</option>
+                    </select>
+                    <input type="file" id="loadSongFile" style="display:none" onchange="loadSongContent(event)">
+                    <button class="btn btn-s" onclick="document.getElementById('loadSongFile').click()">RUČNĚ JSON</button>
+                </div>
+                <div id="loadStatus" class="status">Ruční načtení zůstává jako záloha.</div>
+            </div>
+        </div>
+
+        <div class="panel-data">
+            <div class="panel-title">2. Data</div>
+            <div class="grid">
+            <!-- 1. ŘÁDEK: Interpret / Píseň / Album / Rok / Tónina / Kapodastr -->
+            <div class="input-group">
+                <label>Interpret</label>
+                <select id="artistSelect" onchange="handleArtistSelectChange()" disabled>
+                    <option value="">-- Nejdříve načti database.json --</option>
+                </select>
+                <input class="artist-custom" type="text" id="artist" placeholder="Vlastní interpret" oninput="handleCustomArtistInput()">
+            </div>
+
+            <div class="input-group">
+                <label>Píseň</label>
+                <input type="text" id="title" oninput="updatePaths()"><select id="discogsSongSelect" hidden aria-label="Vybrat skladbu z Discogs"></select>
+            </div>
+
+            <div class="input-group">
+                <label>Album</label>
+                <select id="albumSelect" onchange="handleAlbumSelectChange()" disabled>
+                    <option value="">-- Vyber interpreta --</option>
+                </select>
+                <input class="album-custom" type="text" id="album" placeholder="Vlastní / nové album" oninput="handleCustomAlbumInput()">
+            </div>
+
+            <div class="input-group">
+                <label>Rok</label>
+                <input type="number" id="year">
+            </div>
+
+            <div class="input-group">
+                <label>Tónina</label>
+                <input type="text" id="key">
+            </div>
+
+            <div class="input-group">
+                <label>Kapodastr</label>
+                <input type="number" id="capo" value="0">
+            </div>
+
+            <!-- 2. ŘÁDEK: info pod Interpret+Píseň / obal pod Album+Rok / status+akordy pod Tónina+Kapodastr -->
+            <div class="input-group span-2">
+                <label>Info k souboru</label>
+                <div class="path-preview">
+                    📍 <b>Navržený název:</b> <span id="file-path">-</span><br>
+                    🖼️ <b>Obal:</b> <span id="cover-path">-</span><br>
+                    📄 <b>Aktuálně načteno:</b> <span id="current-file">-</span>
+                </div>
+                <div class="input-group" style="margin-top:12px;">
+                    <label>Akordy (Auto)</label>
+                    <div id="chord-display" class="chord-display-empty">-</div>
+<label for="manualChords">Vlastní nabídka akordů</label><input id="manualChords" placeholder="C, G, Ami, Fmaj7" autocomplete="off">
+<small>Odděl mezerou nebo čárkou. Akordy budou dostupné ve všech finálních sekcích pro vložení do textu.</small><p id="manualChordStatus" role="status"></p>
+                </div>
+
+            </div>
+
+            <div class="input-group span-2">
+                <label>Obal alba</label>
+                <div class="cover-card compact-cover">
+                    <div class="cover-frame">
+                        <img id="cover-preview" alt="Náhled obalu">
+                        <span id="cover-placeholder">Bez obalu</span>
+                    </div>
+                    <div class="cover-actions">
+                        <small id="coverStatus">Nejdřív vyber složku img/covers/. Pokud obal existuje, zobrazí se automaticky.</small>
+                        <button class="btn btn-s" onclick="pickCoverImage()">➕ PŘIDAT / VYMĚNIT OBAL</button>
+                        <button class="btn btn-warn" onclick="refreshCoverPreview()">🔄 ZNOVU NAČÍST OBAL</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group span-2">
+                <label>Stav songu</label>
+                <div class="review-status-box">
+                    <button type="button" id="status-ok" class="status-btn" onclick="setSongStatus('ok')">🟢 OK</button>
+                    <button type="button" id="status-review" class="status-btn" onclick="setSongStatus('needs_review')">🟠 Lehká úprava</button>
+                    <button type="button" id="status-rework" class="status-btn" onclick="setSongStatus('needs_rework')">🔴 Předělat</button>
+                </div>
+                <div id="status-details" class="status-details">
+                    <div style="font-weight:700; color:#475569; margin-bottom:6px;">Co je potřeba opravit?</div>
+                    <div class="issue-grid">
+                        <label class="issue-chip"><input type="checkbox" class="status-issue" value="chords"> Akordy</label>
+                        <label class="issue-chip"><input type="checkbox" class="status-issue" value="lyrics"> Text</label>
+                        <label class="issue-chip"><input type="checkbox" class="status-issue" value="structure"> Struktura</label>
+                        <label class="issue-chip"><input type="checkbox" class="status-issue" value="other"> Jiné</label>
+                    </div>
+                    <input type="text" id="status-note" placeholder="Poznámka k opravě…" oninput="updateCurrentStatusDetails()">
+                </div>
+
+                <div class="playback-panel">
+                    <label>Přehrání</label>
+                    <div class="review-status-box">
+                        <button type="button" id="playback-not-played" class="status-btn" onclick="setPlaybackStatus(false)">⚪ Nepřehráno</button>
+                        <button type="button" id="playback-played" class="status-btn" onclick="setPlaybackStatus(true)">🎸 Přehráno</button>
+                    </div>
+                    <small id="playback-info">Čeká na ověření hraním.</small>
+                </div>
+
+            </div>
+
+            <!-- 3. ŘÁDEK: YouTube přes celou šířku -->
+            <div class="input-group span-6">
+                <label>YouTube Link</label>
+                <input type="text" id="youtube_link">
+                <div id="onlineLookup" style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+                <button type="button" id="findDiscogs">🔎 Najít album na Discogs</button>
+                <button type="button" id="findDiscogsArtist">Najít interpreta na Discogs</button>
+                <button type="button" id="findYoutube">▶ Najít klip na YouTube</button>
+                <a href="https://www.discogs.com/settings/developers" target="_blank" rel="noopener">Získat token Discogs</a>
+                </div>
+                <p id="lookupStatus" role="status"></p>
+                <details id="discogsPanel" style="margin-top:16px;padding:16px;border:1px solid #94a3b8;border-radius:12px">
+<summary><strong>Discogs — připojit účet a vybrat album</strong></summary>
+<p>Token je uložen chráněně pro tvůj účet Windows, mimo knihovnu písní.</p>
+<input id="discogsToken" type="password" autocomplete="off" placeholder="Osobní token Discogs" aria-label="Osobní token Discogs">
+<button type="button" id="discogsConnect">Připojit a ověřit</button> <button type="button" id="discogsForget">Zapomenout token</button>
+<p id="discogsStatus" role="status"></p>
+<label>Hledané jméno interpreta <input id="discogsQuery" type="text" placeholder="Například Ilona Csáková"></label>
+<button type="button" id="discogsSearch">Najít interpreta</button>
+<div id="discogsResults" style="max-height:320px;overflow:auto;margin-top:12px"></div>
+<div id="discogsDetail"></div>
+<p><a href="https://www.discogs.com/" target="_blank" rel="noopener">Data provided by Discogs</a>. Zpěvník není přidružen k Discogs.</p>
+</details>
+            </div>
+            </div>
+        </div>
+
+        <div class="editor-split">
+            <div class="cache-section">
+                <div class="column-header">1. STŘIŽNA (RAW -> MEZIPAMĚŤ)</div>
+                <textarea id="rawInput" placeholder="Vlož text s akordy nahoře..."></textarea>
+                <button class="btn btn-s" style="width:100%; border-radius:0" onclick="processToCache()">PŘEVÉST NA AKORDY</button>
+                <textarea id="cacheOutput" placeholder="Ctrl+X odtud a vkládej vpravo..."></textarea>
+            </div>
+            <div class="sections-area">
+                <div class="column-header" style="background:#1e293b">2. FINÁLNÍ SEKCE</div>
+                <p>Klikni na akord a potom na nové místo v textu. Esc zruší přesun, Ctrl+Z vrátí změnu.</p>
+                <div id="sections-container" style="margin-top:15px;"></div>
+                <button class="btn btn-s" style="width:100%" onclick="addSection()">+ PŘIDAT SEKCI</button>
+            </div>
+        </div>
+        <div style="text-align:right; margin-top:20px; display:flex; gap:10px; justify-content:flex-end;">
+            <button class="btn btn-ok" style="font-size:1.2rem;" id="saveSongButton" onclick="saveSongDirect()">✅ ULOŽIT PÍSEŇ</button>
+            <button class="btn btn-p" style="font-size:1.2rem;" onclick="previewSong()">👁 ZOBRAZIT ÚPRAVY</button>
+        </div>
+    </div>
+
+    <div id="indexer" class="tab-content">
+        <div class="indexer-box">
+            <h2>Generátor systémových souborů</h2>
+            <p>Vyber složku, ze které se má databáze dělat. Primárně vyber přímo <b>songs/</b>. Generátor projde i podsložky.</p>
+
+            <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:15px; max-width:1300px; margin:20px auto; text-align:left;">
+                <div style="background:#f8fafc; padding:15px; border-radius:12px; border:1px solid #cbd5e1;">
+                    <b>1. Zdroj písní</b><br>
+                    <small>Buď použij už připojenou složku songs/ z editoru, nebo vyber jinou.</small><br><br>
+                    <button class="btn btn-s" style="width:100%; margin-bottom:8px;" onclick="useEditorSongsFolderForIndexer()">📁 POUŽÍT PŘIPOJENOU SLOŽKU SONGS</button>
+                    <button class="btn btn-p" style="width:100%;" onclick="pickIndexerFolder()">📂 VYBRAT JINOU SLOŽKU</button>
+                </div>
+
+                <div style="background:#f8fafc; padding:15px; border-radius:12px; border:1px solid #cbd5e1;">
+                    <b>2. Cíl výstupu</b><br>
+                    <small>Doporučeně vyber kořen zpěvníku, kam se uloží database.json a artists.json.</small><br><br>
+                    <button class="btn btn-s" style="width:100%;" onclick="pickIndexerOutputFolder()">💾 VYBRAT CÍLOVOU SLOŽKU</button>
+                </div>
+
+                <div style="background:#f8fafc; padding:15px; border-radius:12px; border:1px solid #cbd5e1;">
+                    <b>3. Generování</b><br>
+                    <small>Vytvoří database.json, artists.json a seznam chybějících obrázků.</small><br><br>
+                    <button class="btn btn-p" style="width:100%; padding:16px;" onclick="generateIndexesFromSelectedFolder()">🚀 GENEROVAT INDEXY</button>
+                </div>
+
+                <div style="background:#fff7ed; padding:15px; border-radius:12px; border:1px solid #fed7aa;">
+                    <b>Záloha</b><br>
+                    <small>Kdyby prohlížeč nepovolil složku, vyber ručně všechny JSON soubory.</small><br><br>
+                    <input type="file" id="bulkFiles" multiple accept=".json" style="display:none">
+                    <button class="btn btn-warn" style="width:100%;" onclick="document.getElementById('bulkFiles').click()">VYBRAT SOUBORY RUČNĚ</button>
+                </div>
+            </div>
+
+            <div id="indexer-folder-status" style="margin-top:10px; font-weight:bold; color:#334155;">Zdroj zatím nevybrán.</div>
+            <div id="indexer-output-status" style="margin-top:6px; font-weight:bold; color:#334155;">Cíl výstupu zatím nevybrán – když ho nevybereš, použije se stažení souborů.</div>
+            <div id="indexer-status" style="margin-top:12px; font-weight:bold;"></div>
+            <textarea id="indexer-preview" style="display:none; width:100%; height:220px; margin-top:15px; font-family:monospace; border:2px solid #cbd5e1; border-radius:10px; padding:10px;" placeholder="Tady se zobrazí database.json pro kontrolu..."></textarea>
+        </div>
+    </div>
+</div>
+
+
+<script type="module" src="../js/tools/editor/main.js"></script>
+<script type="module" src="../js/tools/editor/online-lookup.js"></script><script type="module" src="../js/tools/editor/discogs.js"></script><script type="module" src="../js/tools/editor/editor-extras.js"></script><script type="module" src="../js/tools/shared/token-file.js"></script></body>
+</html>

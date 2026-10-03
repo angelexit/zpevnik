@@ -89,3 +89,29 @@ Nativní okno, nabídka, lokální obsluha požadavků a vývojový režim jsou 
 - js/tools/editor/chord-text.js: vizuální akordové štítky, serializace závorek, přesun, schránka a historie změn.
 - js/tools/chord-editor/chooser.js: sestavení názvu akordu, výběr nástroje a přehled dostupnosti ve všech databázích.
 - js/tools/chord-editor/import.js: validace importu jednoho akordu bez automatické změny nástroje.
+
+
+## Verze 3.1.6
+- core/parser.js: běžné tokové rozložení akordů a textu, reálná šířka každého akordu.
+- song/performance.js: cílová znějící tónina, capo a dvě nezávislé sady hmatů.
+- song/pagination.js: měření aktuálního obsahu, rozdělování velkých sekcí a využití zbytku sloupce.
+- tools/editor/chord-text.js: viditelné konce veršů a počet řádků editoru.
+- Desktop/PerformanceSmokeTests.js: integrační kontroly transpozice a rozložení.
+
+
+## 3.1.7
+- js/song/performance.js: oba režimy capa, společná znějící tónina a nastavení druhé řady.
+- js/tools/github/main.js: nastavení, kontrola, přehled změn, publikování a průběh.
+- Desktop/GithubPublisher.cs: omezený výběr dat, GitHub API, indexy, manifest a atomický commit.
+- Desktop/LibraryStore.cs: konzistentní místní snapshot a zálohované uložení výsledků publikace.
+- Desktop/GithubPublisherTests.cs: izolovaná simulace API, konflikty, přerušení, manifest a ochrana tokenu.
+
+
+## 3.1.8
+- Desktop/SyncComparison.cs: třícestné porovnání, nezávislá metadata a volby konfliktů.
+- js/app/sync-notice.js: volitelná kontrola při spuštění.
+- js/song/performance.js: oba režimy capa, společná znějící tónina a nastavení druhé řady.
+- js/tools/github/main.js: nastavení, kontrola, přehled změn, publikování a průběh.
+- Desktop/GithubPublisher.cs: omezený výběr dat, GitHub API, indexy, manifest a atomický commit.
+- Desktop/LibraryStore.cs: konzistentní místní snapshot a zálohované uložení výsledků publikace.
+- Desktop/GithubPublisherTests.cs: izolovaná simulace API, konflikty, přerušení, manifest a ochrana tokenu.

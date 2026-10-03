@@ -1,4 +1,4 @@
-﻿using System.IO.Compression;
+using System.IO.Compression;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
@@ -12,6 +12,12 @@ static class Program
     [STAThread]
     static void Main(string[] args)
     {
+        if(args.Length>=3 && args[0]=="--publisher-test") {
+            try {GithubPublisherTests.Run(args[1],args[2]).GetAwaiter().GetResult();}
+            catch(Exception ex) {File.WriteAllText(args[1],JsonSerializer.Serialize(new {ok=false,error=ex.ToString()}));}
+            return;
+        }
+        if(args.Length==3 && args[0]=="--discogs-test") {try{DiscogsTests.Run(args[2]).GetAwaiter().GetResult();File.WriteAllText(args[1],"ok");}catch(Exception e){File.WriteAllText(args[1],e.ToString());}return;}
         ApplicationConfiguration.Initialize();
         try { Application.Run(new SongbookWindow(args)); }
         catch (Exception ex) { MessageBox.Show(ex.Message, "Zpěvník – nelze spustit", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -25,6 +31,8 @@ sealed class SongbookWindow : Form
     readonly Dictionary<string, byte[]> assets = new(StringComparer.Ordinal);
     readonly string dataDirectory;
     LibraryStore store = null!;
+    GithubPublisher publisher = null!;
+    readonly DiscogsService discogs = new();
     readonly string? webRoot;
     readonly string? testReport;
     readonly string profileDirectory;
@@ -32,11 +40,17 @@ sealed class SongbookWindow : Form
     readonly List<string> externalRequests = new();
     CoreWebView2Environment? environment;
     bool testStarted;
+    RadioService radio = null!;
+    ChordMidi midi = null!;
+    Form? radioWindow;
+    WebView2? radioBrowser;
+    bool radioOpening, quitting;
     readonly FullScreenController fullScreen;
 
     public SongbookWindow(string[] args)
     {
-        Text = "Zpěvník 3.1.5";
+        Text = "Zpěvník 3.1.30";
+        using(var iconStream=Assembly.GetExecutingAssembly().GetManifestResourceStream("app.ico")) Icon=new Icon(iconStream!);
         Width = 1360; Height = 900; MinimumSize = new Size(800, 550);
         testReport = Argument(args, "--smoke-test");
         var requestedWebRoot = Argument(args, "--web-root");
@@ -69,6 +83,8 @@ sealed class SongbookWindow : Form
         });
         library.DropDownItems.Add("Umístění dat", null, (_, _) => MessageBox.Show(dataDirectory + "\n\nJinou složku lze nastavit v settings.json vedle EXE. Potom aplikaci restartuj.", "Data zpěvníku"));
         menu.Items.Add(library);
+        menu.Items.Add("Rádio", null, async (_, _) => await OpenRadio());
+        FormClosing += (_, _) => { quitting = true; midi?.Dispose(); radio?.Dispose(); radioWindow?.Dispose(); };
         menu.Items.Add("Obnovit", null, (_, _) => browser.Reload());
         Controls.Add(browser); Controls.Add(menu); MainMenuStrip = menu;
         fullScreen = new FullScreenController(this, browser, menu);
@@ -89,8 +105,11 @@ sealed class SongbookWindow : Form
         {
             ValidateLibrary();
             store = new LibraryStore(dataDirectory); store.Seed(assets);
+            publisher = new GithubPublisher(store,dataDirectory,preferences:testReport==null?null:Path.Combine(profileDirectory,"github-settings.json"),applicationDirectory:testReport==null?AppContext.BaseDirectory:Path.Combine(profileDirectory,"TestProject"));
             if (webRoot != null && !File.Exists(Path.Combine(webRoot, "index.html")))
                 throw new FileNotFoundException("Vývojová složka neobsahuje index.html: " + webRoot);
+            midi = new ChordMidi(assets,dataDirectory);
+            radio = new RadioService(assets["radio/stations.json"], Path.Combine(profileDirectory, "radio-stations.json"));
             environment = await CoreWebView2Environment.CreateAsync(null, profileDirectory);
             await browser.EnsureCoreWebView2Async(environment);
             Configure(browser.CoreWebView2);
@@ -101,6 +120,14 @@ sealed class SongbookWindow : Form
             browser.CoreWebView2.WebMessageReceived += (_, e) =>
             {
                 using var msg = JsonDocument.Parse(e.WebMessageAsJson);
+                if(Uri.TryCreate(e.Source,UriKind.Absolute,out var source)&&source.GetLeftPart(UriPartial.Authority)==Origin&&msg.RootElement.TryGetProperty("kind",out var controlKind)&&controlKind.GetString()=="window-control") {
+                    var action=msg.RootElement.GetProperty("action").GetString();
+                    if(action=="minimize")WindowState=FormWindowState.Minimized;
+                    else if(action=="fullscreen")fullScreen.Toggle();
+                    else if(action=="close")BeginInvoke(new Action(Close));
+                    return;
+                }
+
                 if (msg.RootElement.TryGetProperty("kind", out var kind) && kind.GetString() == "script-error") scriptErrors.Add(msg.RootElement.GetProperty("message").GetString() ?? "Unknown error");
             };
             browser.CoreWebView2.NavigationCompleted += async (_, e) =>
@@ -146,17 +173,28 @@ sealed class SongbookWindow : Form
 
     void Configure(CoreWebView2 core)
     {
+        core.WebMessageReceived += async (_, e) => {
+            if (!e.Source.StartsWith(Origin + "/", StringComparison.Ordinal)) return;
+            using var message = JsonDocument.Parse(e.WebMessageAsJson);
+            if(message.RootElement.TryGetProperty("kind",out var kind) && kind.GetString()=="radio-open") await OpenRadio();
+        };
         // Responses are served directly from memory/disk. No HTTP server or listening port.
         core.AddWebResourceRequestedFilter(Origin + "/*", CoreWebView2WebResourceContext.All);
         core.WebResourceRequested += (_, e) => ServeResource(core, e);
         core.NavigationStarting += (_, e) =>
         {
+            midi?.Stop();
             var uri = new Uri(e.Uri);
             if (uri.GetLeftPart(UriPartial.Authority) != Origin) e.Cancel = true;
         };
         core.NewWindowRequested += async (_, e) =>
         {
-            if (!e.Uri.StartsWith(Origin + "/", StringComparison.Ordinal)) { e.Handled = true; return; }
+            if (!e.Uri.StartsWith(Origin + "/", StringComparison.Ordinal)) {
+                e.Handled = true;
+                if(testReport==null && e.IsUserInitiated && Uri.TryCreate(e.Uri,UriKind.Absolute,out var external) && external.Scheme=="https" && new[]{"github.com","www.discogs.com","discogs.com","www.youtube.com","youtube.com","youtu.be"}.Contains(external.Host))
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(external.AbsoluteUri){UseShellExecute=true});
+                return;
+            }
             using var deferral = e.GetDeferral();
             var child = new Form { Text = "Zpěvník – nástroje", Width = 1100, Height = 800 };
             var childBrowser = new WebView2 { Dock = DockStyle.Fill }; child.Controls.Add(childBrowser);
@@ -181,8 +219,35 @@ sealed class SongbookWindow : Form
         };
     }
 
-    void ServeResource(CoreWebView2 core, CoreWebView2WebResourceRequestedEventArgs e)
+    object StopMidi() { midi.Stop();return new {ok=true}; }
+
+    async Task OpenRadio()
     {
+        if (environment == null || radioOpening) return;
+        if (radioWindow != null) { radioWindow.Show(); radioWindow.WindowState = FormWindowState.Normal; radioWindow.Activate(); return; }
+        radioOpening = true;
+        try {
+            radioWindow = new Form { Text = "Rádio – Zpěvník", Width = 900, Height = 780, MinimumSize = new Size(600, 500) };
+            radioBrowser = new WebView2 { Dock = DockStyle.Fill };
+            radioWindow.Controls.Add(radioBrowser);
+            radioWindow.FormClosing += (_, e) => { if (!quitting && e.CloseReason == CloseReason.UserClosing) { e.Cancel = true; radioWindow.Hide(); } };
+            await radioBrowser.EnsureCoreWebView2Async(environment);
+            Configure(radioBrowser.CoreWebView2);
+            radioBrowser.CoreWebView2.WebMessageReceived += (_, e) => {
+                if (!e.Source.StartsWith(Origin + "/radio/",StringComparison.Ordinal)) return;
+                using var message = JsonDocument.Parse(e.WebMessageAsJson);
+                if(message.RootElement.TryGetProperty("kind",out var kind) && kind.GetString()=="radio-hide") radioWindow.Hide();
+            };
+            radioBrowser.Source = new Uri(Origin + "/radio/index.html");
+            if (testReport != null) { radioWindow.Opacity = 0; radioWindow.ShowInTaskbar = false; }
+            radioWindow.Show(this);
+        } catch(Exception ex) { radioWindow?.Dispose(); radioWindow=null; if(testReport!=null)throw; MessageBox.Show(ex.Message,"Rádio"); }
+        finally { radioOpening = false; }
+    }
+
+    async void ServeResource(CoreWebView2 core, CoreWebView2WebResourceRequestedEventArgs e)
+    {
+        using var deferral = e.GetDeferral();
         try
         {
             var uri = new Uri(e.Request.Uri);
@@ -195,7 +260,7 @@ sealed class SongbookWindow : Form
                 var body=new System.Text.Json.Nodes.JsonObject();
                 if(write) { using var reader=new StreamReader(e.Request.Content,Encoding.UTF8);var text=reader.ReadToEnd();if(text.Length>22000000) throw new Exception("Požadavek je příliš velký.");body=System.Text.Json.Nodes.JsonNode.Parse(text)!.AsObject(); }
                 else foreach(var part in uri.Query.TrimStart('?').Split('&',StringSplitOptions.RemoveEmptyEntries)) { var kv=part.Split('=',2);body[Uri.UnescapeDataString(kv[0])]=kv.Length>1?Uri.UnescapeDataString(kv[1]):""; }
-                try { var result=store.Handle(relative[4..],body,write);e.Response=core.Environment.CreateWebResourceResponse(new MemoryStream(JsonSerializer.SerializeToUtf8Bytes(result)),200,"OK","Content-Type: application/json; charset=utf-8\r\nCache-Control: no-store"); }
+                try { var result=relative=="api/midi/play" && write ? midi.Play((string?)body["chord"] ?? "",testReport!=null) : relative=="api/midi/stop" && write ? StopMidi() : relative.StartsWith("api/radio/") ? radio.Handle(relative[10..],body,write) : relative.StartsWith("api/discogs/") ? await discogs.Handle(relative[12..],body,write) : relative.StartsWith("api/github/") ? await publisher.Handle(relative[11..],body,write) : store.Handle(relative[4..],body,write);e.Response=core.Environment.CreateWebResourceResponse(new MemoryStream(JsonSerializer.SerializeToUtf8Bytes(result)),200,"OK","Content-Type: application/json; charset=utf-8\r\nCache-Control: no-store"); }
                 catch(Exception ex) { e.Response=core.Environment.CreateWebResourceResponse(new MemoryStream(JsonSerializer.SerializeToUtf8Bytes(new {error=ex.Message})),409,"Conflict","Content-Type: application/json; charset=utf-8\r\nCache-Control: no-store"); }
                 return;
             }
@@ -281,13 +346,57 @@ sealed class SongbookWindow : Form
         WindowState = initialState; Bounds = initialBounds;
     }
 
+    async Task TestRadio()
+    {
+        if (RadioService.ParseTitle(Encoding.UTF8.GetBytes("StreamTitle='Jiří – Píseň';\0")) != "Jiří – Píseň") throw new Exception("ICY parser");
+        await OpenRadio();
+        var core = radioBrowser!.CoreWebView2;
+        for(int i=0;i<100;i++) { if(await core.ExecuteScriptAsync("document.querySelectorAll('#stations option').length===8") == "true") break; await Task.Delay(100); }
+        if(await core.ExecuteScriptAsync("document.querySelectorAll('#stations option').length===8")!="true")throw new Exception("Radio stations");
+        await core.ExecuteScriptAsync("window.radioTest='running';(async()=>{try{const b=new ArrayBuffer(8044),v=new DataView(b);const txt=(p,s)=>[...s].forEach((c,i)=>v.setUint8(p+i,c.charCodeAt(0)));txt(0,'RIFF');v.setUint32(4,8036,true);txt(8,'WAVE');txt(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,8000,true);v.setUint32(28,8000,true);v.setUint16(32,1,true);v.setUint16(34,8,true);txt(36,'data');v.setUint32(40,8000,true);new Uint8Array(b,44).fill(128);const a=document.getElementById('audio');a.src=URL.createObjectURL(new Blob([b],{type:'audio/wav'}));a.muted=true;a.loop=true;await a.play();window.radioTest='ok';}catch(e){window.radioTest=String(e)}})()");
+        for(int i=0;i<100;i++) { if(await core.ExecuteScriptAsync("window.radioTest!=='running'")=="true")break;await Task.Delay(100); }
+        if(await core.ExecuteScriptAsync("window.radioTest==='ok'")!="true")throw new Exception("Radio playback: "+await core.ExecuteScriptAsync("window.radioTest"));
+        radioWindow!.Close();
+        if(radioWindow.IsDisposed)throw new Exception("Radio close disposed player");
+        await Task.Delay(1000);
+        if(await core.ExecuteScriptAsync("!document.getElementById('audio').paused")!="true")throw new Exception("Radio background playback");
+        using var shot = File.Create(Path.ChangeExtension(testReport!, ".radio.png"));
+        await core.CapturePreviewAsync(CoreWebView2CapturePreviewImageFormat.Png,shot);
+    }
+
+    async Task TestNativeChordClick()
+    {
+        await Evaluate("openTool('editor');window.__nativeReady=false;(async()=>{const w=document.getElementById('editorFrame').contentWindow;await w.eval(`(async()=>{const {mountChordText}=await import('/js/tools/editor/chord-text.js');const box=document.createElement('div');box.id='native-move-test';box.style.cssText='position:fixed;left:20px;top:80px;width:600px;z-index:999999;background:white;color:black';document.body.append(box);for(const value of ['[C]Sloka','Jsem tady']){const t=document.createElement('textarea');t.value=value;box.append(t);mountChordText(t);}})()`);window.__nativeReady=true;})()");
+        await WaitFor("window.__nativeReady");
+        async Task Click(string position) {
+            var coordinates=await Evaluate("(()=>{const f=document.getElementById('editorFrame'),d=f.contentDocument,box=d.getElementById('native-move-test');"+position+"const fr=f.getBoundingClientRect();return {x:fr.x+r.x+1,y:fr.y+r.y+r.height/2};})()");
+            using var point=JsonDocument.Parse(coordinates);var x=point.RootElement.GetProperty("x").GetDouble();var y=point.RootElement.GetProperty("y").GetDouble();
+            foreach(var type in new[]{"mouseMoved","mousePressed","mouseReleased"}) await browser.CoreWebView2.CallDevToolsProtocolMethodAsync("Input.dispatchMouseEvent",JsonSerializer.Serialize(new {type,x,y,button=type=="mouseMoved"?"none":"left",clickCount=type=="mouseMoved"?0:1}));
+        }
+        await Click("const r=box.querySelector('.inline-chord').getBoundingClientRect();");
+        if(await Evaluate("!!document.getElementById('editorFrame').contentDocument.querySelector('.floating-chord')")!="true")throw new Exception("Real pointer failed to lift chord");
+        await Click("const range=d.createRange();range.setStart(box.querySelectorAll('.chord-text')[1].firstChild,5);range.collapse(true);const r=range.getBoundingClientRect();");
+        if(await Evaluate("(()=>{const t=document.getElementById('editorFrame').contentDocument.querySelectorAll('#native-move-test textarea');return t[0].value==='Sloka' && t[1].value==='Jsem [C]tady';})()")!="true")throw new Exception("Real pointer failed to place chord");
+        await Evaluate("document.getElementById('editorFrame').contentDocument.getElementById('native-move-test').remove()");
+    }
+
     async Task SmokeTestAsync()
     {
         if(!File.Exists(Path.Combine(dataDirectory,".integration-test-library"))) throw new Exception("Write tests require an isolated library marked .integration-test-library");
         TestFullScreen();
+        await TestRadio();
+        foreach(var chord in new[]{"C","F#","C#mi","H","B","Ami"}) {
+            using var check=JsonDocument.Parse(JsonSerializer.Serialize(midi.Play(chord,true)));
+            if(!check.RootElement.GetProperty("ok").GetBoolean())throw new Exception("MIDI open failed: "+chord);
+        }
+        if(ChordMidi.FileName("../evil")!=null || ChordMidi.FileName("C/H")!=null)throw new Exception("MIDI unsupported names");
         await WaitFor("document.querySelector('.artist-card') || document.querySelector('[onclick*=artist]')");
         await Evaluate("window.__audit=null;(async()=>{try{const db=await(await fetch('/data/database.json')).json();const {renderSongDetail}=await import('/js/render/ui.js');let count=0;for(const row of db){await renderSongDetail(row.file,document.getElementById('app-content'));if(!document.querySelector('.song-section-card'))throw new Error(row.file);count++;}const {getChordDiagram}=await import('/js/render/chords.js');if(!getChordDiagram('C','guitar','standard').includes('svg'))throw new Error('Chord SVG');window.__audit={ok:true,count};}catch(e){window.__audit={ok:false,error:String(e)}}})();");
         await WaitFor("window.__audit !== null");
+        using(var tests=new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("performance-tests.js")!)) await Evaluate(await tests.ReadToEndAsync());
+        await WaitFor("window.__performanceTest !== null");
+        var performanceTests=await Evaluate("window.__performanceTest");
+        if(await Evaluate("window.__performanceTest.ok")!="true") throw new Exception(performanceTests);
         var allSongs = await Evaluate("window.__audit");
         if (await Evaluate("window.__audit.ok") != "true") throw new Exception(allSongs);
         await Evaluate("history.replaceState({},'', '/index.html');dispatchEvent(new Event('popstate'));");
@@ -301,12 +410,19 @@ sealed class SongbookWindow : Form
         if (await Evaluate("document.getElementById('fullscreenBtn') === null") != "true")
             throw new Exception("Obsolete song fullscreen button is still present.");
         var song = await Evaluate("JSON.stringify({title:document.title,sections:document.querySelectorAll('.song-section-card').length,settings:!!document.getElementById('instrumentSelect')})");
+        await Evaluate("window.__soundTest=null;(async()=>{try{const real=window.fetch;const calls=[];window.fetch=async(u,o)=>String(u).includes('/api/midi/')?(calls.push(JSON.parse(o.body||'{}').chord||'stop'),new Response(JSON.stringify({ok:true}),{status:200})):real(u,o);try{const {scheduleChordSound,stopChordSound}=await import('/js/chords/sound.js');localStorage.removeItem('chordSound');const el=document.querySelector('[data-original]'),tip=document.createElement('div');tip.className='visible';scheduleChordSound('C',el,tip);await new Promise(r=>setTimeout(r,250));stopChordSound();await new Promise(r=>setTimeout(r,1050));if(calls.includes('C'))throw Error('Cancelled MIDI played');scheduleChordSound('H',el,tip);await new Promise(r=>setTimeout(r,1150));if(calls.filter(x=>x==='H').length!==1)throw Error('Delayed MIDI');stopChordSound();const f=document.getElementById('chordFrames'),sf=document.getElementById('secondChordFrames'),sc=document.getElementById('secondChordColorSelect');f.value='true';f.onchange();sf.value='false';sf.onchange();sc.value='#dc2626';sc.onchange();if(!document.body.classList.contains('chord-frames-enabled')||document.body.classList.contains('second-chord-frames-enabled')||document.getElementById('songContent').style.getPropertyValue('--song-second-chord-color')!=='#dc2626')throw Error('Independent chord styles');window.__soundTest=true;}finally{window.fetch=real;}}catch(e){window.__soundTest=String(e)}})()");
+        await WaitFor("window.__soundTest !== null");
+        if(await Evaluate("window.__soundTest")!="true")throw new Exception(await Evaluate("window.__soundTest"));
         await WaitFor("document.fonts.status === 'loaded'");
         await Task.Delay(1200);
         using (var shot = File.Create(Path.ChangeExtension(testReport!, ".png")))
             await browser.CoreWebView2.CapturePreviewAsync(CoreWebView2CapturePreviewImageFormat.Png, shot);
         await Evaluate("history.back()");
         await WaitFor("document.querySelector('[onclick*=song]')");
+        await Evaluate("window.__galleryResult=null;(async()=>{const {renderChordGallery}=await import('/js/chords/gallery.js');const h=document.createElement('div');document.body.append(h);await renderChordGallery(h);if(h.querySelectorAll('.chord-gallery-card').length!==26||h.querySelectorAll('section').length!==5)throw Error('Gallery groups');h.querySelector('select').value='H';h.querySelector('select').dispatchEvent(new Event('change'));if(h.querySelector('h3').textContent!=='H')throw Error('Gallery root');h.querySelector('#galleryRoot').value='C';for(const inst of ['ukulele','mandolin','banjo','bass','piano','guitar']){const sel=h.querySelector('#galleryInstrument');sel.value=inst;sel.dispatchEvent(new Event('change'));for(let i=0;i<100&&h.querySelector('[data-loading=true]');i++)await new Promise(r=>setTimeout(r,50));if(h.querySelector('[data-loading=true]')||h.querySelectorAll('.chord-gallery-card').length!==26)throw Error('Instrument '+inst);if(['ukulele','mandolin','banjo','guitar'].includes(inst)&&!h.querySelector('[data-instrument='+inst+']'))throw Error('Instrument diagram '+inst);}const sel=h.querySelector('#galleryInstrument');sel.value='ukulele';sel.dispatchEvent(new Event('change'));while(h.querySelector('[data-loading=true]'))await new Promise(r=>setTimeout(r,50));const tuning=h.querySelector('#galleryTuning');tuning.value='baritone';tuning.dispatchEvent(new Event('change'));while(h.querySelector('[data-loading=true]'))await new Promise(r=>setTimeout(r,50));if(!h.querySelector('[data-tuning=baritone]'))throw Error('Baritone diagram');h.remove();const {applyMode}=await import('/js/app/login.js');applyMode('user');if([...document.querySelectorAll('[data-admin-only]')].some(x=>!x.hidden)||document.getElementById('toolsBtn').style.display==='none')throw Error('User menu');applyMode('admin');if([...document.querySelectorAll('[data-admin-only]')].some(x=>x.hidden))throw Error('Admin menu');if(document.querySelectorAll('.window-controls button').length!==3)throw Error('Window controls');localStorage.setItem('zpevnikMode','admin');return true;})().then(v=>window.__galleryResult=v).catch(e=>window.__galleryResult=String(e));");
+        await WaitFor("window.__galleryResult !== null");
+        var galleryTest=await Evaluate("window.__galleryResult");
+        if(galleryTest!="true")throw new Exception("Gallery/menu test failed: "+galleryTest);
         await Evaluate("location.href='tools/index.html#export'");
         await WaitFor("document.querySelector('iframe') && document.querySelector('iframe').contentDocument?.readyState === 'complete'");
         await Task.Delay(700);
@@ -320,18 +436,26 @@ sealed class SongbookWindow : Form
         await WaitFor("window.__moduleTest !== null");
         var moduleTests = await Evaluate("window.__moduleTest");
         if (await Evaluate("window.__moduleTest.ok") != "true") throw new Exception(moduleTests);
-        foreach(var tool in new[]{"editor","chords"}) {
+        await TestNativeChordClick();
+        foreach(var tool in new[]{"editor","chords","export"}) {
             await Evaluate("openTool('"+tool+"');");
-            if(tool=="editor") await Evaluate("document.getElementById('editorFrame').contentDocument.querySelector('.section-card').scrollIntoView();");
+            if(tool=="editor") await Evaluate("const panel=document.getElementById('editorFrame').contentDocument.getElementById('discogsPanel');panel.open=true;panel.scrollIntoView();");
+            if(tool=="chords") await Evaluate("document.getElementById('chordsFrame').contentDocument.querySelector('.neck-scroll').scrollIntoView({block:'center'});");
             await Task.Delay(500);
             using var shot=File.Create(Path.ChangeExtension(testReport!, tool+".png"));
             await browser.CoreWebView2.CapturePreviewAsync(CoreWebView2CapturePreviewImageFormat.Png,shot);
         }
         await Evaluate("reloadActiveTool(); toggleToolsTheme();");
         await Task.Delay(500);
+        await Evaluate("location.href='/index.html?chords';");
+        await WaitFor("document.querySelectorAll('.chord-gallery-card').length === 26");
+        await Task.Delay(500);
+        using(var shot=File.Create(Path.ChangeExtension(testReport!, "gallery.png")))
+            await browser.CoreWebView2.CapturePreviewAsync(CoreWebView2CapturePreviewImageFormat.Png,shot);
         if (scriptErrors.Count != 0) throw new Exception(string.Join("\n", scriptErrors));
         if (externalRequests.Count != 0) throw new Exception("Unexpected network requests: " + string.Join(", ", externalRequests));
-        WriteTestReport(new { ok = true, fullScreenTransitions = true, allSongs, startup, song, tools, editorTest, moduleTests, scriptErrors, externalRequests, dataDirectory, webRoot });
+        if(await radioBrowser!.CoreWebView2.ExecuteScriptAsync("!document.getElementById('audio').paused")!="true")throw new Exception("Radio stopped during songbook navigation");
+        WriteTestReport(new { ok = true, radioBackground = true, fullScreenTransitions = true, allSongs, startup, song, tools, editorTest, moduleTests, performanceTests, scriptErrors, externalRequests, dataDirectory, webRoot });
     }
 }
 

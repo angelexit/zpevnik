@@ -1,0 +1,50 @@
+[
+  {
+    "id": "metalomanie",
+    "name": "Metalomanie Radio",
+    "stream_url": "https://ice.abradio.cz/metalomanie128.mp3",
+    "logo_url": "https://www.radio.pl/300/metalomanie.png"
+  },
+  {
+    "id": "rockradio",
+    "name": "Rock Rádio",
+    "stream_url": "https://ice.abradio.cz/rockradio128.mp3",
+    "logo_url": "https://www.radio.pl/300/rockradiocz.png"
+  },
+  {
+    "id": "hitradiopoprock",
+    "name": "Hitrádio PopRock",
+    "stream_url": "https://ice.abradio.cz/hitpoprock128.mp3",
+    "logo_url": "https://www.radio.pl/300/hitradiopoprock.png"
+  },
+  {
+    "id": "hitradio",
+    "name": "HitRádio",
+    "stream_url": "https://ice.abradio.cz/hitradiofm128.mp3",
+    "logo_url": "https://www.radio.pl/300/hitradio.png"
+  },
+  {
+    "id": "fajnradio",
+    "name": "Fajn Rádio",
+    "stream_url": "https://ice.abradio.cz/fajn128.mp3",
+    "logo_url": "https://www.radio.pl/300/fajnradio.png"
+  },
+  {
+    "id": "frekvence1",
+    "name": "Frekvence 1",
+    "stream_url": "https://playerservices.streamtheworld.com/api/livestream-redirect/FREKVENCE1.mp3",
+    "logo_url": "https://www.radio.pl/300/frekvence1.png"
+  },
+  {
+    "id": "impuls",
+    "name": "Rádio Impuls",
+    "stream_url": "https://icecast5.play.cz/impuls128.mp3",
+    "logo_url": "https://www.radio.pl/300/radioimpuls.png"
+  },
+  {
+    "id": "countryradio",
+    "name": "Country Rádio",
+    "stream_url": "https://ice5.radia.cz/countryradio128.mp3",
+    "logo_url": "https://www.radio.pl/300/countryradiocz.png"
+  }
+]

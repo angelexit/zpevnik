@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<script>if(localStorage.getItem('zpevnikMode')!=='admin')location.replace('/index.html');</script>
+<meta charset="UTF-8">
+   <title>GitHub databáze | Zpěvník</title>
+   <link rel="stylesheet" href="../css/export.css">
+<link rel="stylesheet" href="../css/github.css">
+</head>
+<body class="tool-page tool-export">
+<div class="container" id="githubPanel">
+  <section class="panel">
+    <h1>GitHub manager</h1>
+    <p>Správa společné databáze i zdrojů aplikace. Vyber, zda chceš porovnat Data, nebo Source a Licenses.</p>
+    <p><a href="github-help.html" target="_blank">📖 Nastavení GitHubu krok za krokem</a></p>
+    <form id="githubSettings">
+      <div class="github-fields">
+        <label>Vlastník GitHub účtu<input id="ghOwner" autocomplete="off" required placeholder="např. pavel"></label>
+        <label>Repozitář<input id="ghRepo" autocomplete="off" required placeholder="zpevnik-data"></label>
+        <label>Větev<input id="ghBranch" value="main" required placeholder="main"></label>
+        <label>Podsložka databáze (volitelná)<input id="ghFolder" placeholder="prázdné = kořen repozitáře"></label>
+      </div>
+      <label>Přístupový token pro publikování<input id="ghToken" type="password" autocomplete="new-password" placeholder="Uloží se chráněně pro tento účet Windows"></label>
+      <p class="hint">Použij token pro vybraný repozitář s oprávněním Contents: Read and write. Nový repozitář nejprve založ na GitHubu s README. Token se nezapisuje do databáze ani manifestu.</p>
+      <label class="sync-check"><input id="ghAuto" type="checkbox" checked> Při otevření zpěvníku zkontrolovat změny (bez přepisování dat)</label>
+      <div class="github-buttons"><button class="btn secondary" type="submit">Uložit nastavení</button><button class="btn" type="button" id="ghForget">Zapomenout token</button></div>
+    </form>
+    <p id="ghSettingsStatus" role="status"></p>
+  </section>
+  <section class="panel">
+    <h2>Obousměrná synchronizace</h2>
+    <p>Porovnává se poslední společný stav, tvůj počítač a GitHub. Před synchronizací ulož práci v editoru. Mazání souborů se nepřenáší; existující kopie zůstávají zachované.</p>
+    <label>Co synchronizovat<select id="ghScope"><option value="data">Databáze – Data</option><option value="project">Aplikace – Source a Licenses</option></select></label>
+    <p id="ghScopeHelp">Písně, obrázky a akordy v nastavené podsložce databáze.</p>
+    <div class="github-buttons"><button id="ghCheck" class="btn green">Porovnat změny</button><button id="ghDownload" class="btn" disabled>Načíst z GitHubu</button><button id="ghPublish" class="btn secondary" disabled>Synchronizovat obě strany</button></div>
+    <p id="ghStatus" role="status" aria-live="polite">Nejdříve nastav repozitář.</p>
+    <div id="ghWarnings"></div>
+    <div id="ghBulk" class="github-buttons" hidden><button type="button" id="ghAllLocal">U všech konfliktů ponechat místní</button><button type="button" id="ghAllRemote">U všech konfliktů použít GitHub</button></div>
+    <div class="github-table"><table><thead><tr><th>Soubor</th><th>Akce</th><th>Volba / náhled</th></tr></thead><tbody id="ghChanges"></tbody></table></div>
+    <p id="ghResult"></p>
+    <button id="ghReload" class="btn green" hidden>Obnovit zpěvník po načtení</button>
+    <dialog id="ghPreview"><h3 id="ghPreviewTitle"></h3><button id="ghClosePreview" type="button">Zavřít náhled</button><div class="sync-preview"><section><h4>Tento počítač</h4><div id="ghLocalPreview"></div></section><section><h4>GitHub</h4><div id="ghRemotePreview"></div></section></div></dialog>
+  </section>
+</div>
+<details class="legacy-export"><summary>Pokročilé: původní lokální export souborů</summary>
+<div class="container">
+  <div class="tabs export-actions">
+    <button class="tab-btn reset" onclick="resetAll()">🧹 RESET EXPORTU</button>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">1. Zdroj a výstup</div>
+    <div class="setup">
+      <div class="box"><label>1. Vybrat složku songs/</label><button class="btn" onclick="pickSongsFolder()">📁 VYBRAT SONGS</button><div id="songsStatus" class="hint muted">Čekám na složku songs...</div></div>
+      <div class="box"><label>2. Výstupní složka</label><button class="btn secondary" onclick="pickOutputFolder()">💾 VYBRAT VÝSTUP</button><div id="outputStatus" class="hint muted">Volitelné. Bez výběru se soubory stáhnou.</div></div>
+      <div class="box"><label>3. Původní database.json</label><input type="file" id="oldDbFile" accept=".json" onchange="loadOldDatabase(event)"><div id="oldDbStatus" class="hint muted">Volitelné pro porovnání nových/chybějících songů.</div></div>
+      <div class="box"><label>4. Kontrola JSON</label><button class="btn green" onclick="scanSongs()">🔍 NAČÍST A ZKONTROLOVAT</button><div id="scanStatus" class="hint muted">Nejdřív vyber složku songs.</div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">2. Souhrn</div>
+    <div class="grid">
+      <div class="stat"><b id="statFound">0</b><span>nalezeno JSON</span></div>
+      <div class="stat"><b id="statOk">0</b><span>načteno OK</span></div>
+      <div class="stat"><b id="statArtists">0</b><span>interpretů</span></div>
+      <div class="stat"><b id="statErrors">0</b><span>chyb</span></div>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="generateDatabase()">📄 GENEROVAT database.json</button>
+      <button class="btn secondary" onclick="generateArtists()">👥 GENEROVAT artists.json</button>
+      <button class="btn warn" onclick="generateReport()">⚠️ GENEROVAT REPORT</button>
+      <button class="btn green" onclick="generateAll()">🚀 VŠECHNO NAJEDNOU</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">3. Náhledy a diagnostika</div>
+    <div class="tabs2">
+      <button class="smalltab active" onclick="showPreview('songs',this)">Načtené songy</button>
+      <button class="smalltab" onclick="showPreview('database',this)">database.json</button>
+      <button class="smalltab" onclick="showPreview('artists',this)">artists.json</button>
+      <button class="smalltab" onclick="showPreview('report',this)">report.txt</button>
+      <button class="smalltab" onclick="showPreview('log',this)">Log</button>
+    </div>
+    <div id="songsPreview" class="list"></div>
+    <pre id="databasePreview" class="preview" style="display:none"></pre>
+    <pre id="artistsPreview" class="preview" style="display:none"></pre>
+    <pre id="reportPreview" class="preview" style="display:none"></pre>
+    <pre id="logPreview" class="log" style="display:none"></pre>
+  </div>
+</div>
+
+</details>
+<script type="module" src="../js/tools/export/main.js"></script>
+<script type="module" src="../js/tools/github/main.js"></script>
+<script type="module" src="../js/tools/shared/token-file.js"></script></body>
+</html>

@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/b0c618f6d8ea9968.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/1a6844598cfc2dfd.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/aff9ea090b10d898.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/6d83b1a12212ea9e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/c1c656933a1f4b14.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/1aa56dfdd1cd5dcd.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/671f202a714544ec.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/3c52581963d6b654.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Cascadia Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/6895957c280d4c74.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cascadia Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/653eed0f140f0e60.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/c2e19613737da242.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/d84d12267f01ed7b.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/c06116dbbcb3028f.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/89e66686f242e6dd.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/3994a71f4212e1ed.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/11e0e738b8445e3c.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(../fonts/3ea4986857891396.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(../fonts/3ef0d73756297274.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(../fonts/bb78664a089e7f6a.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/ccc3f653c440fde7.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/7dc0f43157eb0343.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/8e5a3600a5acb824.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/4664a706f8240435.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/c7e8ebe771b6b255.ttf) format('truetype');
+}

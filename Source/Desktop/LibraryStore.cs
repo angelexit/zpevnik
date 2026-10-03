@@ -10,7 +10,7 @@ sealed class LibraryStore
 {
     readonly string root;
     readonly Mutex gate;
-    public LibraryStore(string directory) { root = Path.GetFullPath(directory); gate = new Mutex(false, "Local\\ZpevnikLibrary-" + Hash(Encoding.UTF8.GetBytes(root.ToUpperInvariant()))); }
+    public LibraryStore(string directory) { root = Path.TrimEndingDirectorySeparator(Path.GetFullPath(directory)); gate = new Mutex(false, "Local\\ZpevnikLibrary-" + Hash(Encoding.UTF8.GetBytes(root.ToUpperInvariant()))); }
     static string Hash(byte[] bytes) => Convert.ToHexString(SHA256.HashData(bytes));
     string Resolve(string path)
     {
@@ -18,14 +18,15 @@ sealed class LibraryStore
         if (string.IsNullOrWhiteSpace(path) || Path.IsPathRooted(path) || path.Contains(':') || path.Split('/').Any(s=>s is ".." or "." or "")) throw new Exception("Neplatná cesta v knihovně.");
         var full = Path.GetFullPath(Path.Combine(root,path));
         if (!full.StartsWith(root.TrimEnd('\\')+"\\",StringComparison.OrdinalIgnoreCase)) throw new Exception("Cesta mimo knihovnu.");
-        for(var check=full; check!=root; check=Path.GetDirectoryName(check)!)
-            if ((File.Exists(check)||Directory.Exists(check)) && (File.GetAttributes(check)&FileAttributes.ReparsePoint)!=0) throw new Exception("Odkazované složky nejsou podporovány.");
+        for(var check=full; !string.Equals(check,root,StringComparison.OrdinalIgnoreCase); check=Path.GetDirectoryName(check)!)
+            if (string.IsNullOrEmpty(check)) throw new Exception("Cesta mimo knihovnu.");
+            else if ((File.Exists(check)||Directory.Exists(check)) && (File.GetAttributes(check)&FileAttributes.ReparsePoint)!=0) throw new Exception("Odkazované složky nejsou podporovány.");
         return full;
     }
     JsonNode Read(string path) => JsonNode.Parse(File.ReadAllText(Resolve(path)))!;
     string Revision(string path) => File.Exists(Resolve(path)) ? Hash(File.ReadAllBytes(Resolve(path))) : "";
     static string S(JsonNode? n,string key) => n?[key]?.GetValue<string>() ?? "";
-    static byte[] Bytes(JsonNode n) => Encoding.UTF8.GetBytes(n.ToJsonString(new System.Text.Json.JsonSerializerOptions { WriteIndented=true }));
+    static byte[] Bytes(JsonNode n) => Encoding.UTF8.GetBytes(n.ToJsonString(new System.Text.Json.JsonSerializerOptions { WriteIndented=true, Encoder=System.Text.Encodings.Web.JavaScriptEncoder.Create(System.Text.Unicode.UnicodeRanges.All) }));
     public static string Slug(string value) => Regex.Replace(Regex.Replace(new string(value.Normalize(NormalizationForm.FormD).Where(c=>CharUnicodeInfo.GetUnicodeCategory(c)!=UnicodeCategory.NonSpacingMark).ToArray()).ToLowerInvariant().Trim(),@"\s+","_"),"[^a-z0-9_]","");
     void Commit(Dictionary<string,byte[]> changes)
     {
@@ -106,6 +107,81 @@ sealed class LibraryStore
             }
             throw new Exception("Nepodporovaná operace.");
         } finally { gate.ReleaseMutex(); }
+    }
+    public Dictionary<string,byte[]> PublishSnapshot()
+    {
+        try { gate.WaitOne(); } catch(AbandonedMutexException) { }
+        try {
+            var result=new Dictionary<string,byte[]>(StringComparer.Ordinal);
+            foreach(var path in new[]{"database.json","artists.json","config.json","manifest.json"})
+                if(File.Exists(Resolve(path)))result[path]=File.ReadAllBytes(Resolve(path));
+            foreach(var folder in new[]{"songs","chords","img/covers","img/interprets"}) {
+                var full=Resolve(folder);if(!Directory.Exists(full))continue;
+                foreach(var file in Directory.EnumerateFiles(full)) {
+                    var path=folder+"/"+Path.GetFileName(file);if(!GithubPublisher.Managed(path))continue;
+                    if(new FileInfo(file).Length>10000000)throw new Exception("Soubor je větší než 10 MB: "+path);
+                    result[path]=File.ReadAllBytes(Resolve(path));
+                }
+            }
+            if(result.Sum(e=>(long)e.Value.Length)>100000000)throw new Exception("Databáze je větší než 100 MB.");
+            return result;
+        } finally {gate.ReleaseMutex();}
+    }
+    public Dictionary<string,byte[]> ProjectSnapshot()
+    {
+        try {gate.WaitOne();}catch(AbandonedMutexException) { }
+        try {
+            var result=new Dictionary<string,byte[]>(StringComparer.Ordinal);long total=0;
+            void Walk(string folder) {
+                var full=Resolve(folder);if(!Directory.Exists(full))return;
+                foreach(var entry in Directory.EnumerateFileSystemEntries(full)) {
+                    var path=folder+"/"+Path.GetFileName(entry);
+                    if(Directory.Exists(entry)) {if(ProjectFiles.DirectoryAllowed(path))Walk(path);continue;}
+                    if(!ProjectFiles.Managed(path))continue;
+                    var safe=Resolve(path);var length=new FileInfo(safe).Length;if(length>10000000)throw new Exception("Soubor je větší než 10 MB: "+path);
+                    var bytes=File.ReadAllBytes(safe);total+=bytes.Length;if(total>100000000||result.Count>=10000)throw new Exception("Zdroje jsou příliš velké (100 MB / 10 000 souborů).");result[path]=bytes;
+                }
+            }
+            Walk("Source");Walk("Licenses");return result;
+        } finally {gate.ReleaseMutex();}
+    }
+    public bool ApplyProjectSync(Dictionary<string,byte[]> expected,JsonObject expectedState,Dictionary<string,byte[]> files,JsonObject baseline,string key)
+    {
+        try {gate.WaitOne();}catch(AbandonedMutexException) { }
+        try {
+            var local=ProjectSnapshot();if(!GithubPublisher.Same(expected,local)||!JsonNode.DeepEquals(expectedState,ReadSyncState(key)))return false;
+            var changes=new Dictionary<string,byte[]>();
+            foreach(var entry in files) {
+                if(!ProjectFiles.Managed(entry.Key))throw new Exception("Nepodporovaný zdrojový soubor.");
+                if(!local.TryGetValue(entry.Key,out var old)||!old.AsSpan().SequenceEqual(entry.Value))changes[entry.Key]=entry.Value;
+            }
+            changes[".sync/"+key+".json"]=Bytes(baseline);Commit(changes);return true;
+        } finally {gate.ReleaseMutex();}
+    }
+    public JsonObject ReadSyncState(string key)
+    {
+        if(!Regex.IsMatch(key,"^[a-f0-9]{64}$"))throw new Exception("Neplatný stav synchronizace.");
+        try {gate.WaitOne();}catch(AbandonedMutexException) { }
+        try {var path=Resolve(".sync/"+key+".json");return File.Exists(path)?JsonNode.Parse(File.ReadAllBytes(path))!.AsObject():new JsonObject();}
+        finally {gate.ReleaseMutex();}
+    }
+    public bool ApplySync(Dictionary<string,byte[]> expected,JsonObject expectedState,Dictionary<string,byte[]> files,JsonObject baseline,string key)
+    {
+        try {gate.WaitOne();}catch(AbandonedMutexException) { }
+        try {
+            var local=PublishSnapshot();if(!GithubPublisher.Same(expected,local)||!JsonNode.DeepEquals(expectedState,ReadSyncState(key)))return false;
+            var changes=new Dictionary<string,byte[]>();
+            foreach(var entry in files) {
+                if(!GithubPublisher.Managed(entry.Key))throw new Exception("Nepodporovaný synchronizovaný soubor.");
+                var content=entry.Value;
+                if(entry.Key=="config.json"&&local.TryGetValue("config.json",out var cfg)) {
+                    var config=JsonNode.Parse(cfg)!.AsObject();foreach(var publicKey in new[]{"appTitle","appVersion","defaultTheme","searchPlaceholder","homeTitle","loadingText","sectionLabels","schemaVersion","paths"})config.Remove(publicKey);foreach(var item in JsonNode.Parse(content)!.AsObject())config[item.Key]=item.Value?.DeepClone();content=Bytes(config);
+                }
+                if(!local.TryGetValue(entry.Key,out var old)||!old.AsSpan().SequenceEqual(content))changes[entry.Key]=content;
+            }
+            changes[".sync/"+key+".json"]=Bytes(baseline);
+            Commit(changes);return true;
+        } finally {gate.ReleaseMutex();}
     }
     public void Seed(Dictionary<string,byte[]> assets)
     {

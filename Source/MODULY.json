@@ -24,6 +24,13 @@
     ]
   },
   {
+    "file": "js/app/sync-notice.js",
+    "exports": [
+      "checkSyncOnOpen"
+    ],
+    "imports": []
+  },
+  {
     "file": "js/app/theme.js",
     "exports": [
       "setupTheme",
@@ -55,7 +62,8 @@
       "js/app/theme.js",
       "js/app/toolbox.js",
       "js/app/router.js",
-      "js/shell/interactions.js"
+      "js/shell/interactions.js",
+      "js/app/sync-notice.js"
     ]
   },
   {
@@ -178,7 +186,8 @@
       "NOTES_SHARP",
       "NOTE_ALIASES",
       "normalizeChordName",
-      "transposeChord"
+      "transposeChord",
+      "noteNumber"
     ],
     "imports": []
   },
@@ -224,6 +233,7 @@
   {
     "file": "js/core/parser.js",
     "exports": [
+      "escapeHtml",
       "renderSongWithChordLayer"
     ],
     "imports": []
@@ -302,6 +312,18 @@
     "imports": []
   },
   {
+    "file": "js/song/performance.js",
+    "exports": [
+      "initPerformance",
+      "updatePerformance"
+    ],
+    "imports": [
+      "js/chords/theory.js",
+      "js/song/instruments.js",
+      "js/song/pagination.js"
+    ]
+  },
+  {
     "file": "js/song/settings.js",
     "exports": [
       "getSongSettings",
@@ -340,6 +362,7 @@
       "renderSongObject"
     ],
     "imports": [
+      "js/song/performance.js",
       "js/core/loader.js",
       "js/core/parser.js",
       "js/shell/header.js",
@@ -465,6 +488,7 @@
     "exports": [
       "resetChordHistory",
       "cancelChordMove",
+      "insertVerseBreak",
       "insertVisualChord",
       "mountChordText"
     ],
@@ -756,6 +780,11 @@
       "js/tools/export/indexes.js",
       "js/tools/export/report.js"
     ]
+  },
+  {
+    "file": "js/tools/github/main.js",
+    "exports": [],
+    "imports": []
   },
   {
     "file": "js/tools/shared/paths.js",

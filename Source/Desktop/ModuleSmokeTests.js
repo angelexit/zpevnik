@@ -50,15 +50,26 @@ window.__moduleTest = null;
             const a=document.createElement('textarea'),b=document.createElement('textarea');a.value='A [Cmaj7]text\\n[C#mi] další';b.value='Jsem tady';box.append(a,b);const ea=mountChordText(a),eb=mountChordText(b);resetChordHistory();
             if(ea.textContent.includes('[')||a.value!=='A [Cmaj7]text\\n[C#mi] další')throw new Error('Rich text roundtrip');
             const chip=ea.querySelector('.inline-chord');chip.click();document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}));if(a.value.indexOf('[Cmaj7]')<0||document.querySelector('.floating-chord'))throw new Error('Cancel lost chord');
-            chip.click();const r=document.createRange();r.setStart(eb.firstChild,5);r.collapse(true);const bounds=r.getBoundingClientRect();eb.dispatchEvent(new MouseEvent('click',{clientX:bounds.x,clientY:bounds.y+5,bubbles:true}));
+            chip.dispatchEvent(new PointerEvent('pointerdown',{button:0,clientX:10,clientY:10,bubbles:true}));
+            const nativeChipSelection=document.createRange();nativeChipSelection.selectNodeContents(chip);getSelection().removeAllRanges();getSelection().addRange(nativeChipSelection);
+            chip.dispatchEvent(new MouseEvent('click',{clientX:10,clientY:10,detail:1,bubbles:true}));
+            if(!document.querySelector('.floating-chord'))throw Error('Native chip selection blocks click move');
+            const r=document.createRange();r.setStart(eb.firstChild,5);r.collapse(true);const bounds=r.getBoundingClientRect();eb.dispatchEvent(new MouseEvent('click',{clientX:bounds.x,clientY:bounds.y+5,bubbles:true}));
             if(a.value.includes('[Cmaj7]')||b.value!=='Jsem [Cmaj7]tady')throw new Error('Move position: '+a.value+' | '+b.value);
             eb.dispatchEvent(new KeyboardEvent('keydown',{key:'z',ctrlKey:true,bubbles:true}));if(!a.value.includes('[Cmaj7]')||b.value!=='Jsem tady')throw new Error('Undo move');
+            const restoredChip=ea.querySelector('.inline-chord');
+            ea.dispatchEvent(new PointerEvent('pointerdown',{button:0,clientX:0,clientY:0,bubbles:true}));
+            document.dispatchEvent(new PointerEvent('pointermove',{clientX:35,clientY:0,bubbles:true}));
+            const dragRange=document.createRange();dragRange.selectNodeContents(ea);getSelection().removeAllRanges();getSelection().addRange(dragRange);
+            restoredChip.dispatchEvent(new MouseEvent('click',{clientX:35,clientY:0,detail:1,bubbles:true}));
+            if(document.querySelector('.floating-chord')||getSelection().isCollapsed)throw Error('Selection drag starts a move');
             const selection=getSelection();const copyRange=document.createRange();copyRange.selectNodeContents(ea);selection.removeAllRanges();selection.addRange(copyRange);const clipboard=new DataTransfer();ea.dispatchEvent(new ClipboardEvent('copy',{clipboardData:clipboard,bubbles:true}));if(clipboard.getData('text/plain')!==a.value)throw new Error('Copy brackets');
             const pasteRange=document.createRange();pasteRange.selectNodeContents(eb);selection.removeAllRanges();selection.addRange(pasteRange);eb.dispatchEvent(new ClipboardEvent('paste',{clipboardData:clipboard,bubbles:true}));if(b.value!==a.value||eb.querySelectorAll('.inline-chord').length!==2)throw new Error('Paste chips');
             const end=document.createRange();end.selectNodeContents(eb);end.collapse(false);selection.removeAllRanges();selection.addRange(end);eb.focus();
             for(const letter of ['[','G',']'])document.execCommand('insertText',false,letter);
             if(!b.value.endsWith('[G]')||eb.querySelectorAll('.inline-chord').length!==3)throw new Error('Typed chord token');
             eb.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}));document.execCommand('insertText',false,'New line');if(!b.value.endsWith('[G]\\nNew line'))throw new Error('Newline fidelity '+b.value);
+            if(!eb.querySelector('.verse-break'))throw new Error('Missing visible verse marker');
             cancelChordMove();box.remove();resetChordHistory();return {roundtrip:true,moveBetweenSections:true,cancel:true,undo:true,clipboard:true,typing:true,newlines:true};
         })()`);
         const chooserTests=await chords.eval(`(async()=>{
@@ -121,6 +132,94 @@ window.__moduleTest = null;
         const previewFrame=document.createElement('iframe');previewFrame.src='/index.html?preview='+previewKey;document.body.append(previewFrame);
         await new Promise((resolve,reject)=>{let tries=0;const timer=setInterval(()=>{if(previewFrame.contentDocument?.querySelector('.song-section-card')){clearInterval(timer);resolve();}else if(++tries>150){clearInterval(timer);reject(new Error('Preview load'));}},100);});
         if(!previewFrame.contentDocument.body.textContent.includes('Unsaved persistent draft'))throw new Error('Preview missing draft');previewFrame.remove();
-        window.__moduleTest = {ok:true,editor:editorResult,export:exportResult,chordImport:true,richTests,chooserTests,diskTests,chordTests,navigationPersistence:true,preview:true};
+        const gh=exporter.document;
+        if(!gh.getElementById('ghDownload')||!gh.getElementById('ghPublish').disabled)throw new Error('Sync UI initial state');
+        const originalFetch=exporter.fetch;let sent=false,pulled=false,checkCount=0,projectChecked=false;
+        exporter.fetch=async(url,options)=>{
+            if(!String(url).startsWith('/api/github/'))return originalFetch(url,options);
+            const action=String(url).split('/').pop();let result;
+            if(action==='settings')result={settings:{},hasToken:true};
+            else if(action==='status')result={progress:''};
+            else if(action==='preview')result={path:'songs/test.json',isJson:true,local:'local version',remote:'remote version'};
+            else if(action==='check'){if(JSON.parse(options.body).scope==='project')projectChecked=true;checkCount++;result={planId:'test-plan',target:'test/repo',changes:[{path:'songs/test.json',action:checkCount===1?'conflict':'upload'}],unchanged:2,conflicts:checkCount===1?1:0,uploads:1,downloads:1,warnings:[],hasToken:true};}
+            else {const body=JSON.parse(options.body);if(body.planId!=='test-plan')throw new Error('Wrong plan');if(action==='download'){if(body.choices['songs/test.json']!=='remote')throw new Error('Wrong conflict choice');pulled=true;}else sent=true;result={message:'Test synchronized',ok:true,localApplied:true};}
+            return {ok:true,json:async()=>result};
+        };
+        try {
+            gh.getElementById('ghOwner').value='test';gh.getElementById('ghRepo').value='repo';
+            gh.getElementById('ghCheck').click();await new Promise(r=>setTimeout(r,100));
+            if(!gh.getElementById('ghPublish').disabled||!gh.getElementById('ghDownload').disabled)throw new Error('Unresolved conflict allowed');
+            gh.querySelector('#ghChanges button').click();await new Promise(r=>setTimeout(r,100));
+            if(!gh.getElementById('ghLocalPreview').textContent.includes('local version'))throw new Error('Missing preview');gh.getElementById('ghClosePreview').click();
+            const choice=gh.querySelector('#ghChanges select');choice.value='remote';choice.dispatchEvent(new exporter.Event('change'));
+            if(gh.getElementById('ghDownload').disabled)throw new Error('Resolved conflict still blocked');
+            gh.getElementById('ghDownload').click();await new Promise(r=>setTimeout(r,100));
+            if(!pulled||sent)throw new Error('Download posted publish');
+            gh.getElementById('ghCheck').click();await new Promise(r=>setTimeout(r,100));gh.getElementById('ghPublish').click();await new Promise(r=>setTimeout(r,100));
+            if(!sent||!gh.getElementById('ghPublish').disabled)throw new Error('Sync UI failed');
+            gh.getElementById('ghScope').value='project';gh.getElementById('ghScope').dispatchEvent(new exporter.Event('change'));
+            if(!gh.getElementById('ghDownload').disabled||!gh.getElementById('ghScopeHelp').textContent.includes('Source'))throw new Error('Project scope invalidation');
+            gh.getElementById('ghCheck').click();await new Promise(r=>setTimeout(r,100));if(!projectChecked)throw new Error('Project scope request');
+        } finally {exporter.fetch=originalFetch;gh.getElementById('ghScope').value='data';gh.getElementById('ghScope').dispatchEvent(new exporter.Event('change'));gh.getElementById('ghOwner').value='';gh.getElementById('ghRepo').value='';gh.getElementById('ghChanges').replaceChildren();gh.getElementById('ghWarnings').replaceChildren();gh.getElementById('ghResult').replaceChildren();gh.getElementById('ghReload').hidden=true;gh.getElementById('ghStatus').textContent='Nastav repozitář a porovnej změny.';gh.getElementById('ghSettingsStatus').textContent='Token není vyplněný.';}
+        const originalMainFetch=window.fetch;
+        try {
+            window.fetch=async(url)=>({ok:true,json:async()=>String(url).endsWith('settings')?{settings:{owner:'test',repo:'songs',branch:'main',checkOnOpen:true}}:{conflicts:1,downloads:0,uploads:0}});
+            const {checkSyncOnOpen}=await import('/js/app/sync-notice.js');await checkSyncOnOpen();
+            if(!document.querySelector('.sync-notice')?.textContent.includes('konflikt'))throw new Error('Startup sync notice');
+            document.querySelector('.sync-notice').remove();
+        } finally {window.fetch=originalMainFetch;}
+        window.openTool('chords');
+        const cd=chords.document, beforeMirror=cd.getElementById('output').value;
+        const firstCell=cd.querySelector('.string-col .fret-cell'),lastCell=cd.querySelector('.string-col').lastElementChild;
+        if(firstCell.getBoundingClientRect().left>=lastCell.getBoundingClientRect().left)throw Error('Right-handed layout');
+        cd.getElementById('editorHand').value='left';chords.setEditorHand();
+        if(firstCell.getBoundingClientRect().left<=lastCell.getBoundingClientRect().left)throw Error('Left-handed layout');
+        if(cd.getElementById('output').value!==beforeMirror)throw Error('Mirror modified chord');
+        cd.getElementById('editorHand').value='right';chords.setEditorHand();
+        if(!cd.getElementById('output').hidden||!cd.querySelector('.note-tone'))throw Error('Compact editor labels');
+        cd.getElementById('startFret').value='1';chords.shiftFretboard();
+        if(cd.querySelectorAll('.neck-marker').length!==5||!cd.querySelector('.double-marker[data-fret=\"12\"]'))throw Error('Neck markers');
+        await editor.eval(`(async()=>{
+          const real=window.fetch;const d=document;let stage='search';
+          window.fetch=async(url,opts)=>{if(!String(url).startsWith('/api/discogs/'))return real(url,opts);const action=String(url).split('/').pop();return {ok:true,json:async()=>action==='search'?{results:[{id:42,title:'Ilona Csáková'}],pagination:{page:1,pages:1}}:action==='albums'?{releases:[{id:127620,title:'Amsterdam',year:1995,type:'master'}],pagination:{page:1,pages:1}}:{title:'Amsterdam',year:1995,genres:['Pop'],styles:['Europop'],uri:'https://www.discogs.com/master/127620',images:[],tracklist:[{type_:'heading',title:'Strana A'},{position:'A1',title:'Amsterdam',duration:'4:13',sub_tracks:[{position:'A1a',title:'Intro',duration:''}]}]}};};
+          const wait=async(fn)=>{for(let i=0;i<100&&!fn();i++)await new Promise(r=>setTimeout(r,20));if(!fn())throw Error('Discogs UI timeout');};
+          try{
+            const before=d.getElementById('artist').value;
+            d.getElementById('discogsQuery').value='Ilona Csáková';d.getElementById('discogsSearch').click();
+            await wait(()=>d.getElementById('discogsResults').querySelector('button'));
+            d.getElementById('discogsResults').querySelector('button').click();
+            await wait(()=>d.getElementById('discogsResults').textContent.includes('Amsterdam'));
+            d.getElementById('discogsResults').querySelector('button').click();
+            await wait(()=>d.getElementById('discogsDetail').querySelector('button'));
+            d.getElementById('discogsDetail').querySelectorAll('input')[2].checked=true;
+            d.getElementById('discogsDetail').querySelector('button').click();
+            await wait(()=>d.getElementById('discogsStatus').textContent.includes('Vybrané údaje'));
+            const tracklist=d.querySelector('.discogs-tracklist');if(!tracklist||tracklist.querySelectorAll('tbody tr').length!==3||!tracklist.textContent.includes('4:13')||!tracklist.textContent.includes('Intro'))throw Error('Discogs tracklist');const song=buildSongObject();if(song.album!=='Amsterdam'||String(song.year)!=='1995'||song.genres[0]!=='Pop'||song.discogs.id!==127620||song.artist!==before)throw Error('Discogs confirmed import');
+            const picker=d.getElementById('discogsSongSelect');if(picker.hidden||picker.options.length!==3)throw Error('Song dropdown');picker.value='0';picker.dispatchEvent(new Event('change'));if(d.getElementById('title').value!=='Amsterdam')throw Error('Song title selection');
+            const manual=d.getElementById('manualChords');manual.value='C, G Ami Fmaj7 invalid';manual.dispatchEvent(new Event('input',{bubbles:true}));
+            if(!d.querySelector('.section-card .used-row').textContent.includes('Fmaj7')||!d.getElementById('manualChordStatus').textContent.includes('invalid'))throw Error('Manual chord palette');
+            const saved=buildSongObject();if(saved.editor_chords.length!==4)throw Error('Manual chord persistence');loadSongObject(saved);if(!d.getElementById('manualChords').value.includes('Fmaj7')||d.getElementById('discogsSongSelect').hidden)throw Error('Editor extras restore');
+            const cache=d.getElementById('cacheOutput');cache.value='[Ami]První verš\\n[G]Druhý verš';
+            if(cache.hidden||cache.style.display==='none'||cache.nextElementSibling.classList.contains('chord-text'))throw Error('Cache must remain plain text');
+            const data=new DataTransfer();data.setData('text/plain',cache.value);
+            const destination=d.querySelector('.section-card .chord-text');const destRange=d.createRange();destRange.selectNodeContents(destination);getSelection().removeAllRanges();getSelection().addRange(destRange);destination.dispatchEvent(new ClipboardEvent('paste',{bubbles:true,clipboardData:data}));if(d.querySelector('.section-card textarea').value!==cache.value)throw Error('Chord paste roundtrip');
+            const cutRange=d.createRange();cutRange.selectNodeContents(destination);getSelection().removeAllRanges();getSelection().addRange(cutRange);destination.dispatchEvent(new ClipboardEvent('cut',{bubbles:true,clipboardData:data}));if(d.querySelector('.section-card textarea').value!=='')throw Error('Final editor cut');
+            const pasteRange=d.createRange();pasteRange.selectNodeContents(destination);getSelection().removeAllRanges();getSelection().addRange(pasteRange);destination.dispatchEvent(new ClipboardEvent('paste',{bubbles:true,clipboardData:data}));if(d.querySelector('.section-card textarea').value!==cache.value)throw Error('Cut paste preserves chords and verses');
+            const controls=cache.nextElementSibling;controls.querySelector('select').focus();cache.setSelectionRange(0,0);const transfer=[...controls.querySelectorAll('button')].find(b=>b.textContent.includes('Vložit výběr'));transfer.click();if(!d.querySelector('.section-card textarea').value.includes('[Ami]'))throw Error('Direct section transfer');
+            const beforeText=d.querySelector('.section-card textarea').value;const chordButton=[...d.querySelectorAll('.section-card .used-btn')].find(b=>b.textContent.trim()==='Fmaj7');chordButton.click();if(!d.querySelector('.section-card textarea').value.includes('[Fmaj7]'))throw Error('Manual chord insertion');
+            const {parseSections}=await import('/js/tools/editor/section-import.js');
+            const parsed=parseSections('1. [D]První\\n   další\\n\\nR: [G]Refrén\\n3. [Ami]Třetí\\nR. Další\\nR@ Jiný\\nREF: Konec');
+            if(parsed.length!==6||parsed[0].text!=='[D]První\\ndalší'||parsed[1].type!=='chorus'||parsed[2].type!=='verse'||parsed.slice(3).some(x=>x.type!=='chorus'))throw Error('Section marker parser');
+            const previousCards=d.querySelectorAll('.section-card').length;
+            cache.value='1. [D]Sloka\\n\\nR: [G]Refrén';cache.setSelectionRange(0,0);
+            await [...controls.querySelectorAll('button')].find(b=>b.textContent.startsWith('Rozdělit')).onclick();
+            if(d.querySelectorAll('.section-card').length!==previousCards+2)throw Error('Section split count');
+            const parts=buildSongObject().parts;
+            if(!parts.some(p=>p.type==='chorus'))throw Error('Section split type');
+            const {parseTokenFile}=await import('/js/tools/shared/token-file.js');if(parseTokenFile(' {"discogs":"fake-token-123","github":"fake-github-123"} ','github')!=='fake-github-123'||parseTokenFile('fake-token-123','discogs')!=='fake-token-123')throw Error('Token file parser');let rejected=false;try{parseTokenFile('{bad','discogs')}catch{rejected=true}if(!rejected)throw Error('Invalid token file accepted');
+
+          }finally{window.fetch=real;}
+        })()`);
+        window.__moduleTest = {ok:true,editor:editorResult,export:exportResult,chordImport:true,richTests,chooserTests,diskTests,chordTests,navigationPersistence:true,preview:true,githubUI:true,syncConflictUI:true,pullUI:true,startupSyncNotice:true,projectScopeUI:true};
     } catch (error) { window.__moduleTest = {ok:false,error:String(error),stack:error.stack}; }
 })();

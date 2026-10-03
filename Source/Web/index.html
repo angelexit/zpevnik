@@ -17,7 +17,18 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/svg.css">
-</head>
+<link rel="stylesheet" href="css/gallery.css">
+<script type="module" src="js/shell/window-controls.js"></script>
+
+<style>
+[hidden]{display:none!important}
+.topbar-left{min-width:0;flex:1}
+.topbar-right{flex-shrink:0}
+.song-detail-view .topbar-left{flex-wrap:wrap;gap:10px}
+.song-detail-view #mainTitle{min-width:0;white-space:normal;overflow-wrap:anywhere;flex:1 1 300px}
+.song-detail-view #contextBar{flex:0 0 auto;overflow:visible;gap:10px;margin-right:12px}
+.song-detail-view #contextBar button{white-space:nowrap}
+</style></head>
 
 <body data-theme="light">
 
@@ -103,23 +114,10 @@
 <div id="adminToolbox" class="admin-panel">
 
     <div class="admin-grid">
-
-        <a href="tools/index.html#editor" class="admin-link">
-            ✍️ Editor
-        </a>
-
-        <a href="tools/index.html#indexer" class="admin-link">
-            ⚡ Indexer
-        </a>
-
-        <a href="tools/index.html#export" class="admin-link">
-            📦 Export
-        </a>
-
-        <a href="tools/index.html#chords" class="admin-link">
-            🎸 Akordy
-        </a>
-
+        <a href="index.html?chords" class="admin-link">🎸 Akordy</a>
+        <a href="tools/index.html#editor" class="admin-link" data-admin-only>✍️ Editor</a>
+        <a href="tools/index.html#chords" class="admin-link" data-admin-only>🎸 Editor akordů</a>
+        <a href="tools/index.html#export" class="admin-link" data-admin-only>☁️ GitHub</a>
         <button id="logoutBtn" type="button" class="admin-link logout-btn">
             🚪 Odhlásit
         </button>

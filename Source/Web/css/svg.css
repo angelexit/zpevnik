@@ -1,0 +1,447 @@
+/* =========================================================
+   SONG DETAIL / TEXT PÍSNĚ / AKORDY
+========================================================= */
+
+/* Celá stránka písně */
+.song-page {
+    max-width: none !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* Hlavní kontejner – rozvržení stránek dělá JavaScript */
+.song-sections-grid {
+    display: block !important;
+    width: 100% !important;
+    height: calc(100vh - 160px) !important;
+    overflow: hidden !important;
+    position: relative;
+
+    /* Nastavení textu písně */
+    --song-scale: 100%;
+    --song-font-family: "IBM Plex Mono";
+    --song-font-height: 100;
+    --song-font-width: 100;
+}
+
+/* Jedna celá stránka generovaná JavaScriptem */
+.song-page-page {
+    display: none;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 30px !important;
+    box-sizing: border-box;
+}
+
+.song-page-page.active {
+    display: grid !important;
+}
+
+/* Sloupce uvnitř stránky */
+.song-page-column {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    height: 100% !important;
+    justify-content: flex-start;
+}
+
+/* Karty slok/refrenů */
+.song-section-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+    box-sizing: border-box;
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        filter 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.song-section-card.verse {
+    border-left: 6px solid #3b82f6 !important;
+}
+
+.song-section-card.chorus {
+    border-left: 6px solid #a855f7 !important;
+    background: rgba(99, 102, 241, 0.02) !important;
+}
+/* =========================================================
+   VOLITELNÉ ZVÝRAZNĚNÍ / KOMPAKTNÍ SEKCE
+========================================================= */
+
+body.highlight-chorus-enabled .song-section-card.chorus {
+    background: rgba(99, 102, 241, 0.10) !important;
+    border-left: 8px solid var(--accent) !important;
+    box-shadow: inset 0 0 0 1px rgba(99, 102, 241, 0.25);
+}
+
+body.highlight-chorus-enabled .song-section-card.chorus .section-label {
+    color: var(--accent) !important;
+    font-weight: 900 !important;
+}
+
+body.compact-sections-enabled .song-page-column {
+    gap: 12px !important;
+}
+
+body.compact-sections-enabled .song-line {
+    margin-bottom: 0.45em !important;
+}
+
+body.compact-sections-enabled .section-content {
+    line-height: 1.45 !important;
+}
+body.dark-mode .song-section-card.chorus {
+    background: rgba(168, 85, 247, 0.03) !important;
+}
+body.hide-section-borders .song-section-card {
+    border-left: none !important;
+}
+/* Obsah sekce – přesné akordy potřebují monospace */
+.section-content {
+    /*
+    Dostupné fonty pro test:
+    "Courier New"
+    "IBM Plex Mono"
+    "JetBrains Mono"
+    "Fira Code"
+    "Cascadia Mono"
+    "Source Code Pro"
+    "Roboto Mono"
+    "Inconsolata"
+    "Ubuntu Mono"
+    "PT Mono"
+    "Space Mono"
+    */
+
+    font-family:
+        var(--song-font-family),
+        monospace !important;
+
+    font-variant-ligatures: none !important;
+
+    font-size: calc(1.08rem * var(--song-scale) / 100) !important;
+
+    transform:
+        scaleY(calc(var(--song-font-height) / 100))
+        scaleX(calc(var(--song-font-width) / 100));
+
+    transform-origin: top left;
+
+    width: calc(
+        100% / (var(--song-font-width) / 100)
+    );
+
+    line-height: 1.75 !important;
+    font-weight: normal !important;
+    white-space: normal !important;
+
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    scrollbar-width: none !important;
+}
+
+.section-content::-webkit-scrollbar {
+    display: none !important;
+}
+
+.repeat-mark {
+    font-weight: bold;
+    color: #5b5bff;
+    text-shadow: 0 0 2px #999;
+}
+
+/* Jeden kompletní řádek písně */
+.song-line {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    max-width: 100% !important;
+    position: relative !important;
+    margin-bottom: 0.9em !important;
+    min-height: auto !important;
+}
+
+/* Řádek s akordy */
+.chord-line {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    line-height: 1 !important;
+    min-height: 1em !important;
+}
+
+/* Nulová šířka drží přesné pozicování podle mezer v textu */
+.chord-wrapper {
+    display: inline-block !important;
+    position: relative !important;
+    width: 0 !important;
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+}
+
+/* Stack pro jeden nebo dva akordy */
+.chord-stack {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 6px !important;
+
+    white-space: nowrap !important;
+}
+.song-sections-grid {
+    --song-chord-color: var(--accent);
+}
+
+.chord-main {
+    color: var(--song-chord-color) !important;
+    font-weight: bold !important;
+}
+
+/* Capo / druhý akord */
+.chord-second {
+    color: #f97316 !important;
+    font-size: 0.85em !important;
+    font-weight: bold !important;
+    margin-left: 4px !important;
+    display: none;
+}
+
+.two-chords-enabled .chord-second {
+    display: inline !important;
+}
+
+/* Samotný text písně */
+.lyric-line {
+    white-space: pre !important;
+    color: inherit !important;
+    font-weight: normal !important;
+    line-height: 1.2 !important;
+}
+
+/* Prázdný řádek */
+.song-line.empty-line {
+    min-height: 1.2em !important;
+}
+
+/* Intro / mezihra / outro s pomocnou tečkou */
+.song-section-card.intro .lyric-line,
+.song-section-card.bridge .lyric-line,
+.song-section-card.outro .lyric-line {
+    color: transparent !important;
+    visibility: hidden !important;
+    height: 0 !important;
+}
+
+/* Responsivita */
+@media (max-width: 900px) {
+    .song-sections-grid {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .song-page-page.active {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .section-content {
+        font-size: calc(1.05rem * var(--song-scale) / 100) !important;
+    }
+}
+
+/* =========================================================
+   SVG DIAGRAMY AKORDŮ
+========================================================= */
+
+.chord-diagram-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+}
+
+.chord-svg {
+    width: 120px;
+    height: auto;
+    overflow: visible;
+}
+
+.chord-svg .chord-title {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    fill: var(--text);
+}
+
+.chord-svg .string-line,
+.chord-svg .fret-line {
+    stroke: var(--text);
+    stroke-width: 1;
+    opacity: 0.35;
+}
+
+.chord-svg .nut {
+    stroke: var(--text);
+    stroke-width: 3.5;
+    stroke-linecap: round;
+    opacity: 0.85;
+}
+
+.chord-svg .fret-num {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    fill: var(--text);
+    opacity: 0.7;
+}
+
+.chord-svg .mute-string {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+    fill: #ef4444;
+}
+
+.chord-svg .open-string {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+    fill: #10b981;
+    opacity: 0.8;
+}
+
+.chord-svg .barre-line {
+    stroke: var(--accent);
+    stroke-width: 6;
+    stroke-linecap: round;
+}
+
+.chord-svg .fret-dot {
+    fill: var(--accent);
+    stroke: var(--card-bg);
+    stroke-width: 1px;
+}
+
+.chord-svg .finger-num {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 7px;
+    font-weight: 900;
+    fill: #ffffff;
+}
+
+.no-svg {
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    color: #ef4444;
+    padding: 6px;
+    border: 1px dashed #ef4444;
+    border-radius: 6px;
+    background: rgba(239, 68, 68, 0.05);
+}
+/* =========================================================
+   TOOLTIP SVG AKORDŮ
+========================================================= */
+
+.chord-tooltip {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+
+    z-index: 99999 !important;
+    pointer-events: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--border, #d8dee9);
+    border-radius: 14px;
+    padding: 10px;
+
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(6px) scale(0.96);
+
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease,
+        visibility 0.15s ease;
+}
+
+.chord-tooltip.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.chord-tooltip .chord-diagram-container {
+    margin: 0 !important;
+}
+
+.chord-main {
+    cursor: pointer;
+}
+.capo-label {
+    fill: var(--text);
+    font-size: 9px;
+    font-weight: 700;
+    opacity: 0.7;
+}
+/* Flow layout: chord width is real width, including consecutive ending chords. */
+.section-content {transform:none !important;width:100% !important;overflow:visible !important;font-size:calc(1.08rem * var(--song-scale,100) / 100) !important;line-height:calc(1.3 * var(--song-font-height,100) / 100) !important;letter-spacing:calc((var(--song-font-width,100) - 100) * .006em);}
+.song-line.verse-flow {display:block !important;white-space:normal !important;margin:0 0 .25em !important;line-height:inherit !important;}
+.verse-word {display:inline-flex;vertical-align:bottom;max-width:100%;flex-wrap:wrap;}
+.verse-piece {display:inline-grid;grid-template-rows:auto auto auto;vertical-align:bottom;max-width:100%;min-width:0;}
+.verse-flow .chord-main,.verse-flow .chord-second {position:static !important;margin:0 !important;line-height:1.15 !important;min-height:1.15em;white-space:nowrap;}
+.verse-flow [data-original] {padding-right:.55ch;}
+.verse-flow .chord-second {display:none !important;color:#008b8b !important;font-size:.9em !important;}
+body.dual-chords-enabled .verse-flow .chord-second {display:block !important;}
+.verse-lyric {white-space:pre-wrap;overflow-wrap:anywhere;min-height:1.2em;line-height:1.2;}
+.without-chords .chord-main,.without-chords .chord-second {display:none !important;}
+.chords-only .verse-lyric {display:none;}
+.song-section-card {min-height:0 !important;height:auto !important;padding:4px 6px !important;}
+.second-settings {grid-column:1/-1;display:flex;gap:20px;flex-wrap:wrap;border-top:1px solid #aaa6;padding-top:10px;}.second-settings[hidden]{display:none;}.second-settings label {flex:1;min-width:160px;}.performance-legend{grid-column:1/-1;}
+@media(max-width:900px){.song-page-page{grid-template-columns:minmax(0,1fr) !important;}.song-page-column{height:auto !important;}}
+
+.verse-word{align-items:flex-end;}
+.verse-flow .chord-main:not([data-original]),body.dual-chords-enabled .verse-flow .chord-second:not([data-original]){display:none !important;}
+body.dark-mode .verse-flow .chord-second{color:#2bc7bd !important;}
+
+.second-settings label {display:flex;flex-direction:column;gap:8px;flex:1;min-width:180px}.second-settings select {font:inherit;padding:10px;border:1px solid var(--border,#dce4ef);border-radius:12px;background:var(--bg,#f7f9fc);color:inherit}
+
+.sync-notice{position:fixed;bottom:12px;left:12px;right:12px;z-index:10000;background:#1e293b;color:#fff;border:1px solid #a5b4fc;border-radius:12px;padding:12px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 5px 20px #0005}.sync-notice a{color:#c7d2fe}.sync-notice button{margin-left:auto;background:transparent;color:white;border:0;font-size:24px;cursor:pointer}
+
+/* Readable full-size chord previews, constrained on small screens. */
+.chord-tooltip .chord-svg{width:220px;height:auto;max-width:calc(100vw - 72px);max-height:calc(100vh - 72px)}
+.chord-svg .fret-num{font-size:13px;font-weight:900;opacity:1}
+
+/* Draw the frame outside the chord without moving its text or lyric anchor. */
+#songContent .chord-main[data-original], #songContent .chord-second[data-original]{position:relative !important;width:max-content;justify-self:start;isolation:isolate;}
+body.chord-frames-enabled #songContent .chord-main[data-original]::before,
+body.second-chord-frames-enabled #songContent .chord-second[data-original]::before {
+ content:"";position:absolute;inset:0 -2px 0 -2px;border:1px solid #000;border-radius:4px;pointer-events:none;z-index:-1;
+ box-shadow:0 2px 3px rgb(0 0 0 / 22%),inset 0 1px 0 rgb(255 255 255 / 25%);
+ background:color-mix(in srgb,currentColor 9%,transparent);
+}
+#songContent .song-line {padding-left:2px;}
+body #songContent .chord-second {color:var(--song-second-chord-color,#008b8b) !important;}
+body.dark-mode #songContent .chord-second {color:var(--song-second-chord-color,#2bc7bd) !important;}

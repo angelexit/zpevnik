@@ -1,0 +1,711 @@
+:root { 
+    --p: #4b0082; 
+	--s: #2563eb; 
+	--bg: #f0f2f5; 
+	--txt: #1e293b; 
+	--accent: #d8b4fe; 
+	--ok:#16a34a; 
+	--warn:#f59e0b; 
+	--bad:#dc2626; 
+}
+body {
+	font-family: 'Segoe UI', sans-serif; 
+	margin: 0; 
+	background: var(--bg); 
+	color: var(--txt); 
+	padding: 20px; 
+}
+.container { 
+    max-width: 1400px; 
+	margin: 0 auto; 
+	background: white; 
+	padding: 30px; 
+	border-radius: 15px; 
+	box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+.tabs { 
+    display: flex; 
+	gap: 10px; 
+	margin-bottom: 20px; 
+	border-bottom: 2px solid #eee; 
+	padding-bottom: 10px; 
+}
+.tab-btn { 
+    padding: 10px 20px; 
+	border: none; 
+	background: #e2e8f0; 
+	cursor: pointer; 
+	border-radius: 8px; 
+	font-weight: bold; 
+}
+.tab-btn.active { 
+    background: var(--p); 
+	color: white; 
+}
+.tab-content { 
+    display: none; 
+}
+.tab-content.active { 
+    display: block; 
+}
+.panel-title { 
+    font-size:1.05rem; 
+	font-weight:800; 
+	margin: 0 0 14px 0; 
+	color:#334155; 
+	display:flex; 
+	align-items:center; 
+	gap:8px; 
+}
+.panel-db { 
+    background: #eef2ff; 
+	padding: 20px; 
+	border-radius: 12px; 
+	border: 2px solid #c7d2fe; 
+	margin-bottom: 20px; 
+}
+.panel-data { 
+    background:#f8fafc; 
+	padding:20px; 
+	border-radius:10px; 
+	border:1px solid #e2e8f0; 
+	margin-bottom:20px; 
+}
+.setup-box { 
+    display: grid; 
+	grid-template-columns: 1.05fr 1fr 1fr 1.35fr; 
+	gap: 20px; 
+	align-items: start; 
+}
+.grid { 
+    display: grid; 
+	grid-template-columns: repeat(6, minmax(0, 1fr)); 
+	gap: 15px; 
+	align-items:start; 
+}
+.span-2 { 
+    grid-column: span 2; 
+}
+.span-3 { 
+    grid-column: span 3; 
+}
+.span-6 { 
+    grid-column: 1 / -1; 
+}
+.input-group { 
+    display: flex; 
+	flex-direction: column; 
+}
+label { 
+    font-weight: bold; 
+	margin-bottom: 5px; 
+	font-size: 0.8rem; 
+	color: #64748b; 
+	text-transform: uppercase; 
+}
+input, select, textarea { 
+    padding: 10px; 
+	border: 2px solid #e2e8f0; 
+	border-radius: 8px; 
+	font-size: 1rem; 
+	box-sizing: border-box; 
+	width: 100%; 
+	min-width: 0; 
+}
+.input-group { 
+    min-width: 0; 
+}
+.grid > * { 
+    min-width: 0; 
+}
+.editor-split { 
+    display: grid; 
+	grid-template-columns: 1fr 1fr; 
+	gap: 30px; 
+}
+.column-header { 
+    background: var(--p); 
+	color: white; 
+	padding: 12px 15px; 
+	border-radius: 8px 8px 0 0; 
+	font-weight: bold; 
+}
+#rawInput, #cacheOutput { 
+    width: 100%; 
+	height: 350px; 
+	font-family: monospace; 
+}
+.sections-area { 
+    background: #f8fafc; 
+	padding: 15px; 
+	border: 1px solid #ddd; 
+	border-radius: 10px; 
+}
+.section-card { 
+    background: white; 
+	padding: 15px; 
+	margin-bottom: 15px; 
+	border-radius: 10px; 
+	border: 1px solid #cbd5e1; 
+}
+.section-card textarea { 
+    width: 100%; 
+	min-height: 120px; 
+	font-family: monospace; 
+}
+.setup-box .btn { 
+    width:100%; 
+	min-height:44px; 
+}
+.btn { 
+    padding: 10px 20px; 
+	border: none; 
+	border-radius: 8px; 
+	cursor: pointer; 
+	font-weight: bold; 
+}
+.btn-p { 
+    background: var(--p); 
+	color: white; 
+}
+.btn-s { 
+    background: var(--s); 
+	color: white; 
+}
+.btn-ok { 
+    background: var(--ok); 
+	color: white; 
+}
+.btn-warn { 
+    background: var(--warn); 
+	color: white; 
+}
+.status { 
+    margin-top: 8px; 
+	font-size: .85rem; 
+	font-weight: 600; 
+	color: #475569; 
+}
+.status.ok { 
+    color: var(--ok); 
+}
+.status.warn { 
+    color: var(--warn); 
+}
+.status.bad { 
+    color: var(--bad); 
+}
+.path-preview { 
+    background: #fff; 
+	padding: 10px; 
+	border-radius: 8px; 
+	border: 1px solid #d8b4fe; 
+	font-size: 0.85rem; 
+	margin-top:8px; 
+	min-height:62px; 
+}
+.artist-custom, .album-custom { 
+    display:none; 
+	margin-top:8px; 
+}
+.cover-card { 
+    background:#fff; 
+	border:1px solid #cbd5e1; 
+	border-radius:10px; 
+	padding:12px; 
+	display:grid; 
+	grid-template-columns:120px 1fr; 
+	gap:12px; 
+	align-items:center; 
+	min-height:170px; 
+}
+.cover-frame { 
+    width:120px; 
+	height:120px; 
+	border:2px dashed #cbd5e1; 
+	border-radius:10px; 
+	background:#f8fafc; 
+	display:flex; 
+	align-items:center; 
+	justify-content:center; 
+	overflow:hidden; 
+	color:#94a3b8; 
+	font-weight:bold; 
+	text-align:center; 
+}
+.cover-frame img { 
+    width:100%; 
+	height:100%; 
+	object-fit:cover; 
+	display:none; 
+}
+.cover-actions { 
+    display:flex; 
+	flex-direction:column; 
+	gap:8px; 
+}
+.cover-actions small { 
+    color:#64748b; 
+	line-height:1.35; 
+}
+.chord-tag { 
+    display: inline-block; 
+	background: var(--p); 
+	color: white; 
+	padding: 2px 6px; 
+	border-radius: 4px; 
+	margin: 2px; 
+	font-size: 0.75rem; 
+}
+.chord-display-empty { 
+    color:#94a3b8; 
+	font-weight:700; 
+	padding-top:4px; 
+}
+.compact-cover { 
+    min-height: 150px; 
+	grid-template-columns:110px 1fr; 
+}
+.compact-cover .cover-frame { 
+    width:110px; 
+	height:110px; 
+}
+.review-status-box { 
+    display:flex; 
+	flex-wrap:wrap; 
+	gap:6px; 
+}
+.status-btn { 
+    border:2px solid #e2e8f0; 
+	background:#fff; 
+	border-radius:8px; 
+	padding:8px 10px; 
+	font-weight:700; 
+	cursor:pointer; 
+}
+.status-btn.active { 
+    border-color: var(--p); 
+	box-shadow:0 0 0 3px rgba(75,0,130,.12); 
+	background:#f5f3ff; 
+}
+.status-details { 
+    display:none; 
+	margin-top:10px; 
+	padding:10px; 
+	border:1px solid #e2e8f0; 
+	border-radius:10px; 
+	background:#fff; 
+}
+.status-details.active { 
+    display:block; 
+}
+.issue-grid { 
+    display:flex; 
+	flex-wrap:wrap; 
+	gap:8px; 
+	margin-bottom:8px; 
+}
+.issue-chip { 
+    display:inline-flex; 
+	align-items:center; 
+	gap:5px; 
+	padding:6px 8px; 
+	border:1px solid #cbd5e1; 
+	border-radius:999px; 
+	font-size:.85rem; 
+	font-weight:700; 
+	background:#f8fafc; 
+	cursor:pointer; 
+}
+.issue-chip input { 
+    width:auto; 
+	margin:0; 
+}
+.reset-btn { 
+    background:#475569; 
+	color:white; 
+}
+.header-reset { 
+    margin-left:auto; 
+}
+.chords-btn { 
+    background:#1d4ed8; 
+	color:white; 
+}
+.add-btn { 
+    background:#0f766e; 
+	color:white; 
+}
+.add-btn.alt { 
+    background:#0369a1; 
+	color:white; 
+}
+.info-title { 
+    font-weight:800; 
+	color:#475569; 
+	margin-bottom:7px; 
+	text-transform:uppercase; 
+	font-size:.82rem; 
+	letter-spacing:.02em; 
+}
+.indexer-box { 
+    text-align: center; 
+	padding: 40px; 
+	border: 3px dashed #cbd5e1; 
+	border-radius: 20px; 
+}
+@media (max-width: 900px) { 
+  .setup-box, .editor-split, .grid { 
+    grid-template-columns: 1fr; 
+  } 
+  .span-2, .span-3, .span-6 { 
+    grid-column: 1 / -1; 
+  } 
+  .cover-card { 
+    grid-template-columns:1fr; 
+  } 
+  .cover-frame { 
+    width:100%; 
+	height:180px; 
+  } 
+}
+
+/* --- AKORD BUILDER / RYCHLÉ VKLÁDÁNÍ AKORDŮ DO SEKCE --- */
+.chord-quick-picker {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px dashed #cbd5e1;
+}
+
+.picker-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chord-quick-picker .picker-label,
+.builder-label {
+    font-size: 0.78rem;
+    font-weight: 900;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.chord-preview {
+    font-family: monospace;
+    font-size: 0.82rem;
+    font-weight: 900;
+    color: var(--p);
+    background: #f5f3ff;
+    border: 1px solid #ddd6fe;
+    border-radius: 999px;
+    padding: 4px 8px;
+}
+
+.chord-builder-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.builder-label {
+    min-width: 58px;
+}
+
+.chord-btn {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    font-weight: 900;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.chord-btn:hover {
+    background: var(--accent);
+    color: var(--p);
+    border-color: var(--p);
+    transform: translateY(-1px);
+}
+
+.chord-btn.active {
+    background: var(--p);
+    color: #ffffff;
+    border-color: var(--p);
+    box-shadow: 0 0 0 3px rgba(75, 0, 130, 0.12);
+}
+
+.root-btn {
+    min-width: 38px;
+}
+
+.used-row {
+    padding-top: 8px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.used-btn {
+    background: #fff7ed;
+    border-color: #fed7aa;
+    color: #9a3412;
+}
+
+.instrumental-hint {
+    margin-top: 6px;
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.35;
+}
+/* =========================================================
+   TMAVÝ REŽIM EDITORU
+========================================================= */
+
+body.dark-mode {
+    --bg: #0f172a;
+    --txt: #e2e8f0;
+    --p: #8b5cf6;
+    --s: #3b82f6;
+    --accent: #6d28d9;
+    --ok: #22c55e;
+    --warn: #f59e0b;
+    --bad: #ef4444;
+
+    color-scheme: dark;
+}
+
+/* Hlavní plocha */
+body.dark-mode .container {
+    background: #111827;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+/* Záložky */
+body.dark-mode .tabs {
+    border-bottom-color: #334155;
+}
+
+body.dark-mode .tab-btn {
+    background: #1e293b;
+    color: #cbd5e1;
+}
+
+body.dark-mode .tab-btn:hover {
+    background: #334155;
+}
+
+body.dark-mode .tab-btn.active {
+    background: var(--p);
+    color: #ffffff;
+}
+
+/* Nadpisy a popisky */
+body.dark-mode .panel-title,
+body.dark-mode .info-title {
+    color: #e2e8f0;
+}
+
+body.dark-mode label,
+body.dark-mode .builder-label,
+body.dark-mode .chord-quick-picker .picker-label {
+    color: #94a3b8;
+}
+
+/* Panely */
+body.dark-mode .panel-db {
+    background: #172033;
+    border-color: #4338ca;
+}
+
+body.dark-mode .panel-data,
+body.dark-mode .sections-area {
+    background: #0f172a;
+    border-color: #334155;
+}
+
+body.dark-mode .section-card {
+    background: #172033;
+    border-color: #334155;
+}
+
+/* Formuláře */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #0f172a;
+    color: #e2e8f0;
+    border-color: #475569;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus {
+    border-color: var(--p);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.18);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #64748b;
+}
+
+/* Stavové a cestové boxy */
+body.dark-mode .status {
+    color: #cbd5e1;
+}
+
+body.dark-mode .path-preview,
+body.dark-mode .status-details {
+    background: #0f172a;
+    border-color: #475569;
+    color: #cbd5e1;
+}
+
+/* Cover */
+body.dark-mode .cover-card {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark-mode .cover-frame {
+    background: #0f172a;
+    border-color: #475569;
+    color: #64748b;
+}
+
+body.dark-mode .cover-actions small,
+body.dark-mode .instrumental-hint {
+    color: #94a3b8;
+}
+
+/* Review status */
+body.dark-mode .status-btn {
+    background: #1e293b;
+    color: #e2e8f0;
+    border-color: #475569;
+}
+
+body.dark-mode .status-btn.active {
+    background: #312e81;
+    border-color: var(--p);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+body.dark-mode .issue-chip {
+    background: #1e293b;
+    color: #cbd5e1;
+    border-color: #475569;
+}
+
+/* Akord builder */
+body.dark-mode .chord-quick-picker {
+    background: #0f172a;
+    border-color: #475569;
+}
+
+body.dark-mode .chord-preview {
+    background: #312e81;
+    border-color: #6d28d9;
+    color: #ddd6fe;
+}
+
+body.dark-mode .chord-btn {
+    background: #1e293b;
+    color: #e2e8f0;
+    border-color: #475569;
+}
+
+body.dark-mode .chord-btn:hover {
+    background: #4c1d95;
+    color: #ffffff;
+    border-color: #8b5cf6;
+}
+
+body.dark-mode .chord-btn.active {
+    background: var(--p);
+    color: #ffffff;
+    border-color: var(--p);
+}
+
+body.dark-mode .used-row {
+    border-top-color: #334155;
+}
+
+body.dark-mode .used-btn {
+    background: #431407;
+    border-color: #9a3412;
+    color: #fed7aa;
+}
+
+/* Indexer */
+body.dark-mode .indexer-box {
+    border-color: #475569;
+}
+
+/* Scrollbary */
+body.dark-mode * {
+    scrollbar-color: #475569 #0f172a;
+}
+
+body.dark-mode *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body.dark-mode *::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+body.dark-mode *::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 999px;
+}
+
+body.dark-mode *::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+.editor-actions {
+    justify-content: flex-end;
+}
+
+.editor-actions .header-reset {
+    margin-left: auto;
+}
+.chord-text {min-height:180px;white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #b9c6dd;border-radius:10px;padding:14px;font:16px/2.1 Consolas,monospace;background:var(--input-bg,transparent);color:inherit;cursor:text;}
+.chord-text:focus {outline:2px solid #9061e8;outline-offset:1px;}
+.inline-chord {display:inline-block;vertical-align:baseline;line-height:1.45;padding:0 5px;margin:0 1px;border:1px solid #dbab71;border-radius:6px;background:#fff4e5;color:#963e09;font-weight:bold;cursor:grab;user-select:all;}
+.inline-chord.chord-lifted {opacity:.25;border-style:dashed;}
+.floating-chord {position:fixed;z-index:100000;pointer-events:none;background:#e5e7eb;color:#374151;border:1px solid #9ca3af;border-radius:8px;padding:8px 12px;font:14px sans-serif;box-shadow:0 3px 12px #0003;}
+
+.verse-break{color:#8893a6;user-select:all;font-size:.9em}.verse-controls{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:8px 0 16px}.verse-controls button{border:1px solid #b9c6dd;border-radius:7px;padding:6px 12px;cursor:pointer}.verse-controls small{color:#78849b}.chord-text{min-height:2.8em;}
+#discogsPanel {text-transform:none;}
+#discogsPanel button,#onlineLookup button {padding:8px 12px;border:1px solid #94a3b8;border-radius:8px;background:#2563eb;color:white;cursor:pointer;font:inherit;}
+#discogsPanel input[type=checkbox] {width:auto;padding:0;margin-right:6px;}
+#discogsPanel label {text-transform:none;font-weight:normal;margin:10px 0;}
+#discogsPanel input[type=password],#discogsQuery {max-width:440px;margin:10px 8px 10px 0;}
+#discogsResults button {display:block;text-align:left;}
+#discogsPanel a {color:#2563eb;}
+body.dark-mode #discogsPanel a {color:#93c5fd;}
+
+.discogs-tracklist {margin:18px 0;overflow-x:auto;}
+.discogs-tracklist table {width:100%;border-collapse:collapse;text-align:left;font-size:14px;}
+.discogs-tracklist th,.discogs-tracklist td {padding:8px 12px;border-bottom:1px solid #94a3b866;}
+.discogs-tracklist td:nth-child(2) {overflow-wrap:anywhere;}
+.discogs-tracklist th:first-child,.discogs-tracklist td:first-child {width:65px;}
+.discogs-tracklist th:last-child,.discogs-tracklist td:last-child {width:65px;white-space:nowrap;}
+.discogs-track-heading {background:#94a3b822;}
+#discogsSongSelect[hidden] {display:none!important;}
+#discogsSongSelect {margin-top:8px;}
+#manualChordStatus {font-size:13px;color:#b45309;}
+body.dark-mode #manualChordStatus {color:#fbbf24;}

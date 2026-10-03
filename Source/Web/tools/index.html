@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<script>if(localStorage.getItem('zpevnikMode')!=='admin')location.replace('/index.html');</script>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Editor písní | Zpěvník</title>
+
+	    <link
+        rel="stylesheet"
+        href="../css/tools.css"
+    >
+
+    <!--
+        Režim nastavíme ještě před vykreslením stránky,
+        aby při otevření tmavého režimu neblikla bílá stránka.
+    -->
+    
+<script type="module" src="../js/shell/window-controls.js"></script>
+<link rel="stylesheet" href="../css/gallery.css">
+</head>
+
+<body>
+
+<div class="tools-shell">
+
+    <!-- =====================================================
+         SPOLEČNÁ HLAVIČKA NÁSTROJŮ
+    ====================================================== -->
+
+    <header class="tools-topbar">
+
+        <button
+            type="button"
+            class="tools-title"
+            onclick="goSongbook()"
+            title="Zpět do zpěvníku"
+        >
+            🎵 Zpěvník nástroje
+        </button>
+
+        <nav
+            class="tools-tabs"
+            aria-label="Nástroje zpěvníku"
+        >
+            <button
+                type="button"
+                class="tools-tab"
+                data-tool="editor"
+                onclick="openTool('editor')"
+            >
+                ✍️ Editor písní
+            </button>
+
+            <button
+                type="button"
+                class="tools-tab"
+                data-tool="chords"
+                onclick="openTool('chords')"
+            >
+                🎸 Editor akordů
+            </button>
+
+            <button
+                type="button"
+                class="tools-tab"
+                data-tool="export"
+                onclick="openTool('export')"
+            >
+                ☁️ GitHub
+            </button>
+        </nav>
+
+        <div class="tools-actions">
+
+            <button
+                type="button"
+                class="tools-btn"
+                id="toolsThemeBtn"
+                onclick="toggleToolsTheme()"
+                title="Přepnout světlý a tmavý režim"
+            >
+                🌙
+            </button>
+
+            <button
+                type="button"
+                class="tools-btn"
+                onclick="reloadActiveTool()"
+                title="Obnovit pouze otevřený nástroj"
+            >
+                🔄 Obnovit
+            </button>
+
+            <button
+                type="button"
+                class="tools-btn home"
+                onclick="goSongbook()"
+            >
+                🏠 Zpěvník
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- =====================================================
+         VŠECHNY NÁSTROJE SE NAČTOU JEN JEDNOU
+
+         Při přepnutí se pouze mění třída active.
+         Editor proto zůstává živý v paměti.
+    ====================================================== -->
+
+    <main class="tools-frame-wrap">
+
+        <iframe
+            id="editorFrame"
+            class="tool-frame"
+            data-tool-frame="editor"
+            src="editor.html"
+            title="Editor písní"
+        ></iframe>
+
+        <iframe
+            id="chordsFrame"
+            class="tool-frame"
+            data-tool-frame="chords"
+            src="chords.html"
+            title="Editor akordů"
+        ></iframe>
+
+        <iframe
+            id="exportFrame"
+            class="tool-frame"
+            data-tool-frame="export"
+            src="export.html"
+            title="Exporty"
+        ></iframe>
+
+    </main>
+
+</div>
+
+
+
+<script type="module" src="../js/tools/shell/main.js"></script>
+</body>
+</html>

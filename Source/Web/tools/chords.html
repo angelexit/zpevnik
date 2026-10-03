@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<script>if(localStorage.getItem('zpevnikMode')!=='admin')location.replace('/index.html');</script>
+    <meta charset="UTF-8">
+    <title>Editor akordů · 3.1.30</title>
+    <link rel="stylesheet" href="../css/chords-editor.css">
+</head>
+<body class="tool-page tool-chords">
+
+<section class="chord-chooser">
+<h2>Výběr akordu <small>3.1.30</small></h2>
+<div class="chooser-fields">
+<label>Typ akordu<select id="lookupQuality" onchange="buildLookupChord()"><option value="">dur</option><option value="mi">moll</option><option>7</option><option>maj7</option><option>add7</option><option>sus2</option><option>sus4</option><option>dim</option><option>aug</option><option>6</option><option>9</option><option>m7</option></select></label>
+<label>♯ / ♭<select id="lookupAccidental" onchange="buildLookupChord()"><option value="">bez</option><option value="#">♯</option><option value="b">♭</option></select></label>
+<label>Základní tón<select id="lookupRoot" onchange="buildLookupChord()"><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>A</option><option>H</option><option>B</option></select></label>
+<label>Hledaný akord<input id="lookupName" value="C" oninput="renderAvailability()" placeholder="Např. Cmaj7 nebo D/F#"></label>
+<label>Typ nástroje<select id="instrumentGroup" onchange="filterInstrumentTypes()"></select></label>
+<div id="instrumentSlot"><label>Druh / ladění</label></div>
+<button onclick="loadChosenChord()">Načíst / připravit akord</button>
+</div>
+<details class="availability-details"><summary>Dostupnost akordu podle nástroje a ladění</summary><p class="availability-note">Počty uložených hmatů v místních databázích. Hudební správnost převzatých hmatů tím není ověřena.</p><div class="availability-scroll"><table class="availability"><thead><tr><th>Nástroj a ladění</th><th>V databázi</th><th></th></tr></thead><tbody id="availabilityBody"></tbody></table></div></details>
+</section>
+<div class="container">
+    <div class="editor-side">
+        <div style="display:grid;gap:10px;margin-bottom:18px">
+<label>Akord z databáze <select id="databaseChord" onchange="selectDatabaseChord()"></select></label>
+<label>Varianta hmatu <select id="chordPosition" onchange="selectChordPosition()"></select></label>
+<div><button onclick="newDatabaseChord()">Nový akord</button> <button onclick="addChordPosition()">Přidat variantu</button></div>
+<button id="saveChordButton" onclick="saveDatabaseChord()">Uložit akord do databáze</button>
+<div id="chordDbStatus" role="status">Připojuji databázi…</div>
+<label>První zobrazený pražec <input id="startFret" type="number" min="1" max="36" value="1" onchange="shiftFretboard()"></label>
+</div>
+<details><summary>Pokročilé: import akordu z JSON</summary><p>Pro běžné načtení použij výběr akordu nahoře. JSON se importuje do právě vybraného nástroje.</p><div class="import-box">
+            <input type="text" id="importJson" placeholder='Vlož "Akord":{...}' style="width: 70%;">
+            <button onclick="importChord()">Načíst</button>
+        </div>
+
+        </details>
+        <div style="margin-bottom: 10px; display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 10px;">
+                <input type="text" id="chordName" value="G" oninput="updateAll()" style="flex: 1;" placeholder="Název akordu">
+                <select id="instrument" onchange="changeChordLibrary()" style="flex: 1.5;">
+                    <optgroup label="Kytara">
+                        <option value="gtr_std">Kytara 6 strun</option>
+                        <option value="gtr_dropd">Kytara Drop D</option>
+                        <option value="gtr_dropc">Kytara Drop C</option>
+                        <option value="gtr_openc">Kytara Open C</option><option value="gtr_openg">Kytara Open G</option><option value="gtr_opend">Kytara Open D</option>
+						<option value="gtr_7">Kytara 7 strun</option>
+                    </optgroup>
+                    <optgroup label="Banjo">
+                        <option value="banjo_6">Banjo 6 strun</option><option value="banjo_5">Banjo 5 strun</option>
+                        <option value="banjo_tenor">Banjo Tenor</option>
+                    </optgroup>
+                    <optgroup label="Ukulele">
+                        <option value="uke_std">Soprán</option>
+                        <option value="uke_bar">Baryton</option>
+						</optgroup><optgroup label="Mandolína">
+                        <option value="mandolin">Mandolína</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+        <label class="hand-label">Pohled <select id="editorHand" onchange="setEditorHand()"><option value="right">Pravák</option><option value="left">Levák</option></select></label><p class="board-help">Klikni na strunu a pražec. Dalším kliknutím nastavíš prst. U nultého pražce přepínáš ○ / ×.</p><div class="neck-scroll"><div class="string-labels" id="stringLabels"></div>
+        <div class="fretboard-wrap">
+            <div class="fret-nums" id="fretNums"></div>
+            <div class="fretboard" id="fretboard">
+                <div class="inlay-container" id="inlayContainer"></div>
+            </div>
+        </div>
+    </div></div>
+
+    <div class="preview-side">
+        <h3>Nativní Náhled</h3>
+        <div id="svg-render"></div>
+        <textarea id="output" hidden aria-hidden="true"></textarea>
+        
+    </div>
+</div>
+
+
+
+<script type="module" src="../js/tools/chord-editor/main.js"></script>
+</body>
+</html>

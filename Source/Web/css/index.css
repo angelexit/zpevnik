@@ -1,0 +1,632 @@
+/* --- ZÁKLADNÍ PROMĚNNÉ A BARVY --- */
+:root {
+    --bg: #f8fafc;
+    --text: #1e293b;
+    --header-bg: #ffffff;
+    --accent: #6366f1;
+    --border: #e2e8f0;
+    --card-bg: #ffffff;
+    --title-color: #4b0082;
+}
+
+body.dark-mode {
+    --bg: #0f172a;
+    --text: #f1f5f9;
+    --header-bg: #1e293b;
+    --border: #334155;
+    --card-bg: #1e293b;
+    --title-color: #a5b4fc;
+}
+
+* { box-sizing: border-box; }
+
+body { 
+    font-family: 'Segoe UI', system-ui, sans-serif; 
+    margin: 0; 
+    background: var(--bg); 
+    color: var(--text); 
+    transition: background 0.3s, color 0.3s; 
+}
+
+/* --- Login menu --- */
+.login-overlay.hidden {
+    display: none !important;
+}
+
+.login-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.login-box {
+    width: min(420px, 92vw);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+
+/* --- HLAVIČKA (TOPBAR) --- */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#mainTitle { 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    color: var(--title-color); 
+    text-decoration: none; 
+}
+
+.topbar-right { 
+    display: flex; 
+    gap: 12px; 
+    align-items: center; 
+}
+
+#globalSearch {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+    width: 250px;
+    transition: width 0.3s ease;
+}
+
+#globalSearch:focus {
+    width: 300px;
+    border-color: var(--accent);
+}
+
+.icon-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    color: var(--text);
+}
+
+.icon-btn:hover {
+    transform: scale(1.05);
+    border-color: var(--accent);
+}
+
+/* --- TOOLBOX (ADMIN PANEL) --- */
+.admin-panel {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    z-index: 2000;
+    min-width: 180px;
+    backdrop-filter: blur(10px);
+}
+
+.admin-panel.active {
+    display: flex;
+    animation: fadeInDown 0.2s ease-out;
+}
+
+.admin-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: var(--bg);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    border: 1px solid var(--border);
+}
+
+.admin-link:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* --- ALBUM FILTER BAR --- */
+.filter-bar {
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.filter-bar::-webkit-scrollbar { 
+    display: none; 
+	}
+
+.filter-chips { 
+    display: flex; 
+	gap: 10px; 
+	}
+
+.chip {
+    padding: 6px 15px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: var(--text);
+    position: relative;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.chip:hover { 
+    transform: scale(1.05); 
+	border-color: var(--accent); 
+	}
+
+.chip.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* --- TOOLTIP ROKU --- */
+.chip[data-year]:not([data-year=""]):hover::after {
+    content: "Rok: " attr(data-year);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* --- SORT BAR (ŘAZENÍ PÍSNÍ) --- */
+.sort-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-bottom: 25px;
+    padding: 10px 15px;
+
+    background: rgba(128, 128, 128, 0.05);
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.sort-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.sort-bar span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.sort-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.sort-btn:hover { 
+    border-color: var(--accent); 
+	}
+
+.sort-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.alphabet-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.letter-btn {
+    background: var(--card-bg);
+
+    border: 1px solid var(--border);
+    color: var(--text);
+
+    padding: 4px 10px;
+
+    border-radius: 10px;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.letter-btn:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.letter-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.letter-btn.disabled {
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+/* --- GRID A KARTY --- */
+.container { padding: 20px; max-width: 1400px; margin: 0 auto; }
+
+.artist-grid, .song-grid { 
+    display: grid; 
+    gap: 15px; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+}
+.card {
+    position: relative;
+    min-height: 110px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.card:hover { 
+    transform: translateY(-5px); 
+	border-color: var(--accent); 
+	}
+.card.has-cover { 
+    background-size: cover; 
+	background-position: center; 
+	border: none; 
+	}
+.card-overlay { 
+    position: absolute; 
+    inset: 0; 
+    background: linear-gradient(90deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.3) 100%); 
+    }
+.card-content { 
+    position: relative; 
+    z-index: 2; 
+	color: inherit; 
+	}
+.card.has-cover .card-content { 
+    color: white; 
+	}
+.card h3 { 
+    margin: 0; 
+	font-size: 1.25rem; 
+	}
+.meta-info { 
+    font-size: 0.85rem; 
+	opacity: 0.8; 
+	margin-top: 5px; 
+	}
+
+/* --- ANIMACE --- */
+@keyframes fadeInDown {
+    from { 
+	  opacity: 0; 
+	  transform: translateY(-10px); 
+	  }
+    to { 
+	  opacity: 1; 
+	  transform: translateY(0); 
+	  }
+}
+
+
+/* =========================================================
+   CONTEXT BAR / ALBUMY V HLAVIČCE
+========================================================= */
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+}
+
+.context-bar {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+}
+
+.context-chip-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    padding: 4px 8px 6px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+.context-chip-row::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.context-chip-row .chip,
+.context-chip-row .album-cover-chip {
+    flex: 0 0 auto;
+}
+
+.album-cover-chip {
+    width: 62px;
+    height: 62px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 2px solid transparent;
+    background: var(--card-bg);
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.album-cover-chip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.album-cover-chip:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.album-cover-chip.active {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(99,102,241,0.25);
+}
+
+/* =========================================================
+   HRACÍ MENU V HLAVIČCE
+========================================================= */
+
+.song-toolbar.compact {
+    margin: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.song-toolbar.compact .song-toolbar-toggle {
+    min-width: 120px;
+    height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card-bg);
+    color: var(--text);
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.song-toolbar.compact .song-toolbar-content {
+    position: absolute;
+    top: 72px;
+    left: 20px;
+    right: 20px;
+    z-index: 3000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    padding: 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.25);
+}
+
+.song-toolbar.compact.collapsed .song-toolbar-content {
+    display: none;
+}
+
+.toolbar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.toolbar-group label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+.toolbar-group select,
+.toolbar-group input[type="range"] {
+    width: 100%;
+}
+
+.toolbar-group select {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.toolbar-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: end;
+}
+
+.tool-btn {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.tool-btn:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    .topbar {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 14px;
+    }
+
+    .topbar-left {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .context-bar {
+        width: 100%;
+    }
+
+    .song-toolbar.compact {
+        width: 100%;
+    }
+
+    .song-toolbar.compact .song-toolbar-toggle {
+        width: 100%;
+    }
+
+    .song-toolbar.compact .song-toolbar-content {
+        top: 120px;
+        left: 10px;
+        right: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .tool-btn {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   Netflix styl
+========================================================= */
+
+/* podtržení názvu v kartě od středu */
+.card h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.card h3::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transform: translateX(-50%);
+    transition: width 0.28s ease;
+}
+
+.card:hover h3::after {
+    width: 100%;
+}
+/* --- ANIMACE --- */
+@keyframes fadeInDown {
+    from { 
+	  opacity: 0; 
+	  transform: translateY(-10px); 
+	  }
+    to { 
+	  opacity: 1; 
+	  transform: translateY(0); 
+	  }
+}
+
