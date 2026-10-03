@@ -7,15 +7,18 @@
   "key": "Emi",
   "capo": 0,
   "used_chords": [
+    "A",
     "C",
     "Cmaj7",
     "D",
     "Emi",
+    "F#",
     "G",
+    "H",
     "Hmi"
   ],
-  "youtube_link": "https://www.youtube.com/watch?v=KUZbvdKLYbo&list=RDKUZbvdKLYbo&start_radio=1",
-  "last_modified": "2026-06-13T08:37:46.452Z",
+  "youtube_link": "https://www.youtube.com/watch?v=KUZbvdKLYbo\u0026list=RDKUZbvdKLYbo\u0026start_radio=1",
+  "last_modified": "2026-10-03T08:24:55.863Z",
   "status": {
     "state": "ok",
     "level": "green",
@@ -68,5 +71,6 @@
       "type": "outro",
       "text": "[Hmi]      [F#]     [D]    [H]    [G]    [F#]     [D]    [H]    [G]    [A] ."
     }
-  ]
+  ],
+  "editor_chords": []
 }

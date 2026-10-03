@@ -9,12 +9,12 @@
   "used_chords": [
     "A",
     "Asus",
-    "Asus4",
-    "Bmi",
-    "D"
+    "Asus2",
+    "D",
+    "Hmi"
   ],
-  "youtube_link": "https://www.youtube.com/watch?v=6NXnxTNIWkc&list=RD6NXnxTNIWkc&start_radio=1",
-  "last_modified": "2026-04-28T12:23:41.347Z",
+  "youtube_link": "https://www.youtube.com/watch?v=6NXnxTNIWkc\u0026list=RD6NXnxTNIWkc\u0026start_radio=1",
+  "last_modified": "2026-10-02T07:41:23.508Z",
   "status": {
     "state": "ok",
     "level": "green",
@@ -37,43 +37,44 @@
   "parts": [
     {
       "type": "intro",
-      "text": "[A] [Bmi] [D] [Asus2]"
+      "text": "[A] [Hmi] [D] [Asus2]"
     },
     {
       "type": "verse",
-      "text": "[A]25 years of my life and still\n[Bmi]Trying to get up that great big hill of [D]hope\nfor a desti[Asus2]nation\n[A]I realized quickly when I knew I should\nThat the [Bmi]world was made up of this brotherhood of [D]man,\nfor whatever that [Asus2]means."
+      "text": "[A]25 years of my life and still\n[Hmi]Trying to get up that great big hill of [D]hope\nfor a desti[Asus2]nation\n[A]I realized quickly when I knew I should\nThat the [Hmi]world was made up of this brotherhood of [D]man,\nfor whatever that [Asus2]means."
     },
     {
       "type": "chorus",
-      "text": "And so I [A]cry sometimes when I´m lying in bed\njust to [Bmi]get it all out what is in my head, then [D]I,\nI´m feeling, a little pecu[Asus2]liar.\nAnd so I [A]wake up in the morning and I step outside\nAnd I [Bmi]take a deep breath, and I get real high, and [D]I,\nscream from the top of my lungs, \"What is going [Asus2]on?\""
+      "text": "And so I [A]cry sometimes when I´m lying in bed\njust to [Hmi]get it all out what is in my head, then [D]I,\nI´m feeling, a little pecu[Asus2]liar.\nAnd so I [A]wake up in the morning and I step outside\nAnd I [Hmi]take a deep breath, and I get real high, and [D]I,\nscream from the top of my lungs, \u0022What is going [Asus2]on?\u0022"
     },
     {
       "type": "verse",
-      "text": "And I say, \"[A]Hey yeah yeah hey, [Bmi]hey yeah yeah\"\nI said, \"[D]Hey, what´s going [Asus]on?\"\nAnd I say, \"[A]Hey yeah yeah hey, [Bmi]hey yeah yeah\"\nI said, \"[D]Hey, what´s going [Asus2]on?\""
+      "text": "And I say, \u0022[A]Hey yeah yeah hey, [Hmi]hey yeah yeah\u0022\nI said, \u0022[D]Hey, what´s going [Asus]on?\u0022\nAnd I say, \u0022[A]Hey yeah yeah hey, [Hmi]hey yeah yeah\u0022\nI said, \u0022[D]Hey, what´s going [Asus2]on?\u0022"
     },
     {
       "type": "bridge",
-      "text": "[A] [Bmi] [D] [Asus]\nOooh ohh...\n[A] [Bmi] [D] [Asus]\nOooh ohh..."
+      "text": "[A] [Hmi] [D] [Asus]\nOooh ohh...\n[A] [Hmi] [D] [Asus]\nOooh ohh..."
     },
     {
       "type": "verse",
-      "text": "And I try, [A]oh my god, do I [Bmi]try\nI try all the [D]time, in this insti[Asus]tution.\n[A]And I pray, oh my god, do I [Bmi]pray\nI pray every single [D]day, for a revo[Asus2]lution."
+      "text": "And I try, [A]oh my god, do I [Hmi]try\nI try all the [D]time, in this insti[Asus]tution.\n[A]And I pray, oh my god, do I [Hmi]pray\nI pray every single [D]day, for a revo[Asus2]lution."
     },
     {
       "type": "chorus",
-      "text": "And so I [A]cry sometimes when I´m lying in bed\njust to [Bmi]get it all out what is in my head, then [D]I,\nI´m feeling, a little pecu[Asus2]liar.\nAnd so I [A]wake up in the morning and I step outside\nAnd I [Bmi]take a deep breath, and I get real high, and [D]I,\nscream from the top of my lungs, \"What is going [Asus2]on?\""
+      "text": "And so I [A]cry sometimes when I´m lying in bed\njust to [Hmi]get it all out what is in my head, then [D]I,\nI´m feeling, a little pecu[Asus2]liar.\nAnd so I [A]wake up in the morning and I step outside\nAnd I [Hmi]take a deep breath, and I get real high, and [D]I,\nscream from the top of my lungs, \u0022What is going [Asus2]on?\u0022"
     },
     {
       "type": "chorus",
-      "text": "And I say, \"[A]Hey yeah yeah hey, [Bmi]hey yeah yeah\"\nI said, \"[D]Hey, what´s going [Asus]on?\"\nAnd I say, \"[A]Hey yeah yeah hey, [Bmi]hey yeah yeah\"\nI said, \"[D]Hey, what´s going [Asus2]on?\"\n\nAnd I say, \"[A]Hey yeah yeah hey, [Bmi]hey yeah yeah\"\nI said, \"[D]Hey, what´s going [Asus]on?\"\nAnd I say, \"[A]Hey yeah yeah hey, [Bmi]hey yeah yeah\"\nI said, \"[D]Hey, what´s going [Asus2]on?\""
+      "text": "And I say, \u0022[A]Hey yeah yeah hey, [Hmi]hey yeah yeah\u0022\nI said, \u0022[D]Hey, what´s going [Asus]on?\u0022\nAnd I say, \u0022[A]Hey yeah yeah hey, [Hmi]hey yeah yeah\u0022\nI said, \u0022[D]Hey, what´s going [Asus2]on?\u0022\n\nAnd I say, \u0022[A]Hey yeah yeah hey, [Hmi]hey yeah yeah\u0022\nI said, \u0022[D]Hey, what´s going [Asus]on?\u0022\nAnd I say, \u0022[A]Hey yeah yeah hey, [Hmi]hey yeah yeah\u0022\nI said, \u0022[D]Hey, what´s going [Asus2]on?\u0022"
     },
     {
       "type": "bridge",
-      "text": "[A] [Bmi] [D] [Asus]\nOooh ohh...\n[A] [Bmi] [D] [Asus]\nOooh ohh..."
+      "text": "[A] [Hmi] [D] [Asus]\nOooh ohh...\n[A] [Hmi] [D] [Asus]\nOooh ohh..."
     },
     {
       "type": "verse",
-      "text": "[A]25 years of my life and still\n[Bmi]Trying to get up that great big hill of [D]hope\nfor a desti[Asus2]nation"
+      "text": "[A]25 years of my life and still\n[Hmi]Trying to get up that great big hill of [D]hope\nfor a desti[Asus2]nation"
     }
-  ]
+  ],
+  "editor_chords": []
 }

@@ -9,13 +9,12 @@
   "used_chords": [
     "A",
     "D",
-    "Em",
-    "Em7",
     "Emi",
+    "Emi7",
     "G"
   ],
   "youtube_link": "https://www.youtube.com/watch?v=ymMTBli7hBQ\u0026list=RDymMTBli7hBQ\u0026start_radio=1",
-  "last_modified": "2026-09-30T13:41:42.530Z",
+  "last_modified": "2026-10-01T06:35:31.410Z",
   "status": {
     "state": "ok",
     "level": "green",
@@ -54,7 +53,7 @@
     },
     {
       "type": "verse",
-      "text": "[G]Chemie [D]ráno\n[A]tak jiná než [Em]když se setmí\n[G]o srdce [D]závod, jo [A]o\n[G]smůla i štěs[D]tí\n[A]nikdy nejsou [Em]nekonečný\n[G]tak jako ves[D]mír, ale [A]co"
+      "text": "[G]Chemie [D]ráno\n[A]tak jiná než [Emi]když se setmí\n[G]o srdce [D]závod, jo [A]o\n[G]smůla i štěs[D]tí\n[A]nikdy nejsou [Emi]nekonečný\n[G]tak jako ves[D]mír, ale [A]co"
     },
     {
       "type": "chorus",
@@ -62,11 +61,11 @@
     },
     {
       "type": "verse",
-      "text": "[Em]Až se zase jednou budu na tebe [G]smát\n[Em7]otočíš prsten[Em]em\n[A]ať můžu si přát\nvždycky se budeme [D]znááát[G] [Em] [A]"
+      "text": "[Emi]Až se zase jednou budu na tebe [G]smát\n[Emi7]otočíš prsten[Emi]em\n[A]ať můžu si přát\nvždycky se budeme [D]znááát[G] [Emi] [A]"
     },
     {
       "type": "bridge",
-      "text": "[D]    [G]    [Em]     [A] ."
+      "text": "[D]    [G]    [Emi]     [A] ."
     },
     {
       "type": "chorus",

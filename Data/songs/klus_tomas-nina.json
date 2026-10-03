@@ -13,7 +13,7 @@
     "Hmi"
   ],
   "youtube_link": "",
-  "last_modified": "2026-06-08T10:09:24.298Z",
+  "last_modified": "2026-10-02T07:31:12.990Z",
   "status": {
     "state": "needs_review",
     "level": "orange",
@@ -36,7 +36,7 @@
   "parts": [
     {
       "type": "verse",
-      "text": "[D]Dnes v noci jsem ze spaní křičela tvoje jméno, \njá v[Hmi]ím, že nejsi rád, ale nejde zapomenout, \njak při[G] každém slově přivíráš víčka. \nProsím, [A]vyslyš moji zpověď, už jsme starý na psaníčka."
+      "text": "[D]Dnes v noci jsem ze spaní křičela tvoje jméno, \njá [Hmi]vím, že nejsi rád, ale nejde zapomenout, \njak při [G]každém slově přivíráš víčka. \nProsím, [A]vyslyš moji zpověď, už jsme starý na psaníčka."
     },
     {
       "type": "verse",
@@ -52,7 +52,7 @@
     },
     {
       "type": "chorus",
-      "text": "Jsi mé úzko, [D]jsi krev z řezných ran,                   \njsi ten, k[Hmi]do vchází nepozván, \njsi z[G]vuk, když padnou mi na rety slzy m[A]úz. \nJsi mé [D]úzko, jsi krev z řezných ran, \načkoli n[Hmi]echci, jsi ve mně uschován, \njsi z[G]vuk, když padnou mi na rety slzy m[A]úz."
+      "text": "Jsi mé úzko, [D]jsi krev z řezných ran,                   \njsi ten, [Hmi]kdo vchází nepozván, \njsi [G]zvuk, když padnou mi na rety slzy m[A]úz. \nJsi mé [D]úzko, jsi krev z řezných ran, \načkoli [Hmi]nechci, jsi ve mně uschován, \njsi [G]zvuk, když padnou mi na rety slzy m[A]úz."
     },
     {
       "type": "verse",
@@ -64,7 +64,8 @@
     },
     {
       "type": "chorus",
-      "text": "Jsi mé úzko, [D]jsi krev z řezných ran,                   \njsi ten, k[Hmi]do vchází nepozván, \njsi z[G]vuk, když padnou mi na rety slzy m[A]úz. \nJsi mé [D]úzko, jsi krev z řezných ran, \načkoli n[Hmi]echci, jsi ve mně uschován, \njsi z[G]vuk, když padnou mi na rety slzy m[A]úz."
+      "text": "Jsi mé úzko, [D]jsi krev z řezných ran,                   \njsi ten, [Hmi]kdo vchází nepozván, \njsi [G]zvuk, když padnou mi na rety slzy m[A]úz. \nJsi mé [D]úzko, jsi krev z řezných ran, \načkoli [Hmi]nechci, jsi ve mně uschován, \njsi [G]zvuk, když padnou mi na rety slzy m[A]úz."
     }
-  ]
+  ],
+  "editor_chords": []
 }

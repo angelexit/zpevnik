@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "libraryVersion": "20260930-135401-60a2c671",
+  "libraryVersion": "20261003-193618-1863cac2",
   "database": "database.json",
   "artists": "artists.json",
   "songsDirectory": "songs/",
@@ -62,8 +62,8 @@
     },
     {
       "path": "chords/guitar-standard.json",
-      "sha256": "e48c51e5e3dcbb688b70befae5c203ae169ede214b4b27eecba119b264dcd716",
-      "bytes": 822142
+      "sha256": "9a685b3939c46b30eb032008e0f62631a6eba1ba5f14ce4cb58139503e793361",
+      "bytes": 307649
     },
     {
       "path": "chords/mandolin-standard.json",
@@ -282,8 +282,8 @@
     },
     {
       "path": "img/interprets/ag_flek.jpg",
-      "sha256": "c8c41e6ca582900a23fe7341fe757271255f5cf4683c94356601c2744519c2b4",
-      "bytes": 103897
+      "sha256": "6a89d0b4e693a52dd317ee98047887f4c6672f0c73cd7ae8787c18e211a2b4eb",
+      "bytes": 91843
     },
     {
       "path": "img/interprets/anna_k.jpg",
@@ -314,6 +314,11 @@
       "path": "img/interprets/elan.jpg",
       "sha256": "b6ba070adbea14993ddee3fb939ff5305cfc501eaa159198b5cc519dc2274620",
       "bytes": 31124
+    },
+    {
+      "path": "img/interprets/hop_trop.jpg",
+      "sha256": "453fa4b4b95820d5e6b7f62425e787e9c26065b57ed67bd583b14467e382be30",
+      "bytes": 76381
     },
     {
       "path": "img/interprets/jiri_schelinger.jpg",
@@ -352,13 +357,13 @@
     },
     {
       "path": "songs/4_non_blondes-whats_up.json",
-      "sha256": "06374af6d1b3fdfcaacd85256a1bc17f9ac6133c3a41ff807df5b2218a357973",
-      "bytes": 3323
+      "sha256": "30f1b2cd78f8344cd6560c4bc79ce5c15b97abdd9ed7616da98ec9d8605f6caf",
+      "bytes": 3547
     },
     {
       "path": "songs/ag_flek-andante_aledeto.json",
-      "sha256": "e2e7b8f90b725bf4589cc69113e784920b818a3ab921dc6ea68470dc045f7164",
-      "bytes": 2236
+      "sha256": "d92d3c169bdaa3a950a2375966e663ef8e0aff4ab4f837958981fd0d5c38fac7",
+      "bytes": 2372
     },
     {
       "path": "songs/ag_flek-carpe_diem.json",
@@ -427,8 +432,8 @@
     },
     {
       "path": "songs/anna_k-vzdycky_se_budeme_znat.json",
-      "sha256": "a810b9198569326cf1bccf49d2cc7958e9d7360b4f9f72a01af59538287073db",
-      "bytes": 2687
+      "sha256": "94ef742deaa8fdcdb090073c116722c7b11ba0785b4a3dc2accfe36f82eac3b9",
+      "bytes": 2684
     },
     {
       "path": "songs/anna_k-zaviram_oci.json",
@@ -492,13 +497,13 @@
     },
     {
       "path": "songs/klus_tomas-nina.json",
-      "sha256": "ac7b101ad8343d28b3743cc43cab2897018fe0f32714d3865f85e0753eb959c7",
-      "bytes": 2993
+      "sha256": "b5756e5b706f3ffbd1f064499e8b4ee76e449e9736a6b3375e4d8cd5db2fa9c4",
+      "bytes": 3086
     },
     {
       "path": "songs/klus_tomas-pocity.json",
-      "sha256": "168c9c94bdc17efbbbdb672978022b1aab73957d15fc99482d3b8e082ae88269",
-      "bytes": 2504
+      "sha256": "753309cb94e0f4c589b6aa16091b82fcf5ec10536549b68e8acff924dfd8e664",
+      "bytes": 2592
     },
     {
       "path": "songs/krystof-cesta.json",
@@ -507,8 +512,8 @@
     },
     {
       "path": "songs/nedvedi-cechacek.json",
-      "sha256": "a13a19deea813f4757476fd0d89bd623998c28f1653ad8e05040ab82b367b5a7",
-      "bytes": 2348
+      "sha256": "8459b5f7b4972aab6714a8493a645cfc2538c84f580ccb0a9098da6f91a13bfd",
+      "bytes": 2461
     },
     {
       "path": "songs/nedvedi-frankie_dlouhan.json",
@@ -657,5 +662,5 @@
     }
   ],
   "config": "config.json",
-  "publishedAt": "2026-09-30T13:54:01.1811829Z"
+  "publishedAt": "2026-10-03T19:36:18.5272010Z"
 }

@@ -13,7 +13,7 @@
     "G"
   ],
   "youtube_link": "",
-  "last_modified": "2026-06-09T08:21:14.167Z",
+  "last_modified": "2026-10-02T07:45:55.773Z",
   "status": {
     "state": "needs_review",
     "level": "orange",
@@ -36,27 +36,28 @@
   "parts": [
     {
       "type": "verse",
-      "text": "[C]Zvali [G]mě do Stá[Ami]tů, teď [C]když je svoboda,\n[F]vezme[G]me dží[F]py a [G]budeme free,\n[C]mají [G]prej vodo[Ami]pád největ[C]ší na světě,\n[F]pod so[G]chou jakou[F]si že [G]vše[C]chno se smí."
+      "text": "[C]Zvali [G]mě do Stá[Ami]tů, teď [C]když je svoboda,\n[F]vezme[G]me dží[F]py a [G]budeme free,\n[C]mají [G]prej vodo[Ami]pád největ[C]ší na světě,\n[F]pod so[G]chou jakou[F]si že [G]všech[C]no se smí."
     },
     {
       "type": "verse",
-      "text": "Milí jste, psal jsem jim, ale teď nemůžu,\npod chatou tráva mi začíná schnout,\ndo strání nad řekou barvy se ukládaj,\nhospodskej u nás mi zahřejvá kout."
+      "text": "[C]Milí jste, psal jsem jim, ale teď nemůžu,\n[F]pod chatou tráva mi začíná schnout,\n[C]do strání nad řekou barvy se ukládaj,\n[F]hospodskej u nás mi zahřejvá kout."
     },
     {
       "type": "verse",
-      "text": "Jinováč v kolejích, nad lesem leží mlhy,\nnetopýr v podvečer nad Sázavou,\na les plnej kouře z akátů v horkejch kamnech,\nkluci když volaj a do chat se zvou."
+      "text": "[C]Jinováč v kolejích, nad lesem leží mlhy,\n[F]netopýr v podvečer nad Sázavou,\n[C]a les plnej kouře z akátů v horkejch kamnech,\n[F]kluci když volaj a do chat se zvou."
     },
     {
       "type": "chorus",
-      "text": "[C]Možná  [G]jsem blá[Ami]zen, če[C]cháček malej,\n[F]já jsem [G]tu šťast[F]nej [G]jak [G]velkej kluk,\npo ránu z verandy Medník s[C]i  prohlížím,\nposlouchám vlaky, jak vyjíždí z luk.\nVíš co, vem ženu, přijeď se podívat,\nvíš, kde je Třeštibok, vezmu tě tam,\nna skále vyprahlý sednem si, popijem\nrád ti tu ukážu všechno, co znám."
+      "text": "[C]Možná  [G]jsem blá[Ami]zen, če[C]cháček malej,\n[F]já jsem [G]tu šťast[F]nej [G]jak [G]velkej kluk,\npo ránu z verandy Medník s[C]i  prohlížím,\nposlouchám vlaky, jak vyjíždí z luk.\n\nVíš co, vem ženu, přijeď se podívat,\nvíš, kde je Třeštibok, vezmu tě tam,\nna skále vyprahlý sednem si, popijem\nrád ti tu ukážu všechno, co znám."
     },
     {
       "type": "chorus",
-      "text": "[C]Možná  [G]jsem blá[Ami]zen, če[C]cháček malej,\n[F]já jsem [G]tu šťast[F]nej [G]jak [G]velkej kluk,\npo ránu z verandy Medník s[C]i  prohlížím,\nposlouchám vlaky, jak vyjíždí z luk.\nVíš co, vem ženu, přijeď se podívat,\nvíš, kde je Třeštibok, vezmu tě tam,\nna skále vyprahlý sednem si, popijem\nrád ti tu ukážu všechno, co znám."
+      "text": "[C]Možná  [G]jsem blá[Ami]zen, če[C]cháček malej,\n[F]já jsem [G]tu šťast[F]nej [G]jak [G]velkej kluk,\npo ránu z verandy Medník s[C]i  prohlížím,\nposlouchám vlaky, jak vyjíždí z luk.\n\nVíš co, vem ženu, přijeď se podívat,\nvíš, kde je Třeštibok, vezmu tě tam,\nna skále vyprahlý sednem si, popijem\nrád ti tu ukážu všechno, co znám."
     },
     {
       "type": "outro",
       "text": "Rád ti tu ukážu všechno, co znám."
     }
-  ]
+  ],
+  "editor_chords": []
 }
